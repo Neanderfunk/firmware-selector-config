@@ -6,14 +6,14 @@
 # darauf ist versioniert -- damit laesst sich der Webroot nach einem rm -rf
 # vollstaendig aus Git wiederherstellen.
 #
-# Beim naechsten Release wird hier das Ziel nachgezogen; das ist dann ein
-# Commit und keine stille Handaenderung auf dem Server mehr.
+# Das Ziel ist bewusst der feste Name /firmware/stable/ und NICHT ein
+# Release-Verzeichnis wie stable.2023.2.6-26091920sta. Beim Release wird
+# damit nur am Download-vhost umgehaengt; hier aendert sich nichts.
 #
 # Achtung: die Namen muessen zu den Pfaden in config.js passen
 # (dort "./images/<Name>/..."), sonst findet der Downloader nichts.
 
-stable  /var/www/download.ffnef.de/firmware/stable.2023.2.6-26091920sta/
+stable  /var/www/download.ffnef.de/firmware/stable/
 
-# Hier steht spaeter der zusammengefuehrte Baum (Sackgassen-Images fuer 4/32
-# im Upgrade-Verzeichnis). Dann aendert sich nur das Ziel dieser einen Zeile,
-# nicht ihr Name und nicht config.js.
+# Dort liegen spaeter auch die zusammengefuehrten Verzeichnisse (Sackgassen-
+# Images fuer 4/32 im Upgrade-Baum). Auch das aendert diese Datei nicht.

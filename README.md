@@ -134,12 +134,21 @@ anlegt. Beim nächsten Anfassen gerade ziehen.
 
 ## `images/stable`: der richtige Name, und was dafür korrigiert wurde
 
-Auf dem Server hiess der Symlink in `images/` **`stable.2023-2-x`**. Das war
-schlicht falsch (adorfer, 06.10.2026). Richtig ist **`stable`**, denn dort
-liegen später die **zusammengeführten Verzeichnisse** -- die Sackgassen-Images
-für 4/32-Geräte im Upgrade-Baum. Wenn es so weit ist, ändert sich nur das
-*Ziel* dieser einen Zeile in `ffnef/images.links`, nicht ihr Name und nicht
-`config.js`.
+Auf dem Server war der Symlink in `images/` in **beidem** falsch (adorfer,
+06.10.2026): er hiess `stable.2023-2-x` und zeigte auf ein
+**Release-Verzeichnis**, `…/firmware/stable.2023.2.6-26091920sta/`.
+
+Richtig ist:
+
+    stable  ->  /var/www/download.ffnef.de/firmware/stable/
+
+Beide Hälften haben einen Grund. Der **Name** `stable`, weil dort später die
+**zusammengeführten Verzeichnisse** liegen -- die Sackgassen-Images für
+4/32-Geräte im Upgrade-Baum. Und das **Ziel** `/firmware/stable/`, weil das
+der feste Name auf dem Download-vhost ist: beim Release wird dort umgehängt,
+und **hier ändert sich nichts** -- weder dieser Symlink noch `config.js`. Mit
+dem alten, versionsbehafteten Ziel wäre jedes Release eine Handänderung auf
+dem Server gewesen.
 
 Daraus folgte eine Korrektur in `config.js`. Sie enthielt **172**
 Verzeichniseinträge: jede Domäne doppelt, einmal unter `./images/stable/…`
