@@ -16,6 +16,34 @@ nachziehbar, unsere Anpassungen leben hier.
 einer Übergabe der Content-Session vom 01.10.2026 und ist mit dem ersten
 Commit hier erledigt.
 
+## Wie es auf den Server kommt
+
+Ein Klon von Hand, den Rest macht das Skript. Als root auf dem
+Firmware-Server:
+
+    cd /var/www
+    git clone https://github.com/Neanderfunk/firmware-selector-config.git selector-config
+    sh selector-config/deploy.sh
+
+Das Skript klont dann den Upstream daneben, aktualisiert den schon
+vorhandenen Konfigurations-Klon und setzt die Symlinks. Ab da genügt für jede
+Aktualisierung:
+
+    sh /var/www/selector-config/deploy.sh
+
+**Voraussetzungen:** `git` auf dem Server und ausgehendes HTTPS zu
+`github.com`. **Zugangsdaten braucht es nicht** -- beide Repos sind
+öffentlich, lesender Zugriff geht ohne Konto. Geschrieben wird von dort nie.
+
+**Wenn der Server nicht ins Internet darf**, dann die beiden Klone woanders
+anlegen (zum Beispiel auf dem Jumphost) und als Ganzes übertragen:
+
+    rsync -a --delete selector-upstream selector-config root@server:/var/www/
+    ssh root@server sh /var/www/selector-config/deploy.sh
+
+Die `.git`-Verzeichnisse kommen dabei mit, `git pull` funktioniert also später
+auch dort, sobald der Weg frei ist.
+
 ## Ausliefern: zwei Klone, der Webroot ist nur Symlinks
 
 `deploy.sh` baut den Webroot aus **zwei Git-Klonen**:
