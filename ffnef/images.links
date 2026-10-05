@@ -12,9 +12,8 @@
 # Achtung: die Namen muessen zu den Pfaden in config.js passen
 # (dort "./images/<Name>/..."), sonst findet der Downloader nichts.
 
-stable.2023-2-x  /var/www/download.ffnef.de/firmware/stable.2023.2.6-26091920sta/
+stable  /var/www/download.ffnef.de/firmware/stable.2023.2.6-26091920sta/
 
-# Spaeter, sobald die zusammengefuehrten Verzeichnisse stehen (Sackgassen-
-# Images fuer 4/32 im Upgrade-Baum): dann zeigt "stable" dorthin, und die
-# 86 bisher toten Eintraege in config.js werden lebendig. Siehe README.
-# stable  /var/www/download.ffnef.de/firmware/<zusammengefuehrter-baum>/
+# Hier steht spaeter der zusammengefuehrte Baum (Sackgassen-Images fuer 4/32
+# im Upgrade-Verzeichnis). Dann aendert sich nur das Ziel dieser einen Zeile,
+# nicht ihr Name und nicht config.js.
