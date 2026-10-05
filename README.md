@@ -19,10 +19,15 @@ Commit hier erledigt.
 ## Was hier liegt
 
 `stand-live-http/` ist eine **Momentaufnahme über HTTP**, am 06.10.2026 von
-`routersoftware.ffnef.de` geladen. Sie ist ein Sicherungsnetz, **nicht** die
-Wahrheit: ausgeliefert wird, was nginx zeigt, und das kann vom Stand auf der
-Platte abweichen. Der maßgebliche Stand wird nachgereicht und kommt als
-eigener Commit; der Unterschied zwischen beiden ist dann selbst ein Befund.
+`routersoftware.ffnef.de` geladen.
+
+**Gegengeprüft am 06.10.2026:** `devices.js` und `config.js` von der Platte
+sind **byte-identisch** mit dem, was nginx ausliefert (adorfer hat beide
+Dateien von der Maschine geholt). Für diese zwei ist die Momentaufnahme damit
+der maßgebliche Stand und kein Behelf mehr.
+
+**Noch nicht gegengeprüft** sind `app.js`, `app.css`, `index.html` und
+`router.png` -- die liegen hier weiterhin nur in der HTTP-Fassung.
 
 | Datei | Last-Modified am Server | gegenüber Upstream |
 | --- | --- | --- |
@@ -44,8 +49,17 @@ er darauf zugreift. Beim Zusammenführen ist das die eigentliche Arbeit --
 unsere Änderungen einzeln auf den neuen Upstream setzen, statt die alte Datei
 weiterzuschleppen.
 
-**`devices.js` hat im Cudy-Block den Schlüssel `TR3000` doppelt.** In
-JavaScript gewinnt der letzte, also folgenlos, aber unsauber.
+**`devices.js` hat im Cudy-Block den Schlüssel `TR3000` doppelt**, Zeile 81
+und Zeile 90, beide Male mit demselben Wert `cudy-tr3000`. In JavaScript
+gewinnt der letzte, hier also wirklich folgenlos -- aber beim nächsten
+Bearbeiten ändert jemand die eine Zeile und wundert sich.
+
+**Der Changelog-Link in `config.js` zeigt auf ein Repo, das so nicht mehr
+heißt:** `github.com/Neanderfunk/firmware/...`. Das Repo heißt seit dem
+27.09.2026 `FirmwareConfigs`. Der Link funktioniert heute nur, weil GitHub
+nach einer Umbenennung weiterleitet (geprüft: 200 nach Redirect). Diese
+Weiterleitung **fällt weg**, sobald jemand ein neues Repo namens `firmware`
+anlegt. Beim nächsten Anfassen gerade ziehen.
 
 ## Nächste Schritte
 
