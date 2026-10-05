@@ -1,0 +1,8 @@
+/* Eigene Ergaenzungen zum Upstream-Stylesheet.
+   Bewusst eine eigene Datei: app.css bleibt unveraendert und laesst sich
+   damit ohne Konflikt nachziehen. */
+
+/* Die Anzeige der aktuellen Versionen oben rechts blenden wir aus. */
+#currentVersions {
+  display: none;
+}
