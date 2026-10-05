@@ -1,0 +1,339 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42;
+  color: #333;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+#wizard {
+  padding-bottom: 4em;
+}
+
+@media (min-width: 768px) {
+  #wizard .pane {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  #wizard .pane {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #wizard .pane {
+    width: 1170px;
+  }
+}
+
+.initiallyhidden {
+  display: none;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table > thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+  background-color: #f9f9f9;
+}
+
+.table td, th {
+  padding: 8px;
+  text-align: left;
+}
+
+.table td {
+  border-top: 1px solid #ddd;
+}
+
+.table th {
+  border-top: 0;
+  border-bottom: 2px solid #ddd;
+}
+
+.floatingBottomRight {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#branchName {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+#currentVersions {
+  float:right;
+  padding: .5em;
+  color: #999;
+  display: none;
+}
+
+#firmwareTable {
+  padding: 4em 1em;
+}
+
+#firmwareTable h1 {
+  color: #dc0067;
+}
+
+.firmwareTableLink, .notRecommendedLink, .InfoLink {
+  clear: right;
+  float:right;
+  color: #337ab7;
+  cursor: pointer;
+}
+
+.notRecommendedLink {
+  display: none;
+}
+
+.firmwareTableLink:hover, .notRecommendedLink:hover {
+  text-decoration: underline;
+}
+
+.notRecommendedLabel {
+  color: #337ab7;
+}
+
+#wizard #model-pane .notRecommendedCheckbox {
+  width:auto;
+  display: inline;
+}
+
+#wizard .pane-wrapper {
+  box-shadow: 0 0.15em 0.5em #ccc;
+  margin: 1em 0 3em 0;
+}
+
+#wizard .pane {
+  padding: 2em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#wizard #model-pane {
+  border-left: 3px solid #dc0067;
+}
+
+#wizard #model-pane h1 {
+  color: #dc0067;
+}
+
+#wizard #model-pane input {
+  display: block;
+  width: 100%;
+}
+
+#wizard #type-pane {
+  border-left: 3px solid #ffb400;
+}
+
+#wizard #type-pane h1 {
+  color: #ffb400;
+}
+
+#wizard #type-pane .radiogroup label {
+  background-color: #ffb400;
+}
+
+#wizard #type-pane .radiogroup input[type="radio"]:checked + label {
+  box-shadow: 0 0 0.5em #cf7400 inset;
+}
+
+#wizard #branch-pane {
+  border-left: 3px solid #009ee0;
+}
+
+#wizard #branch-pane h1 {
+  color: #009ee0;
+}
+
+#wizard #branch-pane sup {
+  color: #009ee0;
+}
+
+#wizard #branch-pane .btn,
+#wizard #type-pane .btn {
+  background-color: #009ee0;
+}
+
+#wizard #branch-pane.show-experimental-warning button.dl-experimental {
+  box-shadow: 0 0 0.5em #005ea0 inset;
+}
+
+#wizard #type-pane.show-deviceinfo-warning button.deviceinfo {
+  box-shadow: 0 0 0.5em #005ea0 inset;
+}
+
+#wizard #branch-pane .warning-experimental,
+#wizard #model-pane .warning-notrecommended,
+#wizard #type-pane .warning-deviceinfo {
+  display: none;
+  margin: 1em 0;
+  padding: 1em;
+  box-shadow: 0.125em 0.125em 0.5em #ccc;
+  border: .5em solid #009ee0;
+}
+
+#wizard #branch-pane.show-experimental-warning .warning-experimental,
+#wizard #model-pane.show-notrecommended-warning .warning-notrecommended,
+#wizard #type-pane.show-deviceinfo-warning .warning-deviceinfo {
+  display: block;
+}
+
+#wizard p {
+  margin: 1em auto;
+}
+
+#wizard select, #wizard input {
+  font: inherit;
+  color: inherit;
+  margin-bottom: .5em;
+  background: #fff;
+  border: none;
+  border: 1px solid #ddd;
+  box-shadow: 1px 2px 2px 0 #ccc;
+  padding: 0.75em 0.75em;
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+  transition: box-shadow 200ms ease-in-out;
+}
+
+#wizard select:focus, #wizard input:focus {
+  box-shadow: 1px 2px 2px 0 #ccc, 2px 2px 6px #ccc;
+}
+
+#wizard option {
+  font: inherit;
+  color: inherit;
+}
+
+#wizard select.invalid {
+  border: 1px solid #dc0067;
+  box-shadow: 0.125em 0.125em 0.5em rgba(219, 0, 102, 0.125);
+}
+
+#wizard .radiogroup input {
+  display: none;
+}
+
+#wizard .radiogroup label, #wizard .btn {
+  display: inline-block;
+  list-style-type: none;
+  font: inherit;
+  color: black;
+  margin: .5em;
+  padding: .5em 1em;
+  border: none;
+  box-shadow: 0.125em 0.125em 0.5em #ccc;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#wizard .btn:hover {
+  color: black;
+}
+
+#wizard .imagePreview {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-columns: 25% 25% 25% 25%;
+}
+
+@media (max-width: 960px) {
+  #wizard .imagePreview {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    -ms-grid-columns: 33% 33% 33%;
+  }
+}
+
+@media (max-width: 700px) {
+  #wizard .imagePreview {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    -ms-grid-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  #wizard .imagePreview {
+    display: grid;
+    grid-template-columns: 100%;
+    -ms-grid-columns: 100%;
+  }
+}
+
+#wizard .imagePreview .preview {
+  min-height: 11em;
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 1px solid white;
+  text-align: center;
+}
+
+#wizard .imagePreview .preview:hover {
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+#wizard .imagePreview .preview.selected {
+  border: 1px solid #ccc;
+  cursor: default;
+  box-shadow: 0 0 0.5em #ccc inset;
+}
+
+#wizard .imagePreview .preview img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 8em;
+  margin-bottom: 0.5em;
+}
+
+#wizard .imagePreview .preview span {
+  display: block;
+  margin: auto 0.5em;
+}

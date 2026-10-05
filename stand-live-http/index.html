@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Firmware</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="icon" href="router.png" type="image/png">
+  </head>
+  <body>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/images/">
+    </noscript>
+
+    <div id="currentVersions">
+    </div>
+    <div id="wizard">
+      <a href="./index.html"><img src="./router.png" ></a>
+      <div class="pane-wrapper">
+        <div id="model-pane" class="pane">
+          <span class="notRecommendedLink">nicht empfohlene Geräte anzeigen</span>
+          <span class="firmwareTableLink">Tabelle anzeigen</span>
+          <h1>Schritt 1: Wähle Dein Routermodell</h1>
+          <div class="warning-notrecommended">
+            <p>
+              <b>Vorsicht!</b> Nicht ohne Grund siehst Du in der Voreinstellung
+              nur die von uns empfohlenen Geräte, denn nur mit diesen ist ein reibungsloser
+              Freifunk-Betrieb gewährleistet.
+            </p>
+            <p>
+              Bevor du nicht empfohlene Geräte verwendest, solltest du dich selbst über die Konsequenzen
+              und technischen Hintergründe informieren und dich Entscheiden, ob Du wirklich alle
+              Nachteile in Kauf nehmen willst.
+            </p>
+            <div id="notrecommendedinfo"></div>
+            <input type="checkbox" id="notrecommendedselect" class="notRecommendedCheckbox" value="notRecommended" />
+            <label class="notRecommendedLabel" for="notrecommendedselect">nicht empfohlene Geräte trotzdem anzeigen</label>
+          </div>
+          <p>Erst mit der Freifunk-Firmware wird dein Router zu einem Teil des
+             Freifunk-Netzes. Sie ist fertig vorkonfiguriert, um Kontakt mit
+             benachbarten Freifunk-Knoten aufzunehmen, ein offenes und ohne
+             Registrierung zugängliches Freifunk-WLAN auszusenden und dich dabei
+             vor der Störerhaftung zu schützen.</p>
+          <input type="text" class="modelSearch" autofocus
+                 placeholder="Hier Hersteller oder Modell eingeben...">
+          <div class="manualSelection initiallyhidden">
+            <span>manuelle Auswahl:</span>
+            <select id="vendorselect"></select>
+            <select id="modelselect"></select>
+            <select id="revisionselect"></select>
+          </div>
+          <div class="imagePreview"></div>
+        </div>
+      </div>
+      <div class="pane-wrapper">
+        <div id="type-pane" class="pane initiallyhidden">
+          <h1>Schritt 2: Wähle Deine Installationsart</h1>
+          <p>
+            Bitte verwende das <em>Erstinstallationsimage</em>, wenn Du deinen
+            Router gerade erst gekauft hast und sich darauf noch keine
+            Freifunk-/OpenWrt-Firmware befindet. Ist bereits eine Freifunk- oder
+            OpenWrt-Firmware installiert, verwende bitte die mit
+            <em>Upgrade</em> bezeichnete Version.<br>
+            Fehlt in der Auswahl "Erstinstallationsimage" (und wird nur
+            "Upgrade" angeboten), dann sind bei diesem Modell beide Dateien
+            identisch, d.h. das Upgrade-File passt auch für die
+            Erstinstallation.
+          </p>
+          <p>
+            Einige Geräte benötigen spezielle Images, welche über den Bootloader
+            des Herstellers eingespielt werden.
+          </p>
+          <div class="warning-deviceinfo">
+            <b>Vorsicht!</b> Für dieses Gerät gibt es eine extra Anleitung.
+            Dies kann zum Beispiel bedeuten, dass die Installation nicht über die
+            Weboberfläche des Geräts möglich ist. Bitte besuche zuerst die folgende
+            Seite und lies dir alle Informationen gut durch bevor du mit dem
+            Flashen der Firmware beginnst.
+            <div id="deviceinfo"></div>
+          </div>
+          <radiogroup id="typeselect" class="radiogroup"></radiogroup>
+        </div>
+      </div>
+      <div class="pane-wrapper">
+        <div id="branch-pane" class="pane initiallyhidden">
+          <h1>Schritt 3: Wähle Deine Ortschaft/Region/Domain aus</h1>
+          <p>Domain-Auswahl:</p>
+          <ul id="branchdescs"></ul>
+          <p>Die Auswahl der passenden Domain entscheidet darüber, ob sich der
+             Router mit anderen in der Region per Funk-Mesh verbinden kann und es entscheidet
+             auf welcher Karte der Router angezeigt wird</p>
+          <p>Für das gewählte Routermodell sind folgende Versionen vorhanden:</p>
+          <div class="warning-experimental">
+            <b>Vorsicht!</b> Unsere experimentelle Firmware wurde <b>nicht</b>
+            getestet und kann dein Gerät jederzeit und unangekündigt in einen
+            Zustand versetzen, in dem du nur mit einem Lötkolben und dem Öffnen
+            des Gehäuses weiter kommst. Verwende diese Version nur, wenn Du Dir
+            darüber im Klaren bist!
+            <div id="branch-experimental-dl"></div>
+          </div>
+          <div id="branchselect"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="firmwareTable" class="container initiallyhidden">
+      <span class="firmwareTableLink">zurück zum Auswahlmenü</span>
+      <br>
+      <span class="firmwareTableLink">
+        <a id="firmware-source-dir" href="..">Liste aller Dateien</a></span>
+      <a name="firmwareTable"></a>
+      <h1>Firmware</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Hersteller</th>
+            <th>Modell</th>
+            <th>Bootloader-Image</th>
+            <th>Erstinstallation</th>
+            <th>Upgrade</th>
+          </tr>
+        </thead>
+        <tbody id="firmwareTableBody">
+          <tr>
+            <td colspan="5">Loading...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="floatingBottomRight">Diese Webseite ist <a href="https://github.com/freifunk-darmstadt/gluon-firmware-wizard">freie Software</a>! Die Bilder der Router stammen von <a href="https://github.com/Moorviper/Freifunk-Router-Anleitungen">Daniel Krah</a>, <a href="https://github.com/belzebub40k/router-pics">Julian Labus</a>, <a href="https://github.com/nalxnet/freifunk-device-images">Jan Alexander</a> sowie <a href="https://github.com/freifunkstuff/meshviewer-hwimages">freifunkstuff</a> und sind lizenziert unter <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</a>.</p>
+
+    <script src="devices.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
