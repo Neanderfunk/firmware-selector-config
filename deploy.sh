@@ -49,9 +49,22 @@ holen "$CFG" "$CFG_URL" main
 # duerfen von diesem Skript weder angelegt noch geloescht werden.
 mkdir -p "$WURZEL"
 
-if [ ! -e "$WURZEL/images" ]; then
-  sage "WARNUNG: $WURZEL/images fehlt. Ohne dieses Verzeichnis zeigt der"
-  sage "         Downloader keine einzige Datei an. Von Hand wiederherstellen."
+# images/ enthaelt ausschliesslich Zeiger auf den Firmware-Bestand des
+# Downloader-vhosts. Die Zeiger sind in ffnef/images.links versioniert, der
+# Bestand selbst nicht - er liegt ausserhalb und wird hier nie angefasst.
+mkdir -p "$WURZEL/images"
+if [ -r "$CFG/ffnef/images.links" ]; then
+  while read -r name ziel rest; do
+    case "${name:-#}" in ''|\#*) continue ;; esac
+    if [ ! -e "$ziel" ]; then
+      sage "WARNUNG: Ziel fehlt, Symlink wird trotzdem gesetzt: $ziel"
+      sage "         Der Downloader zeigt fuer '$name' dann nichts an."
+    fi
+    ln -sfn "$ziel" "$WURZEL/images/$name"
+    sage "images/$name -> $ziel"
+  done < "$CFG/ffnef/images.links"
+else
+  sage "WARNUNG: $CFG/ffnef/images.links fehlt, images/ bleibt leer."
 fi
 
 setze() {

@@ -1,0 +1,15 @@
+# Symlinks, die in <Webroot>/images/ angelegt werden.
+# Je Zeile: <Name im images-Verzeichnis> <Ziel>
+#
+# Hier steht die Verbindung zum Firmware-Bestand. Der liegt NICHT in diesem
+# Repo und nicht im Webroot, sondern beim Downloader-vhost. Nur der Zeiger
+# darauf ist versioniert -- damit laesst sich der Webroot nach einem rm -rf
+# vollstaendig aus Git wiederherstellen.
+#
+# Beim naechsten Release wird hier das Ziel nachgezogen; das ist dann ein
+# Commit und keine stille Handaenderung auf dem Server mehr.
+#
+# Achtung: die Namen muessen zu den Pfaden in config.js passen
+# (dort "./images/<Name>/..."), sonst findet der Downloader nichts.
+
+stable.2023-2-x  /var/www/download.ffnef.de/firmware/stable.2023.2.6-26091920sta/
