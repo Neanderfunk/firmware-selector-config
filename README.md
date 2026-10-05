@@ -104,6 +104,46 @@ nach einer Umbenennung weiterleitet (geprüft: 200 nach Redirect). Diese
 Weiterleitung **fällt weg**, sobald jemand ein neues Repo namens `firmware`
 anlegt. Beim nächsten Anfassen gerade ziehen.
 
+## `images/stable` ist Absicht -- nicht aufräumen
+
+`config.js` enthält **172 Verzeichniseinträge**: jede Domäne zweimal, einmal
+unter `./images/stable.2023-2-x/…` und einmal unter `./images/stable/…`.
+
+**Der zweite Satz zeigt derzeit ins Leere** (live geprüft: 404), und das ist
+nicht gratis. `app.js` lädt jedes Verzeichnis aus `directories` und wartet,
+bis alle beisammen sind:
+
+    if (directoryLoadCount == Object.keys(config.directories).length)
+
+Die Seite wartet damit bei jedem Aufruf auf 86 Fehlschläge, bevor sie fertig
+ist.
+
+**Trotzdem bleiben die Einträge stehen** (adorfer, 06.10.2026): `images/stable`
+ist der vorgesehene Ort, an dem später die **zusammengeführten Verzeichnisse**
+liegen -- die Zusammenführung der Sackgassen-Images für 4/32-Geräte in den
+Upgrade-Baum. `./images/stable/` ist also das Ziel, und `stable.2023-2-x` ist
+die Übergangsform, die irgendwann verschwindet. Wer die 86 Einträge als
+Dubletten löscht, löscht die Zukunft.
+
+Zu wissen, wenn es so weit ist: `app.js` bildet die Auswahlliste aus den
+**Beschriftungen**, nicht aus den Pfaden, und entfernt dabei Doppelte
+(`ObjectValues(config.directories).filter(…)`). Zwei Pfade mit derselben
+Beschriftung ergeben also einen Eintrag in der Oberfläche, und die gefundenen
+Dateien beider Pfade landen darunter zusammen. Das ist für die Übergangszeit
+genau das gewünschte Verhalten -- aber solange beide Bäume dieselben Dateien
+enthalten, erscheint jede Datei doppelt.
+
+**Zwei Wege bis dahin**, Entscheidung offen:
+
+1. Den `stable`-Block in `config.js` vorerst auskommentieren. Die 86
+   Fehlschläge sind sofort weg, und beim Zusammenführen wird er wieder
+   eingeschaltet.
+2. So lassen. Kostet jeden Besucher die Wartezeit, ändert aber nichts.
+
+Ein Symlink `images/stable` auf **dasselbe** Ziel wie `stable.2023-2-x` wäre
+der dritte Weg und ist der schlechteste: dann steht jede Datei zweimal in der
+Liste.
+
 ## Nächste Schritte
 
 1. ~~Maßgeblichen Stand von der Maschine übernehmen.~~ Erledigt, siehe oben.
