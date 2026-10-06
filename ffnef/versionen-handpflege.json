@@ -1,0 +1,20 @@
+{
+  "zweck": [
+    "Handgepflegte Ergaenzungen zu ffnef/versionen.json. Diese Datei gewinnt",
+    "immer gegen die automatische Vermutung aus der Zaehlung.",
+    "",
+    "Hier gehoert hinein, was keine maschinenlesbare Quelle hergibt: welche",
+    "Hardware-Versionen es in der Welt gibt, die NICHT unterstuetzt werden.",
+    "Je Eintrag bitte die Quelle nennen, damit es nachpruefbar bleibt -",
+    "OpenWrt-Wiki (openwrt.org/toh/...) oder deviwiki.",
+    "",
+    "werkzeug/versionen-holen.py liest diese Datei und ueberschreibt sie nie."
+  ],
+  "geraete": {
+    "tp-link-archer-c7": {
+      "nicht_unterstuetzt": ["v3"],
+      "quelle": "https://openwrt.org/toh/tp-link/archer_c7",
+      "notiz": "Beispiel-Eintrag: die Luecke v3 stammt aus der Zaehlung und ist hier noch NICHT von Hand bestaetigt. Vor dem Anzeigen pruefen."
+    }
+  }
+}

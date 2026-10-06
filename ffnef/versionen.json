@@ -1,0 +1,3620 @@
+{
+ "erzeugt": "2026-10-06",
+ "erzeugt_von": "werkzeug/versionen-holen.py",
+ "geraete": {
+  "adtran-bluesocket-bsap-1800": {
+   "hersteller": "Adtran/Bluesocket",
+   "modell": "BSAP-1800",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "arcadyan-vgv7510kw22": {
+   "hersteller": "Arcadyan",
+   "modell": "VGV7510KW22",
+   "openwrt": [
+    "brn",
+    "nor"
+   ],
+   "wir": [
+    "-"
+   ]
+  },
+  "arcadyan-vgv7519": {
+   "hersteller": "Arcadyan",
+   "modell": "VGV7519",
+   "openwrt": [
+    "brn",
+    "nor"
+   ],
+   "wir": []
+  },
+  "arris-tr4400": {
+   "hersteller": "Arris",
+   "modell": "TR4400",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "askey-rt4230w": {
+   "hersteller": "Askey",
+   "modell": "RT4230W",
+   "openwrt": [
+    "rev6"
+   ],
+   "wir": []
+  },
+  "asus-pl-ac56": {
+   "hersteller": "ASUS",
+   "modell": "PL-AC56",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "asus-rt-ac1200": {
+   "hersteller": "ASUS",
+   "modell": "RT-AC1200",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "asus-rt-ac1300g-plus": {
+   "hersteller": "ASUS",
+   "modell": "RT-AC1300G PLUS",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "asus-rt-ac57u": {
+   "hersteller": "ASUS",
+   "modell": "RT-AC57U",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "asus-rt-ac58u": {
+   "hersteller": "ASUS",
+   "modell": "RT-AC58U",
+   "openwrt": [
+    "v2",
+    "v3"
+   ],
+   "wir": []
+  },
+  "asus-rt-ac59u": {
+   "hersteller": "ASUS",
+   "modell": "RT-AC59U",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "asus-rt-n12-vp": {
+   "hersteller": "ASUS",
+   "modell": "RT-N12 VP",
+   "openwrt": [
+    "b1"
+   ],
+   "wir": []
+  },
+  "asus-rt-n56u": {
+   "hersteller": "ASUS",
+   "modell": "RT-N56U",
+   "openwrt": [
+    "b1"
+   ],
+   "wir": []
+  },
+  "atmel-at91sam9g20-ek": {
+   "hersteller": "Atmel",
+   "modell": "AT91SAM9G20-EK",
+   "openwrt": [
+    "2mmc"
+   ],
+   "wir": []
+  },
+  "avm-fritz-box-3370": {
+   "hersteller": "AVM",
+   "modell": "FRITZ!Box 3370",
+   "openwrt": [
+    "rev. 2 (hynix nand)",
+    "rev. 2 (micron nand)"
+   ],
+   "wir": []
+  },
+  "avm-fritz-box-3490": {
+   "hersteller": "AVM",
+   "modell": "FRITZ!Box 3490",
+   "openwrt": [
+    "micron nand",
+    "other nand"
+   ],
+   "wir": []
+  },
+  "avm-fritz-box-5490": {
+   "hersteller": "AVM",
+   "modell": "FRITZ!Box 5490",
+   "openwrt": [
+    "micron nand",
+    "other nand"
+   ],
+   "wir": []
+  },
+  "avm-fritz-box-7360": {
+   "hersteller": "AVM",
+   "modell": "FRITZ!Box 7360",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": [
+    "v1",
+    "v2"
+   ]
+  },
+  "avm-fritz-box-7490": {
+   "hersteller": "AVM",
+   "modell": "FRITZ!Box 7490",
+   "openwrt": [
+    "micron nand",
+    "other nand"
+   ],
+   "wir": []
+  },
+  "belkin-f9k1109": {
+   "hersteller": "Belkin",
+   "modell": "F9K1109",
+   "openwrt": [
+    "version 1.0"
+   ],
+   "wir": []
+  },
+  "belkin-rt3200": {
+   "hersteller": "Belkin",
+   "modell": "RT3200",
+   "openwrt": [
+    "ubi"
+   ],
+   "wir": []
+  },
+  "british-telecom-bt-business-hub-5": {
+   "hersteller": "British Telecom (BT)",
+   "modell": "Business Hub 5",
+   "openwrt": [
+    "type a"
+   ],
+   "wir": []
+  },
+  "british-telecom-bt-home-hub-2.0": {
+   "hersteller": "British Telecom (BT)",
+   "modell": "Home Hub 2.0",
+   "openwrt": [
+    "a"
+   ],
+   "wir": []
+  },
+  "british-telecom-bt-home-hub-5": {
+   "hersteller": "British Telecom (BT)",
+   "modell": "Home Hub 5",
+   "openwrt": [
+    "type a"
+   ],
+   "wir": []
+  },
+  "buffalo-wbmr-hp-g300h": {
+   "hersteller": "Buffalo",
+   "modell": "WBMR-HP-G300H",
+   "openwrt": [
+    "a",
+    "b"
+   ],
+   "wir": []
+  },
+  "buffalo-wzr-hp-g302h": {
+   "hersteller": "Buffalo",
+   "modell": "WZR-HP-G302H",
+   "openwrt": [
+    "a1a0"
+   ],
+   "wir": []
+  },
+  "cisco-meraki-mx64": {
+   "hersteller": "Cisco Meraki",
+   "modell": "MX64",
+   "openwrt": [
+    "a0"
+   ],
+   "wir": []
+  },
+  "comfast-cf-e110n": {
+   "hersteller": "COMFAST",
+   "modell": "CF-E110N",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "comfast-cf-e120a": {
+   "hersteller": "COMFAST",
+   "modell": "CF-E120A",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "comfast-cf-e130n": {
+   "hersteller": "COMFAST",
+   "modell": "CF-E130N",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "comfast-cf-e314n": {
+   "hersteller": "COMFAST",
+   "modell": "CF-E314N",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "comfast-cf-e355ac": {
+   "hersteller": "COMFAST",
+   "modell": "CF-E355AC",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "comfast-cf-e380ac": {
+   "hersteller": "COMFAST",
+   "modell": "CF-E380AC",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "comfast-cf-ew71": {
+   "hersteller": "COMFAST",
+   "modell": "CF-EW71",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "comfast-cf-wr650ac": {
+   "hersteller": "COMFAST",
+   "modell": "CF-WR650AC",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "comfast-cf-wr752ac": {
+   "hersteller": "COMFAST",
+   "modell": "CF-WR752AC",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "comfast-cf-wr758ac": {
+   "hersteller": "COMFAST",
+   "modell": "CF-WR758AC",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "compex-wpj344": {
+   "hersteller": "Compex",
+   "modell": "WPJ344",
+   "openwrt": [
+    "16m"
+   ],
+   "wir": []
+  },
+  "compex-wpj531": {
+   "hersteller": "Compex",
+   "modell": "WPJ531",
+   "openwrt": [
+    "16m"
+   ],
+   "wir": []
+  },
+  "compex-wpj558": {
+   "hersteller": "Compex",
+   "modell": "WPJ558",
+   "openwrt": [
+    "16m"
+   ],
+   "wir": []
+  },
+  "confiabits-mt7621": {
+   "hersteller": "Confiabits",
+   "modell": "MT7621",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "ctera-c200": {
+   "hersteller": "Ctera",
+   "modell": "C200",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "cudy-ap3000": {
+   "hersteller": "Cudy",
+   "modell": "AP3000",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-ap3000-outdoor": {
+   "hersteller": "Cudy",
+   "modell": "AP3000 Outdoor",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-m3000": {
+   "hersteller": "Cudy",
+   "modell": "M3000",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-re3000": {
+   "hersteller": "Cudy",
+   "modell": "RE3000",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-tr1200": {
+   "hersteller": "Cudy",
+   "modell": "TR1200",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "cudy-tr3000": {
+   "hersteller": "Cudy",
+   "modell": "TR3000",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-wr1300": {
+   "hersteller": "Cudy",
+   "modell": "WR1300",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-wr3000": {
+   "hersteller": "Cudy",
+   "modell": "WR3000",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-wr3000s": {
+   "hersteller": "Cudy",
+   "modell": "WR3000S",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-x6": {
+   "hersteller": "Cudy",
+   "modell": "X6",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1",
+    "v2"
+   ]
+  },
+  "d-link-aquila-pro-ai-m30": {
+   "hersteller": "D-Link",
+   "modell": "AQUILA PRO AI M30",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": [
+    "a1"
+   ]
+  },
+  "d-link-aquila-pro-ai-m60": {
+   "hersteller": "D-Link",
+   "modell": "AQUILA PRO AI M60",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-covr-c1200": {
+   "hersteller": "D-Link",
+   "modell": "COVR-C1200",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-covr-p2500": {
+   "hersteller": "D-Link",
+   "modell": "COVR-P2500",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-covr-x1860": {
+   "hersteller": "D-Link",
+   "modell": "COVR-X1860",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": [
+    "a1"
+   ]
+  },
+  "d-link-dap-1330": {
+   "hersteller": "D-Link",
+   "modell": "DAP-1330",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": [
+    "a1"
+   ]
+  },
+  "d-link-dap-1365": {
+   "hersteller": "D-Link",
+   "modell": "DAP-1365",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": [
+    "a1"
+   ]
+  },
+  "d-link-dap-1620": {
+   "hersteller": "D-Link",
+   "modell": "DAP-1620",
+   "openwrt": [
+    "b1"
+   ],
+   "wir": []
+  },
+  "d-link-dap-1720": {
+   "hersteller": "D-Link",
+   "modell": "DAP-1720",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dap-2230": {
+   "hersteller": "D-Link",
+   "modell": "DAP-2230",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dap-2660": {
+   "hersteller": "D-Link",
+   "modell": "DAP-2660",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": [
+    "a1"
+   ]
+  },
+  "d-link-dap-2680": {
+   "hersteller": "D-Link",
+   "modell": "DAP-2680",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dap-2695": {
+   "hersteller": "D-Link",
+   "modell": "DAP-2695",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dap-3320": {
+   "hersteller": "D-Link",
+   "modell": "DAP-3320",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dap-3662": {
+   "hersteller": "D-Link",
+   "modell": "DAP-3662",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dap-x1860": {
+   "hersteller": "D-Link",
+   "modell": "DAP-X1860",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": [
+    "a1"
+   ]
+  },
+  "d-link-dch-g020": {
+   "hersteller": "D-Link",
+   "modell": "DCH-G020",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dgs-1210-10mp": {
+   "hersteller": "D-Link",
+   "modell": "DGS-1210-10MP",
+   "openwrt": [
+    "f"
+   ],
+   "wir": []
+  },
+  "d-link-dgs-1210-28mp": {
+   "hersteller": "D-Link",
+   "modell": "DGS-1210-28MP",
+   "openwrt": [
+    "f"
+   ],
+   "wir": []
+  },
+  "d-link-dgs-1210-28p": {
+   "hersteller": "D-Link",
+   "modell": "DGS-1210-28P",
+   "openwrt": [
+    "f"
+   ],
+   "wir": []
+  },
+  "d-link-dir-1935": {
+   "hersteller": "D-Link",
+   "modell": "DIR-1935",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-1960": {
+   "hersteller": "D-Link",
+   "modell": "DIR-1960",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-2055": {
+   "hersteller": "D-Link",
+   "modell": "DIR-2055",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-2150": {
+   "hersteller": "D-Link",
+   "modell": "DIR-2150",
+   "openwrt": [
+    "a1",
+    "r1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-2640": {
+   "hersteller": "D-Link",
+   "modell": "DIR-2640",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-2660": {
+   "hersteller": "D-Link",
+   "modell": "DIR-2660",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-3040": {
+   "hersteller": "D-Link",
+   "modell": "DIR-3040",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-3060": {
+   "hersteller": "D-Link",
+   "modell": "DIR-3060",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-629": {
+   "hersteller": "D-Link",
+   "modell": "DIR-629",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-806a": {
+   "hersteller": "D-Link",
+   "modell": "DIR-806A",
+   "openwrt": [
+    "b1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-825": {
+   "hersteller": "D-Link",
+   "modell": "DIR-825",
+   "openwrt": [
+    "b1",
+    "c1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-835": {
+   "hersteller": "D-Link",
+   "modell": "DIR-835",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-842": {
+   "hersteller": "D-Link",
+   "modell": "DIR-842",
+   "openwrt": [
+    "c1",
+    "c2",
+    "c3"
+   ],
+   "wir": []
+  },
+  "d-link-dir-853": {
+   "hersteller": "D-Link",
+   "modell": "DIR-853",
+   "openwrt": [
+    "a1",
+    "a3",
+    "r1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-859": {
+   "hersteller": "D-Link",
+   "modell": "DIR-859",
+   "openwrt": [
+    "a1",
+    "a3"
+   ],
+   "wir": []
+  },
+  "d-link-dir-860l": {
+   "hersteller": "D-Link",
+   "modell": "DIR-860L",
+   "openwrt": [
+    "b1"
+   ],
+   "wir": [
+    "b1"
+   ]
+  },
+  "d-link-dir-867": {
+   "hersteller": "D-Link",
+   "modell": "DIR-867",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-869": {
+   "hersteller": "D-Link",
+   "modell": "DIR-869",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-878": {
+   "hersteller": "D-Link",
+   "modell": "DIR-878",
+   "openwrt": [
+    "a1",
+    "r1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-882": {
+   "hersteller": "D-Link",
+   "modell": "DIR-882",
+   "openwrt": [
+    "a1",
+    "r1"
+   ],
+   "wir": []
+  },
+  "d-link-dra-1360": {
+   "hersteller": "D-Link",
+   "modell": "DRA-1360",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dsl-2740b": {
+   "hersteller": "D-Link",
+   "modell": "DSL-2740B",
+   "openwrt": [
+    "f1"
+   ],
+   "wir": []
+  },
+  "d-link-dsl-2741b": {
+   "hersteller": "D-Link",
+   "modell": "DSL-2741B",
+   "openwrt": [
+    "f1"
+   ],
+   "wir": []
+  },
+  "d-link-dsl-2750b": {
+   "hersteller": "D-Link",
+   "modell": "DSL-2750B",
+   "openwrt": [
+    "b1",
+    "d1"
+   ],
+   "wir": []
+  },
+  "d-link-dsl-2751": {
+   "hersteller": "D-Link",
+   "modell": "DSL-2751",
+   "openwrt": [
+    "d1"
+   ],
+   "wir": []
+  },
+  "d-link-dwr-118": {
+   "hersteller": "D-Link",
+   "modell": "DWR-118",
+   "openwrt": [
+    "a1",
+    "a2"
+   ],
+   "wir": []
+  },
+  "d-link-dwr-921": {
+   "hersteller": "D-Link",
+   "modell": "DWR-921",
+   "openwrt": [
+    "c1",
+    "c3"
+   ],
+   "wir": []
+  },
+  "d-link-dwr-922": {
+   "hersteller": "D-Link",
+   "modell": "DWR-922",
+   "openwrt": [
+    "e2"
+   ],
+   "wir": []
+  },
+  "d-link-dwr-961": {
+   "hersteller": "D-Link",
+   "modell": "DWR-961",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-eagle-pro-ai-m32": {
+   "hersteller": "D-Link",
+   "modell": "EAGLE PRO AI M32",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-eagle-pro-ai-r32": {
+   "hersteller": "D-Link",
+   "modell": "EAGLE PRO AI R32",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "dell-sonicpoint": {
+   "hersteller": "Dell",
+   "modell": "SonicPoint",
+   "openwrt": [
+    "ace (apl26-0ae)"
+   ],
+   "wir": []
+  },
+  "dongwon-t-i-dw02-412h": {
+   "hersteller": "Dongwon T&I",
+   "modell": "DW02-412H",
+   "openwrt": [
+    "(128m)",
+    "(64m)"
+   ],
+   "wir": []
+  },
+  "edimax-br-6208ac": {
+   "hersteller": "Edimax",
+   "modell": "BR-6208AC",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "edimax-br-6478ac": {
+   "hersteller": "Edimax",
+   "modell": "BR-6478AC",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "engenius-eap300": {
+   "hersteller": "EnGenius",
+   "modell": "EAP300",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "engenius-eap350": {
+   "hersteller": "EnGenius",
+   "modell": "EAP350",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "engenius-ecb350": {
+   "hersteller": "EnGenius",
+   "modell": "ECB350",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "engenius-enh202": {
+   "hersteller": "EnGenius",
+   "modell": "ENH202",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "engenius-ens202ext": {
+   "hersteller": "EnGenius",
+   "modell": "ENS202EXT",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "engenius-enstationac": {
+   "hersteller": "EnGenius",
+   "modell": "EnStationAC",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "ezviz-cs-w3-wd1200g": {
+   "hersteller": "EZVIZ",
+   "modell": "CS-W3-WD1200G",
+   "openwrt": [
+    "eup"
+   ],
+   "wir": []
+  },
+  "friendlyarm-nanopi-r4s": {
+   "hersteller": "FriendlyARM",
+   "modell": "NanoPi R4S",
+   "openwrt": [
+    "4gb lpddr4"
+   ],
+   "wir": []
+  },
+  "friendlyarm-nanopi-r4s-enterprise-edition": {
+   "hersteller": "FriendlyARM",
+   "modell": "NanoPi R4S Enterprise Edition",
+   "openwrt": [
+    "4gb lpddr4"
+   ],
+   "wir": []
+  },
+  "gateworks-ventana-family": {
+   "hersteller": "Gateworks",
+   "modell": "Ventana family",
+   "openwrt": [
+    "large nand flash",
+    "normal nand flash"
+   ],
+   "wir": []
+  },
+  "gl.inet-gl-ar300m": {
+   "hersteller": "GL.iNet",
+   "modell": "GL-AR300M",
+   "openwrt": [
+    "lite",
+    "nand",
+    "nor"
+   ],
+   "wir": []
+  },
+  "gl.inet-gl-ar750s": {
+   "hersteller": "GL.iNet",
+   "modell": "GL-AR750S",
+   "openwrt": [
+    "nor",
+    "nor/nand"
+   ],
+   "wir": []
+  },
+  "gl.inet-gl-mt300n": {
+   "hersteller": "GL.iNet",
+   "modell": "GL-MT300N",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "gl.inet-gl-s200": {
+   "hersteller": "GL.iNet",
+   "modell": "GL-S200",
+   "openwrt": [
+    "nor",
+    "nor/nand"
+   ],
+   "wir": []
+  },
+  "gl.inet-gl-x1200": {
+   "hersteller": "GL.iNet",
+   "modell": "GL-X1200",
+   "openwrt": [
+    "nor",
+    "nor/nand"
+   ],
+   "wir": []
+  },
+  "huawei-echolife-hg556a": {
+   "hersteller": "Huawei",
+   "modell": "EchoLife HG556a",
+   "openwrt": [
+    "a",
+    "b",
+    "c"
+   ],
+   "wir": []
+  },
+  "huawei-hg253s": {
+   "hersteller": "Huawei",
+   "modell": "HG253s",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "joowin-jw-wr758ac": {
+   "hersteller": "Joowin",
+   "modell": "JW-WR758AC",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "jotale-js76x8": {
+   "hersteller": "Jotale",
+   "modell": "JS76x8",
+   "openwrt": [
+    "16m",
+    "32m",
+    "8m"
+   ],
+   "wir": []
+  },
+  "kimax-u25awf": {
+   "hersteller": "Kimax",
+   "modell": "U25AWF",
+   "openwrt": [
+    "h1"
+   ],
+   "wir": []
+  },
+  "kpn-experiabox-8": {
+   "hersteller": "KPN",
+   "modell": "Experiabox 8",
+   "openwrt": [
+    "brn",
+    "nor"
+   ],
+   "wir": []
+  },
+  "kt-giga-wifi-home": {
+   "hersteller": "KT",
+   "modell": "GiGA WiFi home",
+   "openwrt": [
+    "(128m)",
+    "(64m)"
+   ],
+   "wir": []
+  },
+  "lantiq-vr9-easy80920": {
+   "hersteller": "Lantiq",
+   "modell": "VR9 EASY80920",
+   "openwrt": [
+    "nand",
+    "nor"
+   ],
+   "wir": []
+  },
+  "libre-computer-all-h3-cc": {
+   "hersteller": "Libre Computer",
+   "modell": "ALL-H3-CC",
+   "openwrt": [
+    "h5"
+   ],
+   "wir": []
+  },
+  "librerouter-librerouter": {
+   "hersteller": "Librerouter",
+   "modell": "LibreRouter",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "linksys-e1550": {
+   "hersteller": "Linksys",
+   "modell": "E1550",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "linksys-e2500": {
+   "hersteller": "Linksys",
+   "modell": "E2500",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v2.1",
+    "v3",
+    "v4"
+   ],
+   "wir": []
+  },
+  "linksys-e3000": {
+   "hersteller": "Linksys",
+   "modell": "E3000",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "linksys-e3200": {
+   "hersteller": "Linksys",
+   "modell": "E3200",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "linksys-e4200": {
+   "hersteller": "Linksys",
+   "modell": "E4200",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "linksys-e8350": {
+   "hersteller": "Linksys",
+   "modell": "E8350",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "linksys-e8450": {
+   "hersteller": "Linksys",
+   "modell": "E8450",
+   "openwrt": [
+    "ubi"
+   ],
+   "wir": []
+  },
+  "linksys-ea4500": {
+   "hersteller": "Linksys",
+   "modell": "EA4500",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "linksys-ea6300": {
+   "hersteller": "Linksys",
+   "modell": "EA6300",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "linksys-ea6350": {
+   "hersteller": "Linksys",
+   "modell": "EA6350",
+   "openwrt": [
+    "v3",
+    "v4"
+   ],
+   "wir": []
+  },
+  "linksys-ea6500": {
+   "hersteller": "Linksys",
+   "modell": "EA6500",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "linksys-ea7300": {
+   "hersteller": "Linksys",
+   "modell": "EA7300",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "linksys-ea7500": {
+   "hersteller": "Linksys",
+   "modell": "EA7500",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "wir": []
+  },
+  "linksys-ea8100": {
+   "hersteller": "Linksys",
+   "modell": "EA8100",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "linksys-ea9200": {
+   "hersteller": "Linksys",
+   "modell": "EA9200",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "linksys-mx4200": {
+   "hersteller": "Linksys",
+   "modell": "MX4200",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "linksys-whw03": {
+   "hersteller": "Linksys",
+   "modell": "WHW03",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "linksys-wrt1900ac": {
+   "hersteller": "Linksys",
+   "modell": "WRT1900AC",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "linksys-wrt1900acs": {
+   "hersteller": "Linksys",
+   "modell": "WRT1900ACS",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "linksys-wrt610n": {
+   "hersteller": "Linksys",
+   "modell": "WRT610N",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "marvell-armada-3700-community-board": {
+   "hersteller": "Marvell",
+   "modell": "Armada 3700 Community Board",
+   "openwrt": [
+    "emmc",
+    "non-emmc",
+    "v7 emmc",
+    "v7 non-emmc"
+   ],
+   "wir": []
+  },
+  "marvell-espressobin": {
+   "hersteller": "Marvell",
+   "modell": "ESPRESSObin",
+   "openwrt": [
+    "emmc",
+    "non-emmc",
+    "ultra",
+    "v7 emmc",
+    "v7 non-emmc"
+   ],
+   "wir": []
+  },
+  "mercury-mac1200r": {
+   "hersteller": "Mercury",
+   "modell": "MAC1200R",
+   "openwrt": [
+    "v2.0"
+   ],
+   "wir": []
+  },
+  "mercury-mw4530r": {
+   "hersteller": "Mercury",
+   "modell": "MW4530R",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "mercusys-mr70x": {
+   "hersteller": "MERCUSYS",
+   "modell": "MR70X",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "netgear-dgnd3700": {
+   "hersteller": "NETGEAR",
+   "modell": "DGND3700",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-eax11": {
+   "hersteller": "NETGEAR",
+   "modell": "EAX11",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-eax15": {
+   "hersteller": "NETGEAR",
+   "modell": "EAX15",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-ex6100": {
+   "hersteller": "NETGEAR",
+   "modell": "EX6100",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-ex6150": {
+   "hersteller": "NETGEAR",
+   "modell": "EX6150",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": [
+    "-"
+   ]
+  },
+  "netgear-ex6250": {
+   "hersteller": "NETGEAR",
+   "modell": "EX6250",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-ex6400": {
+   "hersteller": "NETGEAR",
+   "modell": "EX6400",
+   "openwrt": [
+    "v2",
+    "v3"
+   ],
+   "wir": []
+  },
+  "netgear-ex6410": {
+   "hersteller": "NETGEAR",
+   "modell": "EX6410",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-ex7300": {
+   "hersteller": "NETGEAR",
+   "modell": "EX7300",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-gs108t": {
+   "hersteller": "NETGEAR",
+   "modell": "GS108T",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "netgear-gs110tpp": {
+   "hersteller": "NETGEAR",
+   "modell": "GS110TPP",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-gs110tup": {
+   "hersteller": "NETGEAR",
+   "modell": "GS110TUP",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-gs308t": {
+   "hersteller": "NETGEAR",
+   "modell": "GS308T",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-gs310tp": {
+   "hersteller": "NETGEAR",
+   "modell": "GS310TP",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-nighthawk-ac2100": {
+   "hersteller": "NETGEAR",
+   "modell": "Nighthawk AC2100",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-nighthawk-ac2400": {
+   "hersteller": "NETGEAR",
+   "modell": "Nighthawk AC2400",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-nighthawk-x4-r7500": {
+   "hersteller": "NETGEAR",
+   "modell": "Nighthawk X4 R7500",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-r6200": {
+   "hersteller": "NETGEAR",
+   "modell": "R6200",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-r6300": {
+   "hersteller": "NETGEAR",
+   "modell": "R6300",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-r6700": {
+   "hersteller": "NETGEAR",
+   "modell": "R6700",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-r6900": {
+   "hersteller": "NETGEAR",
+   "modell": "R6900",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-rbr40": {
+   "hersteller": "NETGEAR",
+   "modell": "RBR40",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-rbr50": {
+   "hersteller": "NETGEAR",
+   "modell": "RBR50",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-rbs40": {
+   "hersteller": "NETGEAR",
+   "modell": "RBS40",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-rbs50": {
+   "hersteller": "NETGEAR",
+   "modell": "RBS50",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-readynas-duo": {
+   "hersteller": "NETGEAR",
+   "modell": "ReadyNAS Duo",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-wn2500rp": {
+   "hersteller": "NETGEAR",
+   "modell": "WN2500RP",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-wn3100rp": {
+   "hersteller": "NETGEAR",
+   "modell": "WN3100RP",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "netgear-wndr3400": {
+   "hersteller": "NETGEAR",
+   "modell": "WNDR3400",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "wir": []
+  },
+  "netgear-wndr3700": {
+   "hersteller": "NETGEAR",
+   "modell": "WNDR3700",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5"
+   ],
+   "wir": [
+    "-",
+    "v2",
+    "v4",
+    "v5"
+   ]
+  },
+  "netgear-wndr4000": {
+   "hersteller": "NETGEAR",
+   "modell": "WNDR4000",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "netgear-wndr4300": {
+   "hersteller": "NETGEAR",
+   "modell": "WNDR4300",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": [
+    "-"
+   ]
+  },
+  "netgear-wndr4500": {
+   "hersteller": "NETGEAR",
+   "modell": "WNDR4500",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "netgear-wndrmac": {
+   "hersteller": "NETGEAR",
+   "modell": "WNDRMAC",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v2"
+   ]
+  },
+  "netgear-wnr2200": {
+   "hersteller": "NETGEAR",
+   "modell": "WNR2200",
+   "openwrt": [
+    "16m",
+    "8m",
+    "cn/ru"
+   ],
+   "wir": []
+  },
+  "netgear-wnr3500l": {
+   "hersteller": "NETGEAR",
+   "modell": "WNR3500L",
+   "openwrt": [
+    "v1 (na)",
+    "v1 (row)",
+    "v2"
+   ],
+   "wir": []
+  },
+  "nexx-wt3020": {
+   "hersteller": "Nexx",
+   "modell": "WT3020",
+   "openwrt": [
+    "8m"
+   ],
+   "wir": []
+  },
+  "nucom-r5010un": {
+   "hersteller": "NuCom",
+   "modell": "R5010UN",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "nxp-frwy-ls1046a": {
+   "hersteller": "NXP",
+   "modell": "FRWY-LS1046A",
+   "openwrt": [
+    "default",
+    "sd card boot"
+   ],
+   "wir": []
+  },
+  "nxp-ls1021a-iot": {
+   "hersteller": "NXP",
+   "modell": "LS1021A-IoT",
+   "openwrt": [
+    "sd card boot"
+   ],
+   "wir": []
+  },
+  "nxp-ls1028a-rdb": {
+   "hersteller": "NXP",
+   "modell": "LS1028A-RDB",
+   "openwrt": [
+    "default",
+    "sd card boot"
+   ],
+   "wir": []
+  },
+  "nxp-ls1043a-rdb": {
+   "hersteller": "NXP",
+   "modell": "LS1043A-RDB",
+   "openwrt": [
+    "default",
+    "sd card boot"
+   ],
+   "wir": []
+  },
+  "nxp-ls1046a-rdb": {
+   "hersteller": "NXP",
+   "modell": "LS1046A-RDB",
+   "openwrt": [
+    "default",
+    "sd card boot"
+   ],
+   "wir": []
+  },
+  "nxp-ls1088a-rdb": {
+   "hersteller": "NXP",
+   "modell": "LS1088A-RDB",
+   "openwrt": [
+    "default",
+    "sd card boot"
+   ],
+   "wir": []
+  },
+  "nxp-lx2160a-rdb": {
+   "hersteller": "NXP",
+   "modell": "LX2160A-RDB",
+   "openwrt": [
+    "rev2.0 silicon",
+    "rev2.0 silicon sd card boot"
+   ],
+   "wir": []
+  },
+  "nxp-twr-ls1021a": {
+   "hersteller": "NXP",
+   "modell": "TWR-LS1021A",
+   "openwrt": [
+    "default",
+    "sd card boot"
+   ],
+   "wir": []
+  },
+  "o2-box-6431": {
+   "hersteller": "o2",
+   "modell": "Box 6431",
+   "openwrt": [
+    "brn",
+    "nor"
+   ],
+   "wir": [
+    "-"
+   ]
+  },
+  "olimex-a20-olinuxino-lime2": {
+   "hersteller": "Olimex",
+   "modell": "A20-OLinuXino-LIME2",
+   "openwrt": [
+    "emmc"
+   ],
+   "wir": []
+  },
+  "olimex-a64-olinuxino": {
+   "hersteller": "Olimex",
+   "modell": "A64-Olinuxino",
+   "openwrt": [
+    "emmc"
+   ],
+   "wir": []
+  },
+  "openmesh-mr1750": {
+   "hersteller": "OpenMesh",
+   "modell": "MR1750",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1",
+    "v2"
+   ]
+  },
+  "openmesh-mr600": {
+   "hersteller": "OpenMesh",
+   "modell": "MR600",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1",
+    "v2"
+   ]
+  },
+  "openmesh-mr900": {
+   "hersteller": "OpenMesh",
+   "modell": "MR900",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1",
+    "v2"
+   ]
+  },
+  "openmesh-om2p": {
+   "hersteller": "OpenMesh",
+   "luecke_vermutet": [
+    "v3"
+   ],
+   "modell": "OM2P",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v4"
+   ],
+   "wir": [
+    "v1",
+    "v2",
+    "v4"
+   ]
+  },
+  "openmesh-om2p-hs": {
+   "hersteller": "OpenMesh",
+   "modell": "OM2P-HS",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ],
+   "wir": [
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "openmesh-om5p-ac": {
+   "hersteller": "OpenMesh",
+   "modell": "OM5P-AC",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1",
+    "v2"
+   ]
+  },
+  "p-w-r619ac": {
+   "hersteller": "P&W",
+   "modell": "R619AC",
+   "openwrt": [
+    "128m nand",
+    "64m nand"
+   ],
+   "wir": []
+  },
+  "panasonic-switch-m16eg": {
+   "hersteller": "Panasonic",
+   "modell": "Switch-M16eG",
+   "openwrt": [
+    "pn28160k"
+   ],
+   "wir": []
+  },
+  "panasonic-switch-m24eg": {
+   "hersteller": "Panasonic",
+   "modell": "Switch-M24eG",
+   "openwrt": [
+    "pn28240k"
+   ],
+   "wir": []
+  },
+  "panasonic-switch-m48eg": {
+   "hersteller": "Panasonic",
+   "modell": "Switch-M48eG",
+   "openwrt": [
+    "pn28480k"
+   ],
+   "wir": []
+  },
+  "panasonic-switch-m8eg": {
+   "hersteller": "Panasonic",
+   "modell": "Switch-M8eG",
+   "openwrt": [
+    "pn28080k"
+   ],
+   "wir": []
+  },
+  "phicomm-k2": {
+   "hersteller": "Phicomm",
+   "modell": "K2",
+   "openwrt": [
+    "v22.4 or older",
+    "v22.5 or newer"
+   ],
+   "wir": []
+  },
+  "phicomm-psg1218": {
+   "hersteller": "Phicomm",
+   "modell": "PSG1218",
+   "openwrt": [
+    "bx"
+   ],
+   "wir": []
+  },
+  "plat-home-openblocks-ax3": {
+   "hersteller": "Plat'Home",
+   "modell": "OpenBlocks AX3",
+   "openwrt": [
+    "4 ports"
+   ],
+   "wir": []
+  },
+  "qualcomm-ap148": {
+   "hersteller": "Qualcomm",
+   "modell": "AP148",
+   "openwrt": [
+    "legacy",
+    "standard"
+   ],
+   "wir": []
+  },
+  "qualcomm-atheros-ap143": {
+   "hersteller": "Qualcomm Atheros",
+   "modell": "AP143",
+   "openwrt": [
+    "(16m)",
+    "(8m)"
+   ],
+   "wir": []
+  },
+  "qxwlan-e1700ac": {
+   "hersteller": "Qxwlan",
+   "modell": "E1700AC",
+   "openwrt": [
+    "v2 (16m)",
+    "v2 (8m)"
+   ],
+   "wir": []
+  },
+  "qxwlan-e2600ac": {
+   "hersteller": "Qxwlan",
+   "modell": "E2600AC",
+   "openwrt": [
+    "c1",
+    "c2"
+   ],
+   "wir": []
+  },
+  "qxwlan-e558": {
+   "hersteller": "Qxwlan",
+   "modell": "E558",
+   "openwrt": [
+    "v2 (16m)",
+    "v2 (8m)"
+   ],
+   "wir": []
+  },
+  "qxwlan-e600g": {
+   "hersteller": "Qxwlan",
+   "modell": "E600G",
+   "openwrt": [
+    "v2 (16m)",
+    "v2 (8m)"
+   ],
+   "wir": []
+  },
+  "qxwlan-e600gac": {
+   "hersteller": "Qxwlan",
+   "modell": "E600GAC",
+   "openwrt": [
+    "v2 (16m)",
+    "v2 (8m)"
+   ],
+   "wir": []
+  },
+  "qxwlan-e750a": {
+   "hersteller": "Qxwlan",
+   "modell": "E750A",
+   "openwrt": [
+    "v4 (16m)",
+    "v4 (8m)"
+   ],
+   "wir": []
+  },
+  "qxwlan-e750g": {
+   "hersteller": "Qxwlan",
+   "modell": "E750G",
+   "openwrt": [
+    "v8 (16m)",
+    "v8 (8m)"
+   ],
+   "wir": []
+  },
+  "raisecom-msg1500": {
+   "hersteller": "RAISECOM",
+   "modell": "MSG1500",
+   "openwrt": [
+    "x.00"
+   ],
+   "wir": []
+  },
+  "raspberry-pi-2b-1.2": {
+   "hersteller": "Raspberry Pi",
+   "modell": "2B-1.2",
+   "openwrt": [
+    "(64bit)"
+   ],
+   "wir": []
+  },
+  "raspberry-pi-2b-2b-1.2": {
+   "hersteller": "Raspberry Pi",
+   "modell": "2B/2B 1.2",
+   "openwrt": [
+    "(32bit)"
+   ],
+   "wir": []
+  },
+  "raspberry-pi-3a-3b-3b-cm3-zero2-zero2w": {
+   "hersteller": "Raspberry Pi",
+   "modell": "3A+/3B/3B+/CM3/Zero2/Zero2W",
+   "openwrt": [
+    "(32bit)",
+    "(64bit)"
+   ],
+   "wir": []
+  },
+  "raspberry-pi-3b-3b-cm3": {
+   "hersteller": "Raspberry Pi",
+   "modell": "3B/3B+/CM3",
+   "openwrt": [
+    "(32bit)",
+    "(64bit)"
+   ],
+   "wir": []
+  },
+  "raspberry-pi-4b-400-cm4": {
+   "hersteller": "Raspberry Pi",
+   "modell": "4B/400/CM4",
+   "openwrt": [
+    "(32bit)",
+    "(64bit)"
+   ],
+   "wir": []
+  },
+  "ruijie-rg-ew1200g-pro": {
+   "hersteller": "Ruijie",
+   "modell": "RG-EW1200G PRO",
+   "openwrt": [
+    "v1.1"
+   ],
+   "wir": []
+  },
+  "sagemcom-f-st-2704": {
+   "hersteller": "Sagemcom",
+   "modell": "F@st 2704",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "sagemcom-f-st-3864": {
+   "hersteller": "Sagemcom",
+   "modell": "F@ST 3864",
+   "openwrt": [
+    "op"
+   ],
+   "wir": []
+  },
+  "sercomm-ad1018": {
+   "hersteller": "Sercomm",
+   "modell": "AD1018",
+   "openwrt": [
+    "spi flash mod"
+   ],
+   "wir": []
+  },
+  "sercomm-h500-s": {
+   "hersteller": "Sercomm",
+   "modell": "H500-s",
+   "openwrt": [
+    "lowi",
+    "vfes"
+   ],
+   "wir": []
+  },
+  "sitecom-wlr-4100": {
+   "hersteller": "Sitecom",
+   "modell": "WLR-4100",
+   "openwrt": [
+    "v1 002"
+   ],
+   "wir": []
+  },
+  "snr-cpe-w4n": {
+   "hersteller": "SNR",
+   "modell": "CPE-W4N",
+   "openwrt": [
+    "mt"
+   ],
+   "wir": []
+  },
+  "solidrun-armada-8040-community-board": {
+   "hersteller": "SolidRun",
+   "modell": "Armada 8040 Community Board",
+   "openwrt": [
+    "double shot",
+    "single shot"
+   ],
+   "wir": []
+  },
+  "solidrun-clearfog": {
+   "hersteller": "SolidRun",
+   "modell": "Clearfog",
+   "openwrt": [
+    "gt-8k"
+   ],
+   "wir": []
+  },
+  "solidrun-macchiatobin": {
+   "hersteller": "SolidRun",
+   "modell": "MACCHIATObin",
+   "openwrt": [
+    "double shot",
+    "single shot"
+   ],
+   "wir": []
+  },
+  "sonicwall-sonicpoint": {
+   "hersteller": "SonicWall",
+   "modell": "SonicPoint",
+   "openwrt": [
+    "ace (apl26-0ae)"
+   ],
+   "wir": []
+  },
+  "sophos-red-15w": {
+   "hersteller": "Sophos",
+   "modell": "RED 15w",
+   "openwrt": [
+    "rev.1"
+   ],
+   "wir": []
+  },
+  "technicolor-tg582n": {
+   "hersteller": "Technicolor",
+   "modell": "TG582n",
+   "openwrt": [
+    "telecom italia"
+   ],
+   "wir": []
+  },
+  "teltonika-rut230": {
+   "hersteller": "Teltonika",
+   "modell": "RUT230",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "teltonika-rut955": {
+   "hersteller": "Teltonika",
+   "modell": "RUT955",
+   "openwrt": [
+    "h7v3c0"
+   ],
+   "wir": []
+  },
+  "tp-link-ad7200": {
+   "hersteller": "TP-Link",
+   "modell": "AD7200",
+   "openwrt": [
+    "v1/v2"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-a6": {
+   "hersteller": "TP-Link",
+   "modell": "Archer A6",
+   "openwrt": [
+    "v2 (us/tw)",
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-a7": {
+   "hersteller": "TP-Link",
+   "modell": "Archer A7",
+   "openwrt": [
+    "v5"
+   ],
+   "wir": [
+    "v5"
+   ]
+  },
+  "tp-link-archer-a9": {
+   "hersteller": "TP-Link",
+   "modell": "Archer A9",
+   "openwrt": [
+    "v6"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-ax23": {
+   "hersteller": "TP-Link",
+   "modell": "Archer AX23",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-archer-c2": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2"
+   ],
+   "modell": "Archer C2",
+   "openwrt": [
+    "v1",
+    "v3"
+   ],
+   "wir": [
+    "v1",
+    "v3"
+   ]
+  },
+  "tp-link-archer-c20": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2",
+    "v3"
+   ],
+   "modell": "Archer C20",
+   "openwrt": [
+    "v1",
+    "v4",
+    "v5"
+   ],
+   "wir": [
+    "v1",
+    "v4",
+    "v5"
+   ]
+  },
+  "tp-link-archer-c25": {
+   "hersteller": "TP-Link",
+   "modell": "Archer C25",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-archer-c2600": {
+   "hersteller": "TP-Link",
+   "modell": "Archer C2600",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-c5": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2",
+    "v3"
+   ],
+   "modell": "Archer C5",
+   "openwrt": [
+    "v1",
+    "v4"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-archer-c50": {
+   "hersteller": "TP-Link",
+   "modell": "Archer C50",
+   "openwrt": [
+    "v1",
+    "v3",
+    "v4",
+    "v6 (ca/eu/ru)"
+   ],
+   "wir": [
+    "v1",
+    "v3",
+    "v4"
+   ]
+  },
+  "tp-link-archer-c58": {
+   "hersteller": "TP-Link",
+   "modell": "Archer C58",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-archer-c59": {
+   "hersteller": "TP-Link",
+   "modell": "Archer C59",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-archer-c6": {
+   "hersteller": "TP-Link",
+   "modell": "Archer C6",
+   "openwrt": [
+    "v2 (eu/ru/jp)",
+    "v2 (us)",
+    "v3"
+   ],
+   "wir": [
+    "v3"
+   ]
+  },
+  "tp-link-archer-c60": {
+   "hersteller": "TP-Link",
+   "modell": "Archer C60",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-archer-c6u": {
+   "hersteller": "TP-Link",
+   "modell": "Archer C6U",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-c7": {
+   "handpflege": {
+    "nicht_unterstuetzt": [
+     "v3"
+    ],
+    "notiz": "Beispiel-Eintrag: die Luecke v3 stammt aus der Zaehlung und ist hier noch NICHT von Hand bestaetigt. Vor dem Anzeigen pruefen.",
+    "quelle": "https://openwrt.org/toh/tp-link/archer_c7"
+   },
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v3"
+   ],
+   "modell": "Archer C7",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v4",
+    "v5"
+   ],
+   "wir": [
+    "v2",
+    "v4",
+    "v5"
+   ]
+  },
+  "tp-link-archer-d50": {
+   "hersteller": "TP-Link",
+   "modell": "Archer D50",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-archer-d7": {
+   "hersteller": "TP-Link",
+   "modell": "Archer D7",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-d7b": {
+   "hersteller": "TP-Link",
+   "modell": "Archer D7b",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-mr200": {
+   "hersteller": "TP-Link",
+   "modell": "Archer MR200",
+   "openwrt": [
+    "v5"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-vr200": {
+   "hersteller": "TP-Link",
+   "modell": "Archer VR200",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-vr200v": {
+   "hersteller": "TP-Link",
+   "modell": "Archer VR200v",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-archer-vr2600v": {
+   "hersteller": "TP-Link",
+   "modell": "Archer VR2600v",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-cpe210": {
+   "hersteller": "TP-Link",
+   "modell": "CPE210",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "wir": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "tp-link-cpe220": {
+   "hersteller": "TP-Link",
+   "modell": "CPE220",
+   "openwrt": [
+    "v2",
+    "v3"
+   ],
+   "wir": [
+    "v3"
+   ]
+  },
+  "tp-link-cpe510": {
+   "hersteller": "TP-Link",
+   "modell": "CPE510",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "wir": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "tp-link-cpe605": {
+   "hersteller": "TP-Link",
+   "modell": "CPE605",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-cpe610": {
+   "hersteller": "TP-Link",
+   "modell": "CPE610",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-cpe710": {
+   "hersteller": "TP-Link",
+   "modell": "CPE710",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-deco-m4r": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2",
+    "v3"
+   ],
+   "modell": "Deco M4R",
+   "openwrt": [
+    "v1",
+    "v4"
+   ],
+   "wir": []
+  },
+  "tp-link-deco-s4": {
+   "hersteller": "TP-Link",
+   "modell": "Deco S4",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-eap225": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2"
+   ],
+   "modell": "EAP225",
+   "openwrt": [
+    "v1",
+    "v3",
+    "v4",
+    "v5"
+   ],
+   "wir": []
+  },
+  "tp-link-eap225-outdoor": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2"
+   ],
+   "modell": "EAP225-Outdoor",
+   "openwrt": [
+    "v1",
+    "v3"
+   ],
+   "wir": [
+    "v1",
+    "v3"
+   ]
+  },
+  "tp-link-eap225-wall": {
+   "hersteller": "TP-Link",
+   "modell": "EAP225-Wall",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": [
+    "v2"
+   ]
+  },
+  "tp-link-eap235-wall": {
+   "hersteller": "TP-Link",
+   "modell": "EAP235-Wall",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-eap245": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2"
+   ],
+   "modell": "EAP245",
+   "openwrt": [
+    "v1",
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-eap265-hd": {
+   "hersteller": "TP-Link",
+   "modell": "EAP265 HD",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-eap613": {
+   "hersteller": "TP-Link",
+   "modell": "EAP613",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-eap615-wall": {
+   "hersteller": "TP-Link",
+   "modell": "EAP615-Wall",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-eap660-hd": {
+   "hersteller": "TP-Link",
+   "modell": "EAP660 HD",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-ec220-g5": {
+   "hersteller": "TP-Link",
+   "modell": "EC220-G5",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-ec330-g5u": {
+   "hersteller": "TP-Link",
+   "modell": "EC330-G5u",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-er605": {
+   "hersteller": "TP-Link",
+   "modell": "ER605",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-ex220": {
+   "hersteller": "TP-Link",
+   "modell": "EX220",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-mr600": {
+   "hersteller": "TP-Link",
+   "modell": "MR600",
+   "openwrt": [
+    "v2 (eu)"
+   ],
+   "wir": []
+  },
+  "tp-link-re200": {
+   "hersteller": "TP-Link",
+   "modell": "RE200",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ],
+   "wir": [
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "tp-link-re205": {
+   "hersteller": "TP-Link",
+   "modell": "RE205",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-re210": {
+   "hersteller": "TP-Link",
+   "modell": "RE210",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-re220": {
+   "hersteller": "TP-Link",
+   "modell": "RE220",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-re305": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2"
+   ],
+   "modell": "RE305",
+   "openwrt": [
+    "v1",
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-re350": {
+   "hersteller": "TP-Link",
+   "modell": "RE350",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-re350k": {
+   "hersteller": "TP-Link",
+   "modell": "RE350K",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-re355": {
+   "hersteller": "TP-Link",
+   "modell": "RE355",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-re365": {
+   "hersteller": "TP-Link",
+   "modell": "RE365",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-re450": {
+   "hersteller": "TP-Link",
+   "modell": "RE450",
+   "openwrt": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-re455": {
+   "hersteller": "TP-Link",
+   "modell": "RE455",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-re500": {
+   "hersteller": "TP-Link",
+   "modell": "RE500",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-re650": {
+   "hersteller": "TP-Link",
+   "modell": "RE650",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-sg2008p": {
+   "hersteller": "TP-Link",
+   "modell": "SG2008P",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-sg2210p": {
+   "hersteller": "TP-Link",
+   "modell": "SG2210P",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-sg2452p": {
+   "hersteller": "TP-Link",
+   "modell": "SG2452P",
+   "openwrt": [
+    "v4"
+   ],
+   "wir": []
+  },
+  "tp-link-t1600g-28ts": {
+   "hersteller": "TP-Link",
+   "modell": "T1600G-28TS",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-talon-ad7200": {
+   "hersteller": "TP-Link",
+   "modell": "Talon AD7200",
+   "openwrt": [
+    "v1/v2"
+   ],
+   "wir": []
+  },
+  "tp-link-td-w8960n": {
+   "hersteller": "TP-Link",
+   "modell": "TD-W8960N",
+   "openwrt": [
+    "v5"
+   ],
+   "wir": []
+  },
+  "tp-link-td-w8968": {
+   "hersteller": "TP-Link",
+   "modell": "TD-W8968",
+   "openwrt": [
+    "v3",
+    "v4"
+   ],
+   "wir": []
+  },
+  "tp-link-td-w8970": {
+   "hersteller": "TP-Link",
+   "modell": "TD-W8970",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-td-w8980": {
+   "hersteller": "TP-Link",
+   "modell": "TD-W8980",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-td-w9980": {
+   "hersteller": "TP-LINK",
+   "modell": "TD-W9980",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-td-w9980b": {
+   "hersteller": "TP-LINK",
+   "modell": "TD-W9980B",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-mr3020": {
+   "hersteller": "TP-Link",
+   "modell": "TL-MR3020",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": [
+    "v3"
+   ]
+  },
+  "tp-link-tl-mr3420": {
+   "hersteller": "TP-Link",
+   "modell": "TL-MR3420",
+   "openwrt": [
+    "v5"
+   ],
+   "wir": [
+    "v5"
+   ]
+  },
+  "tp-link-tl-mr6400": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2",
+    "v3"
+   ],
+   "modell": "TL-MR6400",
+   "openwrt": [
+    "v1",
+    "v4",
+    "v5"
+   ],
+   "wir": [
+    "v5"
+   ]
+  },
+  "tp-link-tl-wa1201": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WA1201",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wa801nd": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WA801ND",
+   "openwrt": [
+    "v5"
+   ],
+   "wir": [
+    "v5"
+   ]
+  },
+  "tp-link-tl-wdr3500": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WDR3500",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-tl-wdr3600": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WDR3600",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-tl-wdr4300": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WDR4300",
+   "openwrt": [
+    "v1",
+    "v1 (il)"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-tl-wdr4310": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WDR4310",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wdr4900": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WDR4900",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-tl-wdr6500": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WDR6500",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wdr7500": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WDR7500",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wpa8630": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WPA8630",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wpa8631p": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WPA8631P",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wr1043n": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR1043N",
+   "openwrt": [
+    "v5"
+   ],
+   "wir": [
+    "v5"
+   ]
+  },
+  "tp-link-tl-wr1043n-nd": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR1043N/ND",
+   "openwrt": [
+    "v2",
+    "v3",
+    "v4"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wr1045nd": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR1045ND",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wr2543n-nd": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR2543N/ND",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "-"
+   ]
+  },
+  "tp-link-tl-wr802n": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR802N",
+   "openwrt": [
+    "v4"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wr810n": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR810N",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "tp-link-tl-wr840n": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR840N",
+   "openwrt": [
+    "v4"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wr841hp": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR841HP",
+   "openwrt": [
+    "v2",
+    "v3"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wr841n": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR841N",
+   "openwrt": [
+    "v13"
+   ],
+   "wir": [
+    "v13"
+   ]
+  },
+  "tp-link-tl-wr842n": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v4"
+   ],
+   "modell": "TL-WR842N",
+   "openwrt": [
+    "v3",
+    "v5"
+   ],
+   "wir": [
+    "v3"
+   ]
+  },
+  "tp-link-tl-wr850n": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR850N",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-wr902ac": {
+   "hersteller": "TP-Link",
+   "luecke_vermutet": [
+    "v2"
+   ],
+   "modell": "TL-WR902AC",
+   "openwrt": [
+    "v1",
+    "v3",
+    "v4"
+   ],
+   "wir": [
+    "v1",
+    "v3"
+   ]
+  },
+  "tp-link-tl-wr941hp": {
+   "hersteller": "TP-Link",
+   "modell": "TL-WR941HP",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-wbs210": {
+   "hersteller": "TP-Link",
+   "modell": "WBS210",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-wbs510": {
+   "hersteller": "TP-Link",
+   "modell": "WBS510",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "trendnet-tew-673gru": {
+   "hersteller": "Trendnet",
+   "modell": "TEW-673GRU",
+   "openwrt": [
+    "v1.0r"
+   ],
+   "wir": []
+  },
+  "trendnet-tew-823dru": {
+   "hersteller": "Trendnet",
+   "modell": "TEW-823DRU",
+   "openwrt": [
+    "v1.0r"
+   ],
+   "wir": []
+  },
+  "ubiquiti-airgrid-m5-hp": {
+   "hersteller": "Ubiquiti",
+   "modell": "AirGrid M5 HP",
+   "openwrt": [
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-bullet-m": {
+   "hersteller": "Ubiquiti",
+   "modell": "Bullet M",
+   "openwrt": [
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-litebeam-ac": {
+   "hersteller": "Ubiquiti",
+   "modell": "LiteBeam AC",
+   "openwrt": [
+    "gen2"
+   ],
+   "wir": []
+  },
+  "ubiquiti-litebeam-m5": {
+   "hersteller": "Ubiquiti",
+   "modell": "LiteBeam M5",
+   "openwrt": [
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-nanobeam-ac": {
+   "hersteller": "Ubiquiti",
+   "modell": "NanoBeam AC",
+   "openwrt": [
+    "gen1",
+    "gen1 (xc)",
+    "gen2"
+   ],
+   "wir": []
+  },
+  "ubiquiti-nanobeam-m5": {
+   "hersteller": "Ubiquiti",
+   "modell": "NanoBeam M5",
+   "openwrt": [
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-nanostation-loco-m": {
+   "hersteller": "Ubiquiti",
+   "modell": "Nanostation Loco M",
+   "openwrt": [
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-nanostation-m": {
+   "hersteller": "Ubiquiti",
+   "modell": "Nanostation M",
+   "openwrt": [
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-powerbeam-5ac": {
+   "hersteller": "Ubiquiti",
+   "modell": "PowerBeam 5AC",
+   "openwrt": [
+    "500",
+    "gen2"
+   ],
+   "wir": []
+  },
+  "ubiquiti-powerbeam-m2": {
+   "hersteller": "Ubiquiti",
+   "modell": "PowerBeam M2",
+   "openwrt": [
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-powerbeam-m5": {
+   "hersteller": "Ubiquiti",
+   "modell": "PowerBeam M5",
+   "openwrt": [
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-powerbeam-m5-300": {
+   "hersteller": "Ubiquiti",
+   "modell": "PowerBeam M5 300",
+   "openwrt": [
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-powerbridge-m": {
+   "hersteller": "Ubiquiti",
+   "modell": "PowerBridge M",
+   "openwrt": [
+    "xm"
+   ],
+   "wir": []
+  },
+  "ubiquiti-rocket-5ac": {
+   "hersteller": "Ubiquiti",
+   "modell": "Rocket 5AC",
+   "openwrt": [
+    "lite"
+   ],
+   "wir": []
+  },
+  "ubiquiti-rocket-m": {
+   "hersteller": "Ubiquiti",
+   "modell": "Rocket M",
+   "openwrt": [
+    "xm",
+    "xw"
+   ],
+   "wir": []
+  },
+  "ubiquiti-unifi-ap": {
+   "hersteller": "Ubiquiti",
+   "modell": "UniFi AP",
+   "openwrt": [
+    "lr"
+   ],
+   "wir": [
+    "-"
+   ]
+  },
+  "ubiquiti-unifi-u6-long-range": {
+   "hersteller": "Ubiquiti",
+   "modell": "UniFi U6 Long-Range",
+   "openwrt": [
+    "v1",
+    "v1 u-boot mod",
+    "v2",
+    "v2 u-boot mod",
+    "v3",
+    "v3 u-boot mod"
+   ],
+   "wir": []
+  },
+  "unielec-u7621-01": {
+   "hersteller": "UniElec",
+   "modell": "U7621-01",
+   "openwrt": [
+    "16m"
+   ],
+   "wir": []
+  },
+  "unielec-u7621-06": {
+   "hersteller": "UniElec",
+   "modell": "U7621-06",
+   "openwrt": [
+    "16m",
+    "32m",
+    "64m"
+   ],
+   "wir": []
+  },
+  "unielec-u7623-02": {
+   "hersteller": "UniElec",
+   "modell": "U7623-02",
+   "openwrt": [
+    "emmc/512mib ram (legacy image)"
+   ],
+   "wir": []
+  },
+  "unielec-u7628-01": {
+   "hersteller": "UniElec",
+   "modell": "U7628-01",
+   "openwrt": [
+    "16m"
+   ],
+   "wir": []
+  },
+  "unielec-u7981-01": {
+   "hersteller": "Unielec",
+   "modell": "U7981-01",
+   "openwrt": [
+    "(emmc)",
+    "(nand)"
+   ],
+   "wir": []
+  },
+  "wavlink-ws-wn572hp3": {
+   "hersteller": "Wavlink",
+   "modell": "WS-WN572HP3",
+   "openwrt": [
+    "4g"
+   ],
+   "wir": []
+  },
+  "wevo-w2914ns": {
+   "hersteller": "WeVO",
+   "modell": "W2914NS",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "widora-widora-neo": {
+   "hersteller": "Widora",
+   "modell": "Widora-NEO",
+   "openwrt": [
+    "16m",
+    "32m"
+   ],
+   "wir": []
+  },
+  "xiaomi-mi-router-3g": {
+   "hersteller": "Xiaomi",
+   "modell": "Mi Router 3G",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": [
+    "-",
+    "v2"
+   ]
+  },
+  "xiaomi-mi-router-4a": {
+   "hersteller": "Xiaomi",
+   "modell": "Mi Router 4A",
+   "openwrt": [
+    "100m edition",
+    "100m international edition",
+    "100m international edition v2",
+    "gigabit edition",
+    "gigabit edition v2"
+   ],
+   "wir": []
+  },
+  "xiaomi-miwifi-range-extender-ac1200": {
+   "hersteller": "Xiaomi",
+   "modell": "MiWiFi Range Extender AC1200 ",
+   "openwrt": [
+    "ra75"
+   ],
+   "wir": []
+  },
+  "zbtlink-zbt-we1026-5g": {
+   "hersteller": "Zbtlink",
+   "modell": "ZBT-WE1026-5G",
+   "openwrt": [
+    "16m"
+   ],
+   "wir": []
+  },
+  "zbtlink-zbt-we1026-h": {
+   "hersteller": "Zbtlink",
+   "modell": "ZBT-WE1026-H",
+   "openwrt": [
+    "32m"
+   ],
+   "wir": []
+  },
+  "zbtlink-zbt-we826": {
+   "hersteller": "Zbtlink",
+   "modell": "ZBT-WE826",
+   "openwrt": [
+    "16m",
+    "32m"
+   ],
+   "wir": []
+  },
+  "zbtlink-zbt-wg1602": {
+   "hersteller": "Zbtlink",
+   "modell": "ZBT-WG1602",
+   "openwrt": [
+    "16m"
+   ],
+   "wir": []
+  },
+  "zbtlink-zbt-wg1602-v04": {
+   "hersteller": "Zbtlink",
+   "modell": "ZBT-WG1602-V04",
+   "openwrt": [
+    "16m",
+    "32m"
+   ],
+   "wir": []
+  },
+  "zbtlink-zbt-wg1608": {
+   "hersteller": "Zbtlink",
+   "modell": "ZBT-WG1608",
+   "openwrt": [
+    "16m",
+    "32m"
+   ],
+   "wir": []
+  },
+  "zbtlink-zbt-wg3526": {
+   "hersteller": "Zbtlink",
+   "modell": "ZBT-WG3526",
+   "openwrt": [
+    "16m",
+    "32m"
+   ],
+   "wir": []
+  },
+  "zyxel-ex5601-t0": {
+   "hersteller": "Zyxel",
+   "modell": "EX5601-T0",
+   "openwrt": [
+    "(openwrt u-boot layout)",
+    "(stock layout)"
+   ],
+   "wir": []
+  },
+  "zyxel-gs1900-24": {
+   "hersteller": "ZyXEL",
+   "modell": "GS1900-24",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "zyxel-gs1900-24hp": {
+   "hersteller": "ZyXEL",
+   "modell": "GS1900-24HP",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "zyxel-gs1900-8": {
+   "hersteller": "ZyXEL",
+   "modell": "GS1900-8",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "zyxel-gs1900-8hp": {
+   "hersteller": "ZyXEL",
+   "modell": "GS1900-8HP",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "zyxel-keenetic-lite-iii": {
+   "hersteller": "ZyXEL",
+   "modell": "Keenetic Lite III",
+   "openwrt": [
+    "a"
+   ],
+   "wir": []
+  },
+  "zyxel-nbg-419n": {
+   "hersteller": "ZyXEL",
+   "modell": "NBG-419N",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "zyxel-nsa325": {
+   "hersteller": "ZyXEL",
+   "modell": "NSA325",
+   "openwrt": [
+    "v1/v2"
+   ],
+   "wir": []
+  },
+  "zyxel-nwa1100": {
+   "hersteller": "ZyXEL",
+   "modell": "NWA1100",
+   "openwrt": [
+    "nh"
+   ],
+   "wir": []
+  },
+  "zyxel-nwa1121": {
+   "hersteller": "ZyXEL",
+   "modell": "NWA1121",
+   "openwrt": [
+    "ni"
+   ],
+   "wir": []
+  },
+  "zyxel-nwa1123": {
+   "hersteller": "ZyXEL",
+   "modell": "NWA1123",
+   "openwrt": [
+    "ac",
+    "ni"
+   ],
+   "wir": []
+  },
+  "zyxel-p-2601hn": {
+   "hersteller": "ZyXEL",
+   "modell": "P-2601HN",
+   "openwrt": [
+    "f1/f3"
+   ],
+   "wir": []
+  },
+  "zyxel-p-2812hnu": {
+   "hersteller": "ZyXEL",
+   "modell": "P-2812HNU",
+   "openwrt": [
+    "f1"
+   ],
+   "wir": []
+  }
+ },
+ "hinweis": "luecke_vermutet ist eine VERMUTUNG aus der Zaehlung, keine belegte Tatsache. Belegtes gehoert nach versionen-handpflege.json.",
+ "quellen": {
+  "eigener_server": "https://download.ffnef.de/firmware/stable/02_met/sysupgrade/",
+  "openwrt": [
+   "https://downloads.openwrt.org/releases/23.05.5/.overview.json",
+   "https://downloads.openwrt.org/releases/24.10.0/.overview.json"
+  ]
+ }
+}
