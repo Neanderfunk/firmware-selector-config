@@ -11,14 +11,21 @@
    Die Bildkacheln sind inline-block, deshalb setzt sich der Kasten als
    weitere inline-block-Kachel daneben, ohne dass am Upstream-Stylesheet
    etwas geaendert werden muss. */
+/* app.css legt .imagePreview als Raster mit vier gleichen Spalten an. Ohne
+   Zutun landet der Kasten deshalb in einer 25-Prozent-Spalte, und die
+   Bildkachel streckt sich auf die Hoehe des Kastens. Also: der Kasten nimmt
+   die uebrigen Spalten, und beide stehen oben buendig. */
 #wizard .imagePreview .ffnef-versionen {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 26em;
+  grid-column: 2 / -1;
+  align-self: start;
   margin: 0.5em;
   padding: 0.5em 0.8em;
   text-align: left;
   border-left: 3px solid #ccc;
+}
+
+#wizard .imagePreview .preview.selected {
+  align-self: start;
 }
 
 #wizard .imagePreview .ffnef-versionen h2 {
@@ -59,10 +66,11 @@
 }
 
 /* Schmale Anzeigen: der Kasten gehoert dann unter das Bild, nicht daneben. */
-@media (max-width: 48em) {
+/* Schmale Anzeigen: app.css schaltet das Raster dort auf eine oder zwei
+   Spalten. Der Kasten gehoert dann unter das Bild ueber die volle Breite. */
+@media (max-width: 700px) {
   #wizard .imagePreview .ffnef-versionen {
-    display: block;
-    max-width: none;
+    grid-column: 1 / -1;
     border-left: none;
     border-top: 3px solid #ccc;
   }

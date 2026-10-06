@@ -35,6 +35,20 @@
     return false;
   }
 
+  /* "v10" gehoert hinter "v9", nicht davor: also nach der Zahl sortieren,
+     nicht nach dem Text. Bezeichnungen, die keine Zahl enthalten (etwa
+     "c1/c2" beim DIR-615), bleiben in ihrer Reihenfolge und stehen hinten. */
+  function nachVersion(liste) {
+    var mitZahl = [], ohne = [];
+    liste.forEach(function (v) {
+      var m = /^v(\d+)(?:\.(\d+))?$/i.exec(String(v).trim());
+      if (m) mitZahl.push({ v: v, a: +m[1], b: +(m[2] || 0) });
+      else ohne.push(v);
+    });
+    mitZahl.sort(function (x, y) { return x.a - y.a || x.b - y.b; });
+    return mitZahl.map(function (e) { return e.v; }).concat(ohne);
+  }
+
   function aufzaehlung(liste) {
     if (liste.length === 1) return liste[0];
     return liste.slice(0, -1).join(', ') + ' und ' + liste[liste.length - 1];
@@ -109,6 +123,8 @@
     unsere.forEach(function (v) {
       if (gewaehlt && !gleich(v, gewaehlt) && !enthaelt(andere, v)) andere.push(v);
     });
+    /* Ist noch nichts gewaehlt, bleiben unsere eigenen Versionen aussen vor:
+       sie stehen dann unter "gibt es fuer". */
     bekannt.forEach(function (v) {
       if (!enthaelt(unsere, v) && !enthaelt(andere, v)) andere.push(v);
     });
@@ -127,7 +143,9 @@
     if (andere.length === 0 && belege.length === 0 && warnungen.length === 0) {
       return null;
     }
-    return { gewaehlt: gewaehlt, andere: andere, belege: belege, warnungen: warnungen };
+    return { gewaehlt: gewaehlt, unsere: nachVersion(unsere),
+             andere: nachVersion(andere),
+             belege: belege, warnungen: warnungen };
   }
 
   function kasten(vendor, model, unsere, gewaehlt) {
@@ -141,6 +159,11 @@
 
     if (gewaehlt) {
       box.appendChild(el('p', 'ffnef-gilt', 'Diese Firmware ist für ' + gewaehlt + '.'));
+    } else if (unsere.length) {
+      /* Vor der Wahl ist der Hinweis am nuetzlichsten: wer gerade ueberlegt,
+         welches Geraet er kauft, will jetzt wissen, welche Fassung geht. */
+      box.appendChild(el('p', 'ffnef-gilt',
+        'Diese Firmware gibt es für ' + aufzaehlung(unsere) + '.'));
     }
     if (andere.length) {
       box.appendChild(el('p', 'ffnef-gilt-nicht',
@@ -175,7 +198,7 @@
     if (einzigeVersionWaehlen(select)) return;   // zeichnet gleich erneut
 
     var stand = ausAuswahl(select);
-    if (!stand.gewaehlt) return;                 // noch nichts ausgewaehlt
+    if (!stand.alle.length) return;              // Geraet ohne Versionsangabe
 
     var box = kasten(gewaehltesBild.getAttribute('data-vendor'),
                      gewaehltesBild.getAttribute('data-model'),
@@ -216,7 +239,8 @@
 
   /* Nur fuer die Pruefung ohne Browser. Im Browser gibt es kein module. */
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { aussagen: aussagen, aufzaehlung: aufzaehlung };
+    module.exports = { aussagen: aussagen, aufzaehlung: aufzaehlung,
+                       nachVersion: nachVersion };
     return;
   }
 

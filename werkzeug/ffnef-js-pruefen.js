@@ -51,11 +51,16 @@ pruefe('Cudy WR3000 E: Flashchip-Warnung kommt an',
 
 // Mehrere eigene Versionen: die uebrigen eigenen gehoeren mit in die Liste.
 const c7 = ffnef.aussagen(daten['TP-Link|Archer C7'], ['v2', 'v4'], 'v2');
-pruefe('Archer C7, v2 gewaehlt', c7 && c7.andere, ['v4', 'v1', 'v5']);
+pruefe('Archer C7, v2 gewaehlt', c7 && c7.andere, ['v1', 'v4', 'v5']);
 
 // Dieselbe Rechnung mit der anderen Auswahl.
 const c7b = ffnef.aussagen(daten['TP-Link|Archer C7'], ['v2', 'v4'], 'v4');
-pruefe('Archer C7, v4 gewaehlt', c7b && c7b.andere, ['v2', 'v1', 'v5']);
+pruefe('Archer C7, v4 gewaehlt', c7b && c7b.andere, ['v1', 'v2', 'v5']);
+
+// v10 gehoert hinter v9, nicht zwischen v1 und v2.
+pruefe('Sortierung zaehlt die Zahl, nicht den Text',
+  ffnef.nachVersion(['v10', 'v2', 'v1', 'c1/c2', 'v9']),
+  ['v1', 'v2', 'v9', 'v10', 'c1/c2']);
 
 // Gross- und Kleinschreibung darf keinen Unterschied machen.
 pruefe('V1 und v1 sind dasselbe',
