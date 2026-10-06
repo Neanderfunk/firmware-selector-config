@@ -61,6 +61,9 @@ var devices_recommended = {
     "FRITZ!WLAN Repeater 300E": "avm-fritz-wlan-repeater-300e",
     "FRITZ!WLAN Repeater 450E": "avm-fritz-wlan-repeater-450e",
     "FRITZ!WLAN Repeater 1750E": "avm-fritz-wlan-repeater-1750e",
+    "FRITZ!Box 3390": "avm-fritz-box-3390",
+    "FRITZ!Box 7430": "avm-fritz-box-7430",
+    "FRITZ!Repeater 3000": "avm-fritz-repeater-3000"
   },
 
   "Buffalo": {
@@ -92,6 +95,7 @@ var devices_recommended = {
     "WR3000 S": "cudy-wr3000s",
     "WR3000 H (AX3000)": "cudy-wr3000h",
     "X6": "cudy-x6",
+    "M1800": "cudy-m1800"
   },
 
   "D-Link": {
@@ -143,6 +147,7 @@ var devices_recommended = {
     "NanoPi R2S": "friendlyelec-nanopi-r2s",
     "NanoPi R3S": "friendlyelec-nanopi-r3s",
     "NanoPi R4S": "friendlyelec-nanopi-r4s",
+    "NanoPi R2C": "friendlyelec-nanopi-r2c"
   },
 
   "Genexis": {
@@ -193,7 +198,9 @@ var devices_recommended = {
   "Linksys": {
     "WRT1200AC": "linksys-wrt1200ac",
     "E4200": {"linksys-e4200-v2-viper": "v2"},
-    "E8450": {"linksys-e8450": "", "linksys-e8450-ubi-sysupgrade.itb": ""},
+    "E8450": {"linksys-e8450": "", "linksys-e8450-ubi": ""},
+    "EA8300": "linksys-ea8300-dallas",
+    "MR8300": "linksys-mr8300-dallas"
   },
 
   "Meraki": {
@@ -218,6 +225,10 @@ var devices_recommended = {
     "nand": {"mikrotik-nand-64m" : "64m", "mikrotik-nand-large" : "large", "mikrotik-nand-large-ac": "large AC"},
     "nor": {"mikrotik-rb-nor-flash-16M-sysupgrade": "16m", "mikrotik-rb-nor-flash-16M-ac": "16m AC"},
     "vmlinux": {"mikrotik-vmlinux-lzma" : "", "mikrotik-vmlinux.lzma" : ""},
+    "RB750Gr3 (hEX)": {"mikrotik-routerboard-750gr3": "", "mikrotik-routerboard-hex-v3": ""},
+    "RBmAPL-2nD (mAP lite)": {"mikrotik-routerboard-map-lite": "", "mikrotik-routerboard-mapl-2nd": ""},
+    "RBwAPG-5HacD2HnD (wAP ac)": {"mikrotik-routerboard-wap-ac-d2": "", "mikrotik-wap-ac": ""},
+    "RBwAPG-5HacT2HnD (wAP ac)": {"mikrotik-routerboard-wap-ac-t2": "", "mikrotik-routerboard-wap-g-5hact2hnd": ""}
   },
 
   "Netgear": {
@@ -260,6 +271,7 @@ var devices_recommended = {
       "netgear-wndrmac": "v1",
       "netgear-wndrmacv2": "v2", "netgear-wndrmac-v2": "v2"
     },
+    "WAX206": "netgear-wax206"
   },
 
   "Nexx": {
@@ -405,6 +417,7 @@ var devices_recommended = {
     "TL-WR902AC": {"tp-link-tl-wr902ac-v3": "v3", "tp-link-tl-wr902ac-v4": "v4"},
     "WBS210": "tp-link-wbs210",
     "WBS510": "tp-link-wbs510",
+    "EAP225-Wall": "tp-link-eap225-wall"
   },
 
   "Totolink": {
@@ -446,6 +459,7 @@ var devices_recommended = {
     "UniFi AP Outdoor": {"ubiquiti-unifi-outdoor": "", "ubiquiti-unifiap-outdoor": ""},
     "UniFi AP Outdoor+": {"ubiquiti-unifi-outdoor-plus": "", "ubiquiti-unifiap-outdoor+": "", "ubiquiti-unifiap-outdoor%2B": "", "ubiquiti-unifiap-outdoor%2b": "", "ubiquiti-unifi-ap-outdoor+": ""},
     "UniFi nanoHD": "ubiquiti-unifi-nanohd",
+    "Rocket M (XM)": "ubiquiti-rocket-m-xm"
   },
 
   "VoCore": {
@@ -501,6 +515,7 @@ var devices_recommended = {
   "ZTE": {
     "MF281": "zte-mf281",
     "MF289F": "zte-mf289f",
+    "MF286R": "zte-mf286r"
   },
 };
 
