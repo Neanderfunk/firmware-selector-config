@@ -21,9 +21,11 @@ WURZEL="${1:-/var/www/routersoftware.ffnef.de}"
 BASIS="$(dirname "$WURZEL")"
 UP="$BASIS/selector-upstream"
 CFG="$BASIS/selector-config"
+BILD="$BASIS/selector-pictures"
 
 UP_URL="https://github.com/Neanderfunk/gluon-firmware-selector.git"
 CFG_URL="https://github.com/Neanderfunk/firmware-selector-config.git"
+BILD_URL="https://github.com/freifunk/device-pictures.git"
 
 sage() { echo "deploy: $*"; }
 
@@ -42,6 +44,7 @@ holen() {
 
 holen "$UP"  "$UP_URL"  main
 holen "$CFG" "$CFG_URL" main
+holen "$BILD" "$BILD_URL" master
 
 # --- Webroot vorbereiten -----------------------------------------------
 # "images" wird bewusst NICHT angefasst. Dort liegen die Firmware-Dateien
@@ -77,7 +80,45 @@ setze() {
 setze "$UP/app.js"     app.js
 setze "$UP/app.css"    app.css
 setze "$UP/router.png" router.png
-setze "$UP/pictures"   pictures
+
+# --- Geraetebilder --------------------------------------------------------
+# pictures/ ist ein ECHTES Verzeichnis voller Symlinks, kein Symlink auf ein
+# Verzeichnis: nur so lassen sich die Zeichnungen aus device-pictures und
+# unsere eigenen Dateien in einem Verzeichnis zusammenlegen, ohne eine der
+# beiden Quellen zu veraendern.
+rm -rf "$WURZEL/pictures"
+mkdir -p "$WURZEL/pictures"
+anz=0
+for f in "$BILD"/pictures-svg/*.svg; do
+  [ -e "$f" ] || continue
+  ln -sfn "$f" "$WURZEL/pictures/$(basename "$f")"
+  anz=$((anz+1))
+done
+sage "$anz Zeichnungen aus device-pictures verknuepft"
+
+# Namensabweichungen: zusaetzlicher Zeiger unter unserem Namen
+if [ -r "$CFG/ffnef/bilder.zuordnung" ]; then
+  z=0
+  while read -r unser ihr rest; do
+    case "${unser:-#}" in ''|\#*) continue ;; esac
+    if [ -e "$BILD/pictures-svg/$ihr.svg" ]; then
+      ln -sfn "$BILD/pictures-svg/$ihr.svg" "$WURZEL/pictures/$unser.svg"
+      z=$((z+1))
+    else
+      sage "WARNUNG: Zuordnung zeigt ins Leere: $unser -> $ihr"
+    fi
+  done < "$CFG/ffnef/bilder.zuordnung"
+  sage "$z Namensabweichungen zugeordnet"
+fi
+
+# Eigene Bilder zuletzt: sie ueberschreiben alles Vorherige
+e=0
+for f in "$CFG"/ffnef/bilder/*.svg; do
+  [ -e "$f" ] || continue
+  ln -sfn "$f" "$WURZEL/pictures/$(basename "$f")"
+  e=$((e+1))
+done
+sage "$e eigene Bilder eingehaengt"
 
 # Unsere Dateien: ueberschreiben den Upstream dort, wo wir abweichen
 setze "$CFG/ffnef/index.html" index.html

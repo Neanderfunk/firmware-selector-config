@@ -1,0 +1,14 @@
+# Geraete, deren Bildname im Downloader anders lautet als in
+# freifunk/device-pictures. Je Zeile: <Name laut devices.js> <Name im Bildrepo>
+#
+# deploy.sh legt dafuer einen Symlink an. So bleibt das Bildrepo unberuehrt
+# und nachziehbar, und wir kopieren keine einzige Datei.
+#
+# Zwei Faelle sind reine Schreibweise (wir "gl.inet-", das Repo "gl-inet-"),
+# drei sind Varianten-Suffixe fuer dasselbe Geraet.
+
+d-link-dap-1330-rev        d-link-dap-1330
+gl.inet-gl-ar300m-nor      gl-inet-gl-ar300m-nor
+gl.inet-gl-mt1300          gl-inet-gl-mt1300
+ubiquiti-rocket-m5-ti      ubiquiti-rocket-m5
+zbt-wg3526-16m             zbt-wg3526

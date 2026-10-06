@@ -132,7 +132,7 @@ var config = {
   experimental_branches: ['experimental'],
   // path to preview pictures directory
   preview_pictures: 'pictures/',
-  preview_pictures_ext: '.jpg',
+  preview_pictures_ext: '.svg',
   // link to changelog
   changelog: 'https://github.com/Neanderfunk/firmware/blob/v2023.2.x/docs/release-notes-2023.2.6.md',
   // links for instructions like flashing of certain devices (optional)
