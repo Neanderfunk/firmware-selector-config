@@ -96,11 +96,14 @@
     return a;
   }
 
-  function hinweisBlock(h) {
+  /* Die Einleitung haengt davon ab, worum es geht. Bei einer nicht
+     unterstuetzten Hardware-Version erkennt man seine Version, bei einer
+     Warnung zur Fertigungsreihe erkennt man das betroffene Geraet. */
+  function hinweisBlock(h, einleitung) {
     var block = el('div', 'ffnef-beleg');
     if (h.erkennbar_an) {
       block.appendChild(el('p', 'ffnef-erkennbar',
-        'Woran du deine Version erkennst: ' + h.erkennbar_an));
+        einleitung + ' ' + h.erkennbar_an));
     }
     if (h.grund) block.appendChild(el('p', 'ffnef-grund', h.grund));
     if (h.quelle) {
@@ -174,12 +177,14 @@
       var t = el('p', 'ffnef-belegt',
         aufzaehlung(b.nicht_unterstuetzt) + ' wird nicht unterstützt.');
       box.appendChild(t);
-      box.appendChild(hinweisBlock(b));
+      box.appendChild(hinweisBlock(b, 'Woran du deine Version erkennst:'));
     });
 
     if (warnungen.length) {
       box.appendChild(el('h2', null, 'Außerdem zu beachten'));
-      warnungen.forEach(function (w) { box.appendChild(hinweisBlock(w)); });
+      warnungen.forEach(function (w) {
+        box.appendChild(hinweisBlock(w, 'Woran du erkennst, ob dein Gerät betroffen ist:'));
+      });
     }
     return box;
   }
