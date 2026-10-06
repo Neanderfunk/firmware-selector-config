@@ -60,8 +60,10 @@
    "grund": "Cudy verbaut dort einen anderen Flash-Chip (F50L1G41LC). Aeltere OpenWrt-Staende kennen ihn nicht; das Geraet startet danach nicht mehr. Der Fix ist erst in OpenWrt 24.10.5 (Dezember 2025).",
    "quelle": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download (Cudy-FAQ) sowie https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547",
    "stand": "2026-10-06",
-   "betrifft_uns": "JA fuer v2023.2.x: dort kennt der Kernel nur F50L1G41LB und F50D1G41LB, nicht LC. Ein heute gekaufter Cudy mit Seriennummer ab 2543 laesst sich mit unserer laufenden Firmware nicht in Betrieb nehmen. v2025.1.x hat den Backport-Patch und kann die Hardware.",
-   "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md, Abschnitt \"Der wichtigere Befund: neuer Flash-Chip\". Dort steht auch der Blick in den Baum; hier nicht wiederholen."
+   "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
+   "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
+   "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein.",
+   "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht."
   }
  }
 }
