@@ -44,7 +44,7 @@ holen() {
 
 holen "$UP"  "$UP_URL"  main
 holen "$CFG" "$CFG_URL" main
-holen "$BILD" "$BILD_URL" master
+holen "$BILD" "$BILD_URL" main
 
 # --- Webroot vorbereiten -----------------------------------------------
 # "images" wird bewusst NICHT angefasst. Dort liegen die Firmware-Dateien
