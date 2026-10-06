@@ -33,10 +33,12 @@ var config = {
 
   // Was in der Domaenenauswahl in Klammern steht. Ohne diese Zeile zeigt
   // app.js die ganze gefundene Version, also "18_nefuk-26091920sta-".
-  // Gewollt ist nur die Kennung: "18_nefuk-". Gegriffen wird die erste
-  // Gruppe, deshalb die Klammer um Nummer und Kuerzel.
+  // Gewollt ist nur die Kennung: "18_nefuk". Gegriffen wird die erste
+  // Gruppe, deshalb liegt der abschliessende Bindestrich ausserhalb der
+  // Klammer - er muss im Ausdruck stehen bleiben, damit die Kennung sicher
+  // am Trenner endet, wird aber nicht mit angezeigt.
   // Betrifft nur die Anzeige; intern bleibt die volle Version erhalten.
-  prettyPrintVersionRegex: '^([0-9]+_[a-z]+-)',
+  prettyPrintVersionRegex: '^([0-9]+_[a-z]+)-',
   // relative image paths and branch
   directories: {
         './images/stable/02_met/sysupgrade/': 'Mettmann',
