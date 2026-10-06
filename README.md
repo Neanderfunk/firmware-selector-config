@@ -222,6 +222,29 @@ Beschriftung ergeben also einen Eintrag in der Oberfläche, und die Dateien
 beider Pfade landen darunter zusammen -- aber jede Datei, die in beiden Bäumen
 liegt, erscheint dann auch zweimal in der Liste.
 
+## Beim Bearbeiten von `config.js`: beide Zeilen einer Domäne
+
+Jede Domäne steht in `directories` **zweimal** -- einmal für `sysupgrade`,
+einmal für `factory`:
+
+    './images/stable/18_nefuk/sysupgrade/': 'Neanderfunk Unterkünfte',
+    './images/stable/18_nefuk/factory/':    'Neanderfunk Unterkünfte',
+
+**Die Beschriftung muss in beiden Zeilen zeichengenau gleich lauten.**
+`app.js` baut die Auswahlliste aus den Beschriftungen und entfernt dabei
+Doppelte -- nicht über den Pfad, sondern über den Text:
+
+    var branches = ObjectValues(config.directories).filter(…)
+
+Weichen die beiden Zeilen voneinander ab, erscheint die Domäne deshalb
+**zweimal** in der Auswahl, und eine der beiden Hälften kennt dann nur
+Upgrade- oder nur Erstinstallationsimages. Ein Tippfehler in einer Zeile ist
+also kein Schönheitsfehler, sondern ein sichtbarer Doppeleintrag.
+
+Dasselbe gilt für die Domänenkennung in der Anzeige: was in den Knöpfen in
+Klammern steht, kommt aus `prettyPrintVersionRegex` und nicht aus der
+Beschriftung.
+
 ## Nächste Schritte
 
 1. ~~Maßgeblichen Stand von der Maschine übernehmen.~~ Erledigt, siehe oben.
