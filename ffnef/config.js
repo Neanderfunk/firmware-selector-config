@@ -30,6 +30,13 @@ var config = {
   community_prefix: /gluon-[a-z]{0,}-{0,1}/i,
   // firmware version regex
   version_regex: '(([0-9][0-9](?:\_)[a-z]+)(?:\-)[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9](?:\sta\-))',
+
+  // Was in der Domaenenauswahl in Klammern steht. Ohne diese Zeile zeigt
+  // app.js die ganze gefundene Version, also "18_nefuk-26091920sta-".
+  // Gewollt ist nur die Kennung: "18_nefuk-". Gegriffen wird die erste
+  // Gruppe, deshalb die Klammer um Nummer und Kuerzel.
+  // Betrifft nur die Anzeige; intern bleibt die volle Version erhalten.
+  prettyPrintVersionRegex: '^([0-9]+_[a-z]+-)',
   // relative image paths and branch
   directories: {
         './images/stable/02_met/sysupgrade/': 'Mettmann',
