@@ -11,10 +11,16 @@
      Lizenz:   CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
      Diese abgeleitete Zeichnung steht unter derselben Lizenz (Share Alike).
 
-     Werkzeug: Vorlage freigestellt und auf 320 px gebracht, dann
-               vtracer --mode polygon --color_precision 7 --filter_speckle 4.
+     Werkzeug: Vorlage freigestellt und auf 320 px gebracht, dann vtracer mit
+               mode=polygon, color_precision=7, filter_speckle=4.
                320 px statt 512 px bewusst: bei gleicher Darstellung ein
-               Drittel der Dateigroesse. -->
+               Drittel der Dateigroesse.
+
+     ACHTUNG: In diesem Kommentar duerfen keine zwei aufeinanderfolgenden
+     Bindestriche stehen. XML verbietet das, die Datei waere dann nicht
+     wohlgeformt und der Browser zeigt sie gar nicht an. Genau daran ist die
+     erste Fassung gescheitert, weil dort die vtracer-Aufrufparameter mit
+     ihren Doppelstrichen standen. -->
 <!-- Generator: visioncortex VTracer 0.6.5 -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="320" height="320">
 <path d="M0,0 L320,0 L320,320 L0,320 Z " fill="#1C4E37" transform="translate(0,0)"/>
