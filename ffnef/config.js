@@ -101,7 +101,7 @@ var config = {
         './images/stable/23_dusuks/sysupgrade/': 'Düsseldorf Unterkünfte Süd',
         './images/stable/24_dusukw/factory/': 'Düsseldorf Unterkünfte West',
         './images/stable/24_dusukw/sysupgrade/': 'Düsseldorf Unterkünfte West',
-        './images/stable/18_nefuk/sysupgrade/': 'Neanderfunk Unterfkünfte',
+        './images/stable/18_nefuk/sysupgrade/': 'Neanderfunk Unterkünfte',
         './images/stable/18_nefuk/factory/': 'Neanderfunk Unterkünfte',
         './images/stable/37_siwin/sysupgrade/': 'Siegen-Wittgenstein Nord',
         './images/stable/37_siwin/factory/': 'Siegen-Wittgenstein Nord',
