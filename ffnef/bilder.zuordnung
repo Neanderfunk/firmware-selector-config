@@ -12,3 +12,32 @@ gl.inet-gl-ar300m-nor      gl-inet-gl-ar300m-nor
 gl.inet-gl-mt1300          gl-inet-gl-mt1300
 ubiquiti-rocket-m5-ti      ubiquiti-rocket-m5
 zbt-wg3526-16m             zbt-wg3526
+
+# --- 06.10.2026, zweiter Durchgang -------------------------------------
+# Die Karte normalisiert den Modellnamen MIT Versionssuffix ("Cudy WR3000 v1"
+# -> cudy-wr3000-v1), unsere devices.js kennt oft nur den Grundnamen. Deshalb
+# fanden diese Geraete ihr Bild nicht, obwohl eines da ist.
+#
+# Exakt dasselbe Geraet, nur andere Schreibweise:
+gl.inet-gl-e750            gl-inet-gl-e750
+#
+# Grundname trifft auf genau eine Version im Bildrepo:
+cudy-wr3000                cudy-wr3000-v1
+gl-inet-6408a              gl-inet-6408a-v1
+tp-link-archer-c2          tp-link-archer-c2-v1
+tp-link-archer-c20         tp-link-archer-c20-v1
+tp-link-archer-c5          tp-link-archer-c5-v1
+tp-link-archer-c59         tp-link-archer-c59-v1
+tp-link-re200              tp-link-re200-v1
+tp-link-tl-mr3420          tp-link-tl-mr3420-v1
+tp-link-tl-wdr3500         tp-link-tl-wdr3500-v1
+tp-link-tl-wdr3600         tp-link-tl-wdr3600-v1
+tp-link-tl-wdr4300         tp-link-tl-wdr4300-v1
+tp-link-tl-wdr4900         tp-link-tl-wdr4900-v1
+tp-link-wbs510             tp-link-wbs510-v1
+#
+# Naeherung: unser Eintrag ist versionslos, im Bildrepo gibt es nur eine
+# spaetere Version. Aeusserlich unterscheiden sich die Versionen kaum, das
+# Bild ist also besser als keines - aber es ist nicht streng dasselbe Geraet.
+tp-link-archer-c7          tp-link-archer-c7-v2
+tp-link-tl-wa801nd         tp-link-tl-wa801nd-v2
