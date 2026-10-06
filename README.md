@@ -257,6 +257,25 @@ Beschriftung.
 4. Zum Prüfen in `config.js` `listMissingImages: true` setzen: die
    Browser-Konsole zeigt dann jede Datei ohne Regel.
 
+## Wer diese beiden Repos pflegt
+
+Seit dem 06.10.2026 gehören `gluon-firmware-selector` (der Fork) und dieses
+Repo der Session **Supernode-Betrieb und Operations**. Wer anderswo einen
+Fehler findet, meldet ihn dorthin mit Datei und Zeile, statt selbst zu pushen.
+
+Das ist keine Formalie, sondern aus zwei Vorfällen an einem Tag gelernt:
+
+* Am 06.10. wurde der Tippfehler "Unterfkuenfte" (Domäne 18_nefuk) von
+  auswärts hierher gepusht (6923a29). Gemeldet war er als Fehler im
+  Firmware-Templating; dort stand er nie.
+* Am selben Tag haben zwei Sessions gleichzeitig dieselben 17 Bildzuordnungen
+  gebaut. Eine davon warf ihre Arbeit weg, obwohl ihre Fassung an einer
+  Stelle die richtige war (TL-WR741N/ND zeigt auf v1, nicht v4, weil im Feld
+  dreimal v1 und einmal v4 steht).
+
+Wer hier arbeiten will, sagt also vorher Bescheid. Umgekehrt gilt dasselbe:
+Diese Session fasst fremde Repos nicht an, sondern meldet dorthin.
+
 ## Lizenz
 
 Der Upstream steht unter **AGPL-3.0**, und `config.js` wie `devices.js` leiten
