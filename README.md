@@ -84,6 +84,56 @@ Upstream.
 | `index.html` | **zwei Textänderungen** behalten wir: der Hinweis, dass ein fehlendes Erstinstallationsimage bedeutet, dass das Upgrade-File passt, und Schritt 3 als Domain- statt Kanal-Auswahl. **Zwei Änderungen haben wir verworfen**, weil sie Verschlechterungen waren: das `alt="Logo"` am Logo war entfernt, und `<div id="typeselect">` war durch `<radiogroup>` ersetzt -- ein Element, das es in HTML nicht gibt. |
 | `config.js`, `devices.js` | unsere Dateien, Upstream hat nur `config_template.js`. |
 
+## Gerätebilder: SVG statt Fotos
+
+Seit dem 06.10.2026 zeigt der Downloader die **Zeichnungen aus
+`freifunk/device-pictures`** statt der 276 Fotos aus dem Upstream-Verzeichnis.
+`deploy.sh` klont das Bildrepo als dritten Klon daneben.
+
+Der Grund für alles-oder-nichts: `app.js` setzt Bildpfade aus **einer global**
+gesetzten Endung zusammen (`preview_pictures_ext`). Mischen geht nicht. Die
+Zeichnungen decken 262 unserer Namen ab statt 276, dafür stehen insgesamt 385
+bereit -- Geräte, die wir später aufnehmen, haben dann schon ein Bild.
+
+`pictures/` im Webroot ist deshalb ein **echtes Verzeichnis voller Symlinks**
+und kein Symlink auf ein Verzeichnis: nur so lassen sich fremde Zeichnungen
+und eigene Dateien zusammenlegen, ohne eine der Quellen anzufassen. Reihenfolge
+beim Bauen: erst alle Zeichnungen, dann die Namenszuordnung, zuletzt unsere
+eigenen Dateien -- die gewinnen also immer.
+
+### Drei Sonderfälle
+
+**Fünf Namensabweichungen** stehen in `ffnef/bilder.zuordnung` und werden als
+zusätzlicher Symlink aufgelöst, ohne eine Datei zu kopieren. Zwei davon sind
+reine Schreibweise: wir schreiben `gl.inet-` mit Punkt, das Bildrepo
+`gl-inet-` mit Bindestrich. Drei sind Varianten-Suffixe (`-rev`, `-ti`,
+`-16m`) für dasselbe Gerät.
+
+**Die drei Raspberry Pis** haben als einzige keine Zeichnung. Sie liegen in
+`ffnef/bilder/`, nachgezeichnet mit `vtracer` aus den bisherigen Fotos
+(Vorlage auf 512 px vergrößert, Modus `polygon`, `color_precision 7`,
+`filter_speckle 4`), rund 300 Pfade je Bild und vom Original kaum zu
+unterscheiden. Zwei Wege davor sind gescheitert und sollen niemand sonst Zeit
+kosten: Inkscapes Aktion `org.inkscape.color.trace` ist ein **Farbfilter** und
+zeichnet gar nicht nach -- sie liefert das JPG in einer SVG-Hülle, was
+täuschend echt aussieht. Und `potrace` allein kann nur schwarzweiß, aus einem
+Produktfoto wird eine Silhouette.
+
+**Der Rückfall** `no_picture_available.svg` ist im Bildrepo vorhanden. Ohne
+ihn wäre die Umstellung der stille Totalausfall für jedes Gerät ohne Bild
+gewesen.
+
+### Lizenz der Bilder
+
+`freifunk/device-pictures` steht unter **CC-BY-NC-SA 4.0** -- laut eigener
+README aber *"with exceptions"*, und die Ausnahme steht **in der Datei
+selbst** (`cc:License`-Tag im SVG). Pauschal auszeichnen wäre also falsch.
+Geprüft für die 20 Dateien, die unsere Lücken schließen: acht tragen
+ausdrücklich BY-NC-SA, neun gar kein Tag, und **drei stehen unter BY-SA 4.0**,
+also ohne die NonCommercial-Klausel: `enterasys-ws-ap3715i`,
+`extreme-networks-ws-ap3825i`, `zyxel-wsm20`. Die Fußzeile des Downloaders
+weist beides aus.
+
 Die neu gebaute `index.html` liegt in `ffnef/` und ist der **aktuelle
 Upstream plus genau diese zwei Textänderungen**, nicht mehr die alte Datei.
 
