@@ -41,3 +41,38 @@ tp-link-wbs510             tp-link-wbs510-v1
 # Bild ist also besser als keines - aber es ist nicht streng dasselbe Geraet.
 tp-link-archer-c7          tp-link-archer-c7-v2
 tp-link-tl-wa801nd         tp-link-tl-wa801nd-v2
+
+# --- 06.10.2026, dritter Durchgang ------------------------------------
+# Aus der Fototabelle der Mapserver-Session (router-werkstatt
+# docs/geraetefotos.md): Geraete, die im Feld stehen, bei uns kein Bild
+# hatten, im Bildrepo aber unter anderem Namen eines haben. Nichts davon
+# muss fotografiert werden.
+#
+# Dasselbe Geraet, nur andere Schreibweise oder anderer Modellname:
+gl-ar150                   gl.inet-gl-ar150
+tp-link-cpe210-220         tp-link-cpe210
+ubiquiti-nano-m-xw         ubiquiti-nanostation-m-xw
+ubiquiti-nanostation-loco-m2-xw  ubiquiti-loco-m-xw
+netgear-wndr3800ch         netgear-wndr3800
+ubiquiti-unifi-outdoor     ubiquiti-unifiap-outdoor
+#
+# Das Bildrepo kennt genau eine Version, unser Eintrag ist versionslos:
+tp-link-archer-a7          tp-link-archer-a7-v5
+tp-link-tl-wa850re         tp-link-tl-wa850re-v1
+tp-link-tl-wa860re         tp-link-tl-wa860re-v1
+tp-link-tl-wr2543n-nd      tp-link-tl-wr2543n-nd-v1
+xiaomi-mi-router-4a-gigabit-edition-v2  xiaomi-mi-router-4a-gigabit-edition
+#
+# Naeherung: mehrere Versionen im Bildrepo, unser Eintrag ist versionslos.
+# Genommen ist die Version, die die Mapserver-Session aus den Feldgeraeten
+# vorgeschlagen hat. Aeusserlich unterscheiden sich die Versionen wenig,
+# aber es ist nicht streng dasselbe Geraet.
+tp-link-cpe510             tp-link-cpe510-v1
+tp-link-tl-wr740n-nd       tp-link-tl-wr740n-nd-v4
+tp-link-tl-wr741n-nd       tp-link-tl-wr741n-nd-v4
+tp-link-tl-wr941nd         tp-link-tl-wr941n-nd-v6
+tp-link-tl-wa901nd         tp-link-tl-wa901n-nd-v3
+#
+# Sonderfall: das Bildrepo haengt dem "Outdoor+" einen Bindestrich an,
+# wo das Pluszeichen weggefallen ist. Die Datei heisst wirklich so.
+ubiquiti-unifi-outdoor-plus  ubiquiti-unifiap-outdoor-
