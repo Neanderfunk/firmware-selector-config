@@ -1,0 +1,224 @@
+{
+ "erzeugt": "2026-10-06",
+ "erzeugt_von": "werkzeug/manifest-luecken.py",
+ "quelle": "https://download.ffnef.de/firmware/stable/02_met/sysupgrade/stable.manifest",
+ "zahlen": {
+  "modellkennungen": 366,
+  "verschiedene_images": 287,
+  "devices_js_kennt": 526
+ },
+ "ganz_fehlend": [
+  {
+   "fehlt": [
+    "avm-fritz-box-3390"
+   ],
+   "alle_namen": [
+    "avm-fritz-box-3390"
+   ]
+  },
+  {
+   "fehlt": [
+    "avm-fritz-box-7430"
+   ],
+   "alle_namen": [
+    "avm-fritz-box-7430"
+   ]
+  },
+  {
+   "fehlt": [
+    "avm-fritz-repeater-3000"
+   ],
+   "alle_namen": [
+    "avm-fritz-repeater-3000"
+   ]
+  },
+  {
+   "fehlt": [
+    "cudy-m1800"
+   ],
+   "alle_namen": [
+    "cudy-m1800"
+   ]
+  },
+  {
+   "fehlt": [
+    "friendlyelec-nanopi-r2c"
+   ],
+   "alle_namen": [
+    "friendlyelec-nanopi-r2c"
+   ]
+  },
+  {
+   "fehlt": [
+    "linksys-e8450-ubi"
+   ],
+   "alle_namen": [
+    "linksys-e8450-ubi"
+   ]
+  },
+  {
+   "fehlt": [
+    "linksys-ea8300-dallas"
+   ],
+   "alle_namen": [
+    "linksys-ea8300-dallas"
+   ]
+  },
+  {
+   "fehlt": [
+    "linksys-mr8300-dallas"
+   ],
+   "alle_namen": [
+    "linksys-mr8300-dallas"
+   ]
+  },
+  {
+   "fehlt": [
+    "mikrotik-routerboard-750gr3",
+    "mikrotik-routerboard-hex-v3"
+   ],
+   "alle_namen": [
+    "mikrotik-routerboard-750gr3",
+    "mikrotik-routerboard-hex-v3"
+   ]
+  },
+  {
+   "fehlt": [
+    "mikrotik-routerboard-map-lite",
+    "mikrotik-routerboard-mapl-2nd"
+   ],
+   "alle_namen": [
+    "mikrotik-routerboard-map-lite",
+    "mikrotik-routerboard-mapl-2nd"
+   ]
+  },
+  {
+   "fehlt": [
+    "mikrotik-routerboard-wap-ac-d2",
+    "mikrotik-wap-ac"
+   ],
+   "alle_namen": [
+    "mikrotik-routerboard-wap-ac-d2",
+    "mikrotik-wap-ac"
+   ]
+  },
+  {
+   "fehlt": [
+    "mikrotik-routerboard-wap-ac-t2",
+    "mikrotik-routerboard-wap-g-5hact2hnd"
+   ],
+   "alle_namen": [
+    "mikrotik-routerboard-wap-ac-t2",
+    "mikrotik-routerboard-wap-g-5hact2hnd"
+   ]
+  },
+  {
+   "fehlt": [
+    "netgear-wax206"
+   ],
+   "alle_namen": [
+    "netgear-wax206"
+   ]
+  },
+  {
+   "fehlt": [
+    "tp-link-eap225-wall-v2"
+   ],
+   "alle_namen": [
+    "tp-link-eap225-wall-v2"
+   ]
+  },
+  {
+   "fehlt": [
+    "ubiquiti-rocket-m-xm"
+   ],
+   "alle_namen": [
+    "ubiquiti-rocket-m-xm"
+   ]
+  },
+  {
+   "fehlt": [
+    "zte-mf286r"
+   ],
+   "alle_namen": [
+    "zte-mf286r"
+   ]
+  }
+ ],
+ "nur_alias": [
+  {
+   "fehlt": [
+    "netgear-ex3700-ex3800"
+   ],
+   "alle_namen": [
+    "netgear-ex3700",
+    "netgear-ex3700-ex3800",
+    "netgear-ex3800"
+   ],
+   "gedeckt_als": [
+    "netgear-ex3700",
+    "netgear-ex3800"
+   ]
+  },
+  {
+   "fehlt": [
+    "openmesh-om2p-hsv2"
+   ],
+   "alle_namen": [
+    "openmesh-om2p-hs-v2",
+    "openmesh-om2p-hsv2"
+   ],
+   "gedeckt_als": [
+    "openmesh-om2p-hs-v2"
+   ]
+  },
+  {
+   "fehlt": [
+    "raspberry-pi-3-model-b-plus-rev-1.3",
+    "raspberry-pi-3-model-b-rev-1.2",
+    "raspberrypi-3-model-b-plus"
+   ],
+   "alle_namen": [
+    "raspberry-pi-3-model-b-plus-rev-1.3",
+    "raspberry-pi-3-model-b-rev-1.2",
+    "raspberrypi-3-model-b",
+    "raspberrypi-3-model-b-plus"
+   ],
+   "gedeckt_als": [
+    "raspberrypi-3-model-b"
+   ]
+  },
+  {
+   "fehlt": [
+    "raspberry-pi-4-model-b-rev-1.1",
+    "raspberry-pi-4-model-b-rev-1.2",
+    "raspberry-pi-4-model-b-rev-1.4",
+    "raspberry-pi-4-model-b-rev-1.5"
+   ],
+   "alle_namen": [
+    "raspberry-pi-4-model-b-rev-1.1",
+    "raspberry-pi-4-model-b-rev-1.2",
+    "raspberry-pi-4-model-b-rev-1.4",
+    "raspberry-pi-4-model-b-rev-1.5",
+    "raspberrypi-4-model-b"
+   ],
+   "gedeckt_als": [
+    "raspberrypi-4-model-b"
+   ]
+  },
+  {
+   "fehlt": [
+    "x86-xen_domu"
+   ],
+   "alle_namen": [
+    "x86-generic",
+    "x86-kvm",
+    "x86-xen_domu"
+   ],
+   "gedeckt_als": [
+    "x86-generic",
+    "x86-kvm"
+   ]
+  }
+ ]
+}
