@@ -123,6 +123,8 @@ sage "$e eigene Bilder eingehaengt"
 # Unsere Dateien: ueberschreiben den Upstream dort, wo wir abweichen
 setze "$CFG/ffnef/index.html" index.html
 setze "$CFG/ffnef/ffnef.css"  ffnef.css
+setze "$CFG/ffnef/ffnef.js"   ffnef.js
+setze "$CFG/ffnef/versionen-anzeige.json" versionen-anzeige.json
 setze "$CFG/ffnef/config.js"  config.js
 setze "$CFG/ffnef/devices.js" devices.js
 

@@ -6,3 +6,64 @@
 #currentVersions {
   display: none;
 }
+
+/* Hinweis zur Hardware-Version, rechts neben dem Geraetebild.
+   Die Bildkacheln sind inline-block, deshalb setzt sich der Kasten als
+   weitere inline-block-Kachel daneben, ohne dass am Upstream-Stylesheet
+   etwas geaendert werden muss. */
+#wizard .imagePreview .ffnef-versionen {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 26em;
+  margin: 0.5em;
+  padding: 0.5em 0.8em;
+  text-align: left;
+  border-left: 3px solid #ccc;
+}
+
+#wizard .imagePreview .ffnef-versionen h2 {
+  margin: 0 0 0.3em;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #666;
+}
+
+#wizard .imagePreview .ffnef-versionen h2 + * {
+  margin-top: 0;
+}
+
+#wizard .imagePreview .ffnef-versionen p {
+  margin: 0.4em 0;
+  line-height: 1.4;
+}
+
+#wizard .imagePreview .ffnef-gilt {
+  font-weight: bold;
+}
+
+#wizard .imagePreview .ffnef-gilt-nicht,
+#wizard .imagePreview .ffnef-belegt {
+  font-weight: bold;
+  color: #a33;
+}
+
+#wizard .imagePreview .ffnef-beleg {
+  margin: 0.3em 0 0.8em;
+  font-size: 0.92em;
+}
+
+#wizard .imagePreview .ffnef-erkennbar {
+  background: #f6f6f0;
+  padding: 0.4em 0.6em;
+}
+
+/* Schmale Anzeigen: der Kasten gehoert dann unter das Bild, nicht daneben. */
+@media (max-width: 48em) {
+  #wizard .imagePreview .ffnef-versionen {
+    display: block;
+    max-width: none;
+    border-left: none;
+    border-top: 3px solid #ccc;
+  }
+}

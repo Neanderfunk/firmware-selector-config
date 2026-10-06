@@ -1,0 +1,548 @@
+{
+ "erzeugt": "2026-10-06",
+ "erzeugt_von": "werkzeug/versionen-anzeige.py",
+ "geraete": {
+  "AVM|FRITZ!Box 7360": {
+   "bekannt": [
+    "v2"
+   ]
+  },
+  "Asus|RT-AC57U": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "Cudy|AP3000": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "Cudy|AP3000 Outdoor": {
+   "bekannt": [
+    "v1"
+   ],
+   "warnungen": [
+    {
+     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
+     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
+     "erkennbar_an": "Seriennummer beginnt mit 2543 oder hoeher (Fertigung ab November 2025).",
+     "grund": "Cudy verbaut dort einen anderen Flash-Chip (F50L1G41LC). Aeltere OpenWrt-Staende kennen ihn nicht; das Geraet startet danach nicht mehr. Der Fix ist erst in OpenWrt 24.10.5 (Dezember 2025).",
+     "quelle": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download (Cudy-FAQ) sowie https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547",
+     "stand": "2026-10-06",
+     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
+     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
+    }
+   ]
+  },
+  "Cudy|M3000": {
+   "bekannt": [
+    "v1"
+   ],
+   "warnungen": [
+    {
+     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
+     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
+     "erkennbar_an": "Seriennummer beginnt mit 2543 oder hoeher (Fertigung ab November 2025).",
+     "grund": "Cudy verbaut dort einen anderen Flash-Chip (F50L1G41LC). Aeltere OpenWrt-Staende kennen ihn nicht; das Geraet startet danach nicht mehr. Der Fix ist erst in OpenWrt 24.10.5 (Dezember 2025).",
+     "quelle": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download (Cudy-FAQ) sowie https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547",
+     "stand": "2026-10-06",
+     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
+     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
+    }
+   ]
+  },
+  "Cudy|RE3000": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "Cudy|TR1200": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "Cudy|TR3000": {
+   "bekannt": [
+    "v1"
+   ],
+   "warnungen": [
+    {
+     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
+     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
+     "erkennbar_an": "Seriennummer beginnt mit 2543 oder hoeher (Fertigung ab November 2025).",
+     "grund": "Cudy verbaut dort einen anderen Flash-Chip (F50L1G41LC). Aeltere OpenWrt-Staende kennen ihn nicht; das Geraet startet danach nicht mehr. Der Fix ist erst in OpenWrt 24.10.5 (Dezember 2025).",
+     "quelle": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download (Cudy-FAQ) sowie https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547",
+     "stand": "2026-10-06",
+     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
+     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
+    }
+   ]
+  },
+  "Cudy|WR1300": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "Cudy|WR3000": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ],
+   "belege": [
+    {
+     "erkennbar_an": "V2.x auf dem Etikett; die CPU ist mit 1.2 GHz angegeben (v1: 1.3 GHz). Vor dem Kauf: Haendler, die selbst nicht wissen, welche Version sie haben, zeigen meist ein Foto der Verpackung - dort steht \"1.2GHz Dualcore\".",
+     "grund": "Anderer SoC und nur 128 MB RAM. OpenWrt unterstuetzt nur v1.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "cudy-wr3000",
+     "quelle": "https://forum.openwrt.org/t/cudy-wr3000e-cudy-wr3000-determining-version-number/243206",
+     "stand": "2026-10-06"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2"
+   ]
+  },
+  "Cudy|WR3000 E": {
+   "bekannt": [
+    "v2"
+   ],
+   "belege": [
+    {
+     "erkennbar_an": "V2.x auf dem Etikett; die CPU ist mit 1.2 GHz angegeben (v1: 1.3 GHz). Vor dem Kauf: Haendler, die selbst nicht wissen, welche Version sie haben, zeigen meist ein Foto der Verpackung - dort steht \"1.2GHz Dualcore\".",
+     "grund": "Wie beim WR3000: anderer SoC, nur 128 MB RAM. OpenWrt unterstuetzt nur v1.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "cudy-wr3000e",
+     "quelle": "https://forum.openwrt.org/t/cudy-wr3000e-cudy-wr3000-determining-version-number/243206",
+     "stand": "2026-10-06"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2"
+   ],
+   "warnungen": [
+    {
+     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
+     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
+     "erkennbar_an": "Seriennummer beginnt mit 2543 oder hoeher (Fertigung ab November 2025).",
+     "grund": "Cudy verbaut dort einen anderen Flash-Chip (F50L1G41LC). Aeltere OpenWrt-Staende kennen ihn nicht; das Geraet startet danach nicht mehr. Der Fix ist erst in OpenWrt 24.10.5 (Dezember 2025).",
+     "quelle": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download (Cudy-FAQ) sowie https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547",
+     "stand": "2026-10-06",
+     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
+     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
+    }
+   ]
+  },
+  "Cudy|WR3000 H (AX3000)": {
+   "bekannt": [],
+   "warnungen": [
+    {
+     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
+     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
+     "erkennbar_an": "Seriennummer beginnt mit 2543 oder hoeher (Fertigung ab November 2025).",
+     "grund": "Cudy verbaut dort einen anderen Flash-Chip (F50L1G41LC). Aeltere OpenWrt-Staende kennen ihn nicht; das Geraet startet danach nicht mehr. Der Fix ist erst in OpenWrt 24.10.5 (Dezember 2025).",
+     "quelle": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download (Cudy-FAQ) sowie https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547",
+     "stand": "2026-10-06",
+     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
+     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
+    }
+   ]
+  },
+  "Cudy|WR3000 S": {
+   "bekannt": [
+    "v1"
+   ],
+   "warnungen": [
+    {
+     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
+     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
+     "erkennbar_an": "Seriennummer beginnt mit 2543 oder hoeher (Fertigung ab November 2025).",
+     "grund": "Cudy verbaut dort einen anderen Flash-Chip (F50L1G41LC). Aeltere OpenWrt-Staende kennen ihn nicht; das Geraet startet danach nicht mehr. Der Fix ist erst in OpenWrt 24.10.5 (Dezember 2025).",
+     "quelle": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download (Cudy-FAQ) sowie https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547",
+     "stand": "2026-10-06",
+     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
+     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
+    }
+   ]
+  },
+  "Cudy|X6": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "Mercusys|MR70X": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "Netgear|EAX11": {
+   "bekannt": [
+    "v2"
+   ]
+  },
+  "Netgear|EAX15": {
+   "bekannt": [
+    "v2"
+   ]
+  },
+  "Netgear|EX6150": {
+   "bekannt": [
+    "v2"
+   ]
+  },
+  "Netgear|WNDR3700": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5"
+   ]
+  },
+  "Netgear|WNDR4300": {
+   "bekannt": [
+    "v2"
+   ]
+  },
+  "Netgear|WNDRMAC": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "Open-Mesh|MR1750": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "Open-Mesh|MR600": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "Open-Mesh|MR900": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "Open-Mesh|OM2P": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v4"
+   ]
+  },
+  "Open-Mesh|OM2P HS": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "Open-Mesh|OM5P-AC": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "TP-Link|Archer A7": {
+   "bekannt": [
+    "v5"
+   ]
+  },
+  "TP-Link|Archer AX23": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|Archer C2": {
+   "bekannt": [
+    "v1",
+    "v3"
+   ]
+  },
+  "TP-Link|Archer C20": {
+   "bekannt": [
+    "v1",
+    "v4",
+    "v5"
+   ]
+  },
+  "TP-Link|Archer C25": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|Archer C2600": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|Archer C5": {
+   "bekannt": [
+    "v1",
+    "v4"
+   ]
+  },
+  "TP-Link|Archer C50": {
+   "bekannt": [
+    "v1",
+    "v3",
+    "v4"
+   ]
+  },
+  "TP-Link|Archer C58": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|Archer C59": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "TP-Link|Archer C6": {
+   "bekannt": [
+    "v3"
+   ]
+  },
+  "TP-Link|Archer C60": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "TP-Link|Archer C7": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v4",
+    "v5"
+   ]
+  },
+  "TP-Link|Archer D50": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|CPE210": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "TP-Link|CPE220": {
+   "bekannt": [
+    "v2",
+    "v3"
+   ]
+  },
+  "TP-Link|CPE510": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "TP-Link|CPE710": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "TP-Link|EAP225-Outdoor": {
+   "bekannt": [
+    "v1",
+    "v3"
+   ]
+  },
+  "TP-Link|EAP225-Wall": {
+   "bekannt": [
+    "v2"
+   ]
+  },
+  "TP-Link|EAP615-Wall": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|RE200": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "TP-Link|RE305": {
+   "bekannt": [
+    "v1",
+    "v3"
+   ]
+  },
+  "TP-Link|RE355": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|RE450": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "TP-Link|RE500": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|RE650": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "TP-Link|TD-W8970": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|TD-W8980": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|TD-W9980": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|TL-MR3020": {
+   "bekannt": [
+    "v3"
+   ]
+  },
+  "TP-Link|TL-MR3420": {
+   "bekannt": [
+    "v5"
+   ]
+  },
+  "TP-Link|TL-MR6400": {
+   "bekannt": [
+    "v1",
+    "v4",
+    "v5"
+   ]
+  },
+  "TP-Link|TL-WA801N/ND": {
+   "bekannt": [
+    "v5"
+   ]
+  },
+  "TP-Link|TL-WDR3500": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|TL-WDR3600": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|TL-WDR4300": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|TL-WDR4900": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "TP-Link|TL-WR1043N/ND": {
+   "bekannt": [
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "TP-Link|TL-WR2543N/ND": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|TL-WR802N": {
+   "bekannt": [
+    "v4"
+   ]
+  },
+  "TP-Link|TL-WR810N": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "TP-Link|TL-WR840N": {
+   "bekannt": [
+    "v4"
+   ]
+  },
+  "TP-Link|TL-WR841N/ND": {
+   "bekannt": [
+    "v13"
+   ]
+  },
+  "TP-Link|TL-WR842N/ND": {
+   "bekannt": [
+    "v3",
+    "v5"
+   ]
+  },
+  "TP-Link|TL-WR902AC": {
+   "bekannt": [
+    "v1",
+    "v3",
+    "v4"
+   ]
+  },
+  "TP-Link|WBS210": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "TP-Link|WBS510": {
+   "bekannt": [
+    "v1",
+    "v2"
+   ]
+  },
+  "Teltonika|RUT230": {
+   "bekannt": [
+    "v1"
+   ]
+  },
+  "Xiaomi|Mi Router 3G": {
+   "bekannt": [
+    "v2"
+   ]
+  }
+ },
+ "hinweis": "Schluessel ist 'Hersteller|Modell', genau wie in devices.js. 'bekannt' sind die Hardware-Versionen, die es laut OpenWrt oder laut Handliste gibt. Welche WIR anbieten, entscheidet die Seite zur Laufzeit aus den Dateinamen."
+}
