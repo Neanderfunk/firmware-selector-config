@@ -63,13 +63,17 @@ tp-link-tl-wa860re         tp-link-tl-wa860re-v1
 tp-link-tl-wr2543n-nd      tp-link-tl-wr2543n-nd-v1
 xiaomi-mi-router-4a-gigabit-edition-v2  xiaomi-mi-router-4a-gigabit-edition
 #
-# Naeherung: mehrere Versionen im Bildrepo, unser Eintrag ist versionslos.
-# Genommen ist die Version, die die Mapserver-Session aus den Feldgeraeten
-# vorgeschlagen hat. Aeusserlich unterscheiden sich die Versionen wenig,
-# aber es ist nicht streng dasselbe Geraet.
+# Mehrere Versionen im Bildrepo, unser Eintrag ist versionslos. Genommen ist
+# die Version, die bei uns wirklich im Feld steht, gezaehlt auf der Karte am
+# 06.10.2026. Keine Schaetzung:
+#   CPE510     1x v1
+#   WR740N/ND  1x v4
+#   WR741N/ND  3x v1, 1x v4  -> v1
+#   WR941N/ND  4x v6
+#   WA901N/ND  1x v3
 tp-link-cpe510             tp-link-cpe510-v1
 tp-link-tl-wr740n-nd       tp-link-tl-wr740n-nd-v4
-tp-link-tl-wr741n-nd       tp-link-tl-wr741n-nd-v4
+tp-link-tl-wr741n-nd       tp-link-tl-wr741n-nd-v1
 tp-link-tl-wr941nd         tp-link-tl-wr941n-nd-v6
 tp-link-tl-wa901nd         tp-link-tl-wa901n-nd-v3
 #
