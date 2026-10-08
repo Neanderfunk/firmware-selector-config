@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-10-06",
+ "erzeugt": "2026-10-08",
  "erzeugt_von": "werkzeug/versionen-anzeige.py",
  "geraete": {
   "AVM|FRITZ!Box 7360": {
@@ -22,39 +22,11 @@
   "Cudy|AP3000 Outdoor": {
    "bekannt": [
     "v1"
-   ],
-   "warnungen": [
-    {
-     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
-     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
-     "erkennbar_an": "Die Seriennummer beginnt mit 2543 oder höher. Die vier Ziffern sind das Baudatum: 25 für 2025, 43 für die Kalenderwoche. 2543 ist also die Woche vom 20. Oktober 2025. Die Grenze ist vorsichtig gewählt - im OpenWrt-Forum wird ein Gerät mit 2544 beschrieben, das noch den alten Chip hatte. Oberhalb der Grenze ist der neue Chip möglich, nicht sicher.",
-     "geprueft": "2026-10-06. Cudys eigene Seite, Abschnitt 'Important Notice: November 24, 2025', für die Modellliste und die Seriennummer. Dass unsere Firmware den Chip kennt, ist am ausgelieferten Abbild selbst nachgewiesen: im entpackten Kernel von gluon-nef-02_met-26091920sta-cudy-wr3000e-v1-sysupgrade.bin steht die Kennung F50L1G41LC.",
-     "grund": "Cudy verbaut in diesen Geräten einen anderen Flash-Chip (ESMT F50L1G41LC). Unsere Firmware kennt ihn und läuft darauf. Gefährlich ist der Weg dorthin: Cudys ältere OpenWrt-Zwischenfirmware kennt den Chip nicht, und ein Gerät, das damit geflasht wird, startet nicht mehr. Cudy stellt dafür neue Zwischenfirmware bereit - bei einem Gerät aus dieser Fertigung also unbedingt die neue nehmen.",
-     "neu_pruefen_wenn": "Cudy die Liste der betroffenen Modelle erweitert, oder wenn sich die Zwischenfirmware ändert. Der Hinweis hängt NICHT an unserem Releasestand: der Rückportierungspatch für den Chip ist seit 09.09.2026 in 2023.2.x (FirmwareConfigs 65aafed), und 2025.1 bringt ihn über OpenWrt 24.10 mit.",
-     "quelle": "https://www.cudy.com/blogs/faq/openwrt-software-download",
-     "stand": "2026-10-06",
-     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
-     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
-    }
    ]
   },
   "Cudy|M3000": {
    "bekannt": [
     "v1"
-   ],
-   "warnungen": [
-    {
-     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
-     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
-     "erkennbar_an": "Die Seriennummer beginnt mit 2543 oder höher. Die vier Ziffern sind das Baudatum: 25 für 2025, 43 für die Kalenderwoche. 2543 ist also die Woche vom 20. Oktober 2025. Die Grenze ist vorsichtig gewählt - im OpenWrt-Forum wird ein Gerät mit 2544 beschrieben, das noch den alten Chip hatte. Oberhalb der Grenze ist der neue Chip möglich, nicht sicher.",
-     "geprueft": "2026-10-06. Cudys eigene Seite, Abschnitt 'Important Notice: November 24, 2025', für die Modellliste und die Seriennummer. Dass unsere Firmware den Chip kennt, ist am ausgelieferten Abbild selbst nachgewiesen: im entpackten Kernel von gluon-nef-02_met-26091920sta-cudy-wr3000e-v1-sysupgrade.bin steht die Kennung F50L1G41LC.",
-     "grund": "Cudy verbaut in diesen Geräten einen anderen Flash-Chip (ESMT F50L1G41LC). Unsere Firmware kennt ihn und läuft darauf. Gefährlich ist der Weg dorthin: Cudys ältere OpenWrt-Zwischenfirmware kennt den Chip nicht, und ein Gerät, das damit geflasht wird, startet nicht mehr. Cudy stellt dafür neue Zwischenfirmware bereit - bei einem Gerät aus dieser Fertigung also unbedingt die neue nehmen.",
-     "neu_pruefen_wenn": "Cudy die Liste der betroffenen Modelle erweitert, oder wenn sich die Zwischenfirmware ändert. Der Hinweis hängt NICHT an unserem Releasestand: der Rückportierungspatch für den Chip ist seit 09.09.2026 in 2023.2.x (FirmwareConfigs 65aafed), und 2025.1 bringt ihn über OpenWrt 24.10 mit.",
-     "quelle": "https://www.cudy.com/blogs/faq/openwrt-software-download",
-     "stand": "2026-10-06",
-     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
-     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
-    }
    ]
   },
   "Cudy|RE3000": {
@@ -70,20 +42,6 @@
   "Cudy|TR3000": {
    "bekannt": [
     "v1"
-   ],
-   "warnungen": [
-    {
-     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
-     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
-     "erkennbar_an": "Die Seriennummer beginnt mit 2543 oder höher. Die vier Ziffern sind das Baudatum: 25 für 2025, 43 für die Kalenderwoche. 2543 ist also die Woche vom 20. Oktober 2025. Die Grenze ist vorsichtig gewählt - im OpenWrt-Forum wird ein Gerät mit 2544 beschrieben, das noch den alten Chip hatte. Oberhalb der Grenze ist der neue Chip möglich, nicht sicher.",
-     "geprueft": "2026-10-06. Cudys eigene Seite, Abschnitt 'Important Notice: November 24, 2025', für die Modellliste und die Seriennummer. Dass unsere Firmware den Chip kennt, ist am ausgelieferten Abbild selbst nachgewiesen: im entpackten Kernel von gluon-nef-02_met-26091920sta-cudy-wr3000e-v1-sysupgrade.bin steht die Kennung F50L1G41LC.",
-     "grund": "Cudy verbaut in diesen Geräten einen anderen Flash-Chip (ESMT F50L1G41LC). Unsere Firmware kennt ihn und läuft darauf. Gefährlich ist der Weg dorthin: Cudys ältere OpenWrt-Zwischenfirmware kennt den Chip nicht, und ein Gerät, das damit geflasht wird, startet nicht mehr. Cudy stellt dafür neue Zwischenfirmware bereit - bei einem Gerät aus dieser Fertigung also unbedingt die neue nehmen.",
-     "neu_pruefen_wenn": "Cudy die Liste der betroffenen Modelle erweitert, oder wenn sich die Zwischenfirmware ändert. Der Hinweis hängt NICHT an unserem Releasestand: der Rückportierungspatch für den Chip ist seit 09.09.2026 in 2023.2.x (FirmwareConfigs 65aafed), und 2025.1 bringt ihn über OpenWrt 24.10 mit.",
-     "quelle": "https://www.cudy.com/blogs/faq/openwrt-software-download",
-     "stand": "2026-10-06",
-     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
-     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
-    }
    ]
   },
   "Cudy|WR1300": {
@@ -132,56 +90,11 @@
    ],
    "nicht_unterstuetzt": [
     "v2"
-   ],
-   "warnungen": [
-    {
-     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
-     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
-     "erkennbar_an": "Die Seriennummer beginnt mit 2543 oder höher. Die vier Ziffern sind das Baudatum: 25 für 2025, 43 für die Kalenderwoche. 2543 ist also die Woche vom 20. Oktober 2025. Die Grenze ist vorsichtig gewählt - im OpenWrt-Forum wird ein Gerät mit 2544 beschrieben, das noch den alten Chip hatte. Oberhalb der Grenze ist der neue Chip möglich, nicht sicher.",
-     "geprueft": "2026-10-06. Cudys eigene Seite, Abschnitt 'Important Notice: November 24, 2025', für die Modellliste und die Seriennummer. Dass unsere Firmware den Chip kennt, ist am ausgelieferten Abbild selbst nachgewiesen: im entpackten Kernel von gluon-nef-02_met-26091920sta-cudy-wr3000e-v1-sysupgrade.bin steht die Kennung F50L1G41LC.",
-     "grund": "Cudy verbaut in diesen Geräten einen anderen Flash-Chip (ESMT F50L1G41LC). Unsere Firmware kennt ihn und läuft darauf. Gefährlich ist der Weg dorthin: Cudys ältere OpenWrt-Zwischenfirmware kennt den Chip nicht, und ein Gerät, das damit geflasht wird, startet nicht mehr. Cudy stellt dafür neue Zwischenfirmware bereit - bei einem Gerät aus dieser Fertigung also unbedingt die neue nehmen.",
-     "neu_pruefen_wenn": "Cudy die Liste der betroffenen Modelle erweitert, oder wenn sich die Zwischenfirmware ändert. Der Hinweis hängt NICHT an unserem Releasestand: der Rückportierungspatch für den Chip ist seit 09.09.2026 in 2023.2.x (FirmwareConfigs 65aafed), und 2025.1 bringt ihn über OpenWrt 24.10 mit.",
-     "quelle": "https://www.cudy.com/blogs/faq/openwrt-software-download",
-     "stand": "2026-10-06",
-     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
-     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
-    }
-   ]
-  },
-  "Cudy|WR3000 H (AX3000)": {
-   "bekannt": [],
-   "warnungen": [
-    {
-     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
-     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
-     "erkennbar_an": "Die Seriennummer beginnt mit 2543 oder höher. Die vier Ziffern sind das Baudatum: 25 für 2025, 43 für die Kalenderwoche. 2543 ist also die Woche vom 20. Oktober 2025. Die Grenze ist vorsichtig gewählt - im OpenWrt-Forum wird ein Gerät mit 2544 beschrieben, das noch den alten Chip hatte. Oberhalb der Grenze ist der neue Chip möglich, nicht sicher.",
-     "geprueft": "2026-10-06. Cudys eigene Seite, Abschnitt 'Important Notice: November 24, 2025', für die Modellliste und die Seriennummer. Dass unsere Firmware den Chip kennt, ist am ausgelieferten Abbild selbst nachgewiesen: im entpackten Kernel von gluon-nef-02_met-26091920sta-cudy-wr3000e-v1-sysupgrade.bin steht die Kennung F50L1G41LC.",
-     "grund": "Cudy verbaut in diesen Geräten einen anderen Flash-Chip (ESMT F50L1G41LC). Unsere Firmware kennt ihn und läuft darauf. Gefährlich ist der Weg dorthin: Cudys ältere OpenWrt-Zwischenfirmware kennt den Chip nicht, und ein Gerät, das damit geflasht wird, startet nicht mehr. Cudy stellt dafür neue Zwischenfirmware bereit - bei einem Gerät aus dieser Fertigung also unbedingt die neue nehmen.",
-     "neu_pruefen_wenn": "Cudy die Liste der betroffenen Modelle erweitert, oder wenn sich die Zwischenfirmware ändert. Der Hinweis hängt NICHT an unserem Releasestand: der Rückportierungspatch für den Chip ist seit 09.09.2026 in 2023.2.x (FirmwareConfigs 65aafed), und 2025.1 bringt ihn über OpenWrt 24.10 mit.",
-     "quelle": "https://www.cudy.com/blogs/faq/openwrt-software-download",
-     "stand": "2026-10-06",
-     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
-     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
-    }
    ]
   },
   "Cudy|WR3000 S": {
    "bekannt": [
     "v1"
-   ],
-   "warnungen": [
-    {
-     "analyse": "router-werkstatt docs/erstinstallation-ohne-factory.md. ACHTUNG: der dortige Abschnitt ist ueberholt, er schliesst noch auf \"2023.2 kann die Hardware nicht\". Das galt vor dem Rueckportieren.",
-     "betrifft_uns": "NEIN, beide Zweige koennen die Hardware. v2025.1.x hat den Upstream-Backport; v2023.2.x hat den Patch auf Kernel 5.15 zurueckportiert: gluon-patches-hardware devices/486-02-mtd-spinand-esmt-add-support-for-F50L1G41LC.patch, angewandt von devices/add-cudy-3000.sh nach target/linux/generic/pending-5.15/. Geprueft am 06.10.2026 bis zur Anwendung, nicht nur bis zur Datei.",
-     "erkennbar_an": "Die Seriennummer beginnt mit 2543 oder höher. Die vier Ziffern sind das Baudatum: 25 für 2025, 43 für die Kalenderwoche. 2543 ist also die Woche vom 20. Oktober 2025. Die Grenze ist vorsichtig gewählt - im OpenWrt-Forum wird ein Gerät mit 2544 beschrieben, das noch den alten Chip hatte. Oberhalb der Grenze ist der neue Chip möglich, nicht sicher.",
-     "geprueft": "2026-10-06. Cudys eigene Seite, Abschnitt 'Important Notice: November 24, 2025', für die Modellliste und die Seriennummer. Dass unsere Firmware den Chip kennt, ist am ausgelieferten Abbild selbst nachgewiesen: im entpackten Kernel von gluon-nef-02_met-26091920sta-cudy-wr3000e-v1-sysupgrade.bin steht die Kennung F50L1G41LC.",
-     "grund": "Cudy verbaut in diesen Geräten einen anderen Flash-Chip (ESMT F50L1G41LC). Unsere Firmware kennt ihn und läuft darauf. Gefährlich ist der Weg dorthin: Cudys ältere OpenWrt-Zwischenfirmware kennt den Chip nicht, und ein Gerät, das damit geflasht wird, startet nicht mehr. Cudy stellt dafür neue Zwischenfirmware bereit - bei einem Gerät aus dieser Fertigung also unbedingt die neue nehmen.",
-     "neu_pruefen_wenn": "Cudy die Liste der betroffenen Modelle erweitert, oder wenn sich die Zwischenfirmware ändert. Der Hinweis hängt NICHT an unserem Releasestand: der Rückportierungspatch für den Chip ist seit 09.09.2026 in 2023.2.x (FirmwareConfigs 65aafed), und 2025.1 bringt ihn über OpenWrt 24.10 mit.",
-     "quelle": "https://www.cudy.com/blogs/faq/openwrt-software-download",
-     "stand": "2026-10-06",
-     "ursache": "Der F50L1G41LC nutzt die Hersteller-ID 0x8c statt 0xc8 wie der bisherige F50L1G41LB. Kernel 5.15 erkennt ihn ohne Patch gar nicht.",
-     "warum_ueberhaupt_notiert": "Weil es ohne diesen Patch das Geraet nicht starten laesst und der Chip nur an der Seriennummer zu erkennen ist. Wer mit Fremdfirmware oder aelteren Staenden arbeitet, laeuft hinein."
-    }
    ]
   },
   "Cudy|X6": {

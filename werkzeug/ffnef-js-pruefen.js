@@ -46,8 +46,10 @@ pruefe('Cudy WR3000: keine Flashchip-Warnung (so steht es in der Liste)',
 // WR3000 E: OpenWrt kennt v1 gar nicht als Variante, die Handliste nur v2.
 const wr3000e = ffnef.aussagen(daten['Cudy|WR3000 E'], ['v1'], 'v1');
 pruefe('Cudy WR3000 E: nicht fuer v2', wr3000e && wr3000e.andere, ['v2']);
-pruefe('Cudy WR3000 E: Flashchip-Warnung kommt an',
-  !!(wr3000e && wr3000e.warnungen.length), true);
+// Die Flashchip-Warnung ist am 08.10.2026 entfernt worden: Sie sagte nur,
+// man solle der Anleitung folgen. Siehe zweck in versionen-handpflege.json.
+pruefe('Cudy WR3000 E: keine Flashchip-Warnung mehr',
+  !!(wr3000e && wr3000e.warnungen.length), false);
 
 // Mehrere eigene Versionen: die uebrigen eigenen gehoeren mit in die Liste.
 const c7 = ffnef.aussagen(daten['TP-Link|Archer C7'], ['v2', 'v4'], 'v2');
