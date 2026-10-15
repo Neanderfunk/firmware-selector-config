@@ -8,6 +8,8 @@
 #
 #   /var/www/selector-upstream/        Klon 1, Code (Zweig main)
 #   /var/www/selector-config/          Klon 2, unsere Konfiguration
+#   /var/www/selector-pictures/        Klon 3, freifunk/device-pictures
+#   /var/www/selector-anleitungen/     Klon 4, gluon-rampe-installer
 #   /var/www/routersoftware.ffnef.de/  Symlinks + images/
 #
 # Aufruf als root auf dem Firmware-Server:
@@ -22,10 +24,12 @@ BASIS="$(dirname "$WURZEL")"
 UP="$BASIS/selector-upstream"
 CFG="$BASIS/selector-config"
 BILD="$BASIS/selector-pictures"
+ANL="$BASIS/selector-anleitungen"
 
 UP_URL="https://github.com/Neanderfunk/gluon-firmware-selector.git"
 CFG_URL="https://github.com/Neanderfunk/firmware-selector-config.git"
 BILD_URL="https://github.com/freifunk/device-pictures.git"
+ANL_URL="https://github.com/Neanderfunk/gluon-rampe-installer.git"
 
 sage() { echo "deploy: $*"; }
 
@@ -45,6 +49,7 @@ holen() {
 holen "$UP"  "$UP_URL"  main
 holen "$CFG" "$CFG_URL" main
 holen "$BILD" "$BILD_URL" main
+holen "$ANL"  "$ANL_URL"  main
 
 # --- Webroot vorbereiten -----------------------------------------------
 # "images" wird bewusst NICHT angefasst. Dort liegen die Firmware-Dateien
@@ -127,6 +132,17 @@ setze "$CFG/ffnef/ffnef.js"   ffnef.js
 setze "$CFG/ffnef/versionen-anzeige.json" versionen-anzeige.json
 setze "$CFG/ffnef/config.js"  config.js
 setze "$CFG/ffnef/devices.js" devices.js
+
+# --- Installationsanleitungen je Geraet -----------------------------------
+# Fertig erzeugte Seiten aus gluon-rampe-installer, bewusst kein Bauschritt
+# auf dem Webserver: kein Python, keine Abhaengigkeiten, und der Weg ueber
+# rsync fuer Server ohne Internetzugang funktioniert unveraendert.
+#
+# Der Symlink zeigt auf anleitungen/html, NICHT auf anleitungen: die
+# Basis-URL https://routersoftware.ffnef.de/anleitungen muss auf das
+# html-Verzeichnis zeigen, sonst laufen die Verweise in der index.json ins
+# Leere.
+setze "$ANL/anleitungen/html" anleitungen
 
 sage "fertig. Inhalt von $WURZEL:"
 ls -la "$WURZEL"

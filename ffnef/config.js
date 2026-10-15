@@ -147,12 +147,15 @@ var config = {
   // links for instructions like flashing of certain devices (optional)
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
-  // devices_info: {
-  //   'AVM': {
-  //     "FRITZ!Box 4040": "https://fritz-tools.readthedocs.io"
-  //   },
-  //   "TP-Link": {
-  //     "TL-WR841N/ND": {"v13": "https://wiki.freifunk.net/TP-Link_WR841ND/Flash-Anleitung_v13"}
-  //   }
-  // }
+  // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
+  // https://raw.githubusercontent.com/Neanderfunk/gluon-rampe-installer/main/anleitungen/html/index.json
+  // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
+  devices_info: {
+    "D-Link": {
+      "Aquila Pro AI M60": "https://routersoftware.ffnef.de/anleitungen/de/d-link-aquila-pro-ai-m60-a1.html",
+    },
+  },
+  // Verdrahtet werden nur Seiten mit status "erprobt". Die uebrigen
+  // Geraete der Familie bleiben bei dem, was devices.js aus dem Upstream
+  // mitbringt, also meist einem Link ins OpenWrt-Wiki.
 };
