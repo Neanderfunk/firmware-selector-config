@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 2da0960)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 3c72969)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -200,7 +200,7 @@ var config = {
       "FRITZ!Box 4020": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-4020.html",
       "FRITZ!Box 4040": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-4040.html",
       "FRITZ!Box 7312": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7312.html",
-      "FRITZ!Box 7360": {"v2": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7360-v2.html"},
+      "FRITZ!Box 7360": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7360-v1.html", "v2": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7360-v2.html"},
       "FRITZ!Box 7360 SL": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7360-sl.html",
       "FRITZ!Box 7362 SL": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7362-sl.html",
       "FRITZ!Box 7412": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7412.html",
@@ -263,7 +263,13 @@ var config = {
       "DIR-878": {"a1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-878-a1.html"},
       "DIR-882": {"a1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-882-a1.html"},
     },
+    "Enterasys": {
+      "WS-AP3705i": "https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3705i.html",
+      "WS-AP3710i": "https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3710i.html",
+      "WS-AP3715i": "https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3715i.html",
+    },
     "Extreme Networks": {
+      "WS-AP3805i": "https://routersoftware.ffnef.de/anleitungen/de/extreme-networks-ws-ap3805i.html",
       "WS-AP3825i": "https://routersoftware.ffnef.de/anleitungen/de/extreme-networks-ws-ap3825i.html",
     },
     "FriendlyElec": {
@@ -337,6 +343,9 @@ var config = {
       "PI3": "https://routersoftware.ffnef.de/anleitungen/de/raspberrypi-3-model-b.html",
       "PI4": "https://routersoftware.ffnef.de/anleitungen/de/raspberrypi-4-model-b.html",
     },
+    "Siemens": {
+      "WS-AP3610": "https://routersoftware.ffnef.de/anleitungen/de/siemens-ws-ap3610.html",
+    },
     "Sophos": {
       "AP100": "https://routersoftware.ffnef.de/anleitungen/de/sophos-ap100.html",
       "AP100c": "https://routersoftware.ffnef.de/anleitungen/de/sophos-ap100c.html",
@@ -409,6 +418,14 @@ var config = {
       "NWA50AX Pro": "https://routersoftware.ffnef.de/anleitungen/de/zyxel-nwa50ax-pro.html",
       "NWA55AXE": "https://routersoftware.ffnef.de/anleitungen/de/zyxel-nwa55axe.html",
       "WSM20": "https://routersoftware.ffnef.de/anleitungen/de/zyxel-wsm20.html",
+    },
+    "devolo": {
+      "WiFi Pro 1200e": "https://routersoftware.ffnef.de/anleitungen/de/devolo-wifi-pro-1200e.html",
+      "WiFi Pro 1200i": "https://routersoftware.ffnef.de/anleitungen/de/devolo-wifi-pro-1200i.html",
+      "WiFi Pro 1750c": "https://routersoftware.ffnef.de/anleitungen/de/devolo-wifi-pro-1750c.html",
+      "WiFi Pro 1750e": "https://routersoftware.ffnef.de/anleitungen/de/devolo-wifi-pro-1750e.html",
+      "WiFi Pro 1750i": "https://routersoftware.ffnef.de/anleitungen/de/devolo-wifi-pro-1750i.html",
+      "WiFi Pro 1750x": "https://routersoftware.ffnef.de/anleitungen/de/devolo-wifi-pro-1750x.html",
     },
     "x86": {
       "generic 32bit": "https://routersoftware.ffnef.de/anleitungen/de/x86-generic.html",
