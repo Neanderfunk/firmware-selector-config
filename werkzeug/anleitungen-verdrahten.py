@@ -190,7 +190,12 @@ def main():
     # app.js fuer jede Revision. Sonst ein Objekt je Revision -- app.js kennt
     # dort keinen Rueckfall, eine nicht genannte Revision bleibt ohne Link.
     print("  // Erzeugt von werkzeug/anleitungen-verdrahten.py aus")
-    print("  // %s" % a.index)
+    # Bei einer lokalen Datei nur ihren Namen: ein Pfad aus dem eigenen
+    # Arbeitsverzeichnis hat in einer ausgelieferten config.js nichts
+    # verloren. Die Quelle dann von Hand nachtragen.
+    quelle = a.index if a.index.startswith(("http://", "https://")) \
+        else "lokale Datei " + Path(a.index).name
+    print("  // %s" % quelle)
     print("  // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.")
     print("  devices_info: {")
     for hersteller in sorted(baum):
