@@ -341,7 +341,7 @@ je Gerät eine Markdown-Datei mit YAML-Kopf, daraus eine eigenständige Seite
     [
       {"gluon_name": "d-link-aquila-pro-ai-m60-a1",
        "url": "https://.../html/de/d-link-aquila-pro-ai-m60-a1.html",
-       "status": "erprobt", "stufe": "mit Werkzeug", "sprache": "de"}
+       "status": "erprobt", "stufe": "mit scripts/Netzwerktools", "sprache": "de"}
     ]
 
 Aus `gluon_name` plus unserer `devices.js` entsteht `config.devices_info`
