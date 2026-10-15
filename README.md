@@ -303,6 +303,34 @@ Mehr Oberfläche gibt es dafür nicht. Daraus folgt alles Weitere:
   Revision, so wie sie in `devices.js` stehen, also etwa `"TP-Link"` /
   `"Archer C6"` / `"v2"`. Der `gluon_name` ist dort nur der Wert.
 
+### Was wir daraus machen (Stand 15.10.2026)
+
+**Verdrahtet sind alle Anleitungen, nicht nur die erprobten** (adorfer):
+validieren lässt sich das nur über Rückmeldungen aus dem Feld, so viele Geräte
+kommen bei uns nie zusammen. Und auch eine ungeprüfte Seite ist besser als das,
+was sich jemand Neues aus dem OpenWrt-Wiki und fremden Foren zusammensucht.
+Wie sicher eine Seite ist, sagt sie oben selbst. `config.devices_info` erzeugt
+`werkzeug/anleitungen-verdrahten.py`; die Ausgabe ersetzt den Block in
+`config.js` von Hand.
+
+**Die Revision rechnet das Werkzeug so aus wie `app.js`.** Viele Modelle haben
+in `devices.js` einen einzigen Eintrag für alle Revisionen (`"CPE210":
+"tp-link-cpe210"`), die Revision liest der Selector erst aus dem Imagenamen
+(`…-tp-link-cpe210-v2-sysupgrade.bin` ergibt `v2`). Die Anleitungen heißen wie
+die Images, also lässt sich derselbe Schlüssel ableiten. Bleibt nach dem
+längsten `devices.js`-Präfix etwas übrig, das keine reine Revision ist, wird es
+gemeldet statt geraten: ein früherer Ansatz hatte vom Ende her abgeschnitten
+und dabei aus `cudy-ap3000-wall-v1` den AP3000 gemacht.
+
+**Der kleine Knopf reicht nicht** (adorfer), deshalb baut `ffnef.js` ihn in
+Schritt 2 um, ohne `app.js` anzufassen. Ist der Link unsere eigene Anleitung
+unter `/anleitungen/`, erscheint direkt unter dem Absatz zu Erstinstallation
+und Upgrade ein Kasten mit großem Knopf „Installationsanleitung öffnen" (neues
+Fenster), der Adresse als Text und einem Kopierknopf, dazu der Tipp, sie aufs
+Handy zu holen: bei vielen Geräten ist der Rechner während der Installation
+vom Internet getrennt. Bei einem fremden Link aus `devices.js` bleibt der alte
+Warntext.
+
 ### Vereinbartes Format (15.10.2026, mit Content und Buildsystem)
 
 Die Seiten entstehen im Repo `gluon-rampe-installer` unter `anleitungen/`,
