@@ -142,14 +142,40 @@ def tabelle_lesen():
     return zuordnung, bemerkung
 
 
+# Beide Aufrufe uebergeben die VOLLSTAENDIGE URL, nicht die blanke ID mit
+# "--id". Diese Option war in gdown 5 als veraltet markiert und ist in
+# gdown 6 weg: "unrecognized arguments: --id", und zwar erst beim ersten
+# Download, nicht beim Start. Debian 13 liefert 5.2.0, Ubuntu 26.04 5.2.1,
+# pipx holt 6.x -- in einem Werkzeug, das auf fremden Maschinen laeuft,
+# gehoert also die Form hierher, die alle drei verstehen.
+
+def schon_da(pfad):
+    """Liegt da schon etwas Brauchbares?
+
+    Nicht einfach exists(): ein abgebrochener Lauf hinterlaesst eine leere
+    Datei oder ein leeres Verzeichnis -- gdown_ordner legt das Verzeichnis
+    sogar vor dem Download an. Mit exists() als Mass wuerde so ein Rest
+    beim naechsten Lauf stillschweigend als "vorhanden" durchgehen, und
+    das Geraet fehlte dauerhaft im Spiegel, ohne eine einzige Meldung.
+    """
+    if pfad.is_dir():
+        return any(pfad.iterdir())
+    return pfad.is_file() and pfad.stat().st_size > 0
+
+
 def gdown_datei(kid, ziel):
-    subprocess.run(["gdown", "--id", kid, "-O", str(ziel), "--quiet"], check=True)
+    subprocess.run(["gdown", "https://drive.google.com/uc?id=" + kid,
+                    "-O", str(ziel), "--quiet"], check=True)
 
 
 def gdown_ordner(kid, ziel):
     ziel.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["gdown", "--folder", "--id", kid, "-O", str(ziel), "--quiet"],
-                   check=True)
+    # --remaining-ok: ohne das bricht gdown bei Ordnern mit mehr als 50
+    # Dateien ab. Cudys Unterordner sind klein, aber das soll kein
+    # stiller Abbruch werden, wenn sich das aendert.
+    subprocess.run(["gdown", "--folder", "--remaining-ok",
+                    "https://drive.google.com/drive/folders/" + kid,
+                    "-O", str(ziel), "--quiet"], check=True)
 
 
 def md5(pfad):
@@ -273,12 +299,17 @@ def main():
     for e in sorted(eintraege, key=lambda x: x["name"].lower()):
         rohziel = roh / e["name"]
         try:
-            if rohziel.exists() or (rohziel.is_dir() and any(rohziel.iterdir())):
+            if schon_da(rohziel):
                 print("vorhanden: %s" % e["name"])
             elif e["ordner"]:
+                # Rest eines abgebrochenen Laufs, sonst stolpert gdown.
+                if rohziel.exists():
+                    shutil.rmtree(rohziel, ignore_errors=True)
                 print("hole Ordner: %s" % e["name"])
                 gdown_ordner(e["id"], rohziel)
             else:
+                if rohziel.exists():
+                    rohziel.unlink()
                 print("hole Datei: %s" % e["name"])
                 gdown_datei(e["id"], rohziel)
         except subprocess.CalledProcessError as f:
