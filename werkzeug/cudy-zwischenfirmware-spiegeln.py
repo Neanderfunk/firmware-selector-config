@@ -72,6 +72,11 @@ ORDNER_NOTFALL = "1BKVarlwlNxf7uJUtRhuMGUqeCa5KpMnj"
 
 UA = "Mozilla/5.0 (X11; Linux x86_64)"
 
+# Dorthin gehoert der fertige Spiegel auf dem Firmware-Server. Steht hier
+# nur fuer den Hinweis am Ende; verschoben wird von Hand, weil der Spiegel
+# erst durchgesehen gehoert.
+AUSLIEFERN = "/var/www/download.ffnef.de/other"
+
 # In der Ablage liegt neben den Firmwares auch Cudys Formular fuer die
 # EAEU-Konformitaet samt Antwortordner. Das gehoert nicht in den Spiegel.
 NICHT_SPIEGELN = ("file upload form",)
@@ -371,13 +376,18 @@ def main():
 
     print()
     print("### %d Geraete benannt, Uebersicht in %s" % (len(uebersicht), ziel))
-    print("### Hochladen von Hand, zum Beispiel:")
-    # Ohne "root@": auf unseren Maschinen ist kein root-Login per ssh
-    # moeglich. Wer schon als root auf dem Server sitzt, laesst den
-    # ssh-Teil ganz weg.
-    print("###   rsync -a --delete --rsync-path='sudo rsync' \\")
-    print("###     %s/ benutzer@<firmware-server>:/var/www/.../other/%s/"
-          % (ziel, ziel.name))
+    print("### Einreihen von Hand, nach dem Durchsehen:")
+    if str(ziel.parent) == AUSLIEFERN:
+        print("###   liegt schon am richtigen Platz")
+    elif Path(AUSLIEFERN).is_dir():
+        print("###   mv %s %s/" % (ziel, AUSLIEFERN))
+    else:
+        # Ohne "root@": auf unseren Maschinen ist kein root-Login per ssh
+        # moeglich. Wer schon als root auf dem Server sitzt, laesst den
+        # ssh-Teil ganz weg.
+        print("###   rsync -a --delete --rsync-path='sudo rsync' \\")
+        print("###     %s/ benutzer@firmware6.ffnef.de:%s/%s/"
+              % (ziel, AUSLIEFERN, ziel.name))
     return 0
 
 
