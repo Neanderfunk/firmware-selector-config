@@ -247,6 +247,28 @@ def bin_aus(quelle, tiefe=0):
     return []
 
 
+# Cudy legt in manche Archive neben der Zwischenfirmware ein
+# TFTP-Recovery-Image, beim X6 V2 und beim M1800 aus 2023 als
+# "Recover/recovery.bin". Das ist NICHT die Datei, die wir brauchen: es
+# ist das Bild fuer den Notfallweg per TFTP, und es ist auch nicht das,
+# was ein Router ueber die Weboberflaeche annimmt.
+RECOVERY = re.compile(r"recover", re.I)
+
+
+def firmware_waehlen(dateien):
+    """Aus mehreren .bin die Zwischenfirmware heraussuchen.
+
+    Gibt (Auswahl, Verworfenes) zurueck. Bleibt nach dem Aussortieren
+    nichts uebrig, bleibt alles stehen: dann ist das Recovery-Image
+    offenbar das einzige Angebot, und das soll der Mensch sehen und
+    nicht das Skript entscheiden.
+    """
+    ohne = [d for d in dateien if not RECOVERY.search(d[0])]
+    if not ohne:
+        return dateien, []
+    return ohne, [d[0] for d in dateien if RECOVERY.search(d[0])]
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -344,10 +366,14 @@ def main():
 
         if not e["gluon"]:
             continue
-        dateien = bin_aus(rohziel)
+        dateien, verworfen = firmware_waehlen(bin_aus(rohziel))
+        for v in verworfen:
+            print("  (%s uebergangen, Recovery-Image)" % v)
         if len(dateien) != 1:
-            print("  WARNUNG: %d .bin in %s, keine eindeutige Zuordnung"
-                  % (len(dateien), e["name"]), file=sys.stderr)
+            print("  WARNUNG: %d .bin in %s, keine eindeutige Zuordnung: %s"
+                  % (len(dateien), e["name"],
+                     ", ".join(d[0] for d in dateien) or "keine"),
+                  file=sys.stderr)
             continue
         urname, inhalt = dateien[0]
         zielbin = fertig / (e["gluon"] + ".bin")
