@@ -33,19 +33,9 @@ Aufruf:
     cudy-zwischenfirmware-spiegeln.py --holen          # wirklich holen
     cudy-zwischenfirmware-spiegeln.py --holen --ziel /pfad
 
-Braucht genau ein Fremdpaket: gdown. Das Distributionspaket heisst
-ebenso, liegt aber nur in Debian ab 13 und Ubuntu ab 26.04; Ubuntu 24.04
-und Debian 12 haben es nicht (am 15.10.2026 gegen die Archiv-Indizes geprueft). Dort:
-
-    sudo apt install -y pipx
-    sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install gdown
-
-Der Startlink MUSS in einem Verzeichnis des System-Pfades landen, nicht in
-~/.local/bin: dieses Skript ruft schlicht "gdown" auf, und bei
-"ssh host befehl" liest die Shell kein .profile.
-
-Alles Uebrige ist Bordmittel; die Ordnerliste wird ohne API-Schluessel aus
-der Drive-Seite gelesen.
+Braucht nichts weiter als Python: Ordnerliste und Download gehen ohne
+API-Schluessel und ohne Fremdpaket. gdown wird nur als Rueckfallebene
+versucht, wenn der direkte Weg misslingt, und darf fehlen.
 """
 
 import argparse
