@@ -248,7 +248,7 @@ def main():
     p.add_argument("--holen", action="store_true",
                    help="wirklich herunterladen (ohne dies nur Bericht)")
     p.add_argument("--ziel", default=None,
-                   help="Zielverzeichnis (Vorgabe: ./cudy-spiegel-<datum>)")
+                   help="Zielverzeichnis (Vorgabe: ./cudy-mirror-<datum>)")
     p.add_argument("--nur", default=None,
                    help="nur Eintraege, deren Name dieses Stueck enthaelt. "
                         "Zum Pruefen und zum Nachziehen eines einzelnen Modells.")
@@ -310,7 +310,7 @@ def main():
         print("### auf %d Eintraege eingeschraenkt durch --nur %s\n"
               % (len(eintraege), a.nur))
 
-    ziel = Path(a.ziel or ("cudy-spiegel-" + date.today().strftime("%Y%m%d"))).resolve()
+    ziel = Path(a.ziel or ("cudy-mirror-" + date.today().strftime("%Y%m%d"))).resolve()
     roh = ziel / "roh"
     fertig = ziel / "zwischenfirmware"
     roh.mkdir(parents=True, exist_ok=True)
