@@ -38,8 +38,14 @@ Aktualisierung:
 **Wenn der Server nicht ins Internet darf**, dann die beiden Klone woanders
 anlegen (zum Beispiel auf dem Jumphost) und als Ganzes übertragen:
 
-    rsync -a --delete selector-upstream selector-config root@server:/var/www/
-    ssh root@server sh /var/www/selector-config/deploy.sh
+    rsync -a --delete --rsync-path='sudo rsync' \
+          selector-upstream selector-config benutzer@server:/var/www/
+    ssh benutzer@server sudo sh /var/www/selector-config/deploy.sh
+
+Ein **root-Login per ssh gibt es auf unseren Maschinen nicht**, deshalb der
+persönliche Benutzer plus `sudo`; `--rsync-path` ist der Weg, mit dem rsync
+trotzdem nach `/var/www` schreiben darf. Wer schon als root auf der Maschine
+sitzt, nimmt die Befehle ohne diesen Vorspann.
 
 Die `.git`-Verzeichnisse kommen dabei mit, `git pull` funktioniert also später
 auch dort, sobald der Weg frei ist.

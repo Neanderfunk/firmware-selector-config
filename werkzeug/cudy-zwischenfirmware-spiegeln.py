@@ -320,7 +320,11 @@ def main():
     print()
     print("### %d Geraete benannt, Uebersicht in %s" % (len(uebersicht), ziel))
     print("### Hochladen von Hand, zum Beispiel:")
-    print("###   rsync -a --delete %s/ root@<firmware-server>:/var/www/.../other/%s/"
+    # Ohne "root@": auf unseren Maschinen ist kein root-Login per ssh
+    # moeglich. Wer schon als root auf dem Server sitzt, laesst den
+    # ssh-Teil ganz weg.
+    print("###   rsync -a --delete --rsync-path='sudo rsync' \\")
+    print("###     %s/ benutzer@<firmware-server>:/var/www/.../other/%s/"
           % (ziel, ziel.name))
     return 0
 
