@@ -309,6 +309,44 @@ künftig dort steht. Solange das nicht entschieden ist, bleibt
    Sonderregel für den Cudy M3000 v1/v2 mit YT8821.
 4. Zum Prüfen in `config.js` `listMissingImages: true` setzen: die
    Browser-Konsole zeigt dann jede Datei ohne Regel.
+5. **Deploy steht aus.** Der Server ist auf dem Stand vor `6b23b66`
+   (entfernte Flashchip-Warnung) und kennt die Anleitungen noch nicht.
+   Ein `sh /var/www/selector-config/deploy.sh` holt beides zusammen.
+6. `cudy-wr3000p` und `cudy-ap3000-wall` in `devices.js` aufnehmen,
+   **sobald `stable` auf 2025.1 steht**. Beide sind in Cudys Ablage
+   vorhanden; siehe `werkzeug/cudy-zwischenfirmware.tsv` im Repo
+   router-werkstatt.
+
+### Gerätebilder: wo die Lücke steht (gemessen 15.10.2026)
+
+| | |
+|---|---|
+| Geräte in `devices.js` | 526 |
+| mit Zeichnung | 266 |
+| **ohne Zeichnung** | **260** |
+
+Gezählt gegen `freifunk/device-pictures` (385 Zeichnungen), unsere eigenen
+`ffnef/bilder/` (5) und die Namenszuordnungen in `ffnef/bilder.zuordnung`
+(38 Zeilen).
+
+Die Lücke verteilt sich sehr ungleich: TP-Link 50, Ubiquiti 33, D-Link 23,
+Mikrotik 20, Open-Mesh 17, Netgear 16, Cudy 14, x86 14, dahinter Alfa,
+GL.iNet, Linksys und Sophos mit je 7.
+
+**Nicht jede Lücke ist gleich viel wert.** Ein Open-Mesh oder Sophos aus
+der 4/32-Liste steht praktisch nie zur Auswahl, ein Cudy oder aktueller
+TP-Link täglich. Die Reihenfolge sollte deshalb `devices_recommended` und
+dem tatsächlichen Bestand im Feld folgen, nicht der Herstellerliste.
+
+Drei Wege, die sich kombinieren lassen:
+
+* **Namenszuordnung**: Zeichnungen, die es gibt, aber unter anderem Namen.
+  So kamen am 11.10. siebzehn Bilder ohne jede Fotografie dazu. Kostet
+  nichts außer Rechenzeit und ist der erste Schritt.
+* **Vektorisieren vorhandener Fotos**, so ist `x86-geode.svg` (ALIX 3D2)
+  entstanden.
+* **Selbst fotografieren**, wofür die Mapserver-Session eine Liste
+  angefangen hat.
 
 ## Wer diese beiden Repos pflegt
 
