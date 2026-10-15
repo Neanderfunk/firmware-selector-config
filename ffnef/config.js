@@ -148,7 +148,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 6c064a9)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 2817668)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -169,6 +169,14 @@ var config = {
       "FRITZ!WLAN Repeater 1750E": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-wlan-repeater-1750e.html",
       "FRITZ!WLAN Repeater 300E": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-wlan-repeater-300e.html",
       "FRITZ!WLAN Repeater 450E": "https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-wlan-repeater-450e.html",
+    },
+    "Aruba": {
+      "AP-303": "https://routersoftware.ffnef.de/anleitungen/de/aruba-ap-303.html",
+      "AP-303H": "https://routersoftware.ffnef.de/anleitungen/de/aruba-ap-303h.html",
+      "AP-365": "https://routersoftware.ffnef.de/anleitungen/de/aruba-ap-365.html",
+      "Instant On AP11": "https://routersoftware.ffnef.de/anleitungen/de/aruba-instant-on-ap11.html",
+      "Instant On AP11D": "https://routersoftware.ffnef.de/anleitungen/de/aruba-instant-on-ap11d.html",
+      "Instant On AP17": "https://routersoftware.ffnef.de/anleitungen/de/aruba-instant-on-ap17.html",
     },
     "Buffalo": {
       "WZR-600DHP": {"v2": "https://routersoftware.ffnef.de/anleitungen/de/buffalo-wzr-600dhp.html"},
@@ -233,6 +241,9 @@ var config = {
       "GL-XE300": "https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-xe300.html",
       "VIXMINI": "https://routersoftware.ffnef.de/anleitungen/de/gl.inet-vixmini.html",
       "microuter-N300": "https://routersoftware.ffnef.de/anleitungen/de/gl.inet-microuter-n300.html",
+    },
+    "Genexis": {
+      "Pulse EX400": "https://routersoftware.ffnef.de/anleitungen/de/genexis-pulse-ex400.html",
     },
     "Linksys": {
       "EA6350": {"v3": "https://routersoftware.ffnef.de/anleitungen/de/linksys-ea6350v3.html"},
@@ -306,6 +317,9 @@ var config = {
       "TL-WR902AC": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr902ac-v1.html"},
       "WBS210": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-wbs210-v1.html", "v2": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-wbs210-v2.html"},
       "WBS510": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-wbs510-v1.html"},
+    },
+    "Totolink": {
+      "X5000R": "https://routersoftware.ffnef.de/anleitungen/de/totolink-x5000r.html",
     },
     "Ubiquiti": {
       "EdgeRouter X": "https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-edgerouter-x.html",
