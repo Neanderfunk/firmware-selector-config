@@ -148,7 +148,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 2817668)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer b250f54)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -324,6 +324,7 @@ var config = {
     "Ubiquiti": {
       "EdgeRouter X": "https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-edgerouter-x.html",
       "EdgeRouter X-SFP": "https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-edgerouter-x-sfp.html",
+      "NanoBeam M5 (XW)": "https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-nanobeam-m5-xw.html",
       "NanoStation Loco M2 (XW)": "https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-nanostation-loco-m-xw.html",
       "Rocket M (XM)": "https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-rocket-m-xm.html",
       "Swiss Army Knife Ultra": "https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-swiss-army-knife-ultra.html",
