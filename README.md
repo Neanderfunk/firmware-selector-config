@@ -331,6 +331,15 @@ Handy zu holen: bei vielen Geräten ist der Rechner während der Installation
 vom Internet getrennt. Bei einem fremden Link aus `devices.js` bleibt der alte
 Warntext.
 
+**Zurückgezogene Anleitungen** stehen von Hand in `config.ffnef_zurueckgezogen`
+(Hersteller, Modell, URL des Problems, Grund, Datum), außerhalb des erzeugten
+Blocks, damit ein neuer Lauf des Werkzeugs sie nicht überschreibt. Für diese
+Geräte zeigt der Kasten „Anleitung vorerst zurückgezogen“, den Grund und den
+Knopf „Bekanntes Problem ansehen“. Nur den Link zu entfernen reicht nicht: dann
+fiele der Selector auf den Upstream-Link zurück und schriebe „es gibt eine
+extra Anleitung“. Erster Fall: Enterasys WS-AP3715i, 16.10.2026,
+freifunk-gluon/gluon#3842. Eintrag löschen, sobald die Seite zurück ist.
+
 ### Vereinbartes Format (15.10.2026, mit Content und Buildsystem)
 
 Die Seiten entstehen im Repo `gluon-rampe-installer` unter `anleitungen/`,
