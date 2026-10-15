@@ -2,7 +2,7 @@
    bewusst nur lesend: app.js bleibt unveraendert und laesst sich damit ohne
    Konflikt nachziehen. Genau wie ffnef.css.
 
-   Zwei Dinge tut diese Datei:
+   Drei Dinge tut diese Datei:
 
    1. Hat ein Geraet nur eine Hardware-Version, waehlt sie die von selbst aus.
       Vorher musste man sie trotzdem aus einem Auswahlfeld mit genau einem
@@ -10,6 +10,11 @@
 
    2. Sie schreibt neben das Geraetebild, fuer welche Version die Firmware
       gilt und fuer welche nicht.
+
+   3. Sie macht aus dem kleinen "Anleitung"-Knopf, den app.js in Schritt 2
+      setzt, einen deutlichen Verweis auf unsere eigene Anleitung, mit der
+      Adresse zum Abschreiben und dem Tipp, sie aufs Handy zu holen. Bei
+      einem fremden Link aus devices.js bleibt der alte Warntext stehen.
 
    Woher die Angaben kommen: welche Versionen WIR anbieten, steht im
    Auswahlfeld, das app.js aus den Dateinamen der Images fuellt. Das ist die
@@ -227,7 +232,62 @@
     neuZeichnen();
   }
 
+  /* --- 3. Anleitung in Schritt 2 ------------------------------------------
+     app.js leert #deviceinfo bei jedem Geraetewechsel und setzt dann einen
+     Link hinein, oder keinen. Beobachtet wird nur die direkte Kinderliste;
+     dass wir den Linktext aendern, loest den Beobachter also nicht erneut
+     aus. */
+  function anleitungAufbereiten() {
+    var ziel = $('#deviceinfo');
+    var box = ziel ? ziel.parentNode : null;
+    var adresse = box ? $('.ffnef-anleitung-adresse', box) : null;
+    if (!ziel || !box) return;
+
+    var a = $('a', ziel);
+    var eigen = !!(a && /\/anleitungen\//.test(a.getAttribute('href') || ''));
+    box.classList.toggle('ffnef-eigen', eigen);
+    box.classList.toggle('ffnef-fremd', !!a && !eigen);
+    if (adresse) adresse.textContent = '';
+    if (!a) return;
+
+    a.rel = 'noopener';
+    if (!eigen) return;
+
+    a.textContent = 'Installationsanleitung öffnen';
+    a.classList.add('ffnef-anleitung-knopf');
+
+    /* Die Adresse als Text: zum Abtippen am Handy, und damit man sieht,
+       wohin es geht. Dazu ein Kopierknopf, wo der Browser das erlaubt. */
+    if (adresse) {
+      adresse.appendChild(document.createElement('br'));
+      adresse.appendChild(document.createTextNode('Adresse: '));
+      adresse.appendChild(el('code', null, a.href));
+      if (navigator.clipboard && window.isSecureContext) {
+        var k = el('button', 'ffnef-kopieren', 'Adresse kopieren');
+        k.type = 'button';
+        k.addEventListener('click', function () {
+          navigator.clipboard.writeText(a.href).then(function () {
+            k.textContent = 'Kopiert';
+          }, function () {
+            k.textContent = 'Kopieren ging nicht';
+          });
+        });
+        adresse.appendChild(document.createTextNode(' '));
+        adresse.appendChild(k);
+      }
+    }
+  }
+
+  function anleitungBeobachten() {
+    var ziel = $('#deviceinfo');
+    if (!ziel) return;
+    new MutationObserver(anleitungAufbereiten).observe(ziel, { childList: true });
+    anleitungAufbereiten();
+  }
+
   function los() {
+    /* Haengt nicht an versionen-anzeige.json, also sofort. */
+    anleitungBeobachten();
     var anfrage = new XMLHttpRequest();
     anfrage.open('GET', DATEI, true);
     anfrage.onload = function () {

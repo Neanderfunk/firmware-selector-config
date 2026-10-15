@@ -68,18 +68,35 @@
             identisch, d.h. das Upgrade-File passt auch für die
             Erstinstallation.
           </p>
+          <!-- Sichtbar macht den Kasten app.js (show-deviceinfo-warning), sobald
+               es fuer das Geraet einen Link gibt. Welcher der beiden Texte
+               gilt, entscheidet ffnef.js am Link: unsere eigene Anleitung
+               unter /anleitungen/ oder ein fremder Verweis aus devices.js. -->
+          <div class="warning-deviceinfo">
+            <div class="ffnef-anleitung-eigen">
+              <b>Für die Erstinstallation haben wir eine Anleitung zu genau
+              diesem Gerät.</b> Öffne sie, bevor du anfängst. Sie geht in einem
+              neuen Fenster auf, diese Seite bleibt offen.
+            </div>
+            <div class="ffnef-anleitung-fremd">
+              <b>Vorsicht!</b> Für dieses Gerät gibt es eine extra Anleitung.
+              Dies kann zum Beispiel bedeuten, dass die Installation nicht über die
+              Weboberfläche des Geräts möglich ist. Bitte besuche zuerst die folgende
+              Seite und lies dir alle Informationen gut durch bevor du mit dem
+              Flashen der Firmware beginnst.
+            </div>
+            <div id="deviceinfo"></div>
+            <p class="ffnef-anleitung-handy">
+              <b>Tipp:</b> Hol dir die Anleitung auch aufs Handy. Bei vielen
+              Geräten musst du den Rechner während der Installation vom
+              Internet trennen und kannst sie dort dann nicht mehr aufrufen.
+              <span class="ffnef-anleitung-adresse"></span>
+            </p>
+          </div>
           <p>
             Einige Geräte benötigen spezielle Images, welche über den Bootloader
             des Herstellers eingespielt werden.
           </p>
-          <div class="warning-deviceinfo">
-            <b>Vorsicht!</b> Für dieses Gerät gibt es eine extra Anleitung.
-            Dies kann zum Beispiel bedeuten, dass die Installation nicht über die
-            Weboberfläche des Geräts möglich ist. Bitte besuche zuerst die folgende
-            Seite und lies dir alle Informationen gut durch bevor du mit dem
-            Flashen der Firmware beginnst.
-            <div id="deviceinfo"></div>
-          </div>
           <div id="typeselect" class="radiogroup"></div>
         </div>
       </div>

@@ -75,3 +75,39 @@
     border-top: 3px solid #ccc;
   }
 }
+
+/* --- Anleitung in Schritt 2 ---------------------------------------------
+   app.js blendet .warning-deviceinfo ein, sobald es einen Link gibt.
+   ffnef.js setzt dazu ffnef-eigen (unsere Anleitung) oder ffnef-fremd
+   (Verweis aus devices.js); davon haengt ab, welcher Text sichtbar ist.
+   Ohne ffnef.js bleibt der alte Warntext, damit nichts leer steht. */
+#wizard #type-pane .warning-deviceinfo .ffnef-anleitung-eigen,
+#wizard #type-pane .warning-deviceinfo .ffnef-anleitung-handy {
+  display: none;
+}
+#wizard #type-pane .warning-deviceinfo.ffnef-eigen .ffnef-anleitung-eigen,
+#wizard #type-pane .warning-deviceinfo.ffnef-eigen .ffnef-anleitung-handy {
+  display: block;
+}
+#wizard #type-pane .warning-deviceinfo.ffnef-eigen .ffnef-anleitung-fremd {
+  display: none;
+}
+#wizard #type-pane .warning-deviceinfo #deviceinfo {
+  margin: 0.75em 0;
+}
+#wizard #type-pane .warning-deviceinfo .btn.ffnef-anleitung-knopf {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.6em 1.2em;
+}
+#wizard #type-pane .warning-deviceinfo .ffnef-anleitung-handy {
+  margin: 0.5em 0 0;
+}
+#wizard #type-pane .warning-deviceinfo .ffnef-anleitung-adresse code {
+  word-break: break-all;
+}
+#wizard #type-pane .warning-deviceinfo .ffnef-kopieren {
+  font: inherit;
+  padding: 0.1em 0.6em;
+  cursor: pointer;
+}
