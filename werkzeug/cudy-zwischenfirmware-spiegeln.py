@@ -142,12 +142,30 @@ def tabelle_lesen():
     return zuordnung, bemerkung
 
 
-# Beide Aufrufe uebergeben die VOLLSTAENDIGE URL, nicht die blanke ID mit
-# "--id". Diese Option war in gdown 5 als veraltet markiert und ist in
-# gdown 6 weg: "unrecognized arguments: --id", und zwar erst beim ersten
-# Download, nicht beim Start. Debian 13 liefert 5.2.0, Ubuntu 26.04 5.2.1,
-# pipx holt 6.x -- in einem Werkzeug, das auf fremden Maschinen laeuft,
-# gehoert also die Form hierher, die alle drei verstehen.
+# gdowns Kommandozeile ist zwischen den Fassungen NICHT stabil, und das
+# faellt immer erst beim ersten Download auf, nicht beim Start: der
+# Bericht laeuft durch, dann scheitert jeder Eintrag einzeln.
+#
+#   --id            in 5 veraltet, in 6 entfernt
+#   --remaining-ok  in 5 vorhanden, in 6 entfernt (dort gibt es die
+#                   Grenze von 50 Dateien je Ordner nicht mehr)
+#   --fuzzy         in 5 vorhanden, in 6 entfernt
+#
+# Im Umlauf sind 5.2.0 (Debian 13), 5.2.1 (Ubuntu 26.04) und 6.4.2 (ueber
+# pipx). Deshalb steht hier nur, was alle kennen: die vollstaendige URL
+# statt einer ID mit --id, dazu -O und --quiet. Alles darueber hinaus wird
+# an der Hilfeseite nachgesehen, statt es zu glauben.
+OPTIONEN = None
+
+
+def gdown_kennt(option):
+    """Kennt das installierte gdown diese Option?"""
+    global OPTIONEN
+    if OPTIONEN is None:
+        hilfe = subprocess.run(["gdown", "--help"], check=False,
+                               capture_output=True, text=True).stdout
+        OPTIONEN = set(re.findall(r"--[a-z][a-z0-9-]*", hilfe))
+    return option in OPTIONEN
 
 def schon_da(pfad):
     """Liegt da schon etwas Brauchbares?
@@ -170,12 +188,15 @@ def gdown_datei(kid, ziel):
 
 def gdown_ordner(kid, ziel):
     ziel.mkdir(parents=True, exist_ok=True)
-    # --remaining-ok: ohne das bricht gdown bei Ordnern mit mehr als 50
-    # Dateien ab. Cudys Unterordner sind klein, aber das soll kein
-    # stiller Abbruch werden, wenn sich das aendert.
-    subprocess.run(["gdown", "--folder", "--remaining-ok",
-                    "https://drive.google.com/drive/folders/" + kid,
-                    "-O", str(ziel), "--quiet"], check=True)
+    befehl = ["gdown", "--folder"]
+    # Nur gdown 5 braucht das: ohne die Zusicherung bricht es bei mehr als
+    # 50 Dateien je Ordner ab. Cudys Unterordner sind klein, aber das soll
+    # kein stiller Abbruch werden, wenn sich das aendert.
+    if gdown_kennt("--remaining-ok"):
+        befehl.append("--remaining-ok")
+    befehl += ["https://drive.google.com/drive/folders/" + kid,
+               "-O", str(ziel), "--quiet"]
+    subprocess.run(befehl, check=True)
 
 
 def md5(pfad):
