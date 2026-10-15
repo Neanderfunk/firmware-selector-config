@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 3c72969)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 2f71047)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -358,11 +358,12 @@ var config = {
       "Archer A7": {"v5": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-a7-v5.html"},
       "Archer AX23": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-ax23-v1.html"},
       "Archer C2": {"v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c2-v3.html"},
+      "Archer C20": {"v4": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20-v4.html"},
       "Archer C20i": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20i.html",
       "Archer C25": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c25-v1.html"},
       "Archer C2600": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c2600.html"},
       "Archer C5": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c5-v1.html"},
-      "Archer C50": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c50-v1.html"},
+      "Archer C50": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c50-v1.html", "v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c50-v3.html"},
       "Archer C58": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c58-v1.html"},
       "Archer C59": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c59-v1.html"},
       "Archer C6": {"v2 (EU/RU/JP)": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c6-v2-eu-ru-jp.html", "v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c6-v3.html"},
@@ -377,6 +378,10 @@ var config = {
       "RE200": {"v2": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re200-v2.html", "v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re200-v3.html", "v4": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re200-v4.html"},
       "RE500": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re500-v1.html"},
       "RE650": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re650-v1.html"},
+      "TL-MR3020": {"v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-mr3020-v3.html"},
+      "TL-MR3420": {"v5": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-mr3420-v5.html"},
+      "TL-MR6400": {"v5": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-mr6400-v5.html"},
+      "TL-WA801N/ND": {"v5": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wa801nd-v5.html"},
       "TL-WDR3500": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wdr3500-v1.html"},
       "TL-WDR3600": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wdr3600-v1.html"},
       "TL-WDR4300": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wdr4300-v1.html"},
@@ -384,8 +389,9 @@ var config = {
       "TL-WR1043N/ND": {"v2": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr1043nd-v2.html", "v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr1043nd-v3.html", "v4": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr1043nd-v4.html", "v5": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr1043n-v5.html"},
       "TL-WR2543N/ND": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr2543n-nd.html",
       "TL-WR810N": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr810n-v1.html"},
+      "TL-WR841N/ND": {"v13": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr841n-v13.html"},
       "TL-WR842N/ND": {"v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr842n-v3.html"},
-      "TL-WR902AC": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr902ac-v1.html"},
+      "TL-WR902AC": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr902ac-v1.html", "v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr902ac-v3.html", "v4": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr902ac-v4.html"},
       "WBS210": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-wbs210-v1.html", "v2": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-wbs210-v2.html"},
       "WBS510": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-wbs510-v1.html"},
     },
