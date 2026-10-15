@@ -152,25 +152,13 @@ def tabelle_lesen():
 # Bericht laeuft durch, dann scheitert jeder Eintrag einzeln.
 #
 #   --id            in 5 veraltet, in 6 entfernt
-#   --remaining-ok  in 5 vorhanden, in 6 entfernt (dort gibt es die
-#                   Grenze von 50 Dateien je Ordner nicht mehr)
+#   --remaining-ok  in 5 vorhanden, in 6 entfernt
 #   --fuzzy         in 5 vorhanden, in 6 entfernt
 #
 # Im Umlauf sind 5.2.0 (Debian 13), 5.2.1 (Ubuntu 26.04) und 6.4.2 (ueber
-# pipx). Deshalb steht hier nur, was alle kennen: die vollstaendige URL
-# statt einer ID mit --id, dazu -O und --quiet. Alles darueber hinaus wird
-# an der Hilfeseite nachgesehen, statt es zu glauben.
-OPTIONEN = None
-
-
-def gdown_kennt(option):
-    """Kennt das installierte gdown diese Option?"""
-    global OPTIONEN
-    if OPTIONEN is None:
-        hilfe = subprocess.run(["gdown", "--help"], check=False,
-                               capture_output=True, text=True).stdout
-        OPTIONEN = set(re.findall(r"--[a-z][a-z0-9-]*", hilfe))
-    return option in OPTIONEN
+# pipx). Deshalb benutzt dieses Skript von gdown nur noch den
+# Einzeldatei-Download mit vollstaendiger URL, -O und --quiet. Das ist der
+# gemeinsame Nenner aller Fassungen; Ordner baut es sich selbst zusammen.
 
 def schon_da(pfad):
     """Liegt da schon etwas Brauchbares?
@@ -191,17 +179,30 @@ def gdown_datei(kid, ziel):
                     "-O", str(ziel), "--quiet"], check=True)
 
 
-def gdown_ordner(kid, ziel):
+def gdown_ordner(kid, ziel, tiefe=0):
+    """Einen Drive-Ordner holen, Datei fuer Datei.
+
+    Absichtlich NICHT "gdown --folder": dieser Modus hat sich zwischen
+    gdown 5 und 6 zweimal geaendert (--remaining-ok entfallen) und brachte
+    bei 6.4.2 keine Datei an, ohne dass die Ursache aus der Meldung
+    hervorgegangen waere. Die Kindliste lesen wir sowieso selbst, fuer die
+    oberste Ebene der Ablage. Damit bleibt von gdown nur der
+    Einzeldatei-Download uebrig, und der verhaelt sich in allen Fassungen
+    gleich.
+    """
     ziel.mkdir(parents=True, exist_ok=True)
-    befehl = ["gdown", "--folder"]
-    # Nur gdown 5 braucht das: ohne die Zusicherung bricht es bei mehr als
-    # 50 Dateien je Ordner ab. Cudys Unterordner sind klein, aber das soll
-    # kein stiller Abbruch werden, wenn sich das aendert.
-    if gdown_kennt("--remaining-ok"):
-        befehl.append("--remaining-ok")
-    befehl += ["https://drive.google.com/drive/folders/" + kid,
-               "-O", str(ziel), "--quiet"]
-    subprocess.run(befehl, check=True)
+    kinder = ordner_lesen(kid)
+    if not kinder:
+        raise RuntimeError("Drive-Ordner %s ist leer" % kid)
+    for k in kinder:
+        unterziel = ziel / k["name"]
+        if k["ordner"]:
+            if tiefe >= 2:
+                print("  (%s uebergangen, zu tief verschachtelt)" % k["name"])
+                continue
+            gdown_ordner(k["id"], unterziel, tiefe + 1)
+        else:
+            gdown_datei(k["id"], unterziel)
 
 
 def md5(pfad):
