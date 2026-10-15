@@ -245,6 +245,59 @@ Dasselbe gilt für die Domänenkennung in der Anzeige: was in den Knöpfen in
 Klammern steht, kommt aus `prettyPrintVersionRegex` und nicht aus der
 Beschriftung.
 
+## Installationsanleitungen je Gerät: der Knopf „Anleitung"
+
+Der Selector kann je Gerät auf eine Anleitung verlinken. Zuständig ist
+`findDeviceInfo(vendor, model, revision, links)` in `app.js`. Es liest zwei
+Tabellen, `devices_info` aus `devices.js` (Upstream) und optional
+`config.devices_info` aus unserer `config.js`, wobei **unsere gewinnt**.
+Das Ergebnis ist genau ein String, nämlich eine URL, und daraus entsteht ein
+einzelner Knopf:
+
+    a.href = url; a.className = 'btn'; a.target = '_blank'; a.innerText = 'Anleitung';
+
+Mehr Oberfläche gibt es dafür nicht. Daraus folgt alles Weitere:
+
+* **Der Selector verlinkt, er bettet nicht ein.** Eigenständige HTML-Seiten,
+  kein iframe, kein Fragment, keine gemeinsame CSS-Datei, keine Größengrenze.
+* **Die URL muss absolut sein.** Ein relativer Pfad würde gegen die
+  Selector-Seite aufgelöst.
+* **Status oder Schwierigkeitsgrad lassen sich nicht anzeigen.** Es gibt nur
+  den einen Knopf, ohne Badge und ohne Filter.
+* Der Schlüssel ist **nicht** der `gluon_name`, sondern Hersteller, Modell und
+  Revision, so wie sie in `devices.js` stehen, also etwa `"TP-Link"` /
+  `"Archer C6"` / `"v2"`. Der `gluon_name` ist dort nur der Wert.
+
+### Vereinbartes Format (15.10.2026, mit Content und Buildsystem)
+
+Die Seiten entstehen im Repo `gluon-rampe-installer` unter `anleitungen/`,
+je Gerät eine Markdown-Datei mit YAML-Kopf, daraus eine eigenständige Seite
+`html/de/<gluon_name>.html`. Dazu erzeugt dasselbe Skript eine
+**`html/index.json`** mit absoluten URLs:
+
+    [
+      {"gluon_name": "d-link-aquila-pro-ai-m60-a1",
+       "url": "https://.../html/de/d-link-aquila-pro-ai-m60-a1.html",
+       "status": "erprobt", "stufe": "mit Werkzeug", "sprache": "de"}
+    ]
+
+Aus `gluon_name` plus unserer `devices.js` entsteht `config.devices_info`
+mechanisch; von Hand getippt wären es rund hundert Einträge.
+
+**Seiten mit `status: ungeprüft` werden vorerst nicht verlinkt.** Ein Knopf in
+einer Firmware-Oberfläche soll nicht auf etwas zeigen, das noch niemand
+nachvollzogen hat. Liegt bei adorfer, ob das so bleibt.
+
+Zwei Anforderungen an die Seiten: **HTTPS und dauerhaft erreichbar**, denn der
+Knopf steht in einer Oberfläche, die Jahre später noch benutzt wird. Und
+**nichts von fremden Hosts**, keine Schriften und keine Bibliotheken: eine
+Anleitungsseite, die von einem CDN lädt, fällt genau dann aus, wenn jemand sie
+am dringendsten braucht, nämlich mit halb geflashtem Router.
+
+**Offen:** auf welchem Host die Seiten liegen, und ob die Cudy-Anleitung
+künftig dort steht. Solange das nicht entschieden ist, bleibt
+`config.devices_info` für die 18 Cudy-Modelle bewusst leer.
+
 ## Nächste Schritte
 
 1. ~~Maßgeblichen Stand von der Maschine übernehmen.~~ Erledigt, siehe oben.
