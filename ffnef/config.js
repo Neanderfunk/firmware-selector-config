@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer e0d6aaf)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer a2afa34)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -360,8 +360,8 @@ var config = {
     "TP-Link": {
       "Archer A7": {"v5": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-a7-v5.html"},
       "Archer AX23": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-ax23-v1.html"},
-      "Archer C2": {"v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c2-v3.html"},
-      "Archer C20": {"v4": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20-v4.html", "v5": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20-v5.html"},
+      "Archer C2": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c2-v1.html", "v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c2-v3.html"},
+      "Archer C20": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20-v1.html", "v4": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20-v4.html", "v5": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20-v5.html"},
       "Archer C20i": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20i.html",
       "Archer C25": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c25-v1.html"},
       "Archer C2600": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c2600.html"},
