@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 118addd)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 8abdec9)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -221,6 +221,10 @@ var config = {
       "Instant On AP11D": "https://routersoftware.ffnef.de/anleitungen/de/aruba-instant-on-ap11d.html",
       "Instant On AP17": "https://routersoftware.ffnef.de/anleitungen/de/aruba-instant-on-ap17.html",
     },
+    "Asus": {
+      "TUF-AX4200": "https://routersoftware.ffnef.de/anleitungen/de/asus-tuf-ax4200.html",
+      "TUF-AX6000": "https://routersoftware.ffnef.de/anleitungen/de/asus-tuf-ax6000.html",
+    },
     "Buffalo": {
       "WZR-600DHP": {"v2": "https://routersoftware.ffnef.de/anleitungen/de/buffalo-wzr-600dhp.html"},
       "WZR-HP-AG300H": "https://routersoftware.ffnef.de/anleitungen/de/buffalo-wzr-hp-ag300h.html",
@@ -233,6 +237,7 @@ var config = {
       "M3000": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/cudy-m3000-v1.html"},
       "RE3000": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/cudy-re3000-v1.html"},
       "TR1200": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/cudy-tr1200-v1.html"},
+      "TR3000": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/cudy-tr3000-v1.html"},
       "TR3000-256MB": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/cudy-tr3000-256mb-v1.html"},
       "WR1000": {"v2": "https://routersoftware.ffnef.de/anleitungen/de/cudy-wr1000.html"},
       "WR1300": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/cudy-wr1300-v1.html"},
@@ -349,6 +354,9 @@ var config = {
       "CPE220": {"v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe220-v3.html"},
       "CPE510": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe510-v1.html", "v2": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe510-v2.html", "v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe510-v3.html"},
       "CPE710": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe710-v1.html", "v2": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe710-v2.html"},
+      "EAP225-Outdoor": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-eap225-outdoor-v1.html", "v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-eap225-outdoor-v3.html"},
+      "EAP225-Wall": {"v2": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-eap225-wall-v2.html"},
+      "EAP615-Wall": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-eap615-wall-v1.html"},
       "RE200": {"v2": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re200-v2.html", "v3": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re200-v3.html", "v4": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re200-v4.html"},
       "RE500": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re500-v1.html"},
       "RE650": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/tp-link-re650-v1.html"},
