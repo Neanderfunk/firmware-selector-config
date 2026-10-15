@@ -1,0 +1,38 @@
+# Zuordnung: Eintrag in Cudys Google-Drive-Ablage -> unser Dateiname.
+#
+# Erste Spalte ist der NORMALISIERTE Drive-Name: kleingeschrieben, ".zip"
+# ab, alles ausser a-z0-9 zu "-", mehrfache "-" zusammengezogen. Cudy
+# schreibt denselben Router mal "M1800 V2.zip", mal "M1800+V2.zip", mal
+# "WR3000 V1.0.zip"; die Normalisierung faengt das ab, ohne dass hier
+# jede Schreibweise einzeln steht.
+#
+# Zweite Spalte ist der Gluon-Geraetename, so wie er in devices.js des
+# Downloaders steht. Daran haengt die ganze Benennung des Spiegels.
+#
+# Dritte Spalte ist eine Bemerkung fuer Menschen, sie wird nicht
+# ausgewertet.
+#
+# Was hier NICHT steht, wird trotzdem gespiegelt, nur unter Cudys eigenem
+# Namen. Das Skript meldet solche Eintraege, damit sie jemand ansieht.
+#
+# Stand 15.10.2026, abgeglichen gegen die Ablage von diesem Tag.
+#
+# normalisierter Drive-Name                 Gluon-Name              Bemerkung
+ap3000-v1-0                                 cudy-ap3000             Datei kam urspruenglich vom Cudy-Support
+ap3000-outdoor-1-0                          cudy-ap3000-outdoor
+ap3000-wall-1-0                             cudy-ap3000-wall        erst mit Gluon 2025.1, noch nicht in devices.js
+m1800-v2                                    cudy-m1800              zwei Drive-Eintraege, Firmware darin identisch (0c19a13f...); M1800+V2.zip hat zusaetzlich recovery.bin und Doku
+m3000-1-0-2-0                               cudy-m3000
+re3000-v1                                   cudy-re3000
+tr1200-v1                                   cudy-tr1200             war in cudy-installation.md nicht aufgefuehrt
+tr3000-v1-20251118                          cudy-tr3000             NEU seit 24.11.2025, schliesst die dokumentierte Luecke
+tr3000-256mb-flash-v1-not-for-tr3000-v1     cudy-tr3000-256mb       Unterordner, keine ZIP-Datei
+wr1300-v1                                   cudy-wr1300
+wr2100-v1                                   cudy-wr2100
+wr3000-v1-0                                 cudy-wr3000             nur umbenannt, Inhalt gleich; ZIP IN der ZIP
+wr3000e-1-0                                 cudy-wr3000e
+wr3000h-1-0                                 cudy-wr3000h
+wr3000p-1-0                                 cudy-wr3000p            erst mit Gluon 2025.1, noch nicht in devices.js
+wr3000s-1-0                                 cudy-wr3000s
+x6-v1-0                                     cudy-x6-v1              nur umbenannt, Inhalt gleich; devices.js kennt nur "cudy-x6"
+x6-v2                                       cudy-x6-v2              devices.js kennt nur "cudy-x6"
