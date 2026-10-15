@@ -96,20 +96,14 @@ Weil `/usr/local/sbin` geteilt ist, entfernt das Skript dort nur Zeiger, die
 **in unser `werkzeug/` gehen und ins Leere laufen**. Fremde Zeiger und echte
 Dateien bleiben unberührt.
 
-Ein Werkzeug hat eine Abhängigkeit außerhalb der Standardbibliothek:
-`cudy-zwischenfirmware-spiegeln.py` braucht **`gdown`**. Das Distributionspaket
-heißt ebenso, liegt aber nur in Debian ab 13 und Ubuntu ab 26.04. Auf Ubuntu
-24.04 und Debian 12 gibt es es nicht (am 15.10.2026 gegen die Archiv-Indizes
-geprüft), dort führt der Weg über pipx:
-
-    sudo apt install -y pipx
-    sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install gdown
-
-`PIPX_BIN_DIR` ist der Punkt, aus demselben Grund wie oben. `pipx --global`
-wäre kürzer, gibt es aber erst ab pipx 1.5; Ubuntu 24.04 hat 1.4.3. Bei einem
-späteren `pipx upgrade` beide Variablen wieder mitgeben, sonst sucht pipx in
-`~/.local/pipx` und findet das Paket nicht. Fehlt `gdown`, sagt `deploy.sh` das
-und der Berichtslauf funktioniert weiterhin -- nur das Herunterladen nicht.
+**Fremdpakete braucht keines der Werkzeuge**, und das ist beim Cudy-Spiegel
+teuer gelernt: es rief ursprünglich `gdown` auf. Dessen Kommandozeile hat sich
+zwischen 5.2.1 und 6.4.2 dreimal unter uns weggedreht (`--id` und
+`--remaining-ok` entfernt, `--folder` legte nichts ab), und am Ende verweigerte
+6.4.2 sogar den Einzeldownload einer Datei, die 5.2.1 anstandslos holt. Beides,
+Ordnerliste und Download, ist aber je eine HTTPS-Anfrage, die das Skript nun
+selbst stellt. `gdown` wird nur noch als Rückfallebene versucht und darf
+fehlen.
 
 ## Was von uns tatsächlich abweicht -- weniger, als der Diff nahelegt
 

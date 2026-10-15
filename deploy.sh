@@ -182,11 +182,6 @@ if [ -n "$WERKZEUGBIN" ]; then
       w=$((w+1))
     done
     sage "$w Werkzeuge in $WERKZEUGBIN verknuepft"
-    # Einzige Fremdabhaengigkeit im Werkzeugkasten. Fehlt sie, laeuft der
-    # Bericht trotzdem, nur das Herunterladen nicht -- das soll man hier
-    # erfahren und nicht erst mitten im Lauf.
-    command -v gdown >/dev/null 2>&1 || sage \
-      "HINWEIS: gdown fehlt, cudy-zwischenfirmware-spiegeln.py kann nur berichten"
   else
     sage "WARNUNG: $WERKZEUGBIN fehlt oder ist nicht schreibbar"
     sage "         Werkzeuge nicht verknuepft, Aufruf nur mit vollem Pfad."
