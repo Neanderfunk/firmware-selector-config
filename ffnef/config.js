@@ -455,7 +455,7 @@ var config = {
     "Enterasys": {
       "WS-AP3715i": {
         url: "https://github.com/freifunk-gluon/gluon/issues/3842",
-        grund: "Mit Gluon 2025.1 startet dieses Gerät nach dem Einspielen nicht mehr. Die Korrektur ist bei OpenWrt noch nicht fertig.",
+        grund: "Die neue Freifunk-Firmware startet auf diesem Gerät nach dem Aufspielen nicht. Eine Korrektur ist in Arbeit.",
         seit: "2026-10-16",
       },
     },
