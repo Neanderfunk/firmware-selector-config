@@ -237,6 +237,17 @@
      Link hinein, oder keinen. Beobachtet wird nur die direkte Kinderliste;
      dass wir den Linktext aendern, loest den Beobachter also nicht erneut
      aus. */
+  /* Zurueckgezogene Anleitung zu diesem Link? config.ffnef_zurueckgezogen
+     wird in config.js von Hand gepflegt; gesucht wird ueber die URL, weil
+     ffnef.js nur den Link sieht, den app.js gesetzt hat. */
+  function zurueckgezogen(href) {
+    var z = (window.config && window.config.ffnef_zurueckgezogen) || {};
+    for (var h in z) for (var m in z[h]) {
+      if (z[h][m].url === href) return z[h][m];
+    }
+    return null;
+  }
+
   function anleitungAufbereiten() {
     var ziel = $('#deviceinfo');
     var box = ziel ? ziel.parentNode : null;
@@ -244,13 +255,21 @@
     if (!ziel || !box) return;
 
     var a = $('a', ziel);
-    var eigen = !!(a && /\/anleitungen\//.test(a.getAttribute('href') || ''));
+    var zurueck = a ? zurueckgezogen(a.getAttribute('href') || '') : null;
+    var eigen = !zurueck && !!(a && /\/anleitungen\//.test(a.getAttribute('href') || ''));
+    box.classList.toggle('ffnef-zurueck', !!zurueck);
     box.classList.toggle('ffnef-eigen', eigen);
-    box.classList.toggle('ffnef-fremd', !!a && !eigen);
+    box.classList.toggle('ffnef-fremd', !!a && !eigen && !zurueck);
     if (adresse) adresse.textContent = '';
+    var grund = $('.ffnef-zurueck-grund', box);
+    if (grund) grund.textContent = zurueck ? (zurueck.grund || '') : '';
     if (!a) return;
 
     a.rel = 'noopener';
+    if (zurueck) {
+      a.textContent = 'Bekanntes Problem ansehen';
+      return;
+    }
     if (!eigen) return;
 
     a.textContent = 'Installationsanleitung öffnen';

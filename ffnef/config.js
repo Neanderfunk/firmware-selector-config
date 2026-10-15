@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer a2afa34)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer c6cc087)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -266,7 +266,6 @@ var config = {
     "Enterasys": {
       "WS-AP3705i": "https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3705i.html",
       "WS-AP3710i": "https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3710i.html",
-      "WS-AP3715i": "https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3715i.html",
     },
     "Extreme Networks": {
       "WS-AP3805i": "https://routersoftware.ffnef.de/anleitungen/de/extreme-networks-ws-ap3805i.html",
@@ -445,4 +444,33 @@ var config = {
   // Verdrahtet sind ALLE Seiten, auch die ungeprueften (adorfer 15.10.2026);
   // die Seite selbst sagt oben, wie sicher ihre Angaben sind. Geraete ohne
   // eigene Seite behalten, was devices.js aus dem Upstream mitbringt.
+
+  // Zurueckgezogene Anleitungen, VON HAND gepflegt und ausserhalb des
+  // erzeugten Blocks, damit ein neuer Lauf des Werkzeugs sie nicht
+  // wegwischt. Fuer solche Geraete soll niemand auf den Upstream-Link
+  // zurueckfallen und loslegen: der Kasten in Schritt 2 zeigt stattdessen
+  // den Grund und verlinkt das Problem (ffnef.js). Eintrag loeschen,
+  // sobald die Anleitung zurueck ist.
+  ffnef_zurueckgezogen: {
+    "Enterasys": {
+      "WS-AP3715i": {
+        url: "https://github.com/freifunk-gluon/gluon/issues/3842",
+        grund: "Mit Gluon 2025.1 startet dieses Gerät nach dem Einspielen nicht mehr. Die Korrektur ist bei OpenWrt noch nicht fertig.",
+        seit: "2026-10-16",
+      },
+    },
+  },
 };
+
+// Zurueckgezogene Eintraege gewinnen ueber alles andere: app.js liest nur
+// devices_info, also kommen sie dort hinein.
+(function () {
+  var z = config.ffnef_zurueckgezogen || {};
+  config.devices_info = config.devices_info || {};
+  for (var hersteller in z) {
+    config.devices_info[hersteller] = config.devices_info[hersteller] || {};
+    for (var modell in z[hersteller]) {
+      config.devices_info[hersteller][modell] = z[hersteller][modell].url;
+    }
+  }
+})();

@@ -92,6 +92,16 @@
 #wizard #type-pane .warning-deviceinfo.ffnef-eigen .ffnef-anleitung-fremd {
   display: none;
 }
+/* Zurueckgezogen: eigener Text, kein Handy-Tipp, der alte Warntext weg. */
+#wizard #type-pane .warning-deviceinfo .ffnef-anleitung-zurueck {
+  display: none;
+}
+#wizard #type-pane .warning-deviceinfo.ffnef-zurueck .ffnef-anleitung-zurueck {
+  display: block;
+}
+#wizard #type-pane .warning-deviceinfo.ffnef-zurueck .ffnef-anleitung-fremd {
+  display: none;
+}
 #wizard #type-pane .warning-deviceinfo #deviceinfo {
   margin: 0.75em 0;
 }
