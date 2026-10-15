@@ -12,6 +12,11 @@
 #   /var/www/selector-anleitungen/     Klon 4, gluon-rampe-installer
 #   /var/www/routersoftware.ffnef.de/  Symlinks + images/
 #
+# Ausserdem werden die Skripte aus werkzeug/ nach /usr/local/sbin
+# verknuepft. Sie liefern nichts aus, sie laufen auf DIESER Maschine:
+# Versionsstaende holen, Manifestluecken suchen, Cudys Zwischenfirmware
+# spiegeln. Mit WERKZEUGBIN= (leer) bleibt das aus.
+#
 # Aufruf als root auf dem Firmware-Server:
 #   sh deploy.sh [Webroot]
 #
@@ -25,6 +30,10 @@ UP="$BASIS/selector-upstream"
 CFG="$BASIS/selector-config"
 BILD="$BASIS/selector-pictures"
 ANL="$BASIS/selector-anleitungen"
+
+# Absichtlich ${VAR-...} und nicht ${VAR:-...}: ein leer gesetztes
+# WERKZEUGBIN schaltet die Verknuepfung ab, ein nicht gesetztes nicht.
+WERKZEUGBIN="${WERKZEUGBIN-/usr/local/sbin}"
 
 UP_URL="https://github.com/Neanderfunk/gluon-firmware-selector.git"
 CFG_URL="https://github.com/Neanderfunk/firmware-selector-config.git"
@@ -143,6 +152,46 @@ setze "$CFG/ffnef/devices.js" devices.js
 # html-Verzeichnis zeigen, sonst laufen die Verweise in der index.json ins
 # Leere.
 setze "$ANL/anleitungen/html" anleitungen
+
+# --- Werkzeuge auf den Pfad legen -----------------------------------------
+# Diese Skripte werden von Hand aufgerufen, meist als
+# "ssh firmware6 cudy-zwischenfirmware-spiegeln.py". Eine solche Shell ist
+# keine Login-Shell und liest kein .profile, deshalb muss der Zeiger in
+# einem Verzeichnis des System-Pfades liegen und nicht in ~/.local/bin.
+#
+# Der Dateiname bleibt samt Endung, damit ein .sh und ein gleichnamiges .py
+# nicht uebereinander verknuepft werden koennen.
+if [ -n "$WERKZEUGBIN" ]; then
+  if [ -d "$WERKZEUGBIN" ] && [ -w "$WERKZEUGBIN" ]; then
+    # Erst aufraeumen: Zeiger, die in unser werkzeug/ gehen und ins Leere
+    # laufen, stammen von einer umbenannten oder entfernten Datei. Fremde
+    # Zeiger und echte Dateien bleiben unberuehrt -- hier liegen auch die
+    # Werkzeuge anderer Leute.
+    for zeiger in "$WERKZEUGBIN"/*; do
+      [ -L "$zeiger" ] || continue
+      case "$(readlink "$zeiger")" in
+        "$CFG"/werkzeug/*)
+          [ -e "$zeiger" ] || { rm -f "$zeiger"; sage "veralteten Zeiger entfernt: $zeiger"; }
+          ;;
+      esac
+    done
+    w=0
+    for f in "$CFG"/werkzeug/*; do
+      [ -f "$f" ] && [ -x "$f" ] || continue
+      ln -sfn "$f" "$WERKZEUGBIN/$(basename "$f")"
+      w=$((w+1))
+    done
+    sage "$w Werkzeuge in $WERKZEUGBIN verknuepft"
+    # Einzige Fremdabhaengigkeit im Werkzeugkasten. Fehlt sie, laeuft der
+    # Bericht trotzdem, nur das Herunterladen nicht -- das soll man hier
+    # erfahren und nicht erst mitten im Lauf.
+    command -v gdown >/dev/null 2>&1 || sage \
+      "HINWEIS: gdown fehlt, cudy-zwischenfirmware-spiegeln.py kann nur berichten"
+  else
+    sage "WARNUNG: $WERKZEUGBIN fehlt oder ist nicht schreibbar"
+    sage "         Werkzeuge nicht verknuepft, Aufruf nur mit vollem Pfad."
+  fi
+fi
 
 sage "fertig. Inhalt von $WURZEL:"
 ls -la "$WURZEL"
