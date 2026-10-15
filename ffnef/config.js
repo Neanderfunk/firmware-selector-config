@@ -148,7 +148,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 6c064a9)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -332,6 +332,7 @@ var config = {
       "NWA50AX": "https://routersoftware.ffnef.de/anleitungen/de/zyxel-nwa50ax.html",
       "NWA50AX Pro": "https://routersoftware.ffnef.de/anleitungen/de/zyxel-nwa50ax-pro.html",
       "NWA55AXE": "https://routersoftware.ffnef.de/anleitungen/de/zyxel-nwa55axe.html",
+      "WSM20": "https://routersoftware.ffnef.de/anleitungen/de/zyxel-wsm20.html",
     },
     "x86": {
       "generic 32bit": "https://routersoftware.ffnef.de/anleitungen/de/x86-generic.html",
