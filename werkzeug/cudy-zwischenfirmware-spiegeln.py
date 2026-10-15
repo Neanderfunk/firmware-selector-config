@@ -147,18 +147,44 @@ def tabelle_lesen():
     return zuordnung, bemerkung
 
 
-# gdowns Kommandozeile ist zwischen den Fassungen NICHT stabil, und das
-# faellt immer erst beim ersten Download auf, nicht beim Start: der
-# Bericht laeuft durch, dann scheitert jeder Eintrag einzeln.
+# gdown ist hier nur noch die Rueckfallebene, nicht mehr der Weg.
 #
-#   --id            in 5 veraltet, in 6 entfernt
-#   --remaining-ok  in 5 vorhanden, in 6 entfernt
-#   --fuzzy         in 5 vorhanden, in 6 entfernt
+# Erfahrungen aus einem einzigen Nachmittag: --id in 5 veraltet und in 6
+# entfernt, --remaining-ok in 6 entfernt, --folder legte bei 6.4.2
+# stillschweigend nichts ab, und beim Einzeldownload antwortete 6.4.2 auf
+# dieselbe oeffentliche Datei, die 5.2.1 anstandslos holt, mit "Cannot
+# retrieve the public link of the file". Jede dieser Ueberraschungen kam
+# erst beim Download, nicht beim Start: der Bericht lief durch, dann
+# scheiterte jeder Eintrag einzeln.
 #
-# Im Umlauf sind 5.2.0 (Debian 13), 5.2.1 (Ubuntu 26.04) und 6.4.2 (ueber
-# pipx). Deshalb benutzt dieses Skript von gdown nur noch den
-# Einzeldatei-Download mit vollstaendiger URL, -O und --quiet. Das ist der
-# gemeinsame Nenner aller Fassungen; Ordner baut es sich selbst zusammen.
+# Der Download selbst ist dagegen eine einzige HTTPS-Anfrage, siehe
+# drive_holen(). Deshalb macht das Skript sie selbst und ruft gdown nur
+# noch, wenn das misslingt -- fuer den Fall, dass Google eines Tages mehr
+# verlangt als diese eine Anfrage.
+DRIVE_DIREKT = ("https://drive.usercontent.google.com/download"
+                "?id=%s&export=download&confirm=t")
+
+
+def drive_holen(kid, ziel):
+    """Eine oeffentliche Drive-Datei direkt holen.
+
+    Geschrieben wird in eine Datei mit Endung ".teil" und erst am Ende
+    umbenannt. Ohne das wuerde ein Abbruch auf halber Strecke eine Datei
+    mit Inhalt hinterlassen, und schon_da() haelte sie beim naechsten Lauf
+    fuer fertig.
+    """
+    anfrage = urllib.request.Request(DRIVE_DIREKT % kid,
+                                     headers={"User-Agent": UA})
+    halb = ziel.with_name(ziel.name + ".teil")
+    with urllib.request.urlopen(anfrage, timeout=120) as a:
+        art = (a.headers.get("Content-Type") or "").lower()
+        if "text/html" in art:
+            # Google will mehr als diese Anfrage: Einverstaendnisseite,
+            # Zugriffsgrenze oder nicht mehr oeffentlich.
+            raise RuntimeError("Google liefert HTML statt der Datei")
+        with open(halb, "wb") as f:
+            shutil.copyfileobj(a, f, 1 << 20)
+    halb.replace(ziel)
 
 def schon_da(pfad):
     """Liegt da schon etwas Brauchbares?
@@ -175,8 +201,18 @@ def schon_da(pfad):
 
 
 def gdown_datei(kid, ziel):
-    subprocess.run(["gdown", "https://drive.google.com/uc?id=" + kid,
-                    "-O", str(ziel), "--quiet"], check=True)
+    """Erst selbst, dann gdown. Die Meldung nennt beide Gruende."""
+    try:
+        drive_holen(kid, ziel)
+        return
+    except Exception as fehler:
+        print("  direkt nicht bekommen (%s), versuche gdown" % fehler)
+    try:
+        subprocess.run(["gdown", "https://drive.google.com/uc?id=" + kid,
+                        "-O", str(ziel), "--quiet"], check=True)
+    except FileNotFoundError:
+        raise RuntimeError("gdown ist nicht installiert, und direkt ging es "
+                           "auch nicht")
 
 
 def gdown_ordner(kid, ziel, tiefe=0):
