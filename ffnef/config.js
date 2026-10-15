@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 2f71047)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 661e4c7)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -301,6 +301,9 @@ var config = {
     },
     "Genexis": {
       "Pulse EX400": "https://routersoftware.ffnef.de/anleitungen/de/genexis-pulse-ex400.html",
+    },
+    "Hewlett-Packard": {
+      "MSM460": "https://routersoftware.ffnef.de/anleitungen/de/hewlett-packard-msm460.html",
     },
     "Linksys": {
       "EA6350": {"v3": "https://routersoftware.ffnef.de/anleitungen/de/linksys-ea6350v3.html"},
