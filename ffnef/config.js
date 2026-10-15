@@ -148,7 +148,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer d57ed28)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 118addd)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -214,6 +214,9 @@ var config = {
       "DIR-860L": {"b1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-860l-b1.html"},
       "DIR-878": {"a1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-878-a1.html"},
       "DIR-882": {"a1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-882-a1.html"},
+    },
+    "Extreme Networks": {
+      "WS-AP3825i": "https://routersoftware.ffnef.de/anleitungen/de/extreme-networks-ws-ap3825i.html",
     },
     "FriendlyElec": {
       "NanoPi R2C": "https://routersoftware.ffnef.de/anleitungen/de/friendlyelec-nanopi-r2c.html",
