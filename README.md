@@ -44,16 +44,18 @@ anlegen (zum Beispiel auf dem Jumphost) und als Ganzes übertragen:
 Die `.git`-Verzeichnisse kommen dabei mit, `git pull` funktioniert also später
 auch dort, sobald der Weg frei ist.
 
-## Ausliefern: zwei Klone, der Webroot ist nur Symlinks
+## Ausliefern: vier Klone, der Webroot ist nur Symlinks
 
-`deploy.sh` baut den Webroot aus **zwei Git-Klonen**:
+`deploy.sh` baut den Webroot aus **vier Git-Klonen**:
 
     /var/www/selector-upstream/        Klon 1, Code (Zweig main)
     /var/www/selector-config/          Klon 2, dieses Repo
+    /var/www/selector-pictures/        Klon 3, freifunk/device-pictures
+    /var/www/selector-anleitungen/     Klon 4, gluon-rampe-installer
     /var/www/routersoftware.ffnef.de/  Symlinks + images/
 
 Der Webroot enthält danach **keine Datei mehr, nur Symlinks** -- und
-`images/`. Der Sinn: in beiden Klonen läuft `git pull` ohne Konflikt, weil
+`images/`. Der Sinn: in jedem Klon läuft `git pull` ohne Konflikt, weil
 keine ausgelieferte Datei im Arbeitsbaum überschrieben wird. Gearbeitet wird
 nur im Repo, nie im Webroot.
 
@@ -69,6 +71,39 @@ das Verzeichnis, warnt das Skript und macht sonst nichts.
 
 **Voraussetzung in nginx:** `disable_symlinks` darf nicht gesetzt sein, sonst
 liefert der Server 403 statt der Dateien.
+
+### Die Werkzeuge kommen mit
+
+`deploy.sh` legt zusätzlich Zeiger auf alle ausführbaren Dateien aus
+`werkzeug/` nach `/usr/local/sbin`. Die liefern nichts aus, sie laufen auf dem
+Server und werden von Hand aufgerufen: Versionsstände holen, Manifestlücken
+suchen, Cudys Zwischenfirmware spiegeln.
+
+    ssh firmware6.ffnef.de cudy-zwischenfirmware-spiegeln.py
+
+**Warum nicht `~/.local/bin`:** so ein Aufruf startet keine Login-Shell, und
+die liest kein `.profile`. Ein Zeiger im Home wäre damit unsichtbar, obwohl
+`which` im interaktiven Login ihn findet -- ein Fehlerbild, das man zweimal
+sucht. Mit `WERKZEUGBIN=` (leer gesetzt) bleibt das Verknüpfen aus.
+
+Weil `/usr/local/sbin` geteilt ist, entfernt das Skript dort nur Zeiger, die
+**in unser `werkzeug/` gehen und ins Leere laufen**. Fremde Zeiger und echte
+Dateien bleiben unberührt.
+
+Ein Werkzeug hat eine Abhängigkeit außerhalb der Standardbibliothek:
+`cudy-zwischenfirmware-spiegeln.py` braucht **`gdown`**. Das Distributionspaket
+heißt ebenso, liegt aber nur in Debian ab 13 und Ubuntu ab 26.04. Auf Ubuntu
+24.04 und Debian 12 gibt es es nicht (am 15.10.2026 gegen die Archiv-Indizes
+geprüft), dort führt der Weg über pipx:
+
+    sudo apt install -y pipx
+    sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install gdown
+
+`PIPX_BIN_DIR` ist der Punkt, aus demselben Grund wie oben. `pipx --global`
+wäre kürzer, gibt es aber erst ab pipx 1.5; Ubuntu 24.04 hat 1.4.3. Bei einem
+späteren `pipx upgrade` beide Variablen wieder mitgeben, sonst sucht pipx in
+`~/.local/pipx` und findet das Paket nicht. Fehlt `gdown`, sagt `deploy.sh` das
+und der Berichtslauf funktioniert weiterhin -- nur das Herunterladen nicht.
 
 ## Was von uns tatsächlich abweicht -- weniger, als der Diff nahelegt
 
@@ -314,8 +349,7 @@ künftig dort steht. Solange das nicht entschieden ist, bleibt
    Ein `sh /var/www/selector-config/deploy.sh` holt beides zusammen.
 6. `cudy-wr3000p` und `cudy-ap3000-wall` in `devices.js` aufnehmen,
    **sobald `stable` auf 2025.1 steht**. Beide sind in Cudys Ablage
-   vorhanden; siehe `werkzeug/cudy-zwischenfirmware.tsv` im Repo
-   router-werkstatt.
+   vorhanden; siehe `werkzeug/cudy-zwischenfirmware.tsv`.
 
 ### Gerätebilder: wo die Lücke steht (gemessen 15.10.2026)
 
