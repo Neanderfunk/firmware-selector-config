@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer c6cc087)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 68983f3e)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -259,6 +259,7 @@ var config = {
       "DAP-2680": {"a1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-2680-a1.html"},
       "DAP-2695": {"a1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-2695-a1.html"},
       "DAP-X1860": {"a1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-x1860-a1.html"},
+      "DIR-505": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-505.html",
       "DIR-860L": {"b1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-860l-b1.html"},
       "DIR-878": {"a1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-878-a1.html"},
       "DIR-882": {"a1": "https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-882-a1.html"},
