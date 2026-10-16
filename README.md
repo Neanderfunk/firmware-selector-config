@@ -340,6 +340,61 @@ fiele der Selector auf den Upstream-Link zurück und schriebe „es gibt eine
 extra Anleitung“. Erster Fall: Enterasys WS-AP3715i, 16.10.2026,
 freifunk-gluon/gluon#3842. Eintrag löschen, sobald die Seite zurück ist.
 
+### Sonderimages aus `other/`: der Knopf heißt nach der Dateiendung
+
+Seit 16.10.2026 (`44207af`) liest der Selector je Domäne auch
+`images/stable/<domain>/other/`, nicht nur `factory/` und `sysupgrade/`.
+Anlass war die FRITZ!Box 4040: ihre Anleitung verlangt das Image mit
+`-bootloader.bin`, und das war im Selector nicht zu bekommen. Die Typen
+kannte `app.js` längst, es fehlte nur das Verzeichnis.
+
+Der Knopf in Schritt 2 heißt **nicht** „other“, sondern so, wie `app.js` die
+Dateiendung übersetzt. Die Anleitungen nennen ihn wörtlich:
+
+| Dateiendung | Knopf im Selector |
+| --- | --- |
+| `-factory` | Erstinstallation |
+| `-sysupgrade` | Upgrade |
+| `-bootloader` | Bootloader-Image |
+| `-eva-kernel` | Bootloader-Kernel-Image |
+| `-eva-filesystem` | Bootloader-Root-Image |
+| `-recovery` | Recovery-Image |
+| `-kernel` | Kernel-Image |
+| `-rootfs` | Root-Image |
+
+Eine Datei ohne eine dieser Endungen landet unter „Erstinstallation“. Stand
+16.10.2026 liegen in jeder Domäne dieselben 18 Dateien in `other/`, mit und
+ohne `.key` identisch, alle mit passender Endung.
+
+`-bootloader.bin` heißt nicht, dass der Bootloader ersetzt wird: bei den
+TP-Link-Recovery-Images bleibt er unberührt (die Recovery überspringt die
+ersten 0x20000 Byte). Ob ein Gerät den Bootloader anfasst, steht im Feld
+`risiko` der Anleitung, nicht im Dateinamen.
+
+### Neue Seiten verdrahten: der Ablauf
+
+Die Anleitungen entstehen in `gluon-rampe-installer` und kommen erst mit dem
+nächsten Deploy auf den Server. Damit EIN Deploy Seite und Link zusammen
+bringt, wird gegen die `index.json` von `origin/main` verdrahtet, nicht gegen
+die auf dem Server:
+
+    git -C ~/projekte/freifunk/installer fetch origin
+    git -C ~/projekte/freifunk/installer show origin/main:anleitungen/html/index.json > /tmp/index.json
+    werkzeug/anleitungen-verdrahten.py --index /tmp/index.json
+
+Die Ausgabe ersetzt in `config.js` den Block ab „Erzeugt von“ bis vor
+„Verdrahtet sind ALLE Seiten“; die Quellzeile im Kopf von Hand auf
+`…/anleitungen/index.json (Stand gluon-rampe-installer <commit>)` setzen.
+Danach mit node gegen `devices.js` + `config.js` auswerten, ob alles lädt.
+
+**Falle:** die GitHub-API (`/commits/main`, `/contents/…?ref=main`) lieferte
+am 16.10.2026 minutenlang den Stand von davor. Deshalb aus dem frisch
+geholten Klon lesen, nicht über die API.
+
+Das Werkzeug meldet, was es nicht zuordnen kann: Geräte, die `devices.js`
+nicht führt (meist erst mit 2025.1, sie kommen dann beim nächsten Lauf von
+selbst), und Geräte mit `--ignore--`. Das ist kein Fehler.
+
 ### Vereinbartes Format (15.10.2026, mit Content und Buildsystem)
 
 Die Seiten entstehen im Repo `gluon-rampe-installer` unter `anleitungen/`,
@@ -381,12 +436,30 @@ künftig dort steht. Solange das nicht entschieden ist, bleibt
    Sonderregel für den Cudy M3000 v1/v2 mit YT8821.
 4. Zum Prüfen in `config.js` `listMissingImages: true` setzen: die
    Browser-Konsole zeigt dann jede Datei ohne Regel.
-5. **Deploy steht aus.** Der Server ist auf dem Stand vor `6b23b66`
-   (entfernte Flashchip-Warnung) und kennt die Anleitungen noch nicht.
-   Ein `sh /var/www/selector-config/deploy.sh` holt beides zusammen.
+5. ~~Deploy steht aus.~~ Erledigt, seitdem mehrfach (Stand 16.10.2026).
 6. `cudy-wr3000p` und `cudy-ap3000-wall` in `devices.js` aufnehmen,
    **sobald `stable` auf 2025.1 steht**. Beide sind in Cudys Ablage
-   vorhanden; siehe `werkzeug/cudy-zwischenfirmware.tsv`.
+   vorhanden; siehe `werkzeug/cudy-zwischenfirmware.tsv`. Mit 2025.1 kommen
+   weitere Seiten von selbst dazu, die heute nur mangels `devices.js`-Eintrag
+   nicht verdrahtet sind (u. a. Archer C50 v6, EAP613, GL-MT6000).
+7. **Fremdlinks ablösen.** Stand 16.10.2026 zeigen noch 13 Modelle bzw.
+   Revisionen auf fremde Anleitungen aus der Upstream-`devices.js`: O2 Box 6431
+   (zwei Einträge), RT-AC51U, FRITZ!Box 7320/7330/7330 SL, Joy-IT JT-OR750i,
+   Netgear EX3800, RAVPower RP-WD009, Wavlink WS-WN572HP3 4G, ZTE MF281 und
+   MF289F. Liegt bei Content. Die Xiaomi-Geräte, deren Weg ein Token aus der
+   Herstelleroberfläche braucht, bleiben vorerst bewusst ohne eigene Seite
+   (adorfer 15.10.2026).
+8. **Zurückgezogen:** Enterasys WS-AP3715i (gluon#3842). Eintrag in
+   `config.ffnef_zurueckgezogen` löschen, sobald die Seite zurück ist; das
+   Buildsystem meldet den Fix.
+
+Wie die Kandidaten für neue Anleitungen gezählt wurden (15./16.10.2026):
+Modelle aus `neander.map.freifunk.space/data/meshviewer.json`, **nur
+Gluon-Knoten** (`firmware.base` enthält „gluon“), ohne Gateways. Die
+UniFi-APs aus den Controllern stehen mit Herstellerfirmware auf derselben
+Karte und brauchen keine Anleitung; ohne diesen Filter zählt man sie mit.
+4/32-Geräte (TL-WR841N v8 bis v11 u. a.) und airMAX XM (Sackgasse) bekommen
+keine Erstinstallations-Seite, auch wenn sie im Feld zahlreich sind.
 
 ### Gerätebilder: wo die Lücke steht (gemessen 15.10.2026)
 
