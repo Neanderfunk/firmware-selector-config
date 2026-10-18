@@ -77,21 +77,64 @@
     return null;
   }
 
+  /* Texte: Content, 19.10.2026 (freifunk-content vorschlaege/
+     selector-geraetedaten-texte.md). */
+  var LEVEL = {
+    'L0': 'Einfach hochladen', 'L0.1': 'Hochladen, richtige Datei wählen',
+    'L1': 'Zwei Schritte im Browser', 'L2': 'Taste beim Einschalten',
+    'L3': 'Feste Adresse am Rechner', 'L4': 'Netzwerkwerkzeuge',
+    'L5': 'Besondere Programme', 'L6': 'Serielles Kabel',
+    'L7': 'Gehäuse öffnen', 'L8': 'Löten und Programmer'
+  };
+  var STATUS = { 'erprobt': 'am Gerät erprobt', 'ungeprüft': 'noch nicht am Gerät erprobt' };
+  var BOOTLOADER = 'Hier wird der Bootloader verändert. Geht dabei etwas schief, gibt es ohne ' +
+                   'Flash-Programmer meist kein Zurück.';
+  /* Quellen-Kuerzel sind frei vergeben; die erste passende Regel gilt. */
+  var QUELLEN = [
+    [/^(openwrt_forum|forum|instanton_community)/, 'Forum'],
+    [/^(toh|openwrt_wiki)/, 'OpenWrt'],
+    [/^(openwrt_|gh_pr_)/, 'OpenWrt-Quelltext'],
+    [/^deviwiki/, 'DeviWiki'],
+    [/^wikidevi/, 'WikiDevi'],
+    [/^fcc/, 'FCC-Unterlagen'],
+    [/^anatel/, 'Anatel'],
+    [/^(hersteller|datenblatt|tplink_|avm_|dlink_|tpcdb)/, 'Hersteller'],
+    [/^(haendler|markt)/, 'Händler'],
+    [/^(blog|true_systems)/, 'Bericht'],
+    [/^gluon/, 'Gluon'],
+    [/^werkstatt/, 'eigener Test'],
+    [/^anleitung/i, 'Anleitung']
+  ];
+
+  function quellName(k) {
+    k = String(k || '');
+    for (var i = 0; i < QUELLEN.length; i++) if (QUELLEN[i][0].test(k)) return QUELLEN[i][1];
+    return 'Quelle';
+  }
+
+  function datum(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || '');
+    return m ? m[3] + '.' + m[2] + '.' + m[1] : (iso || '');
+  }
+
   function quellenZeile(belege) {
     var p = el('span', 'ffnef-geraet-quellen');
     var gesehen = {};
     var n = 0;
     var rest = 0;
     (belege || []).forEach(function (b) {
-      if (!b.url || gesehen[b.url]) return;
+      /* Gleiche Klartextnamen nur einmal: "Hersteller Hersteller" hilft niemandem. */
+      var name = quellName(b.quelle);
+      if (!b.url || gesehen[b.url] || gesehen['n:' + name]) return;
       gesehen[b.url] = true;
+      gesehen['n:' + name] = true;
       if (n >= 3) { rest++; return; }      /* drei reichen, der Rest steht in der Datei */
       if (n++) p.appendChild(document.createTextNode(' '));
-      var a = el('a', null, b.quelle || 'Quelle');
+      var a = el('a', null, quellName(b.quelle));
       a.href = b.url;
       a.rel = 'noopener';
       a.target = '_blank';
-      if (b.stand) a.title = 'Stand: ' + b.stand;
+      a.title = (b.quelle || '') + (b.stand ? ', Stand ' + b.stand : '');
       p.appendChild(a);
     });
     if (rest) p.appendChild(document.createTextNode(' +' + rest));
@@ -103,8 +146,11 @@
     (liste || []).forEach(function (z) {
       dl.appendChild(el('dt', null, z.titel));
       var dd = el('dd');
-      var w = el('span', z.stufe ? 'ffnef-stufe ffnef-stufe-' + z.stufe : 'ffnef-wert', z.wert);
-      dd.appendChild(w);
+      if (z.kennwort) {
+        dd.appendChild(el('span', 'ffnef-stufe ffnef-stufe-' + z.stufe, z.kennwort + ':'));
+        dd.appendChild(document.createTextNode(' '));
+      }
+      dd.appendChild(el('span', 'ffnef-wert', z.wert));
       if (z.erklaerung) dd.appendChild(el('span', 'ffnef-geraet-erkl', ' (' + z.erklaerung + ')'));
       if (z.warnung) dd.appendChild(el('p', 'ffnef-geraet-warnung', z.warnung));
       (z.abweichend || []).forEach(function (a) {
@@ -141,12 +187,15 @@
     var a = anleitungen[d.image];
     if (a) {
       oben = oben.filter(function (z) { return z.titel !== 'Installation'; });
-      oben.splice(1, 0, {
+      var lv = a.level || '';
+      var zeileI = {
         titel: 'Installation',
-        wert: 'Level ' + (a.level || '?') + ', Risiko ' + (a.risiko || '?') +
-              (a.status ? ', ' + a.status : ''),
-        belege: [{ quelle: 'Anleitung', url: a.url }]
-      });
+        wert: (lv ? lv + ' ' + (LEVEL[lv] || '') : '').trim() +
+              (STATUS[a.status] ? ', ' + STATUS[a.status] : ''),
+        belege: [{ quelle: 'anleitung', url: a.url }]
+      };
+      if (a.risiko === 'bootloader') zeileI.warnung = BOOTLOADER;
+      oben.splice(oben.length && oben[0].stufe ? 1 : 0, 0, zeileI);
     }
     box.appendChild(zeilen(oben, false));
     if (d.mitte && d.mitte.length) box.appendChild(zeilen(d.mitte, false));
@@ -168,9 +217,16 @@
       fuss.appendChild(x);
     });
     box.appendChild(fuss);
-    box.appendChild(el('p', 'ffnef-geraet-lizenz',
-      'Zusammengetragen aus öffentlichen Quellen, ohne Gewähr' +
-      (d.stand ? ', Stand ' + d.stand : '') + '. Lizenz CC BY-SA 4.0.'));
+    var liz = el('p', 'ffnef-geraet-lizenz',
+      'Zusammengetragen aus öffentlichen Quellen, ohne Gewähr.' +
+      (d.stand ? ' Stand: ' + datum(d.stand) + '.' : '') +
+      ' Lizenz: CC BY-SA 4.0. Fehler gefunden? Schreib uns an ');
+    var mail = el('a', null, 'projekt@neanderfunk.de');
+    mail.href = 'mailto:projekt@neanderfunk.de?subject=' +
+      encodeURIComponent('Gerätedaten ' + d.modell);
+    liz.appendChild(mail);
+    liz.appendChild(document.createTextNode('.'));
+    box.appendChild(liz);
     return box;
   }
 
