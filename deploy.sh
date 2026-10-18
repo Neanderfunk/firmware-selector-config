@@ -10,6 +10,7 @@
 #   /var/www/selector-config/          Klon 2, unsere Konfiguration
 #   /var/www/selector-pictures/        Klon 3, freifunk/device-pictures
 #   /var/www/selector-anleitungen/     Klon 4, gluon-rampe-installer
+#   /var/www/selector-geraetedaten/    Klon 5, Neanderfunk/geraetedaten
 #   /var/www/routersoftware.ffnef.de/  Symlinks + images/
 #
 # Ausserdem werden die Skripte aus werkzeug/ nach /usr/local/sbin
@@ -30,6 +31,7 @@ UP="$BASIS/selector-upstream"
 CFG="$BASIS/selector-config"
 BILD="$BASIS/selector-pictures"
 ANL="$BASIS/selector-anleitungen"
+GD="$BASIS/selector-geraetedaten"
 
 # Absichtlich ${VAR-...} und nicht ${VAR:-...}: ein leer gesetztes
 # WERKZEUGBIN schaltet die Verknuepfung ab, ein nicht gesetztes nicht.
@@ -39,6 +41,7 @@ UP_URL="https://github.com/Neanderfunk/gluon-firmware-selector.git"
 CFG_URL="https://github.com/Neanderfunk/firmware-selector-config.git"
 BILD_URL="https://github.com/freifunk/device-pictures.git"
 ANL_URL="https://github.com/Neanderfunk/gluon-rampe-installer.git"
+GD_URL="https://github.com/Neanderfunk/geraetedaten.git"
 
 sage() { echo "deploy: $*"; }
 
@@ -59,6 +62,7 @@ holen "$UP"  "$UP_URL"  main
 holen "$CFG" "$CFG_URL" main
 holen "$BILD" "$BILD_URL" main
 holen "$ANL"  "$ANL_URL"  main
+holen "$GD"   "$GD_URL"   main
 
 # --- Webroot vorbereiten -----------------------------------------------
 # "images" wird bewusst NICHT angefasst. Dort liegen die Firmware-Dateien
@@ -138,6 +142,7 @@ sage "$e eigene Bilder eingehaengt"
 setze "$CFG/ffnef/index.html" index.html
 setze "$CFG/ffnef/ffnef.css"  ffnef.css
 setze "$CFG/ffnef/ffnef.js"   ffnef.js
+setze "$CFG/ffnef/ffnef-geraete.js" ffnef-geraete.js
 setze "$CFG/ffnef/versionen-anzeige.json" versionen-anzeige.json
 setze "$CFG/ffnef/config.js"  config.js
 setze "$CFG/ffnef/devices.js" devices.js
@@ -152,6 +157,17 @@ setze "$CFG/ffnef/devices.js" devices.js
 # html-Verzeichnis zeigen, sonst laufen die Verweise in der index.json ins
 # Leere.
 setze "$ANL/anleitungen/html" anleitungen
+
+# --- Geraetedaten ---------------------------------------------------------
+# Fertig erzeugte Ansicht aus Neanderfunk/geraetedaten (werkzeug/
+# selector-ansicht.py), je Geraet eine JSON-Datei plus index.json.
+# ffnef-geraete.js laedt sie erst, wenn ein Geraet gewaehlt ist. Fehlt das
+# Verzeichnis, zeigt der Selector schlicht keine Geraetedaten.
+if [ -d "$GD/ausgabe/selector" ]; then
+  setze "$GD/ausgabe/selector" geraete
+else
+  sage "WARNUNG: $GD/ausgabe/selector fehlt, keine Geraetedaten"
+fi
 
 # --- Werkzeuge auf den Pfad legen -----------------------------------------
 # Diese Skripte werden von Hand aufgerufen, meist als

@@ -515,3 +515,27 @@ Diese Session fasst fremde Repos nicht an, sondern meldet dorthin.
 
 Der Upstream steht unter **AGPL-3.0**, und `config.js` wie `devices.js` leiten
 sich von dessen Vorlagen ab. Deshalb liegt die `LICENSE` hier unverändert bei.
+
+## Gerätedaten in Schritt 1 (seit 19.10.2026)
+
+`ffnef/ffnef-geraete.js` zeigt nach der Wahl von Gerät und Hardware-Version
+unter dem Gerätebild die Daten aus der Gerätedatenbank
+[Neanderfunk/geraetedaten](https://github.com/Neanderfunk/geraetedaten):
+Firmware-Zukunft (aus Flash/RAM gedeutet), Installation (Level, Risiko,
+Status frisch aus `anleitungen/index.json`), Einsatzort, Stromversorgung,
+Hardware-Version erkennen, WLAN, Anschlüsse, Antennen, aufklappbar die
+technischen Daten. Jede Angabe trägt ihre Quellen. Widersprechen sich
+Quellen, steht die andere Angabe rot darunter.
+
+- `deploy.sh` klont `geraetedaten` als fünften Klon und verknüpft
+  `ausgabe/selector` als `geraete/` im Webroot. Fehlt das Verzeichnis, gibt es
+  nur eine Warnung, der Selector läuft ohne Gerätedaten weiter.
+- Welches Image gemeint ist, ergibt sich aus `devices.js`: Image-Name als
+  Text plus gewählte Version (`cudy-wr3000` + `v1`), oder die Liste
+  `{image: Bezeichnung}`.
+- Die Ansicht erzeugt `werkzeug/selector-ansicht.py` im Repo
+  `geraetedaten`. Neue Daten kommen mit dem nächsten Deploy.
+- Lokal prüfen: kleiner Proxy, der die geänderten Dateien aus dem Klon und
+  `geraete/` aus `geraetedaten/ausgabe/selector` ausliefert und den Rest von
+  routersoftware.ffnef.de holt, dann Headless-Chromium mit
+  `?q=Cudy%E2%81%A3WR3000%E2%81%A3v1%E2%81%A3` (Trenner U+2063 wie in app.js).
