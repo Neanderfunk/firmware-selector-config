@@ -190,6 +190,7 @@
   font-weight: bold;
 }
 
+#wizard .imagePreview .ffnef-stufe-reichlich { background: #bfb; color: #141; }
 #wizard .imagePreview .ffnef-stufe-reicht { background: #dfd; color: #262; }
 #wizard .imagePreview .ffnef-stufe-knapp { background: #ffd; color: #752; }
 #wizard .imagePreview .ffnef-stufe-sackgasse { background: #fdd; color: #a33; }

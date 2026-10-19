@@ -216,7 +216,7 @@
     });
 
     var sp = zeileMit(d.oben, 'Speicher für Updates');
-    if (sp && sp.stufe && sp.stufe !== 'reicht') {
+    if (sp && sp.stufe && sp.stufe !== 'reicht' && sp.stufe !== 'reichlich') {
       var p = el('p', 'ffnef-geraet-speicher');
       p.appendChild(el('span', 'ffnef-stufe ffnef-stufe-' + sp.stufe, sp.kennwort + ':'));
       p.appendChild(document.createTextNode(' Künftige Updates passen vielleicht nicht mehr.'));
