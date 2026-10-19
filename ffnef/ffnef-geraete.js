@@ -83,7 +83,7 @@
   var LEVEL = {
     'L0': 'Einfach hochladen', 'L0.1': 'Hochladen, richtige Datei wählen',
     'L1': 'Zwei Schritte im Browser', 'L2': 'Taste beim Einschalten',
-    'L3': 'Feste Adresse am Rechner', 'L4': 'Network-Tools',
+    'L3': 'Feste Adresse am Rechner', 'L4': 'Netz-Werkzeuge',
     'L5': 'Besondere Programme', 'L6': 'Serielles Kabel',
     'L7': 'Gehäuse öffnen', 'L8': 'Löten und Programmer'
   };
