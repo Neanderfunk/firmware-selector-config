@@ -539,3 +539,18 @@ Quellen, steht die andere Angabe rot darunter.
   `geraete/` aus `geraetedaten/ausgabe/selector` ausliefert und den Rest von
   routersoftware.ffnef.de holt, dann Headless-Chromium mit
   `?q=Cudy%E2%81%A3WR3000%E2%81%A3v1%E2%81%A3` (Trenner U+2063 wie in app.js).
+
+## routerwahl.ffnef.de (seit 19.10.2026)
+
+Zweite Seite für Leute, die noch einen Router suchen (Filtersuche), aus
+`Neanderfunk/geraetedaten` (`web/`). `deploy.sh` baut dafür den Webroot
+`/var/www/routerwahl.ffnef.de` aus Symlinks; Bilder, Anleitungen,
+`devices.js` und `config.js` kommen von hier. Querverweise in beide
+Richtungen: Selector Schritt 1 und Gerätedaten-Block, routerwahl oben und
+an jeder Karte ("Firmware" mit `?q=`).
+
+**Falle beim Deploy:** `deploy.sh` aktualisiert seinen eigenen Klon,
+während es läuft, und die Shell liest das Skript stückweise nach. Ändert
+sich `deploy.sh` selbst, deshalb vorher den Klon holen:
+
+    git -C /var/www/selector-config pull --ff-only && sh /var/www/selector-config/deploy.sh
