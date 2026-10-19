@@ -169,6 +169,26 @@ else
   sage "WARNUNG: $GD/ausgabe/selector fehlt, keine Geraetedaten"
 fi
 
+# --- routerwahl.ffnef.de -------------------------------------------------
+# Zweite Seite fuer Leute, die noch einen Router suchen (Filtersuche). Sie
+# liegt im Repo geraetedaten unter web/ und nutzt Bilder, Anleitungen und
+# devices.js von hier mit, damit beide Seiten denselben Stand zeigen.
+# Eigener vhost; WAHL= (leer) schaltet das ab.
+WAHL="${WAHL-$BASIS/routerwahl.ffnef.de}"
+if [ -n "$WAHL" ] && [ -d "$GD/web" ]; then
+  mkdir -p "$WAHL"
+  for d in index.html routerwahl.js routerwahl.css; do
+    ln -sfn "$GD/web/$d" "$WAHL/$d"
+  done
+  ln -sfn "$UP/router.png" "$WAHL/router.png"
+  ln -sfn "$GD/ausgabe/selector" "$WAHL/geraete"
+  ln -sfn "$ANL/anleitungen/html" "$WAHL/anleitungen"
+  ln -sfn "$WURZEL/pictures" "$WAHL/pictures"
+  ln -sfn "$CFG/ffnef/devices.js" "$WAHL/devices.js"
+  ln -sfn "$CFG/ffnef/config.js" "$WAHL/config.js"
+  sage "routerwahl: $WAHL verknuepft"
+fi
+
 # --- Werkzeuge auf den Pfad legen -----------------------------------------
 # Diese Skripte werden von Hand aufgerufen, meist als
 # "ssh firmware6 cudy-zwischenfirmware-spiegeln.py". Eine solche Shell ist

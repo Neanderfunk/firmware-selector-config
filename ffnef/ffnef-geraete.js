@@ -208,6 +208,10 @@
     }
 
     var fuss = el('p', 'ffnef-geraet-fuss');
+    var rw = el('a', null, 'Gerät vergleichen auf routerwahl.ffnef.de');
+    rw.href = 'https://routerwahl.ffnef.de/?geraet=' + encodeURIComponent(d.image);
+    fuss.appendChild(rw);
+    fuss.appendChild(document.createTextNode(' · '));
     (d.links || []).forEach(function (l, i) {
       if (i) fuss.appendChild(document.createTextNode(' · '));
       var x = el('a', null, l.name);
