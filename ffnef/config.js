@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 68983f3e)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer c757a43e)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -311,6 +311,7 @@ var config = {
     },
     "Mercusys": {
       "MR70X": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/mercusys-mr70x-v1.html"},
+      "MR90X": {"v1": "https://routersoftware.ffnef.de/anleitungen/de/mercusys-mr90x-v1.html"},
     },
     "Netgear": {
       "DGN3500": "https://routersoftware.ffnef.de/anleitungen/de/netgear-dgn3500b.html",
