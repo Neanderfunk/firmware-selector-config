@@ -30,8 +30,9 @@ HIER = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIEL = os.path.join(HIER, "ffnef", "versionen.json")
 HAND = os.path.join(HIER, "ffnef", "versionen-handpflege.json")
 
-# Die OpenWrt-Staende, auf denen unsere Gluon-Zweige aufsetzen.
-RELEASES = ["23.05.5", "24.10.0"]
+# Die OpenWrt-Staende, auf denen unsere Gluon-Zweige aufsetzen, dazu die
+# aktuelle Release: was dort drin ist, gilt als "in OpenWrt".
+RELEASES = ["23.05.5", "24.10.0", "25.12.6"]
 OW = "https://downloads.openwrt.org/releases/{}/.overview.json"
 # Eine Domaene genuegt: alle Domaenen bauen dieselbe Geraeteliste.
 UNSER = "https://download.ffnef.de/firmware/stable/02_met/sysupgrade/"

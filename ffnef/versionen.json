@@ -1,7 +1,15 @@
 {
- "erzeugt": "2026-10-06",
+ "erzeugt": "2026-10-20",
  "erzeugt_von": "werkzeug/versionen-holen.py",
  "geraete": {
+  "accton-technology-corporation-eap1024a": {
+   "hersteller": "Accton Technology Corporation",
+   "modell": "EAP1024A",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
   "adtran-bluesocket-bsap-1800": {
    "hersteller": "Adtran/Bluesocket",
    "modell": "BSAP-1800",
@@ -30,11 +38,27 @@
    ],
    "wir": []
   },
+  "archer-a5": {
+   "hersteller": "",
+   "modell": "Archer A5",
+   "openwrt": [
+    "v6 (ca/eu/ru)"
+   ],
+   "wir": []
+  },
   "arris-tr4400": {
    "hersteller": "Arris",
    "modell": "TR4400",
    "openwrt": [
     "v2"
+   ],
+   "wir": []
+  },
+  "asiarf-ap7621-004": {
+   "hersteller": "AsiaRF",
+   "modell": "AP7621-004",
+   "openwrt": [
+    "v3"
    ],
    "wir": []
   },
@@ -99,6 +123,30 @@
    ],
    "wir": []
   },
+  "asus-rt-ax1800hp": {
+   "hersteller": "ASUS",
+   "modell": "RT-AX1800HP",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "asus-rt-ax1800s": {
+   "hersteller": "ASUS",
+   "modell": "RT-AX1800S",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
+  "asus-rt-ax54hp": {
+   "hersteller": "ASUS",
+   "modell": "RT-AX54HP",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
   "asus-rt-n12-vp": {
    "hersteller": "ASUS",
    "modell": "RT-N12 VP",
@@ -112,6 +160,14 @@
    "modell": "RT-N56U",
    "openwrt": [
     "b1"
+   ],
+   "wir": []
+  },
+  "asus-zenwifi-bt8": {
+   "hersteller": "ASUS",
+   "modell": "ZenWiFi BT8",
+   "openwrt": [
+    "u-boot mod"
    ],
    "wir": []
   },
@@ -291,6 +347,14 @@
    ],
    "wir": []
   },
+  "comfast-cf-wr632ax": {
+   "hersteller": "COMFAST",
+   "modell": "CF-WR632AX",
+   "openwrt": [
+    "(openwrt u-boot layout)"
+   ],
+   "wir": []
+  },
   "comfast-cf-wr650ac": {
    "hersteller": "COMFAST",
    "modell": "CF-WR650AC",
@@ -349,12 +413,29 @@
    ],
    "wir": []
   },
+  "creatlentem-clt-r30b1": {
+   "hersteller": "CreatLentem",
+   "modell": "CLT-R30B1",
+   "openwrt": [
+    "(ubi)",
+    "112m"
+   ],
+   "wir": []
+  },
   "ctera-c200": {
    "hersteller": "Ctera",
    "modell": "C200",
    "openwrt": [
     "v1",
     "v2"
+   ],
+   "wir": []
+  },
+  "cudy-ap1300-outdoor": {
+   "hersteller": "Cudy",
+   "modell": "AP1300 Outdoor",
+   "openwrt": [
+    "v1"
    ],
    "wir": []
   },
@@ -378,15 +459,67 @@
     "v1"
    ]
   },
+  "cudy-ap3000-wall": {
+   "hersteller": "Cudy",
+   "modell": "AP3000 Wall",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "cudy-lt300": {
+   "hersteller": "Cudy",
+   "modell": "LT300",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
+  },
+  "cudy-lt500-outdoor": {
+   "hersteller": "Cudy",
+   "modell": "LT500 Outdoor",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "cudy-m1200": {
+   "hersteller": "Cudy",
+   "modell": "M1200",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "cudy-m1300": {
+   "hersteller": "Cudy",
+   "modell": "M1300",
+   "openwrt": [
+    "v2"
+   ],
+   "wir": []
+  },
   "cudy-m3000": {
    "hersteller": "Cudy",
    "modell": "M3000",
    "openwrt": [
-    "v1"
+    "v1",
+    "v1/v2",
+    "v1/v2 (openwrt u-boot layout)",
+    "v2 with motorcomm yt8821",
+    "v2 with motorcomm yt8821 (openwrt u-boot layout)"
    ],
    "wir": [
     "v1"
    ]
+  },
+  "cudy-re1200-outdoor": {
+   "hersteller": "Cudy",
+   "modell": "RE1200 Outdoor",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
   },
   "cudy-re3000": {
    "hersteller": "Cudy",
@@ -410,11 +543,22 @@
    "hersteller": "Cudy",
    "modell": "TR3000",
    "openwrt": [
-    "v1"
+    "256mb v1",
+    "v1",
+    "v1 (openwrt u-boot layout)"
    ],
    "wir": [
     "v1"
    ]
+  },
+  "cudy-wbr3000uax": {
+   "hersteller": "Cudy",
+   "modell": "WBR3000UAX",
+   "openwrt": [
+    "v1",
+    "v1 (openwrt u-boot layout)"
+   ],
+   "wir": []
   },
   "cudy-wr1300": {
    "hersteller": "Cudy",
@@ -428,10 +572,18 @@
     "v1"
    ]
   },
+  "cudy-wr300": {
+   "hersteller": "Cudy",
+   "modell": "WR300",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
   "cudy-wr3000": {
    "handpflege": {
-    "erkennbar_an": "V2.x auf dem Etikett; die CPU ist mit 1.2 GHz angegeben (v1: 1.3 GHz). Vor dem Kauf: Haendler, die selbst nicht wissen, welche Version sie haben, zeigen meist ein Foto der Verpackung - dort steht \"1.2GHz Dualcore\".",
-    "grund": "Anderer SoC und nur 128 MB RAM. OpenWrt unterstuetzt nur v1.",
+    "erkennbar_an": "V2.x auf dem Etikett; die CPU ist mit 1.2 GHz angegeben (v1: 1.3 GHz). Vor dem Kauf: Händler, die selbst nicht wissen, welche Version sie haben, zeigen meist ein Foto der Verpackung - dort steht \"1.2GHz Dualcore\".",
+    "grund": "Anderer SoC und nur 128 MB RAM. OpenWrt unterstützt nur v1.",
     "nicht_unterstuetzt": [
      "v2"
     ],
@@ -447,15 +599,64 @@
     "v1"
    ]
   },
-  "cudy-wr3000s": {
+  "cudy-wr3000e": {
+   "handpflege": {
+    "erkennbar_an": "V2.x auf dem Etikett; die CPU ist mit 1.2 GHz angegeben (v1: 1.3 GHz). Vor dem Kauf: Händler, die selbst nicht wissen, welche Version sie haben, zeigen meist ein Foto der Verpackung - dort steht \"1.2GHz Dualcore\".",
+    "grund": "Wie beim WR3000: anderer SoC, nur 128 MB RAM. OpenWrt unterstützt nur v1.",
+    "nicht_unterstuetzt": [
+     "v2"
+    ],
+    "quelle": "https://forum.openwrt.org/t/cudy-wr3000e-cudy-wr3000-determining-version-number/243206",
+    "stand": "2026-10-06"
+   },
    "hersteller": "Cudy",
-   "modell": "WR3000S",
+   "modell": "WR3000E",
    "openwrt": [
-    "v1"
+    "v1",
+    "v1 (openwrt u-boot layout)"
    ],
    "wir": [
     "v1"
    ]
+  },
+  "cudy-wr3000h": {
+   "hersteller": "Cudy",
+   "modell": "WR3000H",
+   "openwrt": [
+    "v1",
+    "v1 (openwrt u-boot layout)"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-wr3000p": {
+   "hersteller": "Cudy",
+   "modell": "WR3000P",
+   "openwrt": [
+    "v1",
+    "v1 (openwrt u-boot layout)"
+   ],
+   "wir": []
+  },
+  "cudy-wr3000s": {
+   "hersteller": "Cudy",
+   "modell": "WR3000S",
+   "openwrt": [
+    "v1",
+    "v1 (openwrt u-boot layout)"
+   ],
+   "wir": [
+    "v1"
+   ]
+  },
+  "cudy-wr3000u": {
+   "hersteller": "Cudy",
+   "modell": "WR3000U",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
   },
   "cudy-x6": {
    "hersteller": "Cudy",
@@ -468,6 +669,14 @@
     "v1",
     "v2"
    ]
+  },
+  "d-link-aquila-pro-ai-e30": {
+   "hersteller": "D-Link",
+   "modell": "AQUILA PRO AI E30",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
   },
   "d-link-aquila-pro-ai-m30": {
    "hersteller": "D-Link",
@@ -641,6 +850,14 @@
    ],
    "wir": []
   },
+  "d-link-dir-1360": {
+   "hersteller": "D-Link",
+   "modell": "DIR-1360",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
   "d-link-dir-1935": {
    "hersteller": "D-Link",
    "modell": "DIR-1935",
@@ -686,7 +903,8 @@
    "hersteller": "D-Link",
    "modell": "DIR-2660",
    "openwrt": [
-    "a1"
+    "a1",
+    "a2"
    ],
    "wir": []
   },
@@ -812,6 +1030,30 @@
    ],
    "wir": []
   },
+  "d-link-dir-x1550": {
+   "hersteller": "D-Link",
+   "modell": "DIR-X1550",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "d-link-dir-x1860": {
+   "hersteller": "D-Link",
+   "modell": "DIR-X1860",
+   "openwrt": [
+    "b1"
+   ],
+   "wir": []
+  },
+  "d-link-dns-325": {
+   "hersteller": "D-Link",
+   "modell": "DNS-325",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
   "d-link-dra-1360": {
    "hersteller": "D-Link",
    "modell": "DRA-1360",
@@ -907,7 +1149,8 @@
    "hersteller": "Dell",
    "modell": "SonicPoint",
    "openwrt": [
-    "ace (apl26-0ae)"
+    "ace (apl26-0ae)",
+    "aci (apl27-0b1)"
    ],
    "wir": []
   },
@@ -917,6 +1160,15 @@
    "openwrt": [
     "(128m)",
     "(64m)"
+   ],
+   "wir": []
+  },
+  "dragonglass-dgx21": {
+   "hersteller": "Dragonglass",
+   "modell": "DGX21",
+   "openwrt": [
+    "(ubi)",
+    "112m"
    ],
    "wir": []
   },
@@ -933,6 +1185,15 @@
    "modell": "BR-6478AC",
    "openwrt": [
     "v2"
+   ],
+   "wir": []
+  },
+  "edup-rt2980": {
+   "hersteller": "EDUP",
+   "modell": "RT2980",
+   "openwrt": [
+    "(ubi)",
+    "112m"
    ],
    "wir": []
   },
@@ -981,6 +1242,18 @@
    "modell": "EnStationAC",
    "openwrt": [
     "v1"
+   ],
+   "wir": []
+  },
+  "engenius-ews2910p": {
+   "hersteller": "EnGenius",
+   "luecke_vermutet": [
+    "v2"
+   ],
+   "modell": "EWS2910P",
+   "openwrt": [
+    "v1",
+    "v3"
    ],
    "wir": []
   },
@@ -1036,6 +1309,15 @@
    ],
    "wir": []
   },
+  "gl.inet-gl-mt2500": {
+   "hersteller": "GL.iNet",
+   "modell": "GL-MT2500",
+   "openwrt": [
+    "airoha phy",
+    "maxlinear phy"
+   ],
+   "wir": []
+  },
   "gl.inet-gl-mt300n": {
    "hersteller": "GL.iNet",
    "modell": "GL-MT300N",
@@ -1062,6 +1344,47 @@
    ],
    "wir": []
   },
+  "hongdian-h7920": {
+   "hersteller": "Hongdian",
+   "modell": "H7920",
+   "openwrt": [
+    "v40"
+   ],
+   "wir": []
+  },
+  "hongdian-h8850": {
+   "hersteller": "Hongdian",
+   "modell": "H8850",
+   "openwrt": [
+    "v20"
+   ],
+   "wir": []
+  },
+  "hongdian-h8922": {
+   "hersteller": "Hongdian",
+   "modell": "H8922",
+   "openwrt": [
+    "v30"
+   ],
+   "wir": []
+  },
+  "huasifei-wh3000-pro": {
+   "hersteller": "Huasifei",
+   "modell": "WH3000 Pro",
+   "openwrt": [
+    "emmc",
+    "nand"
+   ],
+   "wir": []
+  },
+  "huasifei-wh3000r": {
+   "hersteller": "Huasifei",
+   "modell": "WH3000R",
+   "openwrt": [
+    "nand"
+   ],
+   "wir": []
+  },
   "huawei-echolife-hg556a": {
    "hersteller": "Huawei",
    "modell": "EchoLife HG556a",
@@ -1077,6 +1400,19 @@
    "modell": "HG253s",
    "openwrt": [
     "v2"
+   ],
+   "wir": []
+  },
+  "jiorouter-ax6000": {
+   "hersteller": "JioRouter",
+   "modell": "AX6000",
+   "openwrt": [
+    "jidu6101",
+    "jidu6201",
+    "jidu6401",
+    "jidu6601",
+    "jidu6701",
+    "jidu6j01"
    ],
    "wir": []
   },
@@ -1324,6 +1660,15 @@
    ],
    "wir": []
   },
+  "livinet-li228": {
+   "hersteller": "Livinet",
+   "modell": "Li228",
+   "openwrt": [
+    "(ubi)",
+    "112m"
+   ],
+   "wir": []
+  },
   "marvell-armada-3700-community-board": {
    "hersteller": "Marvell",
    "modell": "Armada 3700 Community Board",
@@ -1363,6 +1708,14 @@
    ],
    "wir": []
   },
+  "mercusys-mb130-4g": {
+   "hersteller": "MERCUSYS",
+   "modell": "MB130-4G",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
   "mercusys-mr70x": {
    "hersteller": "MERCUSYS",
    "modell": "MR70X",
@@ -1372,6 +1725,14 @@
    "wir": [
     "v1"
    ]
+  },
+  "mercusys-mr80x": {
+   "hersteller": "MERCUSYS",
+   "modell": "MR80X",
+   "openwrt": [
+    "v3"
+   ],
+   "wir": []
   },
   "netgear-dgnd3700": {
    "hersteller": "NETGEAR",
@@ -1386,7 +1747,24 @@
    "hersteller": "NETGEAR",
    "modell": "EAX11",
    "openwrt": [
+    "v2",
+    "v3"
+   ],
+   "wir": []
+  },
+  "netgear-eax12": {
+   "hersteller": "NETGEAR",
+   "modell": "EAX12",
+   "openwrt": [
     "v2"
+   ],
+   "wir": []
+  },
+  "netgear-eax14": {
+   "hersteller": "NETGEAR",
+   "modell": "EAX14",
+   "openwrt": [
+    "v3"
    ],
    "wir": []
   },
@@ -1394,7 +1772,8 @@
    "hersteller": "NETGEAR",
    "modell": "EAX15",
    "openwrt": [
-    "v2"
+    "v2",
+    "v3"
    ],
    "wir": []
   },
@@ -1682,6 +2061,14 @@
    "openwrt": [
     "v1 (na)",
     "v1 (row)",
+    "v2"
+   ],
+   "wir": []
+  },
+  "netis-nx30": {
+   "hersteller": "netis",
+   "modell": "NX30",
+   "openwrt": [
     "v2"
    ],
    "wir": []
@@ -2079,6 +2466,14 @@
    ],
    "wir": []
   },
+  "routerich-ax3000": {
+   "hersteller": "Routerich",
+   "modell": "AX3000",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
   "ruijie-rg-ew1200g-pro": {
    "hersteller": "Ruijie",
    "modell": "RG-EW1200G PRO",
@@ -2166,7 +2561,8 @@
    "hersteller": "SonicWall",
    "modell": "SonicPoint",
    "openwrt": [
-    "ace (apl26-0ae)"
+    "ace (apl26-0ae)",
+    "aci (apl27-0b1)"
    ],
    "wir": []
   },
@@ -2178,11 +2574,35 @@
    ],
    "wir": []
   },
+  "sourceparts-popstick": {
+   "hersteller": "SourceParts",
+   "modell": "PopStick",
+   "openwrt": [
+    "v1.1"
+   ],
+   "wir": []
+  },
+  "stmicroelectronics-stm32mp157c-dk2": {
+   "hersteller": "STMicroelectronics",
+   "modell": "STM32MP157C-DK2",
+   "openwrt": [
+    "scmi"
+   ],
+   "wir": []
+  },
   "technicolor-tg582n": {
    "hersteller": "Technicolor",
    "modell": "TG582n",
    "openwrt": [
     "telecom italia"
+   ],
+   "wir": []
+  },
+  "teltonika-rut200": {
+   "hersteller": "Teltonika",
+   "modell": "RUT200",
+   "openwrt": [
+    "v1-v4"
    ],
    "wir": []
   },
@@ -2196,11 +2616,35 @@
     "v1"
    ]
   },
+  "teltonika-rut240": {
+   "hersteller": "Teltonika",
+   "modell": "RUT240",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "teltonika-rut241": {
+   "hersteller": "Teltonika",
+   "modell": "RUT241",
+   "openwrt": [
+    "v1-v4"
+   ],
+   "wir": []
+  },
   "teltonika-rut955": {
    "hersteller": "Teltonika",
    "modell": "RUT955",
    "openwrt": [
     "h7v3c0"
+   ],
+   "wir": []
+  },
+  "teralink-tl3020": {
+   "hersteller": "Teralink",
+   "modell": "TL3020",
+   "openwrt": [
+    "256mb"
    ],
    "wir": []
   },
@@ -2239,6 +2683,14 @@
    ],
    "wir": []
   },
+  "tp-link-archer-ax21": {
+   "hersteller": "TP-Link",
+   "modell": "Archer AX21",
+   "openwrt": [
+    "v4"
+   ],
+   "wir": []
+  },
   "tp-link-archer-ax23": {
    "hersteller": "TP-Link",
    "modell": "Archer AX23",
@@ -2248,6 +2700,15 @@
    "wir": [
     "v1"
    ]
+  },
+  "tp-link-archer-ax80": {
+   "hersteller": "TP-Link",
+   "modell": "Archer AX80",
+   "openwrt": [
+    "v1",
+    "v1 (eu)"
+   ],
+   "wir": []
   },
   "tp-link-archer-c2": {
    "hersteller": "TP-Link",
@@ -2431,7 +2892,8 @@
    "hersteller": "TP-Link",
    "modell": "Archer MR200",
    "openwrt": [
-    "v5"
+    "v5",
+    "v6"
    ],
    "wir": []
   },
@@ -2632,6 +3094,22 @@
     "v1"
    ]
   },
+  "tp-link-eap620-hd": {
+   "hersteller": "TP-Link",
+   "modell": "EAP620 HD",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-eap623-outdoor-hd": {
+   "hersteller": "TP-Link",
+   "modell": "EAP623-Outdoor HD",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
   "tp-link-eap660-hd": {
    "hersteller": "TP-Link",
    "modell": "EAP660 HD",
@@ -2660,6 +3138,7 @@
    "hersteller": "TP-Link",
    "modell": "ER605",
    "openwrt": [
+    "v1",
     "v2"
    ],
    "wir": []
@@ -2667,6 +3146,31 @@
   "tp-link-ex220": {
    "hersteller": "TP-Link",
    "modell": "EX220",
+   "openwrt": [
+    "v1",
+    "v2"
+   ],
+   "wir": []
+  },
+  "tp-link-f65": {
+   "hersteller": "TP-Link",
+   "modell": "F65",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-fr205": {
+   "hersteller": "TP-Link",
+   "modell": "FR205",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-fr365": {
+   "hersteller": "TP-Link",
+   "modell": "FR365",
    "openwrt": [
     "v1"
    ],
@@ -2926,6 +3430,22 @@
    "wir": [
     "v5"
    ]
+  },
+  "tp-link-tl-r605": {
+   "hersteller": "TP-Link",
+   "modell": "TL-R605",
+   "openwrt": [
+    "v1"
+   ],
+   "wir": []
+  },
+  "tp-link-tl-st1008f": {
+   "hersteller": "TP-Link",
+   "modell": "TL-ST1008F",
+   "openwrt": [
+    "v2.0"
+   ],
+   "wir": []
   },
   "tp-link-tl-wa1201": {
    "hersteller": "TP-Link",
@@ -3385,6 +3905,30 @@
    ],
    "wir": []
   },
+  "watchguard-xtm-330": {
+   "hersteller": "WatchGuard",
+   "modell": "XTM 330",
+   "openwrt": [
+    "nc5ae7"
+   ],
+   "wir": []
+  },
+  "wavlink-wl-wn536ax6": {
+   "hersteller": "WAVLINK",
+   "modell": "WL-WN536AX6",
+   "openwrt": [
+    "rev a"
+   ],
+   "wir": []
+  },
+  "wavlink-wl-wnt100x3": {
+   "hersteller": "WAVLINK",
+   "modell": "WL-WNT100X3",
+   "openwrt": [
+    "(openwrt u-boot layout)"
+   ],
+   "wir": []
+  },
   "wavlink-ws-wn572hp3": {
    "hersteller": "Wavlink",
    "modell": "WS-WN572HP3",
@@ -3510,11 +4054,44 @@
    ],
    "wir": []
   },
+  "zyxel-gs1900-10hp": {
+   "hersteller": "ZyXEL",
+   "modell": "GS1900-10HP",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "zyxel-gs1900-16": {
+   "hersteller": "ZyXEL",
+   "modell": "GS1900-16",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
   "zyxel-gs1900-24": {
    "hersteller": "ZyXEL",
    "modell": "GS1900-24",
    "openwrt": [
+    "a1",
     "v1"
+   ],
+   "wir": []
+  },
+  "zyxel-gs1900-24e": {
+   "hersteller": "ZyXEL",
+   "modell": "GS1900-24E",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "zyxel-gs1900-24ep": {
+   "hersteller": "Zyxel",
+   "modell": "GS1900-24EP",
+   "openwrt": [
+    "a1"
    ],
    "wir": []
   },
@@ -3522,8 +4099,18 @@
    "hersteller": "ZyXEL",
    "modell": "GS1900-24HP",
    "openwrt": [
+    "a1",
+    "b1",
     "v1",
     "v2"
+   ],
+   "wir": []
+  },
+  "zyxel-gs1900-48": {
+   "hersteller": "ZyXEL",
+   "modell": "GS1900-48",
+   "openwrt": [
+    "a1"
    ],
    "wir": []
   },
@@ -3531,6 +4118,8 @@
    "hersteller": "ZyXEL",
    "modell": "GS1900-8",
    "openwrt": [
+    "a1",
+    "b1",
     "v1",
     "v2"
    ],
@@ -3540,6 +4129,8 @@
    "hersteller": "ZyXEL",
    "modell": "GS1900-8HP",
    "openwrt": [
+    "a1",
+    "b1",
     "v1",
     "v2"
    ],
@@ -3609,6 +4200,40 @@
     "f1"
    ],
    "wir": []
+  },
+  "zyxel-wx5600-t0": {
+   "hersteller": "Zyxel",
+   "modell": "WX5600-T0",
+   "openwrt": [
+    "(openwrt u-boot layout)"
+   ],
+   "wir": []
+  },
+  "zyxel-xgs1010-12": {
+   "hersteller": "Zyxel",
+   "modell": "XGS1010-12",
+   "openwrt": [
+    "a1"
+   ],
+   "wir": []
+  },
+  "zyxel-xgs1210-12": {
+   "hersteller": "Zyxel",
+   "modell": "XGS1210-12",
+   "openwrt": [
+    "a1",
+    "b1"
+   ],
+   "wir": []
+  },
+  "zyxel-xgs1250-12": {
+   "hersteller": "Zyxel",
+   "modell": "XGS1250-12",
+   "openwrt": [
+    "a1",
+    "b1"
+   ],
+   "wir": []
   }
  },
  "hinweis": "luecke_vermutet ist eine VERMUTUNG aus der Zaehlung, keine belegte Tatsache. Belegtes gehoert nach versionen-handpflege.json.",
@@ -3616,7 +4241,8 @@
   "eigener_server": "https://download.ffnef.de/firmware/stable/02_met/sysupgrade/",
   "openwrt": [
    "https://downloads.openwrt.org/releases/23.05.5/.overview.json",
-   "https://downloads.openwrt.org/releases/24.10.0/.overview.json"
+   "https://downloads.openwrt.org/releases/24.10.0/.overview.json",
+   "https://downloads.openwrt.org/releases/25.12.6/.overview.json"
   ]
  }
 }
