@@ -19,6 +19,8 @@ HIER = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEV = os.path.join(HIER, "ffnef", "devices.js")
 VER = os.path.join(HIER, "ffnef", "versionen.json")
 HAND = os.path.join(HIER, "ffnef", "versionen-handpflege.json")
+# Erzeugt von werkzeug/versionen-toh.py; zaehlt nur, wo die Handpflege nichts sagt
+TOH = os.path.join(HIER, "ffnef", "versionen-toh.json")
 ZIEL = os.path.join(HIER, "ffnef", "versionen-anzeige.json")
 
 # Nur echte Hardware-Versionen anzeigen. OpenWrts variant-Feld traegt auch
@@ -93,6 +95,9 @@ def main():
     if os.path.exists(HAND):
         hand = json.load(open(HAND, encoding="utf-8"))
     handgeraete = hand.get("geraete", {})
+    tohgeraete = {}
+    if os.path.exists(TOH):
+        tohgeraete = json.load(open(TOH, encoding="utf-8")).get("geraete", {})
     warnungen = hand.get("warnungen", {})
 
     # Warnungen auf die betroffenen Profile umdrehen
@@ -123,6 +128,13 @@ def main():
                     if h:
                         bekannt.update(h.get("nicht_unterstuetzt", []))
                         belege.append({"profil": g, **h})
+                    hand_v = set(h.get("nicht_unterstuetzt", [])) if h else set()
+                    for t in tohgeraete.get(g, []):
+                        neu = [v for v in t["nicht_unterstuetzt"] if v not in hand_v]
+                        if neu and not any(neu == b.get("nicht_unterstuetzt") and b["profil"] == g
+                                           for b in belege):
+                            bekannt.update(neu)
+                            belege.append({"profil": g, **t, "nicht_unterstuetzt": neu})
                     for w in warn_je_profil.get(p, []) or warn_je_profil.get(g, []):
                         if w not in warn:
                             warn.append(w)
