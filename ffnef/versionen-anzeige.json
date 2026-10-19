@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-10-08",
+ "erzeugt": "2026-10-20",
  "erzeugt_von": "werkzeug/versionen-anzeige.py",
  "geraete": {
   "AVM|FRITZ!Box 7360": {
@@ -10,6 +10,34 @@
   "Asus|RT-AC57U": {
    "bekannt": [
     "v1",
+    "v2",
+    "v3"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "asus-rt-ac57u",
+     "quelle": "https://firmware-selector.openwrt.org/"
+    },
+    {
+     "art": "keine brauchbaren WLAN-Treiber (2.4 GHz)",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: keine brauchbaren WLAN-Treiber (2.4 GHz).",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "asus-rt-ac57u",
+     "quelle": "https://openwrt.org/toh/hwdata/asus/asus_rt-ac57u_v3"
+    }
+   ],
+   "nicht_unterstuetzt": [
     "v2",
     "v3"
    ]
@@ -49,6 +77,34 @@
     "v1",
     "v2",
     "v3"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "cudy-wr1300",
+     "quelle": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v2"
+    },
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "cudy-wr1300",
+     "quelle": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v2"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2",
+    "v3"
    ]
   },
   "Cudy|WR3000": {
@@ -74,6 +130,7 @@
   },
   "Cudy|WR3000 E": {
    "bekannt": [
+    "v1",
     "v2"
    ],
    "belege": [
@@ -92,6 +149,11 @@
     "v2"
    ]
   },
+  "Cudy|WR3000 H (AX3000)": {
+   "bekannt": [
+    "v1"
+   ]
+  },
   "Cudy|WR3000 S": {
    "bekannt": [
     "v1"
@@ -105,17 +167,90 @@
   },
   "Mercusys|MR70X": {
    "bekannt": [
-    "v1"
+    "v1",
+    "v2"
+   ],
+   "belege": [
+    {
+     "erkennbar_an": "„V2“ oder „Ver: 2.x“ (auch 2.30) auf dem Typenschild unter dem Router oder auf dem Karton. V1 und V1.20 sind dieselbe Hardware.",
+     "geprueft": "Versionsauswahl der Mercusys-Produktseite (V1, V1.20, V2) und OpenWrt-Releases bis 25.12.6 (nur v1); Neanderfunk/geraetedaten mercusys-mr70x-v1",
+     "grund": "Grund: noch nicht in OpenWrt. Mercusys führt V2 mit eigener Firmware; das OpenWrt-Image gilt nur für V1.",
+     "neu_pruefen_wenn": "OpenWrt ein Image mercusys_mr70x-v2 bekommt",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "mercusys-mr70x",
+     "quelle": "https://www.mercusys.com/en/product/wifi-router/mr70x/v1/",
+     "stand": "2026-10-19"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2"
    ]
   },
   "Netgear|EAX11": {
    "bekannt": [
+    "v2",
+    "v3"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "netgear-eax11",
+     "quelle": "https://firmware-selector.openwrt.org/"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v3"
+   ]
+  },
+  "Netgear|EAX12": {
+   "bekannt": [
+    "v2"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "netgear-eax12",
+     "quelle": "https://firmware-selector.openwrt.org/"
+    }
+   ],
+   "nicht_unterstuetzt": [
     "v2"
    ]
   },
   "Netgear|EAX15": {
    "bekannt": [
-    "v2"
+    "v2",
+    "v3"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "netgear-eax15",
+     "quelle": "https://firmware-selector.openwrt.org/"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v3"
    ]
   },
   "Netgear|EX6150": {
@@ -130,10 +265,42 @@
     "v3",
     "v4",
     "v5"
+   ],
+   "belege": [
+    {
+     "art": "keine brauchbaren WLAN-Treiber (5 GHz)",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: keine brauchbaren WLAN-Treiber (5 GHz).",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "netgear-wndr3700",
+     "quelle": "https://openwrt.org/toh/hwdata/netgear/netgear_wndr3700_v3"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v3"
    ]
   },
   "Netgear|WNDR4300": {
    "bekannt": [
+    "v2"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "netgear-wndr4300",
+     "quelle": "https://openwrt.org/toh/hwdata/netgear/netgear_wndr4300_v2"
+    }
+   ],
+   "nicht_unterstuetzt": [
     "v2"
    ]
   },
@@ -141,6 +308,22 @@
    "bekannt": [
     "v1",
     "v2"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v1"
+     ],
+     "profil": "netgear-wndrmac",
+     "quelle": "https://openwrt.org/toh/hwdata/netgear/netgear_wndrmac_v1"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v1"
    ]
   },
   "Open-Mesh|MR1750": {
@@ -219,13 +402,46 @@
    "bekannt": [
     "v1",
     "v4"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v4"
+     ],
+     "profil": "tp-link-archer-c5",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c5_v4"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v4"
    ]
   },
   "TP-Link|Archer C50": {
    "bekannt": [
     "v1",
     "v3",
-    "v4"
+    "v4",
+    "v5"
+   ],
+   "belege": [
+    {
+     "art": "passt nicht mehr in OpenWrt (zu wenig Speicher)",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: passt nicht mehr in OpenWrt (zu wenig Speicher).",
+     "nicht_unterstuetzt": [
+      "v5"
+     ],
+     "profil": "tp-link-archer-c50",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c50_v5"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v5"
    ]
   },
   "TP-Link|Archer C58": {
@@ -236,6 +452,22 @@
   "TP-Link|Archer C59": {
    "bekannt": [
     "v1",
+    "v2"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-archer-c59",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v2"
+    }
+   ],
+   "nicht_unterstuetzt": [
     "v2"
    ]
   },
@@ -249,14 +481,71 @@
     "v1",
     "v2",
     "v3"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-archer-c60",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v2"
+    },
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "tp-link-archer-c60",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v3"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2",
+    "v3"
    ]
   },
   "TP-Link|Archer C7": {
    "bekannt": [
     "v1",
     "v2",
+    "v3",
     "v4",
     "v5"
+   ],
+   "belege": [
+    {
+     "art": "keine brauchbaren WLAN-Treiber (5 GHz)",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: keine brauchbaren WLAN-Treiber (5 GHz).",
+     "nicht_unterstuetzt": [
+      "v1"
+     ],
+     "profil": "tp-link-archer-c7",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c7_ac1750_v1"
+    },
+    {
+     "art": "nicht mehr in OpenWrt",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: nicht mehr in OpenWrt.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "tp-link-archer-c7",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c7_ac1750_v3"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v1",
+    "v3"
    ]
   },
   "TP-Link|Archer D50": {
@@ -273,8 +562,37 @@
   },
   "TP-Link|CPE220": {
    "bekannt": [
+    "v1",
     "v2",
     "v3"
+   ],
+   "belege": [
+    {
+     "art": "passt nicht mehr in OpenWrt (zu wenig Speicher)",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: passt nicht mehr in OpenWrt (zu wenig Speicher).",
+     "nicht_unterstuetzt": [
+      "v1"
+     ],
+     "profil": "tp-link-cpe220",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe220_v1"
+    },
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-cpe220",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe220_v2"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v1",
+    "v2"
    ]
   },
   "TP-Link|CPE510": {
@@ -312,6 +630,22 @@
     "v2",
     "v3",
     "v4"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v1"
+     ],
+     "profil": "tp-link-re200",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re200_v1"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v1"
    ]
   },
   "TP-Link|RE305": {
@@ -341,11 +675,44 @@
    "bekannt": [
     "v1",
     "v2"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-re650",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re650_v2"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2"
    ]
   },
   "TP-Link|TD-W8970": {
    "bekannt": [
-    "v1"
+    "v1",
+    "v3"
+   ],
+   "belege": [
+    {
+     "art": "noch nicht in OpenWrt",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: noch nicht in OpenWrt.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "tp-link-td-w8970",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v3.0"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v3"
    ]
   },
   "TP-Link|TD-W8980": {
@@ -360,12 +727,72 @@
   },
   "TP-Link|TL-MR3020": {
    "bekannt": [
+    "v1",
     "v3"
+   ],
+   "belege": [
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v1"
+     ],
+     "profil": "tp-link-tl-mr3020",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr3020_v1"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v1"
    ]
   },
   "TP-Link|TL-MR3420": {
    "bekannt": [
+    "v1",
+    "v2",
+    "v3",
     "v5"
+   ],
+   "belege": [
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v1"
+     ],
+     "profil": "tp-link-tl-mr3420",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr3420_v1"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-tl-mr3420",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr3420_v2"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "tp-link-tl-mr3420",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr3420_v3"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v1",
+    "v2",
+    "v3"
    ]
   },
   "TP-Link|TL-MR6400": {
@@ -373,11 +800,95 @@
     "v1",
     "v4",
     "v5"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v1"
+     ],
+     "profil": "tp-link-tl-mr6400",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr6400_v1"
+    },
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v4"
+     ],
+     "profil": "tp-link-tl-mr6400",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr6400_v4"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v1",
+    "v4"
    ]
   },
   "TP-Link|TL-WA801N/ND": {
    "bekannt": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
     "v5"
+   ],
+   "belege": [
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v1"
+     ],
+     "profil": "tp-link-tl-wa801nd",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wa801nd_v1"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-tl-wa801nd",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wa801nd_v2"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "tp-link-tl-wa801nd",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wa801nd_v3"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v4"
+     ],
+     "profil": "tp-link-tl-wa801nd",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wa801nd_v4"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v1",
+    "v2",
+    "v3",
+    "v4"
    ]
   },
   "TP-Link|TL-WDR3500": {
@@ -398,6 +909,22 @@
   "TP-Link|TL-WDR4900": {
    "bekannt": [
     "v1",
+    "v2"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-tl-wdr4900",
+     "quelle": "https://firmware-selector.openwrt.org/"
+    }
+   ],
+   "nicht_unterstuetzt": [
     "v2"
    ]
   },
@@ -420,7 +947,24 @@
   },
   "TP-Link|TL-WR810N": {
    "bekannt": [
-    "v1"
+    "v1",
+    "v2"
+   ],
+   "belege": [
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-tl-wr810n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr810n_v2"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2"
    ]
   },
   "TP-Link|TL-WR840N": {
@@ -430,12 +974,45 @@
   },
   "TP-Link|TL-WR841N/ND": {
    "bekannt": [
-    "v13"
+    "v13",
+    "v14"
+   ],
+   "belege": [
+    {
+     "art": "zu wenig Speicher",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v14"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841n_v14"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v14"
    ]
   },
   "TP-Link|TL-WR842N/ND": {
    "bekannt": [
     "v3",
+    "v5"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v5"
+     ],
+     "profil": "tp-link-tl-wr842n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr842n_v5"
+    }
+   ],
+   "nicht_unterstuetzt": [
     "v5"
    ]
   },
@@ -455,6 +1032,22 @@
   "TP-Link|WBS510": {
    "bekannt": [
     "v1",
+    "v2"
+   ],
+   "belege": [
+    {
+     "art": "in OpenWrt, aber noch nicht in Gluon",
+     "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-wbs510",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_wbs510_v2"
+    }
+   ],
+   "nicht_unterstuetzt": [
     "v2"
    ]
   },

@@ -58,6 +58,17 @@
    "grund": "Wie beim WR3000: anderer SoC, nur 128 MB RAM. OpenWrt unterstützt nur v1.",
    "quelle": "https://forum.openwrt.org/t/cudy-wr3000e-cudy-wr3000-determining-version-number/243206",
    "stand": "2026-10-06"
+  },
+  "mercusys-mr70x": {
+   "nicht_unterstuetzt": [
+    "v2"
+   ],
+   "erkennbar_an": "„V2“ oder „Ver: 2.x“ (auch 2.30) auf dem Typenschild unter dem Router oder auf dem Karton. V1 und V1.20 sind dieselbe Hardware.",
+   "grund": "Grund: noch nicht in OpenWrt. Mercusys führt V2 mit eigener Firmware; das OpenWrt-Image gilt nur für V1.",
+   "quelle": "https://www.mercusys.com/en/product/wifi-router/mr70x/v1/",
+   "stand": "2026-10-19",
+   "geprueft": "Versionsauswahl der Mercusys-Produktseite (V1, V1.20, V2) und OpenWrt-Releases bis 25.12.6 (nur v1); Neanderfunk/geraetedaten mercusys-mr70x-v1",
+   "neu_pruefen_wenn": "OpenWrt ein Image mercusys_mr70x-v2 bekommt"
   }
  },
  "warnungen": {}
