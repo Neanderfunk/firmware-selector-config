@@ -217,3 +217,7 @@
   #wizard .imagePreview .ffnef-geraet-liste { grid-template-columns: 1fr; }
   #wizard .imagePreview .ffnef-geraet-liste dd { margin-bottom: 0.4em; }
 }
+
+#wizard .imagePreview .ffnef-geraet-speicher {
+  margin: 0.3em 0;
+}

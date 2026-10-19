@@ -1,6 +1,7 @@
 /* Geraetedaten in Schritt 1: Nach der Wahl von Geraet und Hardware-Version
-   zeigt diese Datei unter dem Geraetebild die wichtigsten Daten aus der
-   Neanderfunk-Geraetedatenbank (github.com/Neanderfunk/geraetedaten).
+   zeigt diese Datei unter dem Geraetebild, was fuer die Installation zaehlt,
+   aus der Neanderfunk-Geraetedatenbank (github.com/Neanderfunk/geraetedaten).
+   Den Rest und den Vergleich zeigt routerwahl.ffnef.de.
 
    Wie ffnef.js nur lesend: app.js bleibt unveraendert. Die Daten liegen je
    Geraet in geraete/<image>.json und werden erst geladen, wenn das Geraet
@@ -179,14 +180,24 @@
     return dl;
   }
 
+  /* Im Selector hat man das Geraet schon. Gezeigt wird deshalb nur, was
+     beim Installieren schiefgehen kann (Content, 19.10.2026); alles andere
+     steht auf routerwahl.ffnef.de. */
+  function zeileMit(liste, titel) {
+    for (var i = 0; i < (liste || []).length; i++) if (liste[i].titel === titel) return liste[i];
+    return null;
+  }
+
   function kasten(d) {
     var box = el('div', 'ffnef-geraet');
     box.appendChild(el('h2', null, 'Gerätedaten: ' + d.modell));
+    var zeilenListe = [];
 
-    var oben = (d.oben || []).slice();
+    var hw = zeileMit(d.oben, 'Hardware-Version erkennen');
+    if (hw) zeilenListe.push(hw);
+
     var a = anleitungen[d.image];
     if (a) {
-      oben = oben.filter(function (z) { return z.titel !== 'Installation'; });
       var lv = a.level || '';
       var zeileI = {
         titel: 'Installation',
@@ -195,39 +206,35 @@
         belege: [{ quelle: 'anleitung', url: a.url }]
       };
       if (a.risiko === 'bootloader') zeileI.warnung = BOOTLOADER;
-      oben.splice(oben.length && oben[0].stufe ? 1 : 0, 0, zeileI);
+      zeilenListe.push(zeileI);
     }
-    box.appendChild(zeilen(oben, false));
-    if (d.mitte && d.mitte.length) box.appendChild(zeilen(d.mitte, false));
+    box.appendChild(zeilen(zeilenListe, false));
 
-    if (d.technik && d.technik.length) {
-      var det = el('details', 'ffnef-geraet-technik');
-      det.appendChild(el('summary', null, 'Technische Daten'));
-      det.appendChild(zeilen(d.technik, true));
-      box.appendChild(det);
+    /* Warnsaetze nur, wenn sie zutreffen */
+    [zeileMit(d.oben, 'Stromversorgung'), zeileMit(d.mitte, 'Anschlüsse')].forEach(function (z) {
+      if (z && z.warnung) box.appendChild(el('p', 'ffnef-geraet-warnung', z.warnung));
+    });
+
+    var sp = zeileMit(d.oben, 'Speicher für Updates');
+    if (sp && sp.stufe && sp.stufe !== 'reicht') {
+      var p = el('p', 'ffnef-geraet-speicher');
+      p.appendChild(el('span', 'ffnef-stufe ffnef-stufe-' + sp.stufe, sp.kennwort + ':'));
+      p.appendChild(document.createTextNode(' Künftige Updates passen vielleicht nicht mehr.'));
+      if (sp.erklaerung) p.appendChild(el('span', 'ffnef-geraet-erkl', ' (' + sp.erklaerung + ')'));
+      box.appendChild(p);
     }
 
     var fuss = el('p', 'ffnef-geraet-fuss');
-    var rw = el('a', null, 'Gerät vergleichen auf routerwahl.ffnef.de');
+    var rw = el('a', null, 'Alle Daten und Vergleich auf routerwahl.ffnef.de');
     rw.href = 'https://routerwahl.ffnef.de/?geraet=' + encodeURIComponent(d.image);
     fuss.appendChild(rw);
-    fuss.appendChild(document.createTextNode(' · '));
-    (d.links || []).forEach(function (l, i) {
-      if (i) fuss.appendChild(document.createTextNode(' · '));
-      var x = el('a', null, l.name);
-      x.href = l.url;
-      x.rel = 'noopener';
-      x.target = '_blank';
-      fuss.appendChild(x);
-    });
     box.appendChild(fuss);
     var liz = el('p', 'ffnef-geraet-lizenz',
       'Zusammengetragen aus öffentlichen Quellen, ohne Gewähr.' +
       (d.stand ? ' Stand: ' + datum(d.stand) + '.' : '') +
       ' Lizenz: CC BY-SA 4.0. Fehler gefunden? Schreib uns an ');
     var mail = el('a', null, 'projekt@neanderfunk.de');
-    mail.href = 'mailto:projekt@neanderfunk.de?subject=' +
-      encodeURIComponent('Gerätedaten ' + d.modell);
+    mail.href = 'mailto:projekt@neanderfunk.de?subject=' + encodeURIComponent('Gerätedaten ' + d.modell);
     liz.appendChild(mail);
     liz.appendChild(document.createTextNode('.'));
     box.appendChild(liz);
