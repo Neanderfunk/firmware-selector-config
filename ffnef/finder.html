@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gerät finden</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="ffnef.css" />
+    <link rel="stylesheet" href="ffnef-finder.css" />
+    <link rel="icon" href="router.png" type="image/png">
+  </head>
+  <body>
+    <div id="wizard">
+      <a href="./index.html"><img src="./router.png" alt="Logo"></a>
+      <div class="pane-wrapper">
+        <div class="pane" id="finder-pane">
+          <a class="finder-zurueck" href="./index.html">zur Firmware-Auswahl</a>
+          <h1>Passendes Gerät finden</h1>
+          <p>
+            Wähle aus, was dein Router können soll. Die Liste zeigt die Geräte,
+            für die es unsere Freifunk-Firmware gibt und die alle gewählten
+            Merkmale haben. Die Zahl hinter jeder Auswahl sagt, wie viele Geräte
+            übrig blieben, wenn du sie dazunimmst.
+          </p>
+          <div class="finder">
+            <aside class="finder-filter" id="finder-filter" aria-label="Merkmale"></aside>
+            <section class="finder-ergebnis" aria-live="polite">
+              <div class="finder-kopf">
+                <span id="finder-anzahl"></span>
+                <label>Sortieren:
+                  <select id="finder-sortierung">
+                    <option value="einfach">am einfachsten zu installieren</option>
+                    <option value="ram">meiste RAM</option>
+                    <option value="wlan">neuestes WLAN</option>
+                    <option value="leistung">geringste Leistungsaufnahme</option>
+                    <option value="name">Name</option>
+                  </select>
+                </label>
+                <label class="finder-unbekannt">
+                  <input type="checkbox" id="finder-unbekannt">
+                  auch Geräte mit fehlenden Angaben zeigen
+                </label>
+                <button type="button" id="finder-leeren">Auswahl zurücksetzen</button>
+              </div>
+              <div id="finder-liste" class="finder-liste"></div>
+              <p class="finder-fuss">
+                Die Gerätedaten sind aus öffentlichen Quellen zusammengetragen,
+                ohne Gewähr (<a href="https://github.com/Neanderfunk/geraetedaten">Neanderfunk/geraetedaten</a>,
+                Lizenz CC BY-SA 4.0). Fehler gefunden? Schreib uns an
+                <a href="mailto:projekt@neanderfunk.de?subject=Ger%C3%A4tesuche">projekt@neanderfunk.de</a>.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="devices.js"></script>
+    <script src="config.js"></script>
+    <script src="ffnef-finder.js"></script>
+  </body>
+</html>
