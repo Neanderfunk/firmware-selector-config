@@ -15,16 +15,19 @@ Aufgenommen werden nur Modelle, die wir in mindestens einer Version bauen.
 
 Gruende, in dieser Reihenfolge (abgeleitet, nicht gemessen):
   zu wenig Speicher                 4 MB Flash oder 32 MB RAM oder weniger
-  keine brauchbaren WLAN-Treiber    ToH fuehrt WLAN (ohne "partly") unter
-                                    unsupported_functions
-  in OpenWrt, aber noch nicht in Gluon
+  kein brauchbarer Treiber fuer     ToH fuehrt WLAN (ohne "partly") unter
+  das 5-GHz-WLAN                    unsupported_functions
+  noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon
                                     Version steckt in einem aktuellen
                                     OpenWrt-Release (versionen.json)
-  passt nicht mehr in OpenWrt       ToH kennt eine Release mit Unterstuetzung,
-  (zu wenig Speicher)               aktuell nicht mehr; 8 MB Flash oder 64 MB
-                                    RAM oder weniger, sonst nur
-                                    "nicht mehr in OpenWrt"
-  noch nicht in OpenWrt             weder ToH noch aktuelle Releases
+  aktuelles OpenWrt passt nicht     ToH kennt eine Release mit Unterstuetzung,
+  mehr in den Speicher              aktuell nicht mehr; 8 MB Flash oder 64 MB
+                                    RAM oder weniger, sonst "wird von OpenWrt
+                                    nicht mehr unterstuetzt"
+  wird von OpenWrt noch nicht       weder ToH noch aktuelle Releases
+  unterstuetzt
+Wortlaut mit Content abgestimmt (20.10.2026): wer im Selector steht, kennt den
+Unterschied zwischen OpenWrt und Gluon meist nicht.
 
 Die ToH hinkt bei neuen Versionen oft hinterher; deshalb entscheidet ueber
 "in OpenWrt" die Release-Liste, nicht die ToH-Spalte supportedcurrentrel.
@@ -126,14 +129,17 @@ def main():
             if (fl and fl <= 4) or (ra and ra <= 32):
                 art = "zu wenig Speicher"
             elif wl:
-                art = "keine brauchbaren WLAN-Treiber (%s)" % ", ".join(wl)
+                art = "kein brauchbarer Treiber für das %s" % (
+                    "WLAN" if wl == ["WLAN"] else "2.4- und 5-GHz-WLAN" if len(wl) > 1
+                    else wl[0].replace(" ", "-") + "-WLAN")
             elif v in in_openwrt:
-                art = "in OpenWrt, aber noch nicht in Gluon"
+                art = "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon"
             elif re.search(r"\d+\.\d+", r.get("supportedsincerel") or ""):
-                art = ("passt nicht mehr in OpenWrt (zu wenig Speicher)"
-                       if (fl and fl <= 8) or (ra and ra <= 64) else "nicht mehr in OpenWrt")
+                art = ("aktuelles OpenWrt passt nicht mehr in den Speicher"
+                       if (fl and fl <= 8) or (ra and ra <= 64)
+                       else "wird von OpenWrt nicht mehr unterstützt")
             else:
-                art = "noch nicht in OpenWrt"
+                art = "wird von OpenWrt noch nicht unterstützt"
             seite = r.get("page", "")
             belegt = []
             if r:
@@ -144,7 +150,11 @@ def main():
                 "nicht_unterstuetzt": [v],
                 "art": art,
                 "grund": "Grund: %s." % art,
-                "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+                # ganzer Satz, ohne Einleitung angezeigt (anders als erkennbar_an).
+                # "Ver: 2.0" schreiben TP-Link und Mercusys; andere nicht verlaesslich
+                "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät" + (
+                    ", etwa „Ver: %s.0“." % v.lstrip("v").split(".")[0]
+                    if g.startswith(("tp-link-", "mercusys-")) else "."),
                 "quelle": ("https://openwrt.org/" + seite.replace(":", "/")) if seite
                           else "https://firmware-selector.openwrt.org/",
                 "geprueft": "; ".join(belegt),

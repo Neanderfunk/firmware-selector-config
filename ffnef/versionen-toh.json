@@ -4,20 +4,20 @@
  "geraete": {
   "asus-rt-ac57u": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],
     "quelle": "https://firmware-selector.openwrt.org/"
    },
    {
-    "art": "keine brauchbaren WLAN-Treiber (2.4 GHz)",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "kein brauchbarer Treiber für das 2.4-GHz-WLAN",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: keine brauchbaren WLAN-Treiber (2.4 GHz).",
+    "grund": "Grund: kein brauchbarer Treiber für das 2.4-GHz-WLAN.",
     "nicht_unterstuetzt": [
      "v3"
     ],
@@ -26,20 +26,20 @@
   ],
   "cudy-wr1300": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],
     "quelle": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v2"
    },
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v3"
     ],
@@ -48,10 +48,10 @@
   ],
   "linksys-ea6350": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v4"
     ],
@@ -60,10 +60,10 @@
   ],
   "netgear-eax11": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v3"
     ],
@@ -72,10 +72,10 @@
   ],
   "netgear-eax12": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],
@@ -84,10 +84,10 @@
   ],
   "netgear-eax15": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v3"
     ],
@@ -96,10 +96,10 @@
   ],
   "netgear-wndr3700": [
    {
-    "art": "keine brauchbaren WLAN-Treiber (5 GHz)",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "kein brauchbarer Treiber für das 5-GHz-WLAN",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: keine brauchbaren WLAN-Treiber (5 GHz).",
+    "grund": "Grund: kein brauchbarer Treiber für das 5-GHz-WLAN.",
     "nicht_unterstuetzt": [
      "v3"
     ],
@@ -108,10 +108,10 @@
   ],
   "netgear-wndr4300": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],
@@ -120,10 +120,10 @@
   ],
   "netgear-wndrmac": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v1"
     ],
@@ -132,10 +132,10 @@
   ],
   "tp-link-archer-c5": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 4.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v4"
     ],
@@ -144,10 +144,10 @@
   ],
   "tp-link-archer-c50": [
    {
-    "art": "passt nicht mehr in OpenWrt (zu wenig Speicher)",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "aktuelles OpenWrt passt nicht mehr in den Speicher",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 5.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
-    "grund": "Grund: passt nicht mehr in OpenWrt (zu wenig Speicher).",
+    "grund": "Grund: aktuelles OpenWrt passt nicht mehr in den Speicher.",
     "nicht_unterstuetzt": [
      "v5"
     ],
@@ -156,10 +156,10 @@
   ],
   "tp-link-archer-c59": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],
@@ -168,20 +168,20 @@
   ],
   "tp-link-archer-c60": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],
     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v2"
    },
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v3"
     ],
@@ -190,20 +190,20 @@
   ],
   "tp-link-archer-c7": [
    {
-    "art": "keine brauchbaren WLAN-Treiber (5 GHz)",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "kein brauchbarer Treiber für das 5-GHz-WLAN",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: keine brauchbaren WLAN-Treiber (5 GHz).",
+    "grund": "Grund: kein brauchbarer Treiber für das 5-GHz-WLAN.",
     "nicht_unterstuetzt": [
      "v1"
     ],
     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c7_ac1750_v1"
    },
    {
-    "art": "nicht mehr in OpenWrt",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "wird von OpenWrt nicht mehr unterstützt",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
-    "grund": "Grund: nicht mehr in OpenWrt.",
+    "grund": "Grund: wird von OpenWrt nicht mehr unterstützt.",
     "nicht_unterstuetzt": [
      "v3"
     ],
@@ -212,20 +212,20 @@
   ],
   "tp-link-cpe220": [
    {
-    "art": "passt nicht mehr in OpenWrt (zu wenig Speicher)",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "aktuelles OpenWrt passt nicht mehr in den Speicher",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
-    "grund": "Grund: passt nicht mehr in OpenWrt (zu wenig Speicher).",
+    "grund": "Grund: aktuelles OpenWrt passt nicht mehr in den Speicher.",
     "nicht_unterstuetzt": [
      "v1"
     ],
     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe220_v1"
    },
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],
@@ -234,10 +234,10 @@
   ],
   "tp-link-re200": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v1"
     ],
@@ -246,10 +246,10 @@
   ],
   "tp-link-re650": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],
@@ -258,10 +258,10 @@
   ],
   "tp-link-td-w8970": [
    {
-    "art": "noch nicht in OpenWrt",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "wird von OpenWrt noch nicht unterstützt",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
-    "grund": "Grund: noch nicht in OpenWrt.",
+    "grund": "Grund: wird von OpenWrt noch nicht unterstützt.",
     "nicht_unterstuetzt": [
      "v3"
     ],
@@ -271,7 +271,7 @@
   "tp-link-tl-mr3020": [
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -283,7 +283,7 @@
   "tp-link-tl-mr3420": [
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -293,7 +293,7 @@
    },
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -303,7 +303,7 @@
    },
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -314,20 +314,20 @@
   ],
   "tp-link-tl-mr6400": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v1"
     ],
     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr6400_v1"
    },
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 4.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v4"
     ],
@@ -337,7 +337,7 @@
   "tp-link-tl-wa801nd": [
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -347,7 +347,7 @@
    },
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -357,7 +357,7 @@
    },
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -367,7 +367,7 @@
    },
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 4.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -378,10 +378,10 @@
   ],
   "tp-link-tl-wdr4900": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
     "geprueft": "OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],
@@ -391,7 +391,7 @@
   "tp-link-tl-wr810n": [
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -403,7 +403,7 @@
   "tp-link-tl-wr841n": [
    {
     "art": "zu wenig Speicher",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 14.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
     "grund": "Grund: zu wenig Speicher.",
     "nicht_unterstuetzt": [
@@ -414,10 +414,10 @@
   ],
   "tp-link-tl-wr842n": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 5.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v5"
     ],
@@ -426,10 +426,10 @@
   ],
   "tp-link-wbs510": [
    {
-    "art": "in OpenWrt, aber noch nicht in Gluon",
-    "erkennbar_an": "an der Hardware-Version auf dem Typenschild.",
+    "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+    "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-    "grund": "Grund: in OpenWrt, aber noch nicht in Gluon.",
+    "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
     "nicht_unterstuetzt": [
      "v2"
     ],

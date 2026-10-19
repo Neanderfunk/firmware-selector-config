@@ -106,7 +106,11 @@
      Warnung zur Fertigungsreihe erkennt man das betroffene Geraet. */
   function hinweisBlock(h, einleitung) {
     var block = el('div', 'ffnef-beleg');
-    if (h.erkennbar_an) {
+    /* "erkennung" ist schon ein ganzer Satz (versionen-toh.py), "erkennbar_an"
+       aus der Handpflege braucht die Einleitung. */
+    if (h.erkennung) {
+      block.appendChild(el('p', 'ffnef-erkennbar', h.erkennung));
+    } else if (h.erkennbar_an) {
       block.appendChild(el('p', 'ffnef-erkennbar',
         einleitung + ' ' + h.erkennbar_an));
     }
