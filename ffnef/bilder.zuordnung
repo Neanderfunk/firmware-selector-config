@@ -80,3 +80,8 @@ tp-link-tl-wa901nd         tp-link-tl-wa901n-nd-v3
 # Sonderfall: das Bildrepo haengt dem "Outdoor+" einen Bindestrich an,
 # wo das Pluszeichen weggefallen ist. Die Datei heisst wirklich so.
 ubiquiti-unifi-outdoor-plus  ubiquiti-unifiap-outdoor-
+# 21.10.2026: Bild in device-pictures unter anderem Namen (router-werkstatt docs/geraetefotos.md)
+ubiquiti-unifi-outdoor+	ubiquiti-unifiap-outdoor-
+d-link-dir825	d-link-dir-825-rev-b1
+gl.inet-6416	gl-inet-6416a-v1
+gl.inet-gl-ar300m16	gl-inet-gl-ar300m16
