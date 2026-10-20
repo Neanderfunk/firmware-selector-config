@@ -16,7 +16,9 @@ den lokalen Mailer (`/usr/sbin/sendmail`, auf dem Firmware-Server nullmailer).
 
 ## Einrichtung auf dem Firmware-Server (einmalig, als root)
 
-1. Dienst eintragen und starten:
+1. Benutzer anlegen, Dienst eintragen und starten:
+   `ln -s /var/www/selector-config/dienst/fehlermeldung.sysusers /etc/sysusers.d/fehlermeldung.conf`
+   und `systemd-sysusers`, dann
    `ln -s /var/www/selector-config/dienst/fehlermeldung.service /etc/systemd/system/`,
    dann `systemctl daemon-reload` und `systemctl enable --now fehlermeldung`.
 2. In die server-Blöcke von routerwahl.ffnef.de und routersoftware.ffnef.de

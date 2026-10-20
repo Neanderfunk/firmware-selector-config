@@ -7,8 +7,8 @@ After=network.target
 [Service]
 ExecStart=/usr/bin/python3 -I /var/www/selector-config/dienst/fehlermeldung.py
 Environment=FEHLERMELDUNG_ADRESSE=127.0.0.1:8471
-User=nobody
-Group=nogroup
+User=fehlermeldung
+Group=fehlermeldung
 # nullmailer-queue ist setuid "mail" und schreibt nach /var/spool/nullmailer:
 # deshalb kein NoNewPrivileges und kein ProtectSystem=strict.
 ProtectSystem=full

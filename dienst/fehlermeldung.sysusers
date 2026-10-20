@@ -1,0 +1,3 @@
+# Eigener Systembenutzer fuer dienst/fehlermeldung.service (statt "nobody",
+# das systemd zu Recht anmeckert). Einrichtung siehe dienst/README.md.
+u fehlermeldung - "Fehlermeldungen Geraetedaten" /nonexistent /usr/sbin/nologin
