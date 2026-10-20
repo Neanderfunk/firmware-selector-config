@@ -114,8 +114,8 @@
    ],
    "belege": [
     {
-     "erkennbar_an": "V2.x auf dem Etikett; die CPU ist mit 1.2 GHz angegeben (v1: 1.3 GHz). Vor dem Kauf: Händler, die selbst nicht wissen, welche Version sie haben, zeigen meist ein Foto der Verpackung - dort steht \"1.2GHz Dualcore\".",
-     "grund": "Anderer SoC und nur 128 MB RAM. OpenWrt unterstützt nur v1.",
+     "erkennbar_an": "V2.x auf dem Typenschild; die CPU ist mit 1.2 GHz angegeben (v1: 1.3 GHz). Vor dem Kauf: Händler, die selbst nicht wissen, welche Version sie haben, zeigen meist ein Foto der Verpackung - dort steht \"1.2GHz Dualcore\".",
+     "grund": "Grund: Anderer SoC und nur 128 MB RAM. OpenWrt unterstützt nur v1.",
      "nicht_unterstuetzt": [
       "v2"
      ],
@@ -135,8 +135,8 @@
    ],
    "belege": [
     {
-     "erkennbar_an": "V2.x auf dem Etikett; die CPU ist mit 1.2 GHz angegeben (v1: 1.3 GHz). Vor dem Kauf: Händler, die selbst nicht wissen, welche Version sie haben, zeigen meist ein Foto der Verpackung - dort steht \"1.2GHz Dualcore\".",
-     "grund": "Wie beim WR3000: anderer SoC, nur 128 MB RAM. OpenWrt unterstützt nur v1.",
+     "erkennbar_an": "V2.x auf dem Typenschild; die CPU ist mit 1.2 GHz angegeben (v1: 1.3 GHz). Vor dem Kauf: Händler, die selbst nicht wissen, welche Version sie haben, zeigen meist ein Foto der Verpackung - dort steht \"1.2GHz Dualcore\".",
+     "grund": "Grund: Wie beim WR3000: anderer SoC, nur 128 MB RAM. OpenWrt unterstützt nur v1.",
      "nicht_unterstuetzt": [
       "v2"
      ],

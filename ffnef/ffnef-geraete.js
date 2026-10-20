@@ -232,7 +232,11 @@
     var liz = el('p', 'ffnef-geraet-lizenz',
       'Zusammengetragen aus öffentlichen Quellen, ohne Gewähr.' +
       (d.stand ? ' Stand: ' + datum(d.stand) + '.' : '') +
-      ' Lizenz: CC BY-SA 4.0.');
+      ' Lizenz: CC BY-SA 4.0. Fehler gefunden? Nimm „Fehler melden“ oder schreib uns an ');
+    var mail0 = el('a', null, 'projekt@neanderfunk.de');
+    mail0.href = 'mailto:projekt@neanderfunk.de?subject=' + encodeURIComponent('Gerätedaten ' + d.modell);
+    liz.appendChild(mail0);
+    liz.appendChild(document.createTextNode('.'));
     box.appendChild(liz);
     if (window.ffnefFehlerMelden) {
       var titel = [];
@@ -240,13 +244,6 @@
         (d[t] || []).forEach(function (z) { if (z.titel && titel.indexOf(z.titel) < 0) titel.push(z.titel); });
       });
       window.ffnefFehlerMelden(box, { image: d.image, modell: d.modell, zeilen: titel });
-    } else {
-      /* Rueckfall ohne fehler-melden.js: Mail-Link wie bisher */
-      liz.appendChild(document.createTextNode(' Fehler gefunden? Schreib uns an '));
-      var mail = el('a', null, 'projekt@neanderfunk.de');
-      mail.href = 'mailto:projekt@neanderfunk.de?subject=' + encodeURIComponent('Gerätedaten ' + d.modell);
-      liz.appendChild(mail);
-      liz.appendChild(document.createTextNode('.'));
     }
     return box;
   }

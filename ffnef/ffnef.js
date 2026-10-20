@@ -184,7 +184,7 @@
 
     belege.forEach(function (b) {
       var t = el('p', 'ffnef-belegt',
-        aufzaehlung(b.nicht_unterstuetzt) + ' wird nicht unterstützt.');
+        aufzaehlung(b.nicht_unterstuetzt) + (b.nicht_unterstuetzt.length > 1 ? ' werden' : ' wird') + ' nicht unterstützt.');
       box.appendChild(t);
       box.appendChild(hinweisBlock(b, 'Woran du deine Version erkennst:'));
     });
