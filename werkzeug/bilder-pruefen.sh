@@ -13,7 +13,12 @@ HIER=$(dirname "$(dirname "$0")")
 fehler=0
 for f in "$HIER"/ffnef/bilder/*.svg; do
   [ -e "$f" ] || continue
-  if python3 -c "import xml.etree.ElementTree as E,sys; E.parse(sys.argv[1])" "$f" 2>/dev/null; then
+  if ! grep -q 'viewBox=' "$f"; then
+    # ohne viewBox schneidet der Browser verkleinerte Bilder ab statt zu skalieren
+    # (Karte, .hw-img 150 px; Mapserver-Session 21.10.2026)
+    echo "  FEHLER  $(basename "$f"): kein viewBox im <svg>-Tag"
+    fehler=1
+  elif python3 -c "import xml.etree.ElementTree as E,sys; E.parse(sys.argv[1])" "$f" 2>/dev/null; then
     echo "  ok      $(basename "$f")"
   else
     echo "  FEHLER  $(basename "$f")"

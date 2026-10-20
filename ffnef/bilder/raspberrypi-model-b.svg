@@ -6,7 +6,7 @@
      color_precision 7, filter_speckle 4.
      Lizenz wie die Vorlage: CC-BY-NC-SA 4.0. -->
 <!-- Generator: visioncortex VTracer 0.6.5 -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+<svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512">
 <path d="M0,0 L512,0 L512,512 L0,512 Z " fill="#FEFEFE" transform="translate(0,0)"/>
 <path d="M0,0 L417,0 L417,2 L421,3 L426,8 L427,9 L427,16 L425,17 L348,17 L348,81 L427,81 L427,113 L348,113 L348,177 L427,177 L427,203 L328,203 L328,282 L423,282 L421,286 L416,287 L416,289 L283,290 L280,292 L279,304 L249,304 L248,303 L248,292 L245,292 L245,289 L189,289 L189,238 L114,238 L114,288 L113,289 L63,290 L61,293 L61,266 L27,266 L27,289 L1,289 L-6,285 L-9,282 L-10,278 L-10,10 L-8,9 L-5,4 Z " fill="#01753A" transform="translate(43,104)"/>
 <path d="M0,0 L1,2 L10,2 L10,85 L-4,86 L-7,88 L-11,87 L-5,84 L-4,82 L-99,82 L-99,3 L0,3 Z " fill="#CBCBCB" transform="translate(470,304)"/>

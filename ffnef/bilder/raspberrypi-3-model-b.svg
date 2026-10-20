@@ -6,7 +6,7 @@
      color_precision 7, filter_speckle 4.
      Lizenz wie die Vorlage: CC-BY-NC-SA 4.0. -->
 <!-- Generator: visioncortex VTracer 0.6.5 -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+<svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512">
 <path d="M0,0 L512,0 L512,512 L0,512 Z " fill="#FEFEFE" transform="translate(0,0)"/>
 <path d="M0,0 L416,0 L418,1 L418,3 L422,4 L425,13 L425,15 L432,15 L431,19 L430,17 L344,17 L344,81 L425,81 L424,113 L344,113 L344,179 L424,179 L424,203 L326,203 L326,283 L422,283 L419,286 L415,289 L281,289 L280,293 L278,293 L278,304 L277,305 L246,305 L246,293 L242,293 L242,289 L186,289 L186,239 L112,239 L112,289 L59,289 L59,266 L26,267 L25,289 L-4,289 L-8,285 L-11,276 L-11,251 L-6,251 L-6,241 L-11,241 L-11,232 L-6,232 L-6,223 L-12,223 L-12,113 L-11,69 L0,69 L0,41 L-11,41 L-11,13 L-9,7 L-5,2 Z " fill="#01753A" transform="translate(40,103)"/>
 <path d="M0,0 L1,3 L9,4 L10,5 L10,74 L8,75 L2,75 L2,101 L10,101 L10,172 L2,172 L2,191 L10,191 L10,276 L-3,276 L-3,275 L-98,274 L-98,194 L0,194 L0,170 L-80,170 L-80,104 L0,104 L0,74 L1,72 L-80,72 L-80,8 L6,8 L7,9 L8,6 L1,6 Z " fill="#CBCBCB" transform="translate(464,112)"/>
