@@ -3,7 +3,8 @@
 #
 #   1. versionen-holen.py     holt die Hardware-Versionen von OpenWrt und die
 #                             Liste unserer gebauten Images vom eigenen Server
-#   2. versionen-toh.py       Versionen, die es laut OpenWrt-ToH gibt und die wir
+#   2. versionen-toh.py       (mit HERSTELLER=1 vorher versionen-hersteller.py)
+#                             Versionen, die es laut OpenWrt-ToH gibt und die wir
 #                             nicht bauen, mit Grund (braucht ToH-Dump und
 #                             Image-Liste aus Neanderfunk/geraetedaten, quellen/)
 #   3. versionen-anzeige.py   baut daraus die Datei, die die Webseite liest
@@ -20,10 +21,14 @@ cd "$HIER"
 echo "1/4 Versionen holen"
 python3 werkzeug/versionen-holen.py "$@"
 
-echo "2/4 Nicht unterstuetzte Versionen aus der ToH"
+echo "2/4 Nicht unterstuetzte Versionen aus ToH und von den Hersteller-Downloadseiten"
 GD=${GERAETEDATEN:-$HOME/projekte/freifunk/geraetedaten}
 TOH=$(ls "$GD"/quellen/quellen-toh-*.tsv.gz 2>/dev/null | sort | tail -1)
-IMG=$(ls "$GD"/quellen/images-*.txt 2>/dev/null | sort | tail -1)
+IMG=$(ls "$GD"/quellen/images-testing-*.txt 2>/dev/null | sort | tail -1)
+# Hersteller-Seiten (TP-Link, Mercusys) nur mit HERSTELLER=1, dauert einige Minuten
+if [ "${HERSTELLER:-0}" = 1 ] && [ -n "$IMG" ]; then
+  python3 werkzeug/versionen-hersteller.py "$IMG"
+fi
 if [ -n "$TOH" ] && [ -n "$IMG" ]; then
   python3 werkzeug/versionen-toh.py "$TOH" "$IMG"
 else

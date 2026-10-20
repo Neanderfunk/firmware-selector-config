@@ -24,8 +24,9 @@ Gruende, in dieser Reihenfolge (abgeleitet, nicht gemessen):
   mehr in den Speicher              aktuell nicht mehr; 8 MB Flash oder 64 MB
                                     RAM oder weniger, sonst "wird von OpenWrt
                                     nicht mehr unterstuetzt"
-  wird von OpenWrt noch nicht       weder ToH noch aktuelle Releases
-  unterstuetzt
+  wird von OpenWrt noch nicht       weder ToH noch aktuelle Releases; auch
+  unterstuetzt                      Versionen, die nur die Download-Seite des
+                                    Herstellers nennt (versionen-hersteller.json)
 Wortlaut mit Content abgestimmt (20.10.2026): wer im Selector steht, kennt den
 Unterschied zwischen OpenWrt und Gluon meist nicht.
 
@@ -39,6 +40,8 @@ import csv, datetime, gzip, io, json, os, re, sys
 
 HIER = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VER = os.path.join(HIER, "ffnef", "versionen.json")
+# werkzeug/versionen-hersteller.py: Versionen laut Download-Seite des Herstellers
+HERST = os.path.join(HIER, "ffnef", "versionen-hersteller.json")
 ZIEL = os.path.join(HIER, "ffnef", "versionen-toh.json")
 
 
@@ -54,8 +57,8 @@ def ohne_strich(t):
 
 def hauptversion(v, grund):
     v = v.lower()
-    if grund.startswith("tp-link-cpe210"):
-        return v
+    if grund.startswith("tp-link-cpe210") and v.startswith("v1."):
+        return v   # nur CPE210 v1.1 (signierter Bootloader EU/US) ist eigene Hardware-Version
     return re.sub(r"^(v\d+)\.\d+$", r"\1", v)
 
 
@@ -88,6 +91,10 @@ def main():
     releases = ", ".join(re.search(r"releases/([^/]+)/", u).group(1)
                          for u in ver.get("quellen", {}).get("openwrt", []))
 
+    herst = {}
+    if os.path.exists(HERST):
+        herst = json.load(open(HERST, encoding="utf-8")).get("geraete", {})
+
     gruppen = {}
     for r in rows:
         gruppen.setdefault(ohne_strich(norm(r["brand"] + " " + r["model"])), []).append(r)
@@ -110,16 +117,21 @@ def main():
         # "v2 (eu/ru/jp)" -> v2
         in_openwrt = {hauptversion(m.group(0), g) for m in
                       (re.match(r"v\d+(\.\d+)?", v) for v in e.get("openwrt", [])) if m}
-        treffer = gruppen.get(ohne_strich(g)) or gruppen.get(
-            ohne_strich(norm(e.get("hersteller", "") + " " + e.get("modell", "")))) or []
+        # "TL-WR841N/ND" fuehrt die ToH fuer die alten Versionen getrennt von "TL-WR841N"
+        treffer = []
+        for k in dict.fromkeys([ohne_strich(g), ohne_strich(norm(e.get("hersteller", "") + " " + e.get("modell", "")))]):
+            for kk in (k, k + "nd"):
+                treffer += [r for r in gruppen.get(kk, []) if r not in treffer]
 
         # je Version die ToH-Zeile; mehrere Zeilen zu einer Version: die erste
         toh = {}
         for r in treffer:
             for v in re.findall(r"\bv\d+(?:\.\d+)?\b", r["version"], re.I):
                 toh.setdefault(hauptversion(v, g), r)
+        h = herst.get(g, {})
+        beim_hersteller = {hauptversion(v, g) for v in h.get("versionen", [])}
         eintraege = []
-        for v in sorted(set(toh) | in_openwrt,
+        for v in sorted(set(toh) | in_openwrt | beim_hersteller,
                         key=lambda x: [int(n) for n in re.findall(r"\d+", x)]):
             if v in unsere:
                 continue
@@ -138,6 +150,9 @@ def main():
                 art = ("aktuelles OpenWrt passt nicht mehr in den Speicher"
                        if (fl and fl <= 8) or (ra and ra <= 64)
                        else "wird von OpenWrt nicht mehr unterstützt")
+            elif not r and v in beim_hersteller:
+                # nur der Hersteller nennt sie; ob OpenWrt sie je bekommt, ist offen
+                art = "wird von OpenWrt nicht unterstützt"
             else:
                 art = "wird von OpenWrt noch nicht unterstützt"
             seite = r.get("page", "")
@@ -146,6 +161,8 @@ def main():
                 belegt.append("OpenWrt-ToH, Dump vom %s" % stand)
             if v in in_openwrt:
                 belegt.append("OpenWrt-Releases " + releases)
+            if v in beim_hersteller:
+                belegt.append("Download-Seite des Herstellers, abgerufen %s" % h.get("abgerufen", ""))
             eintraege.append({
                 "nicht_unterstuetzt": [v],
                 "art": art,
@@ -156,6 +173,7 @@ def main():
                     ", etwa „Ver: %s.0“." % v.lstrip("v").split(".")[0]
                     if g.startswith(("tp-link-", "mercusys-")) else "."),
                 "quelle": ("https://openwrt.org/" + seite.replace(":", "/")) if seite
+                          else h.get("quelle") if v in beim_hersteller and v not in in_openwrt
                           else "https://firmware-selector.openwrt.org/",
                 "geprueft": "; ".join(belegt),
             })
@@ -165,7 +183,7 @@ def main():
     with open(ZIEL, "w", encoding="utf-8") as f:
         json.dump({"erzeugt": datetime.date.today().isoformat(),
                    "erzeugt_von": "werkzeug/versionen-toh.py",
-                   "quelle": "OpenWrt-ToH-Dump %s und ffnef/versionen.json" % stand,
+                   "quelle": "OpenWrt-ToH-Dump %s, ffnef/versionen.json, ffnef/versionen-hersteller.json" % stand,
                    "geraete": aus}, f, ensure_ascii=False, indent=1, sort_keys=True)
         f.write("\n")
     print("geschrieben:", ZIEL, len(aus), "Grundnamen,", sum(len(v) for v in aus.values()), "Versionen")

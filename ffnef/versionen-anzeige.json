@@ -372,25 +372,106 @@
   },
   "TP-Link|Archer AX23": {
    "bekannt": [
-    "v1"
+    "v1",
+    "v2"
+   ],
+   "belege": [
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-archer-ax23",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-ax23/"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2"
    ]
   },
   "TP-Link|Archer C2": {
    "bekannt": [
     "v1",
-    "v3"
+    "v3",
+    "v5"
+   ],
+   "belege": [
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 5.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v5"
+     ],
+     "profil": "tp-link-archer-c2",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c2/"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v5"
    ]
   },
   "TP-Link|Archer C20": {
    "bekannt": [
     "v1",
+    "v2",
     "v4",
-    "v5"
+    "v5",
+    "v6"
+   ],
+   "belege": [
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-archer-c20",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c20/"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 6.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v6"
+     ],
+     "profil": "tp-link-archer-c20",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c20/"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2",
+    "v6"
    ]
   },
   "TP-Link|Archer C25": {
    "bekannt": [
-    "v1"
+    "v1",
+    "v2"
+   ],
+   "belege": [
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-archer-c25",
+     "quelle": "https://www.tp-link.com/en/support/download/archer-c25/"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2"
    ]
   },
   "TP-Link|Archer C2600": {
@@ -401,9 +482,21 @@
   "TP-Link|Archer C5": {
    "bekannt": [
     "v1",
+    "v2",
     "v4"
    ],
    "belege": [
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-archer-c5",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c5/"
+    },
     {
      "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 4.0“.",
@@ -417,17 +510,30 @@
     }
    ],
    "nicht_unterstuetzt": [
+    "v2",
     "v4"
    ]
   },
   "TP-Link|Archer C50": {
    "bekannt": [
     "v1",
+    "v2",
     "v3",
     "v4",
     "v5"
    ],
    "belege": [
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-archer-c50",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c50/"
+    },
     {
      "art": "aktuelles OpenWrt passt nicht mehr in den Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 5.0“.",
@@ -441,39 +547,113 @@
     }
    ],
    "nicht_unterstuetzt": [
+    "v2",
     "v5"
    ]
   },
   "TP-Link|Archer C58": {
-   "bekannt": [
-    "v1"
-   ]
-  },
-  "TP-Link|Archer C59": {
    "bekannt": [
     "v1",
     "v2"
    ],
    "belege": [
     {
-     "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+     "art": "wird von OpenWrt nicht unterstützt",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
-     "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
      "nicht_unterstuetzt": [
       "v2"
      ],
-     "profil": "tp-link-archer-c59",
-     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v2"
+     "profil": "tp-link-archer-c58",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c58/"
     }
    ],
    "nicht_unterstuetzt": [
     "v2"
    ]
   },
+  "TP-Link|Archer C59": {
+   "bekannt": [
+    "v1",
+    "v2",
+    "v3"
+   ],
+   "belege": [
+    {
+     "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-archer-c59",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v2"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "tp-link-archer-c59",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c59/"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2",
+    "v3"
+   ]
+  },
   "TP-Link|Archer C6": {
    "bekannt": [
-    "v3"
+    "v3",
+    "v4",
+    "v5",
+    "v6"
+   ],
+   "belege": [
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 4.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v4"
+     ],
+     "profil": "tp-link-archer-c6",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c6/"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 5.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v5"
+     ],
+     "profil": "tp-link-archer-c6",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c6/"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 6.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v6"
+     ],
+     "profil": "tp-link-archer-c6",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-c6/"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v4",
+    "v5",
+    "v6"
    ]
   },
   "TP-Link|Archer C60": {
@@ -486,7 +666,7 @@
     {
      "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
      "nicht_unterstuetzt": [
       "v2"
@@ -497,7 +677,7 @@
     {
      "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
      "nicht_unterstuetzt": [
       "v3"
@@ -523,7 +703,7 @@
     {
      "art": "kein brauchbarer Treiber für das 5-GHz-WLAN",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: kein brauchbarer Treiber für das 5-GHz-WLAN.",
      "nicht_unterstuetzt": [
       "v1"
@@ -550,7 +730,24 @@
   },
   "TP-Link|Archer D50": {
    "bekannt": [
-    "v1"
+    "v1",
+    "v2"
+   ],
+   "belege": [
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-archer-d50",
+     "quelle": "https://www.tp-link.com/de/support/download/archer-d50/"
+    }
+   ],
+   "nicht_unterstuetzt": [
+    "v2"
    ]
   },
   "TP-Link|CPE210": {
@@ -570,7 +767,7 @@
     {
      "art": "aktuelles OpenWrt passt nicht mehr in den Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: aktuelles OpenWrt passt nicht mehr in den Speicher.",
      "nicht_unterstuetzt": [
       "v1"
@@ -581,7 +778,7 @@
     {
      "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
      "nicht_unterstuetzt": [
       "v2"
@@ -629,23 +826,36 @@
     "v1",
     "v2",
     "v3",
-    "v4"
+    "v4",
+    "v5"
    ],
    "belege": [
     {
      "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
      "nicht_unterstuetzt": [
       "v1"
      ],
      "profil": "tp-link-re200",
      "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re200_v1"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 5.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v5"
+     ],
+     "profil": "tp-link-re200",
+     "quelle": "https://www.tp-link.com/de/support/download/re200/"
     }
    ],
    "nicht_unterstuetzt": [
-    "v1"
+    "v1",
+    "v5"
    ]
   },
   "TP-Link|RE305": {
@@ -680,7 +890,7 @@
     {
      "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
      "nicht_unterstuetzt": [
       "v2"
@@ -695,24 +905,7 @@
   },
   "TP-Link|TD-W8970": {
    "bekannt": [
-    "v1",
-    "v3"
-   ],
-   "belege": [
-    {
-     "art": "wird von OpenWrt noch nicht unterstützt",
-     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
-     "grund": "Grund: wird von OpenWrt noch nicht unterstützt.",
-     "nicht_unterstuetzt": [
-      "v3"
-     ],
-     "profil": "tp-link-td-w8970",
-     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v3.0"
-    }
-   ],
-   "nicht_unterstuetzt": [
-    "v3"
+    "v1"
    ]
   },
   "TP-Link|TD-W8980": {
@@ -728,23 +921,36 @@
   "TP-Link|TL-MR3020": {
    "bekannt": [
     "v1",
+    "v2",
     "v3"
    ],
    "belege": [
     {
      "art": "zu wenig Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v1"
      ],
      "profil": "tp-link-tl-mr3020",
      "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr3020_v1"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-tl-mr3020",
+     "quelle": "https://www.tp-link.com/de/support/download/tl-mr3020/"
     }
    ],
    "nicht_unterstuetzt": [
-    "v1"
+    "v1",
+    "v2"
    ]
   },
   "TP-Link|TL-MR3420": {
@@ -758,7 +964,7 @@
     {
      "art": "zu wenig Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v1"
@@ -769,7 +975,7 @@
     {
      "art": "zu wenig Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v2"
@@ -780,7 +986,7 @@
     {
      "art": "zu wenig Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v3"
@@ -798,14 +1004,20 @@
   "TP-Link|TL-MR6400": {
    "bekannt": [
     "v1",
+    "v2",
+    "v3",
     "v4",
-    "v5"
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9"
    ],
    "belege": [
     {
      "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
      "nicht_unterstuetzt": [
       "v1"
@@ -814,20 +1026,92 @@
      "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr6400_v1"
     },
     {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v2"
+     ],
+     "profil": "tp-link-tl-mr6400",
+     "quelle": "https://www.tp-link.com/de/support/download/tl-mr6400/"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "tp-link-tl-mr6400",
+     "quelle": "https://www.tp-link.com/de/support/download/tl-mr6400/"
+    },
+    {
      "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 4.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
      "nicht_unterstuetzt": [
       "v4"
      ],
      "profil": "tp-link-tl-mr6400",
      "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-mr6400_v4"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 6.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v6"
+     ],
+     "profil": "tp-link-tl-mr6400",
+     "quelle": "https://www.tp-link.com/de/support/download/tl-mr6400/"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 7.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v7"
+     ],
+     "profil": "tp-link-tl-mr6400",
+     "quelle": "https://www.tp-link.com/de/support/download/tl-mr6400/"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 8.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v8"
+     ],
+     "profil": "tp-link-tl-mr6400",
+     "quelle": "https://www.tp-link.com/de/support/download/tl-mr6400/"
+    },
+    {
+     "art": "wird von OpenWrt nicht unterstützt",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 9.0“.",
+     "geprueft": "Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: wird von OpenWrt nicht unterstützt.",
+     "nicht_unterstuetzt": [
+      "v9"
+     ],
+     "profil": "tp-link-tl-mr6400",
+     "quelle": "https://www.tp-link.com/de/support/download/tl-mr6400/"
     }
    ],
    "nicht_unterstuetzt": [
     "v1",
-    "v4"
+    "v2",
+    "v3",
+    "v4",
+    "v6",
+    "v7",
+    "v8",
+    "v9"
    ]
   },
   "TP-Link|TL-WA801N/ND": {
@@ -842,7 +1126,7 @@
     {
      "art": "zu wenig Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v1"
@@ -853,7 +1137,7 @@
     {
      "art": "zu wenig Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v2"
@@ -864,7 +1148,7 @@
     {
      "art": "zu wenig Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v3"
@@ -875,7 +1159,7 @@
     {
      "art": "zu wenig Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 4.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v4"
@@ -954,7 +1238,7 @@
     {
      "art": "zu wenig Speicher",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v2"
@@ -974,14 +1258,122 @@
   },
   "TP-Link|TL-WR841N/ND": {
    "bekannt": [
+    "v1",
+    "v10",
+    "v11",
+    "v12",
     "v13",
-    "v14"
+    "v14",
+    "v3",
+    "v5",
+    "v7",
+    "v8",
+    "v9"
    ],
    "belege": [
     {
      "art": "zu wenig Speicher",
-     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 14.0“.",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 1.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v1"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841n_v1.5"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 3.0“.",
      "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v3"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841nd_v3"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 5.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v5"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841nd_v5"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 7.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v7"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841n_v7"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 8.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v8"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841n_v8"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 9.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v9"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841n_v9"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 10.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v10"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841n_v10"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 11.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v11"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841n_v11"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 12.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
+     "grund": "Grund: zu wenig Speicher.",
+     "nicht_unterstuetzt": [
+      "v12"
+     ],
+     "profil": "tp-link-tl-wr841n",
+     "quelle": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr841n_v12"
+    },
+    {
+     "art": "zu wenig Speicher",
+     "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 14.0“.",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: zu wenig Speicher.",
      "nicht_unterstuetzt": [
       "v14"
@@ -991,7 +1383,16 @@
     }
    ],
    "nicht_unterstuetzt": [
-    "v14"
+    "v1",
+    "v10",
+    "v11",
+    "v12",
+    "v14",
+    "v3",
+    "v5",
+    "v7",
+    "v8",
+    "v9"
    ]
   },
   "TP-Link|TL-WR842N/ND": {
@@ -1038,7 +1439,7 @@
     {
      "art": "noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon",
      "erkennung": "Die Version steht auf dem Typenschild unter dem Gerät, etwa „Ver: 2.0“.",
-     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6",
+     "geprueft": "OpenWrt-ToH, Dump vom 2026-10-18; OpenWrt-Releases 23.05.5, 24.10.0, 25.12.6; Download-Seite des Herstellers, abgerufen 2026-10-20",
      "grund": "Grund: noch nicht in unserer Freifunk-Firmware, OpenWrt kann es schon.",
      "nicht_unterstuetzt": [
       "v2"
