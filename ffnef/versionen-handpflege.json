@@ -13,7 +13,7 @@
   "Felder je Geraet:",
   "  nicht_unterstuetzt  Liste der Versionen, die es gibt und die nicht gehen",
   "  erkennbar_an        Woran der Nutzer SEINE Version erkennt. Sichtbare",
-  "                      Merkmale, keine Innereien: Etikett, Aufdruck, Angaben",
+  "                      Merkmale, keine Innereien: Typenschild, Aufdruck, Angaben",
   "                      auf der Verpackung.",
   "  grund               Warum es nicht geht, in einem Satz",
   "  quelle              Nachpruefbarer Link",
