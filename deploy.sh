@@ -143,6 +143,7 @@ setze "$CFG/ffnef/index.html" index.html
 setze "$CFG/ffnef/ffnef.css"  ffnef.css
 setze "$CFG/ffnef/ffnef.js"   ffnef.js
 setze "$CFG/ffnef/ffnef-geraete.js" ffnef-geraete.js
+setze "$CFG/ffnef/fehler-melden.js" fehler-melden.js
 setze "$CFG/ffnef/versionen-anzeige.json" versionen-anzeige.json
 setze "$CFG/ffnef/config.js"  config.js
 setze "$CFG/ffnef/devices.js" devices.js
@@ -186,6 +187,7 @@ if [ -n "$WAHL" ] && [ -d "$GD/web" ]; then
   ln -sfn "$WURZEL/pictures" "$WAHL/pictures"
   ln -sfn "$CFG/ffnef/devices.js" "$WAHL/devices.js"
   ln -sfn "$CFG/ffnef/config.js" "$WAHL/config.js"
+  ln -sfn "$CFG/ffnef/fehler-melden.js" "$WAHL/fehler-melden.js"
   sage "routerwahl: $WAHL verknuepft"
 fi
 
