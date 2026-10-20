@@ -1,0 +1,275 @@
+{
+ "erzeugt": "2026-10-20",
+ "erzeugt_von": "werkzeug/versionen-hersteller.py",
+ "geraete": {
+  "mercusys-mr70x": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.mercusys.com/de/download/mr70x/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-archer-ax23": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-ax23/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-archer-c2": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-c2/",
+   "versionen": [
+    "v1",
+    "v3",
+    "v5"
+   ]
+  },
+  "tp-link-archer-c20": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-c20/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "v6"
+   ]
+  },
+  "tp-link-archer-c25": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/en/support/download/archer-c25/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-archer-c5": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-c5/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-archer-c50": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-c50/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v6"
+   ]
+  },
+  "tp-link-archer-c58": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-c58/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-archer-c59": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-c59/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "tp-link-archer-c6": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-c6/",
+   "versionen": [
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6"
+   ]
+  },
+  "tp-link-archer-c60": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-c60/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "tp-link-archer-c7": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-c7/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v4",
+    "v5"
+   ]
+  },
+  "tp-link-archer-d50": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/archer-d50/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-cpe210": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/cpe210/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3",
+    "v3.20",
+    "v3.40"
+   ]
+  },
+  "tp-link-cpe220": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/cpe220/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "tp-link-cpe510": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/cpe510/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "tp-link-cpe710": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/cpe710/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-re200": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/re200/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5"
+   ]
+  },
+  "tp-link-re650": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/re650/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-tl-mr3020": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/tl-mr3020/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3"
+   ]
+  },
+  "tp-link-tl-mr3420": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/tl-mr3420/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3",
+    "v5"
+   ]
+  },
+  "tp-link-tl-mr6400": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/tl-mr6400/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9"
+   ]
+  },
+  "tp-link-tl-wa801nd": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/tl-wa801nd/",
+   "versionen": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5"
+   ]
+  },
+  "tp-link-tl-wr810n": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/tl-wr810n/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-tl-wr841n": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/tl-wr841n/",
+   "versionen": [
+    "v1",
+    "v5",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14"
+   ]
+  },
+  "tp-link-tl-wr902ac": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/tl-wr902ac/",
+   "versionen": [
+    "v1",
+    "v3",
+    "v4"
+   ]
+  },
+  "tp-link-wbs210": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/wbs210/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  },
+  "tp-link-wbs510": {
+   "abgerufen": "2026-10-20",
+   "quelle": "https://www.tp-link.com/de/support/download/wbs510/",
+   "versionen": [
+    "v1",
+    "v2"
+   ]
+  }
+ },
+ "hinweis": "Hardware-Versionen laut Download-Seite des Herstellers (Hauptversion)."
+}
