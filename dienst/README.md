@@ -23,7 +23,7 @@ den lokalen Mailer (`/usr/sbin/sendmail`, auf dem Firmware-Server nullmailer).
    `include /var/www/selector-config/dienst/fehlermeldung-nginx.conf;`
    eintragen, `nginx -t`, `systemctl reload nginx`.
 3. Prüfen: `curl -s -X POST https://routerwahl.ffnef.de/fehler-melden -d 'image=x&text=y&quiz=falsch'`
-   muss `{"ok": false, "fehler": "Die Antwort auf die Frage zum WLAN-Namen stimmt nicht."}` liefern.
+   muss `{"ok": false, "fehler": "Das stimmt nicht ganz. Tipp: Es ist ein Wort."}` liefern.
 
 Testen ohne Mail: `FEHLERMELDUNG_TROCKEN=1 FEHLERMELDUNG_ADRESSE=127.0.0.1:18471 python3 -I dienst/fehlermeldung.py`
 gibt die Mail auf stderr aus.

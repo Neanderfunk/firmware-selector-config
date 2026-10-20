@@ -4,7 +4,7 @@
 
    Aufruf: ffnefFehlerMelden(elternelement, {image, modell, zeilen: [...]})
    "zeilen" sind die Titel der angezeigten Datenzeilen fuer die Auswahl
-   "Betrifft". Kein E-Mail-Pflichtfeld; Spamschutz wie beim
+   "Welche Angabe?". Texte von Content, nah am Stoerungsformular. Kein E-Mail-Pflichtfeld; Spamschutz wie beim
    Stoerungsformular auf neanderfunk.de (Quizfrage) plus verstecktes Feld. */
 (function () {
   'use strict';
@@ -57,16 +57,16 @@
     form.noValidate = true;
 
     form.appendChild(el('p', 'ffm-hinweis',
-      'Stimmt bei ' + (info.modell || 'diesem Gerät') + ' etwas nicht? Schreib uns kurz, was. ' +
-      'Die Meldung geht an das Neanderfunk-Team.'));
+      'Stimmt bei den Daten zum ' + (info.modell || 'Gerät') + ' etwas nicht, oder fehlt etwas? ' +
+      'Schreib uns kurz, was. Einen Namen brauchst du nicht.'));
 
     var betrifft = null;
     if (info.zeilen && info.zeilen.length) {
-      var lb = el('label', null, 'Betrifft');
+      var lb = el('label', null, 'Welche Angabe? (freiwillig)');
       betrifft = el('select');
       betrifft.name = 'zeile';
       [''].concat(info.zeilen, ['Etwas anderes']).forEach(function (t) {
-        var o = el('option', null, t || 'bitte wählen (freiwillig)');
+        var o = el('option', null, t || 'bitte wählen');
         o.value = t;
         betrifft.appendChild(o);
       });
@@ -74,15 +74,18 @@
       form.appendChild(lb);
     }
 
-    var lt = el('label', null, 'Was stimmt nicht?');
+    var lt = el('label', null, 'Was stimmt nicht oder fehlt? (Pflicht)');
     var text = el('textarea');
     text.name = 'text';
     text.maxLength = 1500;
     text.required = true;
+    text.placeholder = 'z. B. „Das Netzteil hat 12 V, nicht 24 V, steht auf dem Typenschild.“';
     lt.appendChild(text);
+    lt.appendChild(el('span', 'ffm-hinweis',
+      'Wenn du eine Quelle hast (Typenschild, Datenblatt, Foto-Link), nenn sie gern.'));
     form.appendChild(lt);
 
-    var lq = el('label', null, 'Wie heißt das offene WLAN unserer Router?');
+    var lq = el('label', null, 'Kurze Frage gegen Spam (Pflicht): Wie heißt das offene WLAN unserer Router?');
     var quiz = el('input');
     quiz.name = 'quiz';
     quiz.maxLength = 30;
@@ -102,11 +105,14 @@
 
     var mehr = el('details');
     mehr.appendChild(el('summary', null, 'Ich möchte eine Antwort'));
-    var lk = el('label', null, 'E-Mail-Adresse oder andere Kontaktmöglichkeit (freiwillig)');
+    var lk = el('label', null, 'Deine E-Mail-Adresse oder Handynummer');
     var kontakt = el('input');
     kontakt.name = 'kontakt';
     kontakt.maxLength = 200;
     lk.appendChild(kontakt);
+    lk.appendChild(el('span', 'ffm-hinweis',
+      'Wir antworten per E-Mail oder SMS, wenn wir es für sinnvoll halten. ' +
+      'Ohne Angabe bekommst du keine Antwort; deine Meldung hilft uns trotzdem.'));
     mehr.appendChild(lk);
     form.appendChild(mehr);
 
@@ -149,17 +155,17 @@
         var a = null;
         try { a = JSON.parse(r.responseText); } catch (e) { /* unten */ }
         if (a && a.ok) {
-          zeige('Danke! Deine Meldung ist angekommen.', true);
+          zeige('Danke! Deine Meldung ist bei uns angekommen.', true);
           text.value = ''; kontakt.value = '';
           senden.disabled = true;
           return;
         }
         senden.disabled = false;
-        zeige((a && a.fehler) || 'Das hat nicht geklappt. Schreib uns bitte an projekt@neanderfunk.de.');
+        zeige((a && a.fehler) || 'Das hat leider nicht geklappt. Schreib uns bitte an projekt@neanderfunk.de.');
       };
       r.onerror = r.ontimeout = function () {
         senden.disabled = false;
-        zeige('Das hat nicht geklappt. Schreib uns bitte an projekt@neanderfunk.de.');
+        zeige('Das hat leider nicht geklappt. Schreib uns bitte an projekt@neanderfunk.de.');
       };
       r.send(JSON.stringify(daten));
     });

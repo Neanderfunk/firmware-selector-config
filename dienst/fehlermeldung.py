@@ -90,7 +90,7 @@ def pruefen(f):
     if aus["website"]:
         return None, "Die Meldung konnte nicht angenommen werden."
     if aus["quiz"].strip().lower() != "freifunk":
-        return None, "Die Antwort auf die Frage zum WLAN-Namen stimmt nicht."
+        return None, "Das stimmt nicht ganz. Tipp: Es ist ein Wort."
     if not re.fullmatch(r"[A-Za-z0-9.+%_-]{1,80}", aus["image"]):
         return None, "Es fehlt die Angabe, um welches Gerät es geht."
     if len(re.findall(r"https?://|www\.", aus["text"] + " " + aus["kontakt"], re.I)) > 2:
@@ -121,7 +121,8 @@ def mail(a):
     zeilen += ["", a["text"], ""]
     if a["kontakt"]:
         zeilen.append("Kontakt (freiwillig angegeben): %s" % a["kontakt"])
-    zeilen += ["", "Gesendet über \"Fehler melden\" bei den Gerätedaten.",
+    herkunft = re.match(r"https://([^/?#]+)", a["seite"])
+    zeilen += ["", "Gesendet über „Fehler melden“ auf %s" % (herkunft.group(1) if herkunft else "den Gerätedaten-Seiten"),
                "Datensatz: https://github.com/Neanderfunk/geraetedaten/blob/main/daten/%s.json" % a["image"]]
     m.set_content("\n".join(zeilen))
     return m
