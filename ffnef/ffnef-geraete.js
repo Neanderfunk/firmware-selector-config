@@ -200,7 +200,7 @@
     if (a) {
       var lv = a.level || '';
       var zeileI = {
-        titel: 'Installation',
+        titel: 'Einrichtung',
         wert: (lv ? lv + ' ' + (LEVEL[lv] || '') : '').trim() +
               (STATUS[a.status] ? ', ' + STATUS[a.status] : ''),
         belege: [{ quelle: 'anleitung', url: a.url }]
