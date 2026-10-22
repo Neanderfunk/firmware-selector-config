@@ -18,7 +18,9 @@
                Seitentext, Buchsenbeschriftungen mit falschen Namen), das
                kopfstehende Logo und auf Wunsch von adorfer der schwarze
                Aufkleber mit LED in der Mitte. "cudy" als SVG-Text neu
-               gesetzt. Auf 640 px gebracht, vtracer mit mode=polygon,
+               gesetzt, ebenso die Buchsen nach dem OpenWrt-Wiki (von hinten
+               links nach rechts: Strom, LAN4, LAN3, LAN2, LAN1, WAN; die
+               Vorlage hatte WAN neben der Strombuchse). Auf 640 px gebracht, vtracer mit mode=polygon,
                color_precision=6, filter_speckle=8, gradient_step=16,
                path_precision=1. Angezeigt in 320 x 248 (viewBox 640 x 497).
 
@@ -281,4 +283,12 @@
 <path d="M0,0 L12,1 L12,4 L9,6 L6,6 L5,9 L-2,6 L1,3 L4,3 L4,1 Z " fill="#A8B7BE" transform="translate(426,299)"/>
 <path d="M0,0 L1,0 L1,34 L-1,37 L-3,41 L-2,19 Z " fill="#494D50" transform="translate(496,250)"/>
 <text x="311" y="283" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="17" fill="#2E3436" text-anchor="middle">cudy</text>
+<g font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="8" fill="#2E3436" text-anchor="middle">
+<text x="198.3" y="451.2">POWER</text>
+<text x="266.5" y="451.2">LAN4</text>
+<text x="301.6" y="451.2">LAN3</text>
+<text x="339.4" y="451.2">LAN2</text>
+<text x="376.3" y="451.2">LAN1</text>
+<text x="410.4" y="451.2">WAN</text>
+</g>
 </svg>
