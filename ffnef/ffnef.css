@@ -223,3 +223,20 @@
 #wizard .imagePreview .ffnef-geraet-speicher {
   margin: 0.3em 0;
 }
+
+/* --- Bildnachweise unten -------------------------------------------------
+   app.css heftet sie fest an den unteren Rand. Auf dem Handy sind sie
+   mehrere Zeilen hoch und verdecken den Inhalt; ffnef.js setzt deshalb beim
+   Scrollen diese Klasse (nur bis 700px Breite). */
+.floatingBottomRight {
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.floatingBottomRight.ffnef-ausgeblendet {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floatingBottomRight { transition: none; }
+}

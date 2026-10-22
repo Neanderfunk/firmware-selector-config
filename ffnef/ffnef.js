@@ -16,6 +16,11 @@
       Adresse zum Abschreiben und dem Tipp, sie aufs Handy zu holen. Bei
       einem fremden Link aus devices.js bleibt der alte Warntext stehen.
 
+   4. Auf schmalen Anzeigen blendet sie die Bildnachweise unten aus, sobald
+      man scrollt. app.css heftet sie fest an den unteren Rand; auf dem
+      Handy sind sie mehrere Zeilen hoch und verdecken dann den Inhalt.
+      Oben auf der Seite stehen sie wieder da.
+
    Woher die Angaben kommen: welche Versionen WIR anbieten, steht im
    Auswahlfeld, das app.js aus den Dateinamen der Images fuellt. Das ist die
    genaueste Quelle, die es gibt, und sie ist immer aktuell. Welche Versionen
@@ -337,4 +342,15 @@
   } else {
     los();
   }
+
+  /* Punkt 4: Bildnachweise beim Scrollen ausblenden. */
+  var schmal = window.matchMedia ? window.matchMedia('(max-width: 700px)') : null;
+  function nachweise() {
+    var p = $('.floatingBottomRight');
+    if (!p) return;
+    var weg = !!(schmal && schmal.matches) && window.pageYOffset > 10;
+    p.classList.toggle('ffnef-ausgeblendet', weg);
+  }
+  window.addEventListener('scroll', nachweise, { passive: true });
+  window.addEventListener('resize', nachweise);
 })();
