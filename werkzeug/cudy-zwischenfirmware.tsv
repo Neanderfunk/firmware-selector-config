@@ -20,6 +20,7 @@
 # normalisierter Drive-Name                 Gluon-Name              Bemerkung
 ap3000-v1-0                                 cudy-ap3000             Datei kam urspruenglich vom Cudy-Support
 ap3000-outdoor-1-0                          cudy-ap3000-outdoor
+ap1300-outdoor-v1-0                         cudy-ap1300-outdoor     erst mit Gluon 2025.1 (22.10.2026 ergaenzt)
 ap3000-wall-1-0                             cudy-ap3000-wall        erst mit Gluon 2025.1, noch nicht in devices.js
 m1800-v2                                    cudy-m1800              zwei Drive-Eintraege, Firmware darin identisch (0c19a13f...); M1800+V2.zip hat zusaetzlich recovery.bin und Doku
 m3000-1-0-2-0                               cudy-m3000
@@ -33,6 +34,7 @@ wr3000-v1-0                                 cudy-wr3000             nur umbenann
 wr3000e-1-0                                 cudy-wr3000e
 wr3000h-1-0                                 cudy-wr3000h
 wr3000p-1-0                                 cudy-wr3000p            erst mit Gluon 2025.1, noch nicht in devices.js
+wr3000u-256mb-v1-0                          cudy-wr3000u            Gluon cudy-wr3000u-v1 = WR3000U-256MB; Cudy-Image cudy_wr3000u-256-v1 (22.10.2026 ergaenzt)
 wr3000s-1-0                                 cudy-wr3000s
 x6-v1-0                                     cudy-x6-v1              nur umbenannt, Inhalt gleich; devices.js kennt nur "cudy-x6"
 x6-v2                                       cudy-x6-v2              devices.js kennt nur "cudy-x6"
