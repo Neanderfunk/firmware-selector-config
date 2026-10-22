@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer c757a43e)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 8f41bb43)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
@@ -267,6 +267,7 @@ var config = {
     "Enterasys": {
       "WS-AP3705i": "https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3705i.html",
       "WS-AP3710i": "https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3710i.html",
+      "WS-AP3715i": "https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3715i.html",
     },
     "Extreme Networks": {
       "WS-AP3805i": "https://routersoftware.ffnef.de/anleitungen/de/extreme-networks-ws-ap3805i.html",
@@ -454,13 +455,6 @@ var config = {
   // den Grund und verlinkt das Problem (ffnef.js). Eintrag loeschen,
   // sobald die Anleitung zurueck ist.
   ffnef_zurueckgezogen: {
-    "Enterasys": {
-      "WS-AP3715i": {
-        url: "https://github.com/freifunk-gluon/gluon/issues/3842",
-        grund: "Die neue Freifunk-Firmware startet auf diesem Gerät nach dem Aufspielen nicht. Eine Korrektur ist in Arbeit.",
-        seit: "2026-10-16",
-      },
-    },
   },
 };
 

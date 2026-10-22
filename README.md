@@ -449,9 +449,11 @@ künftig dort steht. Solange das nicht entschieden ist, bleibt
    MF289F. Liegt bei Content. Die Xiaomi-Geräte, deren Weg ein Token aus der
    Herstelleroberfläche braucht, bleiben vorerst bewusst ohne eigene Seite
    (adorfer 15.10.2026).
-8. **Zurückgezogen:** Enterasys WS-AP3715i (gluon#3842). Eintrag in
-   `config.ffnef_zurueckgezogen` löschen, sobald die Seite zurück ist; das
-   Buildsystem meldet den Fix.
+8. ~~**Zurückgezogen:** Enterasys WS-AP3715i (gluon#3842).~~ Seit 22.10.2026
+   wieder verlinkt: der Loader-Backport (gluon-patches-hardware 188dff9)
+   steckt in stable 26101610sta, Ladeadresse am Image geprüft. Das
+   Verfahren bleibt für künftige Fälle: Eintrag in
+   `config.ffnef_zurueckgezogen`, nur bei bekanntem Defekt der Firmware.
 
 Wie die Kandidaten für neue Anleitungen gezählt wurden (15./16.10.2026):
 Modelle aus `neander.map.freifunk.space/data/meshviewer.json`, **nur
