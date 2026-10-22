@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 8f41bb43)
+  // https://routersoftware.ffnef.de/anleitungen/index.json (Stand gluon-rampe-installer 06c309fd)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
