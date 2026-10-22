@@ -73,9 +73,11 @@
             anderes sagt.
           </p>
           <!-- Sichtbar macht den Kasten app.js (show-deviceinfo-warning), sobald
-               es fuer das Geraet einen Link gibt. Welcher der beiden Texte
-               gilt, entscheidet ffnef.js am Link: unsere eigene Anleitung
-               unter /anleitungen/ oder ein fremder Verweis aus devices.js. -->
+               es fuer das Geraet einen Link gibt. Welcher Text gilt, entscheidet
+               ffnef.js am Link: unsere eigene Anleitung unter /anleitungen/,
+               eine zurueckgezogene (config.ffnef_zurueckgezogen), ein Geraet
+               ohne eigene Anleitung (config.ffnef_ohne_anleitung, Xiaomi)
+               oder ein fremder Verweis aus devices.js. -->
           <div class="warning-deviceinfo">
             <div class="ffnef-anleitung-eigen">
               <b>Für die Erstinstallation haben wir eine Anleitung zu genau
@@ -88,6 +90,25 @@
               <span class="ffnef-zurueck-grund"></span>
               <b>Bitte jetzt nicht installieren.</b> Sobald es behoben ist, ist
               die Anleitung wieder da.
+            </div>
+            <div class="ffnef-anleitung-ohne">
+              <b>Für dieses Gerät haben wir keine eigene Anleitung.</b> Der Weg
+              zur Freifunk-Firmware führt hier über OpenWrt, in zwei Schritten:
+              <ol>
+                <li><b>Zuerst OpenWrt installieren.</b> Dafür brauchst du eine
+                Anleitung aus dem Netz, zum Beispiel aus dem OpenWrt-Wiki, aus
+                Foren oder von anderen Freifunk-Communities. Wir haben sie nicht
+                geprüft, du folgst ihr in eigener Verantwortung.</li>
+                <li><b>Dann unsere Firmware aufspielen.</b> Lade unten das
+                Sysupgrade-Image herunter. Öffne die OpenWrt-Oberfläche unter
+                <code>http://192.168.1.1</code>, geh zu <b>System → Backup /
+                Flash Firmware</b>, "Flash image…", wähl die Datei,
+                <b>entfern den Haken bei "Keep settings"</b> und klick
+                <b>Continue</b>. Nach einigen Minuten startet der Router mit der
+                Freifunk-Firmware, zuerst mit der Einrichtungsseite unter
+                <code>http://192.168.1.1</code>.</li>
+              </ol>
+              <span class="ffnef-ohne-zusatz"></span>
             </div>
             <div class="ffnef-anleitung-fremd">
               <b>Vorsicht!</b> Für dieses Gerät gibt es eine extra Anleitung.

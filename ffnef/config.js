@@ -471,10 +471,46 @@ var config = {
   // sobald die Anleitung zurueck ist.
   ffnef_zurueckgezogen: {
   },
+
+  // Geraete ohne eigene Anleitung, VON HAND gepflegt (adorfer 22.10.2026,
+  // Text Content, freifunk-content vorschlaege/selector-xiaomi-kasten.md,
+  // 9a79499). Fuer Xiaomi koennen wir keine Anleitungen erzeugen. Der
+  // Kasten in Schritt 2 beschreibt den Weg: erst OpenWrt nach einer
+  // Anleitung aus dem Netz, dann unser sysupgrade-Image. Der Knopf fuehrt
+  // ins OpenWrt-Wiki (am 22.10.2026 geprueft; RA75 und 4A 100M
+  // International liegen dort unter inbox/ und koennen umziehen, Ersatz
+  // dann https://openwrt.org/toh/xiaomi/start). "zusatz" ist optional.
+  ffnef_ohne_anleitung: {
+    "Xiaomi": {
+      "AX3200 (RB03)": {url: "https://openwrt.org/toh/xiaomi/ax3200"},
+      "Mi RA75": {url: "https://openwrt.org/inbox/toh/xiaomi/mi_wifi_range_extender_ac1200_model_ra75"},
+      "Mi Router 3G": {url: "https://openwrt.org/toh/xiaomi/mir3g"},
+      "Mi Router 4A (100M Edition)": {url: "https://openwrt.org/toh/xiaomi/mi_router_4a_mir4a_100m"},
+      "Mi Router 4A (100M International Edition)": {url: "https://openwrt.org/inbox/toh/xiaomi/r4ac"},
+      "Mi Router 4A (Gigabit Edition)": {url: "https://openwrt.org/toh/xiaomi/xiaomi_mi_router_4a_gigabit_edition"},
+      "Mi Router 4C": {url: "https://openwrt.org/toh/xiaomi/xiaomi_mi_router_4c"},
+      "MiWiFi Mini": {url: "https://openwrt.org/toh/xiaomi/miwifi_mini"},
+      "AX3600": {url: "https://openwrt.org/toh/xiaomi/ax3600"},
+      "Mi Router AC2100": {url: "https://openwrt.org/toh/xiaomi/mi_router_ac2100"},
+      "Redmi Router AC2100": {url: "https://openwrt.org/toh/xiaomi/xiaomi_redmi_router_ac2100"},
+      "Mi Router AX3000T": {url: "https://openwrt.org/toh/xiaomi/ax3000t",
+        zusatz: 'Für die AX3000T gibt es zwei Images. Welches passt, hängt davon ab, wie OpenWrt installiert wurde: Steht in der OpenWrt-Oberfläche unter Status → Overview bei "Model" der Zusatz "(OpenWrt U-Boot layout)", nimm das Image "OpenWrt-U-Boot-Layout", sonst das normale. Meldet OpenWrt beim Hochladen, das Image passe nicht zum Gerät, hast du das andere erwischt: Dann nicht erzwingen, sondern das andere Image nehmen.'},
+    },
+  },
 };
 
 // Zurueckgezogene Eintraege gewinnen ueber alles andere: app.js liest nur
 // devices_info, also kommen sie dort hinein.
+(function () {
+  var z = config.ffnef_ohne_anleitung || {};
+  config.devices_info = config.devices_info || {};
+  for (var hersteller in z) {
+    config.devices_info[hersteller] = config.devices_info[hersteller] || {};
+    for (var modell in z[hersteller]) {
+      config.devices_info[hersteller][modell] = z[hersteller][modell].url;
+    }
+  }
+})();
 (function () {
   var z = config.ffnef_zurueckgezogen || {};
   config.devices_info = config.devices_info || {};

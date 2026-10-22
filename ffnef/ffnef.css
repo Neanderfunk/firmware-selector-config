@@ -102,6 +102,20 @@
 #wizard #type-pane .warning-deviceinfo.ffnef-zurueck .ffnef-anleitung-fremd {
   display: none;
 }
+/* Ohne eigene Anleitung (Xiaomi): Weg ueber OpenWrt, Knopf ins Wiki. */
+#wizard #type-pane .warning-deviceinfo .ffnef-anleitung-ohne {
+  display: none;
+}
+#wizard #type-pane .warning-deviceinfo.ffnef-ohne .ffnef-anleitung-ohne {
+  display: block;
+}
+#wizard #type-pane .warning-deviceinfo.ffnef-ohne .ffnef-anleitung-fremd {
+  display: none;
+}
+#wizard #type-pane .warning-deviceinfo .ffnef-ohne-zusatz:not(:empty) {
+  display: block;
+  margin-top: 0.5em;
+}
 #wizard #type-pane .warning-deviceinfo #deviceinfo {
   margin: 0.75em 0;
 }

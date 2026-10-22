@@ -509,7 +509,11 @@ var devices_recommended = {
     "Mi Router 4A (100M International Edition)": "xiaomi-mi-router-4a-100m-international-edition",
     "Mi Router 4A (Gigabit Edition)": { "xiaomi-mi-router-4a-gigabit-edition": "v1", "xiaomi-mi-router-4a-gigabit-edition-v2": "v2" },
     "Mi Router 4C": "xiaomi-mi-router-4c",
-    "MiWiFi Mini": "xiaomi-miwifi-mini"
+    "MiWiFi Mini": "xiaomi-miwifi-mini",
+    "AX3600": "xiaomi-ax3600",
+    "Mi Router AC2100": "xiaomi-mi-router-ac2100",
+    "Redmi Router AC2100": "xiaomi-redmi-router-ac2100",
+    "Mi Router AX3000T": {"xiaomi-mi-router-ax3000t": "normal", "xiaomi-mi-router-ax3000t-openwrt-u-boot-layout": "OpenWrt-U-Boot-Layout"},
   },
 
   "x86": {

@@ -257,6 +257,16 @@
     return null;
   }
 
+  /* Geraet ohne eigene Anleitung (config.ffnef_ohne_anleitung, Xiaomi)?
+     Ebenfalls ueber die URL, wie oben. */
+  function ohneAnleitung(href) {
+    var z = (window.config && window.config.ffnef_ohne_anleitung) || {};
+    for (var h in z) for (var m in z[h]) {
+      if (z[h][m].url === href) return z[h][m];
+    }
+    return null;
+  }
+
   function anleitungAufbereiten() {
     var ziel = $('#deviceinfo');
     var box = ziel ? ziel.parentNode : null;
@@ -265,18 +275,26 @@
 
     var a = $('a', ziel);
     var zurueck = a ? zurueckgezogen(a.getAttribute('href') || '') : null;
-    var eigen = !zurueck && !!(a && /\/anleitungen\//.test(a.getAttribute('href') || ''));
+    var ohne = a && !zurueck ? ohneAnleitung(a.getAttribute('href') || '') : null;
+    var eigen = !zurueck && !ohne && !!(a && /\/anleitungen\//.test(a.getAttribute('href') || ''));
     box.classList.toggle('ffnef-zurueck', !!zurueck);
+    box.classList.toggle('ffnef-ohne', !!ohne);
     box.classList.toggle('ffnef-eigen', eigen);
-    box.classList.toggle('ffnef-fremd', !!a && !eigen && !zurueck);
+    box.classList.toggle('ffnef-fremd', !!a && !eigen && !zurueck && !ohne);
     if (adresse) adresse.textContent = '';
     var grund = $('.ffnef-zurueck-grund', box);
     if (grund) grund.textContent = zurueck ? (zurueck.grund || '') : '';
+    var zusatz = $('.ffnef-ohne-zusatz', box);
+    if (zusatz) zusatz.textContent = ohne ? (ohne.zusatz || '') : '';
     if (!a) return;
 
     a.rel = 'noopener';
     if (zurueck) {
       a.textContent = 'Bekanntes Problem ansehen';
+      return;
+    }
+    if (ohne) {
+      a.textContent = 'OpenWrt-Wiki zu diesem Gerät (englisch)';
       return;
     }
     if (!eigen) return;
