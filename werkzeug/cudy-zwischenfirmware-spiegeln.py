@@ -111,7 +111,8 @@ def ordner_lesen(ordner_id):
     if not m:
         raise SystemExit("FEHLER: Dateiliste in der Drive-Seite nicht gefunden. "
                          "Google hat vermutlich die Seite umgebaut.")
-    daten = json.loads(codecs.decode(m.group(1), "unicode_escape"))
+    # "\\/" ist in JSON erlaubt, fuer unicode_escape aber eine ungueltige Folge (DeprecationWarning)
+    daten = json.loads(codecs.decode(m.group(1).replace("\\/", "/"), "unicode_escape"))
     eintraege = []
     for k in daten[0]:
         kid, name, mime = k[0], k[2], (k[3] or "")
