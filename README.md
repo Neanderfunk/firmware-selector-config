@@ -437,11 +437,14 @@ künftig dort steht. Solange das nicht entschieden ist, bleibt
 4. Zum Prüfen in `config.js` `listMissingImages: true` setzen: die
    Browser-Konsole zeigt dann jede Datei ohne Regel.
 5. ~~Deploy steht aus.~~ Erledigt, seitdem mehrfach (Stand 16.10.2026).
-6. `cudy-wr3000p` und `cudy-ap3000-wall` in `devices.js` aufnehmen,
-   **sobald `stable` auf 2025.1 steht**. Beide sind in Cudys Ablage
-   vorhanden; siehe `werkzeug/cudy-zwischenfirmware.tsv`. Mit 2025.1 kommen
-   weitere Seiten von selbst dazu, die heute nur mangels `devices.js`-Eintrag
-   nicht verdrahtet sind (u. a. Archer C50 v6, EAP613, GL-MT6000).
+6. ~~Neue 2025.1-Geräte in `devices.js`.~~ Erledigt 22.10.2026 gegen stable
+   26101610sta: 31 Images ohne Regel oder mit Restnamen (u. a. GL-MT6000,
+   Cudy WR3000P/WR3000U/AP3000 Wall/AP1300 Outdoor/M3000 YT8821, EAP613,
+   EAP620 HD, Orbi, Velop, MX5300, NWA90AX, ERX `-ka`, Archer C50 v6).
+   Geprüft mit dem Live-`app.js` und `listMissingImages` gegen die Listen
+   von 01_vel: übrig bleiben nur die Xiaomi-Geräte und die x86-`mbr`-Varianten.
+   **Nach jedem neuen stable so prüfen**, denn ein Image ohne Regel fehlt im
+   Selector still.
 7. **Fremdlinks ablösen.** Stand 16.10.2026 zeigen noch 13 Modelle bzw.
    Revisionen auf fremde Anleitungen aus der Upstream-`devices.js`: O2 Box 6431
    (zwei Einträge), RT-AC51U, FRITZ!Box 7320/7330/7330 SL, Joy-IT JT-OR750i,

@@ -32,6 +32,7 @@ var devices_recommended = {
     "Instant On AP11": "aruba-instant-on-ap11",
     "Instant On AP11D": "aruba-instant-on-ap11d",
     "Instant On AP17": "aruba-instant-on-ap17",
+    "AP-324 / AP-325": "aruba-ap-32x",
   },
 
   "Asus": {
@@ -41,6 +42,8 @@ var devices_recommended = {
      "RT-AX53U": "asus-rt-ax53u",
      "TUF-AX4200": "asus-tuf-ax4200",
      "TUF-AX6000": "asus-tuf-ax6000",
+     "Lyra (MAP-AC2200)": "asus-lyra-map-ac2200",
+     "RT-AX59U": "asus-rt-ax59u",
   },
 
   "AVM": {
@@ -75,11 +78,19 @@ var devices_recommended = {
       "buffalo-wzr-hp-g300nh": "v1",
       "buffalo-wzr-hp-g300nh2": "v2"
     },
-    "WZR-HP-G450H": {"buffalo-wzr-hp-g450h": ""},
+    "WZR-HP-G450H": {"buffalo-wzr-hp-g450h": "", "buffalo-wzr-hp-g450h-wzr-450hp": ""},
+  },
+
+  "COMFAST": {
+    "CF-EW71": "comfast-cf-ew71",
   },
 
   "Cudy": {
+    "AP1300 Outdoor": "cudy-ap1300-outdoor",
     "AP3000 Outdoor": "cudy-ap3000-outdoor",
+    "AP3000 Wall": "cudy-ap3000-wall",
+    "WR3000P": "cudy-wr3000p",
+    "WR3000U": "cudy-wr3000u",
     "TR1200": "cudy-tr1200",
     "TR3000": "cudy-tr3000",
     "WR1000": {"cudy-wr1000": "v2"},
@@ -88,7 +99,7 @@ var devices_recommended = {
     "WR3000": "cudy-wr3000",
     "WR3000 E": "cudy-wr3000e",
     "AP3000": "cudy-ap3000",
-    "M3000": "cudy-m3000",
+    "M3000": {"cudy-m3000-v1": "v1/v2", "cudy-m3000-v2-with-motorcomm-yt8821": "v2 (YT8821)"},
     "RE3000": "cudy-re3000",
     "TR3000": "cudy-tr3000",
     "TR3000-256MB": "cudy-tr3000-256mb",
@@ -141,6 +152,7 @@ var devices_recommended = {
     "WS-AP3805i": "extreme-networks-ws-ap3805i",
     "WS-AP3825i": "extreme-networks-ws-ap3825i",
     "WS-AP3915i": "extreme-networks-ws-ap3915i",
+    "WS-AP3935i": "extreme-networks-ap3935",
   },
 
   "FriendlyElec": {
@@ -160,6 +172,7 @@ var devices_recommended = {
     "GL-AP1300": "gl.inet-gl-ap1300",
     "GL-AR150": {"gl-ar150": "", "gl.inet-gl-ar150": ""},
     "GL-AR300M Lite": "gl.inet-gl-ar300m-lite",
+    "GL-AR300M16": "gl.inet-gl-ar300m16",
     "GL-AR300M": {"gl-ar300m": "", "gl.inet-gl-ar300m": "", "gl.inet-gl-ar300m-nor": ""},
     "GL-AR750S": {"gl.inet-gl-ar750s-nor": ""},
     "GL-AR750": {"gl-ar750": "", "gl.inet-gl-ar750": ""},
@@ -171,6 +184,7 @@ var devices_recommended = {
     "GL-MT1300": "gl.inet-gl-mt1300",
     "GL-MT2500": "gl.inet-gl-mt2500",
     "GL-MT3000": "gl.inet-gl-mt3000",
+    "GL-MT6000": "gl.inet-gl-mt6000",
     "GL-USB150": "gl.inet-gl-usb150",
     "GL-XE300": "gl.inet-gl-xe300",
     "microuter-N300": "gl.inet-microuter-n300",
@@ -200,7 +214,10 @@ var devices_recommended = {
     "E4200": {"linksys-e4200-v2-viper": "v2"},
     "E8450": {"linksys-e8450": "", "linksys-e8450-ubi": ""},
     "EA8300": "linksys-ea8300-dallas",
-    "MR8300": "linksys-mr8300-dallas"
+    "MR8300": "linksys-mr8300-dallas",
+    "MX5300": "linksys-mx5300",
+    "Velop WHW01": {"linksys-whw01": "", "linksys-vlp01": "--ignore--"},
+    "Velop WHW03": {"linksys-whw03-velop": "v1", "linksys-whw03-v2-velop": "v2"},
   },
 
   "Meraki": {
@@ -213,6 +230,7 @@ var devices_recommended = {
 
   "Mercusys": {
     "MR70X": "mercusys-mr70x",
+    "MR80X": "mercusys-mr80x",
     "MR90X": "mercusys-mr90x",
   },
 
@@ -227,7 +245,7 @@ var devices_recommended = {
     "vmlinux": {"mikrotik-vmlinux-lzma" : "", "mikrotik-vmlinux.lzma" : ""},
     "RB750Gr3 (hEX)": {"mikrotik-routerboard-750gr3": "", "mikrotik-routerboard-hex-v3": ""},
     "RBmAPL-2nD (mAP lite)": {"mikrotik-routerboard-map-lite": "", "mikrotik-routerboard-mapl-2nd": ""},
-    "RBwAPG-5HacD2HnD (wAP ac)": {"mikrotik-routerboard-wap-ac-d2": "", "mikrotik-wap-ac": ""},
+    "RBwAPG-5HacD2HnD (wAP ac)": {"mikrotik-routerboard-wap-ac-d2": "", "mikrotik-wap-ac": "", "mikrotik-routerboard-wap-g-5hacd2hnd": "--ignore--"},
     "RBwAPG-5HacT2HnD (wAP ac)": {"mikrotik-routerboard-wap-ac-t2": "", "mikrotik-routerboard-wap-g-5hact2hnd": ""}
   },
 
@@ -238,6 +256,11 @@ var devices_recommended = {
     "EAX15": "netgear-eax15-v2",
     "EX3700": "netgear-ex3700",
     "EX3800": "netgear-ex3800",
+    "Orbi RBR50": "netgear-rbr50",
+    "Orbi RBS50": "netgear-rbs50",
+    "Orbi Pro SRR60": "netgear-srr60",
+    "Orbi Pro SRS60": "netgear-srs60",
+    "WAX218": "netgear-wax218",
     "EX6100": {"netgear-ex6100v2": "v2"},
     "EX6130": "netgear-ex6130",
     "EX6150": {"netgear-ex6150": "v1", "netgear-ex6150v2": "v2"},
@@ -380,7 +403,7 @@ var devices_recommended = {
     "Archer C20i": "tp-link-archer-c20i",
     "Archer C2600": {"tp-link-archer-c2600": "v1"},
     "Archer C5": "tp-link-archer-c5",
-    "Archer C50": {"tp-link-archer-c50": "v1", "tp-link-archer-c50-v3": "v3", "tp-link-archer-c50-v4": "v4"},
+    "Archer C50": {"tp-link-archer-c50": "v1", "tp-link-archer-c50-v3": "v3", "tp-link-archer-c50-v4": "v4", "tp-link-archer-c50-v6-ca-eu-ru": "v6"},
     "Archer C59": "tp-link-archer-c59",
     "Archer C6": {"tp-link-archer-c6-v2-eu-ru-jp": "v2 (EU/RU/JP)", "tp-link-archer-c6-v2": "v2 (EU/RU/JP)", "tp-link-archer-c6-v3": "v3"},
     "Archer C7": "tp-link-archer-c7",
@@ -389,7 +412,9 @@ var devices_recommended = {
     "CPE510": {"tp-link-cpe510": "", "tp-link-cpe510-520": "", "tp-link-cpe520": "--ignore--"},
     "CPE710": "tp-link-cpe710",
     "EAP225-Outdoor": "tp-link-eap225-outdoor",
+    "EAP613": "tp-link-eap613",
     "EAP615-Wall": "tp-link-eap615-wall",
+    "EAP620 HD": "tp-link-eap620-hd",
     "RE200": "tp-link-re200",
     "RE305": "tp-link-re305",
     "RE500": "tp-link-re500",
@@ -425,8 +450,8 @@ var devices_recommended = {
   },
 
   "Ubiquiti": {
-    "EdgeRouter X": {"ubnt-erx": "", "ubiquiti-edgerouter-x": ""},
-    "EdgeRouter X-SFP": {"ubnt-erx-sfp": "", "ubiquiti-edgerouter-x-sfp": ""},
+    "EdgeRouter X": {"ubnt-erx": "", "ubiquiti-edgerouter-x": "", "ubiquiti-edgerouter-x-ka": ""},
+    "EdgeRouter X-SFP": {"ubnt-erx-sfp": "", "ubiquiti-edgerouter-x-sfp": "", "ubiquiti-edgerouter-x-sfp-ka": ""},
     "NanoBeam AC Gen1 (XC)": "ubiquiti-nanobeam-ac-gen1-xc",
     "NanoBeam M5 (XW)": "ubiquiti-nanobeam-m5-xw",
     "NanoBeam": {"ubiquity-nanobeam-m": "--ignore--", "ubiquiti-nanobeam-m5": "M5"},
@@ -468,6 +493,7 @@ var devices_recommended = {
 
   "Wavlink": {
     "WS-WN572HP3 (4G)": "wavlink-ws-wn572hp3-4g",
+    "WL-WN573HX3": "wavlink-wl-wn573hx3",
   },
 
   "Western Digital": {
@@ -504,6 +530,8 @@ var devices_recommended = {
     "NBG6716": "zyxel-nbg6716",
     "NWA50AX": "zyxel-nwa50ax",
     "NWA50AX Pro": "zyxel-nwa50ax-pro",
+    "NWA90AX": "zyxel-nwa90ax",
+    "NWA90AX Pro": "zyxel-nwa90ax-pro",
     "NWA55AXE": "zyxel-nwa55axe",
     "WSM20": "zyxel-wsm20",
   },
