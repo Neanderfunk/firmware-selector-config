@@ -789,7 +789,7 @@ var devices_info = {
     "EdgeRouter X-SFP": "https://github.com/oszilloskop/UBNT_ERX_Gluon_Factory-Image/blob/master/README.md#gluon-auf-ubnt-edgerouter-x-und-x-sfp",
     "Swiss Army Knife Ultra": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=5ad05681f2de00c8c6d6449df2b958b0838dbc1a",
     "UniFi 6 Lite": "https://openwrt.org/toh/ubiquiti/unifi6lite#installation",
-    "UniFi 6 LR": "https://openwrt.org/toh/ubiquiti/unifi6lite#installation",
+    "UniFi 6 LR": "https://openwrt.org/toh/ubiquiti/unifi_6_lr#installation",
     "UniFi 6+": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=75ee5546e9b7cfa5bbfd6f844ab8c5fffd5bb594",
     "UniFi AC Lite": "https://forum.darmstadt.freifunk.net/t/unifi-ap-erstinstallation/790",
     "UniFi AC LR": "https://forum.darmstadt.freifunk.net/t/unifi-ap-erstinstallation/790",
