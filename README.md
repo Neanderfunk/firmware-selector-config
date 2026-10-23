@@ -559,3 +559,12 @@ während es läuft, und die Shell liest das Skript stückweise nach. Ändert
 sich `deploy.sh` selbst, deshalb vorher den Klon holen:
 
     git -C /var/www/selector-config pull --ff-only && sh /var/www/selector-config/deploy.sh
+
+**Preise (seit 23.10.2026):** `preise.json` liegt als echte Datei im
+routerwahl-Webroot, nicht als Symlink. `deploy.sh` legt sie weder an noch
+löscht es sie. Erzeugt wird sie wöchentlich per Cron aus dem Gerätedaten-Klon:
+
+    0 3 * * 1  python3 /var/www/selector-geraetedaten/werkzeug/preise-holen.py --aus /var/www/routerwahl.ffnef.de/preise.json >> /var/log/preise-holen.log 2>&1
+
+Regel und Grenzen stehen in `geraetedaten`, `schema/felder.md`, Abschnitt
+„Circa-Neupreise“. Fehlt die Datei, zeigt routerwahl einfach keine Preise.
