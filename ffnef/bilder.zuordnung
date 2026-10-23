@@ -62,7 +62,8 @@ tp-link-archer-a7          tp-link-archer-a7-v5
 tp-link-tl-wa850re         tp-link-tl-wa850re-v1
 tp-link-tl-wa860re         tp-link-tl-wa860re-v1
 tp-link-tl-wr2543n-nd      tp-link-tl-wr2543n-nd-v1
-xiaomi-mi-router-4a-gigabit-edition-v2  xiaomi-mi-router-4a-gigabit-edition
+# xiaomi-mi-router-4a-gigabit-edition-v2 entfallen am 23.10.2026: eigene Zeichnung
+# ffnef/bilder/xiaomi-mi-router-4a-gigabit-edition.svg (dazu Symlink -v2)
 #
 # Mehrere Versionen im Bildrepo, unser Eintrag ist versionslos. Genommen ist
 # die Version, die bei uns wirklich im Feld steht, gezaehlt auf der Karte am
