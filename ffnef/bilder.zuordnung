@@ -22,7 +22,8 @@ zbt-wg3526-16m             zbt-wg3526
 gl.inet-gl-e750            gl-inet-gl-e750
 #
 # Grundname trifft auf genau eine Version im Bildrepo:
-cudy-wr3000                cudy-wr3000-v1
+# cudy-wr3000 -> cudy-wr3000-v1 entfallen am 23.10.2026: eigene schwarze
+# Zeichnung ffnef/bilder/cudy-wr3000.svg (dazu Symlink cudy-wr3000-v1.svg)
 gl-inet-6408a              gl-inet-6408a-v1
 tp-link-archer-c2          tp-link-archer-c2-v1
 tp-link-archer-c20         tp-link-archer-c20-v1
