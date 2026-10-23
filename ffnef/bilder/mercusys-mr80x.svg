@@ -4,91 +4,179 @@
      Eigene Zeichnung, weil es in freifunk/device-pictures keine dieses
      Geraets gibt.
 
-     Vorlage:  Vektorzeichnung von hinten, von adorfer, 23.10.2026
-               (austausch/mr80x router_strichzeichnung.svg)
+     Vorlage:  Vektorzeichnung von hinten, zweite Fassung mit Facetten,
+               Scharnieren und beschrifteten LAN1 bis LAN3, von adorfer,
+               23.10.2026 (ersetzt die erste Fassung vom selben Tag)
      Urheber:  adorfer, fuer Neanderfunk
      Lizenz:   CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
 
      Geaendert: weisser Hintergrund und Schatten entfernt (Bild steht frei
      auf jeder Seitenfarbe), viewBox auf das Geraet zugeschnitten, feste
-     Anzeigegroesse 320 x 297. Anschluesse geprueft gegen das
+     Anzeigegroesse 320 x 307. Anschluesse geprueft gegen das
      Mercusys-Datenblatt (Geraetedaten mercusys-mr80x-v3): von links
      Strom, WPS/Reset-Knopf, WAN, LAN1 bis LAN3.
 
      ACHTUNG: In diesem Kommentar keine zwei aufeinanderfolgenden
      Bindestriche (XML verbietet das, die Datei waere nicht wohlgeformt). -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="90 100 820 760" width="320" height="297">
-  <!-- Style Definition with 6 distinct colors for vector/line art look -->
-  <style>
-    .main-body { fill: #1a1a1a; stroke: #404040; stroke-width: 3; }
-    .body-detail { fill: #2d2d2d; stroke: #404040; stroke-width: 2; }
-    .antenna { fill: #2d2d2d; stroke: #404040; stroke-width: 3; stroke-linejoin: round; }
-    .port-bg { fill: #000000; stroke: #404040; stroke-width: 2; }
-    .port-metal { fill: #808080; }
-    .labels { fill: #b3b3b3; font-family: sans-serif; font-size: 8px; text-anchor: middle; }
-    .line-art { fill: none; stroke: #404040; stroke-width: 2; }
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="90 100 620 595" width="320" height="307">
+    <style>
+        /* Inline SVG Color Classes strictly matching the 8 colors */
+        .c-main { fill: #1a1d20; }
+        .c-bevel { fill: #2a2e33; }
+        .c-panel { fill: #383d43; }
+        .c-dark { fill: #0e1012; }
+        .c-hinge { fill: #121417; }
+        .c-accent { fill: #4a5056; }
+        .c-pins { fill: #8c929a; }
+    </style>
 
-  <g id="router">
-    <!-- Antennas (Left to Right) -->
-    <!-- Antenna 1 (Far Left) -->
-    <path class="antenna" d="M 100 170 L 135 175 L 155 820 L 120 825 Z"/>
-    <circle class="body-detail" cx="128" cy="805" r="4"/>
-    
-    <!-- Antenna 2 (Inner Left) -->
-    <path class="antenna" d="M 265 110 L 305 112 L 315 850 L 275 850 Z"/>
+    <!-- 3. MAIN CHASSIS BASE (REAR VIEW) -->
+    <!-- Base Foundation -->
+    <polygon points="150,650 220,680 580,680 650,650 635,590 530,565 270,565 165,590" class="c-main"/>
+    <polygon points="150,650 220,680 580,680 650,650 640,655 580,684 220,684 160,655" class="c-dark"/>
 
-    <!-- Antenna 3 (Inner Right) -->
-    <path class="antenna" d="M 695 112 L 735 110 L 725 850 L 685 850 Z"/>
+    <!-- Angular Chassis Facets -->
+    <polygon points="165,590 270,565 300,535 175,558" class="c-panel"/>
+    <polygon points="635,590 530,565 500,535 625,558" class="c-panel"/>
+    <polygon points="270,565 530,565 500,535 300,535" class="c-bevel"/>
+    <polygon points="300,535 500,535 460,520 340,520" class="c-dark"/>
 
-    <!-- Antenna 4 (Far Right) -->
-    <path class="antenna" d="M 865 175 L 900 170 L 880 825 L 845 820 Z"/>
-    <circle class="body-detail" cx="872" cy="805" r="4"/>
+    <!-- Vents Top Ridge -->
+    <path d="M 330,548 L 350,548 L 345,553 L 328,553 Z" class="c-dark"/>
+    <path d="M 360,548 L 380,548 L 377,553 L 358,553 Z" class="c-dark"/>
+    <path d="M 390,548 L 410,548 L 409,553 L 389,553 Z" class="c-dark"/>
+    <path d="M 420,548 L 440,548 L 441,553 L 421,553 Z" class="c-dark"/>
+    <path d="M 450,548 L 470,548 L 472,553 L 453,553 Z" class="c-dark"/>
 
-    <!-- Antenna Joints Base Left & Right -->
-    <path class="body-detail" d="M 120 780 L 165 785 L 165 830 L 120 825 Z"/>
-    <path class="body-detail" d="M 880 780 L 835 785 L 835 830 L 880 825 Z"/>
+    <!-- 4. OUTER ANTENNAS WITH CONNECTED HINGES -->
+    <!-- OUTER LEFT ANTENNA & HINGE -->
+    <g>
+        <!-- Hinge Arm connected directly into chassis -->
+        <path d="M 140,630 L 165,630 L 165,650 L 140,650 Z" class="c-hinge"/>
+        <rect x="135" y="628" width="12" height="24" rx="3" class="c-accent"/>
+        <circle cx="141" cy="640" r="5" class="c-bevel"/>
+        <!-- Antenna Stem -->
+        <path d="M 98,160 Q 98,140 118,140 Q 138,140 138,160 L 142,630 Q 140,645 125,645 Q 110,645 100,630 Z" class="c-main"/>
+        <path d="M 118,140 Q 138,140 138,160 L 142,630 L 132,630 L 130,142 Z" class="c-panel"/>
+        <path d="M 102,150 Q 112,142 118,140 L 118,638 Q 106,634 102,620 Z" class="c-bevel"/>
+    </g>
 
-    <!-- Main Router Body (Rear View Profile) -->
-    <path class="main-body" d="M 160 740 Q 500 690 840 740 L 845 800 Q 500 870 155 800 Z"/>
-    
-    <!-- Inner Recessed Port Panel Area -->
-    <path class="body-detail" d="M 300 730 L 700 730 L 690 835 L 310 835 Z"/>
+    <!-- OUTER RIGHT ANTENNA & HINGE -->
+    <g>
+        <!-- Hinge Arm connected directly into chassis -->
+        <path d="M 635,630 L 660,630 L 660,650 L 635,650 Z" class="c-hinge"/>
+        <rect x="653" y="628" width="12" height="24" rx="3" class="c-accent"/>
+        <circle cx="659" cy="640" r="5" class="c-bevel"/>
+        <!-- Antenna Stem -->
+        <path d="M 662,160 Q 662,140 682,140 Q 702,140 702,160 L 700,630 Q 690,645 675,645 Q 660,645 658,630 Z" class="c-main"/>
+        <path d="M 682,140 Q 702,140 702,160 L 700,630 L 690,630 L 694,142 Z" class="c-panel"/>
+        <path d="M 664,150 Q 674,142 682,140 L 682,638 Q 670,634 664,620 Z" class="c-bevel"/>
+    </g>
 
-    <!-- Ports details inside panel -->
-    <!-- Power Jack (Round) -->
-    <circle class="port-bg" cx="360" cy="800" r="15"/>
-    <circle class="port-metal" cx="360" cy="800" r="5"/>
-    <text class="labels" x="360" y="828">POWER</text>
+    <!-- 5. INNER LEFT & RIGHT ANTENNAS WITH HINGES -->
+    <!-- Inner Left Antenna -->
+    <g>
+        <path d="M 235,625 L 265,625 L 265,665 L 235,665 Z" class="c-hinge"/>
+        <circle cx="250" cy="645" r="6" class="c-accent"/>
+        <path d="M 238,110 L 262,110 L 272,655 L 232,655 Z" class="c-main"/>
+        <path d="M 238,110 L 250,110 L 254,655 L 232,655 Z" class="c-panel"/>
+        <path d="M 250,110 L 262,110 L 272,655 L 254,655 Z" class="c-bevel"/>
+    </g>
 
-    <!-- Reset/WPS Button -->
-    <circle class="port-bg" cx="415" cy="805" r="8"/>
-    <text class="labels" x="415" y="828">RESET/WPS</text>
+    <!-- Inner Right Antenna -->
+    <g>
+        <path d="M 535,625 L 565,625 L 565,665 L 535,665 Z" class="c-hinge"/>
+        <circle cx="550" cy="645" r="6" class="c-accent"/>
+        <path d="M 538,110 L 562,110 L 568,655 L 528,655 Z" class="c-main"/>
+        <path d="M 538,110 L 550,110 L 546,655 L 528,655 Z" class="c-panel"/>
+        <path d="M 550,110 L 562,110 L 568,655 L 546,655 Z" class="c-bevel"/>
+    </g>
 
-    <!-- WAN Port (Internet Port - Usually colored/isolated) -->
-    <rect class="port-bg" x="450" y="775" width="50" height="40" rx="3"/>
-    <rect class="port-metal" x="455" y="785" width="40" height="20"/>
-    <path class="line-art" d="M 460 805 L 465 775 M 490 805 L 485 775"/>
-    <text class="labels" x="475" y="828">WAN</text>
+    <!-- 6. REAR PORT PANEL AREA -->
+    <rect x="280" y="580" width="240" height="80" rx="4" class="c-bevel"/>
+    <rect x="284" y="584" width="232" height="72" rx="3" class="c-dark"/>
 
-    <!-- LAN Port 1 -->
-    <rect class="port-bg" x="515" y="775" width="45" height="40" rx="3"/>
-    <rect class="port-metal" x="520" y="785" width="35" height="20"/>
-    <text class="labels" x="537" y="828">LAN</text>
+    <!-- Port Labels -->
+    <text x="300" y="656" font-family="sans-serif" font-size="7" font-weight="bold" class="c-pins">POWER</text>
+    <text x="333" y="656" font-family="sans-serif" font-size="6" font-weight="bold" class="c-pins">RESET/WPS</text>
+    <text x="382" y="656" font-family="sans-serif" font-size="7" font-weight="bold" class="c-pins">WAN</text>
+    <text x="417" y="656" font-family="sans-serif" font-size="7" font-weight="bold" class="c-pins">LAN 1</text>
+    <text x="450" y="656" font-family="sans-serif" font-size="7" font-weight="bold" class="c-pins">LAN 2</text>
+    <text x="483" y="656" font-family="sans-serif" font-size="7" font-weight="bold" class="c-pins">LAN 3</text>
 
-    <!-- LAN Port 2 -->
-    <rect class="port-bg" x="570" y="775" width="45" height="40" rx="3"/>
-    <rect class="port-metal" x="575" y="785" width="35" height="20"/>
-    <text class="labels" x="592" y="828">LAN</text>
+    <!-- Power Plug -->
+    <circle cx="312" cy="618" r="11" class="c-main"/>
+    <circle cx="312" cy="618" r="9" class="c-panel"/>
+    <circle cx="312" cy="618" r="5" class="c-dark"/>
+    <circle cx="312" cy="618" r="2" class="c-pins"/>
 
-    <!-- LAN Port 3 -->
-    <rect class="port-bg" x="625" y="775" width="45" height="40" rx="3"/>
-    <rect class="port-metal" x="630" y="785" width="35" height="20"/>
-    <text class="labels" x="647" y="828">LAN</text>
+    <!-- Reset / WPS Button -->
+    <circle cx="348" cy="620" r="6" class="c-main"/>
+    <circle cx="348" cy="620" r="4" class="c-dark"/>
 
-    <!-- Subtle line art details on the body curves -->
-    <path class="line-art" d="M 160 740 L 300 730"/>
-    <path class="line-art" d="M 840 740 L 700 730"/>
-    <path class="line-art" d="M 155 800 Q 500 855 845 800"/>
-  </g>
+    <!-- ETHERNET PORTS (WAN + 3 LAN PORTS - ALL EQUAL WIDTH = 28px, REDUCED HEIGHT = 32px) -->
+    <!-- 1. WAN Port (Position X: 376, Height: 32) -->
+    <g>
+        <rect x="376" y="604" width="28" height="32" rx="2" class="c-accent"/>
+        <rect x="378" y="606" width="24" height="28" rx="1" class="c-dark"/>
+        <path d="M 382,606 L 398,606 L 398,617 L 400,617 L 400,630 L 380,630 L 380,617 L 382,617 Z" class="c-main"/>
+        <!-- Pins -->
+        <line x1="384" y1="608" x2="384" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="386" y1="608" x2="386" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="388" y1="608" x2="388" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="390" y1="608" x2="390" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="392" y1="608" x2="392" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="394" y1="608" x2="394" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="396" y1="608" x2="396" y2="615" stroke="#8c929a" stroke-width="1"/>
+    </g>
+
+    <!-- 2. LAN Port 1 (Position X: 410, Height: 32) -->
+    <g>
+        <rect x="410" y="604" width="28" height="32" rx="2" class="c-accent"/>
+        <rect x="412" y="606" width="24" height="28" rx="1" class="c-dark"/>
+        <path d="M 416,606 L 432,606 L 432,617 L 434,617 L 434,630 L 414,630 L 414,617 L 416,617 Z" class="c-main"/>
+        <!-- Pins -->
+        <line x1="418" y1="608" x2="418" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="420" y1="608" x2="420" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="422" y1="608" x2="422" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="424" y1="608" x2="424" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="426" y1="608" x2="426" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="428" y1="608" x2="428" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="430" y1="608" x2="430" y2="615" stroke="#8c929a" stroke-width="1"/>
+    </g>
+
+    <!-- 3. LAN Port 2 (Position X: 444, Height: 32) -->
+    <g>
+        <rect x="444" y="604" width="28" height="32" rx="2" class="c-accent"/>
+        <rect x="446" y="606" width="24" height="28" rx="1" class="c-dark"/>
+        <path d="M 450,606 L 466,606 L 466,617 L 468,617 L 468,630 L 448,630 L 448,617 L 450,617 Z" class="c-main"/>
+        <!-- Pins -->
+        <line x1="452" y1="608" x2="452" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="454" y1="608" x2="454" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="456" y1="608" x2="456" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="458" y1="608" x2="458" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="460" y1="608" x2="460" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="462" y1="608" x2="462" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="464" y1="608" x2="464" y2="615" stroke="#8c929a" stroke-width="1"/>
+    </g>
+
+    <!-- 4. LAN Port 3 (Position X: 478, Height: 32) -->
+    <g>
+        <rect x="478" y="604" width="28" height="32" rx="2" class="c-accent"/>
+        <rect x="480" y="606" width="24" height="28" rx="1" class="c-dark"/>
+        <path d="M 484,606 L 500,606 L 500,617 L 502,617 L 502,630 L 482,630 L 482,617 L 484,617 Z" class="c-main"/>
+        <!-- Pins -->
+        <line x1="486" y1="608" x2="486" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="488" y1="608" x2="488" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="490" y1="608" x2="490" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="492" y1="608" x2="492" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="494" y1="608" x2="494" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="496" y1="608" x2="496" y2="615" stroke="#8c929a" stroke-width="1"/>
+        <line x1="498" y1="608" x2="498" y2="615" stroke="#8c929a" stroke-width="1"/>
+    </g>
+
+    <!-- Chassis Feet Base Visible -->
+    <rect x="210" y="680" width="30" height="4" rx="2" class="c-dark"/>
+    <rect x="560" y="680" width="30" height="4" rx="2" class="c-dark"/>
+
 </svg>
