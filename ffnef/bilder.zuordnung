@@ -87,3 +87,25 @@ ubiquiti-unifi-outdoor+	ubiquiti-unifiap-outdoor-
 d-link-dir825	d-link-dir-825-rev-b1
 gl.inet-6416	gl-inet-6416a-v1
 gl.inet-gl-ar300m16	gl-inet-gl-ar300m16
+
+# --- 24.10.2026: Namen der Geraeteanleitungen -------------------------
+# Die Anleitungen (gluon-rampe-installer, html/de/<gluon_name>.html) zeigen
+# oben ../../pictures/<gluon_name>.svg. Diese Gluon-Namen weichen vom Bildrepo
+# ab; jedes Paar von Hand geprueft (gleiches Geraet, gleiches Gehaeuse).
+# Eigene Bilder dafuer stehen als Symlinks in ffnef/bilder/ (-v1, -a1).
+d-link-dap-1330-a1             d-link-dap-1330
+netgear-wndr3700-v4            netgear-wndr3700v4
+netgear-wndrmac-v2             netgear-wndrmacv2
+netgear-wnr2200-16m            netgear-wnr2200
+netgear-wnr2200-8m             netgear-wnr2200
+nexx-wt3020-8m                 nexx-wt3020
+tp-link-archer-c2600           tp-link-archer-c2600-v1
+tp-link-tl-wr842n-v3           tp-link-tl-wr842n-nd-v3
+buffalo-wzr-hp-g300nh-rtl8366s buffalo-wzr-hp-g300nh
+buffalo-wzr-hp-ag300h          buffalo-wzr-hp-ag300h-wzr-600dhp
+buffalo-wzr-600dhp             buffalo-wzr-hp-ag300h-wzr-600dhp
+ubiquiti-nanostation-loco-m-xw ubiquiti-loco-m-xw
+ubiquiti-unifi-ap-outdoor+     ubiquiti-unifiap-outdoor-
+x86-generic                    x86-generic.img
+x86-legacy                     x86-legacy.img
+x86-64                         x86-generic.img
