@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mercusys MR80X.
+
+     Eigene Zeichnung, weil es in freifunk/device-pictures keine dieses
+     Geraets gibt.
+
+     Vorlage:  Vektorzeichnung von hinten, von adorfer, 23.10.2026
+               (austausch/mr80x router_strichzeichnung.svg)
+     Urheber:  adorfer, fuer Neanderfunk
+     Lizenz:   CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
+
+     Geaendert: weisser Hintergrund und Schatten entfernt (Bild steht frei
+     auf jeder Seitenfarbe), viewBox auf das Geraet zugeschnitten, feste
+     Anzeigegroesse 320 x 297. Anschluesse geprueft gegen das
+     Mercusys-Datenblatt (Geraetedaten mercusys-mr80x-v3): von links
+     Strom, WPS/Reset-Knopf, WAN, LAN1 bis LAN3.
+
+     ACHTUNG: In diesem Kommentar keine zwei aufeinanderfolgenden
+     Bindestriche (XML verbietet das, die Datei waere nicht wohlgeformt). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="90 100 820 760" width="320" height="297">
+  <!-- Style Definition with 6 distinct colors for vector/line art look -->
+  <style>
+    .main-body { fill: #1a1a1a; stroke: #404040; stroke-width: 3; }
+    .body-detail { fill: #2d2d2d; stroke: #404040; stroke-width: 2; }
+    .antenna { fill: #2d2d2d; stroke: #404040; stroke-width: 3; stroke-linejoin: round; }
+    .port-bg { fill: #000000; stroke: #404040; stroke-width: 2; }
+    .port-metal { fill: #808080; }
+    .labels { fill: #b3b3b3; font-family: sans-serif; font-size: 8px; text-anchor: middle; }
+    .line-art { fill: none; stroke: #404040; stroke-width: 2; }
+  </style>
+
+  <g id="router">
+    <!-- Antennas (Left to Right) -->
+    <!-- Antenna 1 (Far Left) -->
+    <path class="antenna" d="M 100 170 L 135 175 L 155 820 L 120 825 Z"/>
+    <circle class="body-detail" cx="128" cy="805" r="4"/>
+    
+    <!-- Antenna 2 (Inner Left) -->
+    <path class="antenna" d="M 265 110 L 305 112 L 315 850 L 275 850 Z"/>
+
+    <!-- Antenna 3 (Inner Right) -->
+    <path class="antenna" d="M 695 112 L 735 110 L 725 850 L 685 850 Z"/>
+
+    <!-- Antenna 4 (Far Right) -->
+    <path class="antenna" d="M 865 175 L 900 170 L 880 825 L 845 820 Z"/>
+    <circle class="body-detail" cx="872" cy="805" r="4"/>
+
+    <!-- Antenna Joints Base Left & Right -->
+    <path class="body-detail" d="M 120 780 L 165 785 L 165 830 L 120 825 Z"/>
+    <path class="body-detail" d="M 880 780 L 835 785 L 835 830 L 880 825 Z"/>
+
+    <!-- Main Router Body (Rear View Profile) -->
+    <path class="main-body" d="M 160 740 Q 500 690 840 740 L 845 800 Q 500 870 155 800 Z"/>
+    
+    <!-- Inner Recessed Port Panel Area -->
+    <path class="body-detail" d="M 300 730 L 700 730 L 690 835 L 310 835 Z"/>
+
+    <!-- Ports details inside panel -->
+    <!-- Power Jack (Round) -->
+    <circle class="port-bg" cx="360" cy="800" r="15"/>
+    <circle class="port-metal" cx="360" cy="800" r="5"/>
+    <text class="labels" x="360" y="828">POWER</text>
+
+    <!-- Reset/WPS Button -->
+    <circle class="port-bg" cx="415" cy="805" r="8"/>
+    <text class="labels" x="415" y="828">RESET/WPS</text>
+
+    <!-- WAN Port (Internet Port - Usually colored/isolated) -->
+    <rect class="port-bg" x="450" y="775" width="50" height="40" rx="3"/>
+    <rect class="port-metal" x="455" y="785" width="40" height="20"/>
+    <path class="line-art" d="M 460 805 L 465 775 M 490 805 L 485 775"/>
+    <text class="labels" x="475" y="828">WAN</text>
+
+    <!-- LAN Port 1 -->
+    <rect class="port-bg" x="515" y="775" width="45" height="40" rx="3"/>
+    <rect class="port-metal" x="520" y="785" width="35" height="20"/>
+    <text class="labels" x="537" y="828">LAN</text>
+
+    <!-- LAN Port 2 -->
+    <rect class="port-bg" x="570" y="775" width="45" height="40" rx="3"/>
+    <rect class="port-metal" x="575" y="785" width="35" height="20"/>
+    <text class="labels" x="592" y="828">LAN</text>
+
+    <!-- LAN Port 3 -->
+    <rect class="port-bg" x="625" y="775" width="45" height="40" rx="3"/>
+    <rect class="port-metal" x="630" y="785" width="35" height="20"/>
+    <text class="labels" x="647" y="828">LAN</text>
+
+    <!-- Subtle line art details on the body curves -->
+    <path class="line-art" d="M 160 740 L 300 730"/>
+    <path class="line-art" d="M 840 740 L 700 730"/>
+    <path class="line-art" d="M 155 800 Q 500 855 845 800"/>
+  </g>
+</svg>
