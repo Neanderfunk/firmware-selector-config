@@ -158,6 +158,57 @@ Produktfoto wird eine Silhouette.
 ihn wäre die Umstellung der stille Totalausfall für jedes Gerät ohne Bild
 gewesen.
 
+### Eigene Zeichnungen nach Vorlagen von adorfer (seit 21.10.2026)
+
+Für Geräte ohne Bild in `freifunk/device-pictures`, oder wenn das dortige Bild
+falsch ist (Farbe, Version), liegen eigene SVGs in `ffnef/bilder/`. Stand
+25.10.2026: 37 Dateien, dazu 25 Symlinks für weitere Namen desselben Geräts.
+Eigene Dateien gewinnen immer, auch über `bilder.zuordnung`.
+
+Vorlagen schickt adorfer, meist mit einem Bildgenerator erzeugt, oft mit
+einem Foto zum Abgleich. Der Ablauf, so wie er sich eingespielt hat:
+
+* **Erst prüfen, dann zeichnen.** Anschlüsse, Reihenfolge, Taster und Farben
+  gegen das Foto, die Gerätedaten (`geraetedaten/daten/<image>.json`, Felder
+  `ports`, `reset_knopf`, `antennen_anzahl`) und notfalls FCC-Außenfotos.
+  Der Generator erfindet regelmäßig: eine Antenne zu viel (X5000R), falsche
+  oder verdrehte Port-Nummern (WR3000H, WR3000P), USB statt Stiftleiste
+  (NWA50AX Pro), farbige Rahmen, Taster oder LEDs, die es nicht gibt (M30,
+  AP3000 Wall), Fantasietext auf Typenschildern. Weicht etwas ab: adorfer
+  fragen, nicht raten.
+* **Farben nur so weit ändern, wie adorfer es will.** Umfärben einer weißen
+  Zeichnung in ein dunkles oder blaues Gerät geht oft schief (OpenWrt One,
+  TR3000: „weiß lassen“). Bewährt: dunkle Geräte als sehr dunkles Grau mit
+  gestauchter Helligkeit, damit die schwarzen Konturen sichtbar bleiben
+  (Archer AX23, C7 v4).
+* **Schrift als SVG-Text.** Kleine Beschriftungen zerfallen beim
+  Vektorisieren. Vorher aus dem Raster entfernen (lange Linien schonen),
+  danach als `<text>` neu setzen, Lage gegen das Original prüfen. Zeichen,
+  die die Schrift nicht hat (⎓), als Pfade zeichnen.
+* **Größe unter etwa 100 KB.** `vtracer --mode polygon` mit fester Palette
+  aus den Tönen der Vorlage; feine Muster (Lochgitter, Punkte) als Fläche
+  oder als SVG-`pattern`. Seitenverhältnis möglichst 2:1 oder schmaler, die
+  Karte zeigt die Bilder 150 px hoch.
+* **Kopfkommentar** je Datei: Gerät, Vorlage, Urheber adorfer, Lizenz CC BY-SA
+  4.0, was gegenüber der Vorlage geändert wurde und warum, Werkzeugeinstellung.
+  Keine zwei Bindestriche hintereinander (XML-Kommentar), `bilder-pruefen.sh`.
+* **Namen:** die Datei unter dem devices.js-Namen, Symlinks für die Namen mit
+  Version oder Variante (`-v1`, `-a1`, Gluon-Namen der Anleitungen).
+* **Archiv:** Vorlage und Foto nach `privat/bilder/` mit `.md` (Fotos nur als
+  Referenz, sie gehören den Herstellern).
+* **Karte:** Die Mapserver-Session übernimmt die Bilder von Hand unter den
+  Kartennamen (normalisiertes Modell aus respondd, z. B. `ubiquiti-unifi-u6-pro`)
+  in mapserver `web/geraetebilder/`. Ihr nach jedem Bild Commit, Größe und
+  Kartennamen melden.
+
+### Bilder in den Geräteanleitungen (seit 24.10.2026)
+
+Jede Geräteseite der Anleitungen zeigt unter der Überschrift
+`../../pictures/<gluon_name>.svg` (Generator im gluon-rampe-installer,
+6f8749dc). Fehlt das Bild, entfernt sich das Element selbst. Damit die
+Gluon-Namen treffen, stehen Zuordnungen und Symlinks für sie hier
+(c9f58f1, ddd5e04). Stand 24.10.2026: 172 von 252 Seiten mit Bild.
+
 ### Lizenz der Bilder
 
 `freifunk/device-pictures` steht unter **CC-BY-NC-SA 4.0** -- laut eigener
@@ -499,8 +550,10 @@ Drei Wege, die sich kombinieren lassen:
 
 ## Wer diese beiden Repos pflegt
 
-Seit dem 06.10.2026 gehören `gluon-firmware-selector` (der Fork) und dieses
-Repo der Session **Supernode-Betrieb und Operations**. Wer anderswo einen
+Seit dem 23.10.2026 gehören `gluon-firmware-selector` (der Fork) und dieses
+Repo der Session **Routerwahl/Gluon-Selektor und FlashAnleitungen** (vorher,
+seit 06.10.2026, Supernode-Betrieb und Operations, die jetzt nur noch Server
+und Ansible macht). Wer anderswo einen
 Fehler findet, meldet ihn dorthin mit Datei und Zeile, statt selbst zu pushen.
 
 Das ist keine Formalie, sondern aus zwei Vorfällen an einem Tag gelernt:
