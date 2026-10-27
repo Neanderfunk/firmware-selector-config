@@ -148,6 +148,12 @@ setze "$CFG/ffnef/versionen-anzeige.json" versionen-anzeige.json
 setze "$CFG/ffnef/config.js"  config.js
 setze "$CFG/ffnef/devices.js" devices.js
 
+# --- Fremde Anleitungen ---------------------------------------------------
+# OpenWrt-Anleitungen fuer Xiaomi-Geraete, die adorfer am 27.10.2026
+# geliefert hat und die wir ungeprueft ausliefern. config.js verweist aus
+# ffnef_ohne_anleitung darauf.
+setze "$CFG/ffnef/xiaomi" xiaomi
+
 # --- Installationsanleitungen je Geraet -----------------------------------
 # Fertig erzeugte Seiten aus gluon-rampe-installer, bewusst kein Bauschritt
 # auf dem Webserver: kein Python, keine Abhaengigkeiten, und der Weg ueber

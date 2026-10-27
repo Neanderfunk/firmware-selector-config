@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anleitung: OpenWrt für Xiaomi Mi Router 4A Gigabit Edition</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { background: #dc0043; color: white; padding: 20px; border-radius: 6px; }
+        h1 { margin: 0; font-size: 1.6em; }
+        .spec { background: #f4f6f8; padding: 15px; border-radius: 6px; margin: 20px 0; display: flex; justify-content: space-between; }
+        .warning { background: #fff8e6; border-left: 4px solid #ffb400; padding: 10px 15px; margin: 20px 0; }
+        pre { background: #222; color: #fff; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 0.9em; }
+        code { font-family: monospace; }
+        a { color: #dc0043; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OpenWrt Installation: Xiaomi Mi Router 4A Gigabit Edition</h1>
+    </header>
+    
+    <div class="spec">
+        <div><strong>Target:</strong> ramips / mt7621</div>
+        <div><strong>SoC:</strong> MediaTek MT7621AT</div>
+        <div><strong>Flash Partition:</strong> <code>OS1</code></div>
+    </div>
+
+    <div class="warning">
+        <strong>Achtung:</strong> Flashen auf eigene Gefahr. Gerät während des Vorgangs nicht ausschalten!
+    </div>
+
+    <h2>1. Vorbereitung (OpenWRTInvasion)</h2>
+    <pre>git clone https://github.com/acecilia/OpenWRTInvasion.git
+cd OpenWRTInvasion
+pip3 install -r requirements.txt</pre>
+
+    <h2>2. Stok auslesen & Exploit</h2>
+    <p>Melden Sie sich unter http://192.168.31.1 an und kopieren Sie den <code>stok</code>-Wert aus der URL.</p>
+    <pre>python3 remote_command_execution_vulnerability.py</pre>
+
+    <h2>3. Firmware herunterladen & HTTP-Server</h2>
+    <p>Firmware herunterladen: <a href="https://firmware-selector.openwrt.org/?version=23.05.5&target=ramips%2Fmt7621&id=xiaomi_mi-router-4a-gigabit" target="_blank">OpenWrt Download</a></p>
+    <pre>python3 -m http.server 8000</pre>
+
+    <h2>4. Flashen via Telnet</h2>
+    <pre>telnet 192.168.31.1
+cd /tmp
+wget http://&lt;PC-IP&gt;:8000/openwrt-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin -O firmware.bin
+mtd -r write firmware.bin OS1</pre>
+
+    <h2>5. Erstzugriff</h2>
+    <p>Nach dem Neustrat erreichbar unter <strong>http://192.168.1.1</strong></p>
+</body>
+</html>
