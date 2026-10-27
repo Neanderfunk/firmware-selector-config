@@ -480,15 +480,18 @@ var config = {
   // ins OpenWrt-Wiki (am 22.10.2026 geprueft; RA75 und 4A 100M
   // International liegen dort unter inbox/ und koennen umziehen, Ersatz
   // dann https://openwrt.org/toh/xiaomi/start). "zusatz" ist optional.
+  // Seit 27.10.2026 zeigen 4A 100M, 4A Gigabit und 4C auf OpenWrt-
+  // Anleitungen von adorfer unter xiaomi/ (ungeprueft eingebunden, Zuordnung
+  // nach dem Seitentitel); "knopf" ersetzt dann den Wiki-Knopftext.
   ffnef_ohne_anleitung: {
     "Xiaomi": {
       "AX3200 (RB03)": {url: "https://openwrt.org/toh/xiaomi/ax3200"},
       "Mi RA75": {url: "https://openwrt.org/inbox/toh/xiaomi/mi_wifi_range_extender_ac1200_model_ra75"},
       "Mi Router 3G": {url: "https://openwrt.org/toh/xiaomi/mir3g"},
-      "Mi Router 4A (100M Edition)": {url: "https://openwrt.org/toh/xiaomi/mi_router_4a_mir4a_100m"},
+      "Mi Router 4A (100M Edition)": {url: "xiaomi/Anleitung_OpenWrt_r4ac.html", knopf: 'Anleitung: OpenWrt installieren (nicht von uns geprüft)'},
       "Mi Router 4A (100M International Edition)": {url: "https://openwrt.org/inbox/toh/xiaomi/r4ac"},
-      "Mi Router 4A (Gigabit Edition)": {url: "https://openwrt.org/toh/xiaomi/xiaomi_mi_router_4a_gigabit_edition"},
-      "Mi Router 4C": {url: "https://openwrt.org/toh/xiaomi/xiaomi_mi_router_4c"},
+      "Mi Router 4A (Gigabit Edition)": {url: "xiaomi/Anleitung_OpenWrt_r4ag.html", knopf: 'Anleitung: OpenWrt installieren (nicht von uns geprüft)'},
+      "Mi Router 4C": {url: "xiaomi/Anleitung_OpenWrt_r4cm.html", knopf: 'Anleitung: OpenWrt installieren (nicht von uns geprüft)'},
       "MiWiFi Mini": {url: "https://openwrt.org/toh/xiaomi/miwifi_mini"},
       "AX3600": {url: "https://openwrt.org/toh/xiaomi/ax3600"},
       "Mi Router AC2100": {url: "https://openwrt.org/toh/xiaomi/mi_router_ac2100"},
