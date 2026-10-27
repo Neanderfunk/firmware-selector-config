@@ -294,7 +294,7 @@
       return;
     }
     if (ohne) {
-      a.textContent = 'OpenWrt-Wiki zu diesem Gerät (englisch)';
+      a.textContent = ohne.knopf || 'OpenWrt-Wiki zu diesem Gerät (englisch)';
       return;
     }
     if (!eigen) return;
