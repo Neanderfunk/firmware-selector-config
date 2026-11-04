@@ -29,7 +29,8 @@ AN = os.environ.get("FEHLERMELDUNG_AN", "projekt@neanderfunk.de")
 VON = os.environ.get("FEHLERMELDUNG_VON", "Neanderfunk Gerätedaten <kontakt@neanderfunk.de>")
 TROCKEN = os.environ.get("FEHLERMELDUNG_TROCKEN") == "1"
 
-SEITEN = ("https://routerwahl.ffnef.de", "https://routersoftware.ffnef.de")
+SEITEN = ("https://router.neanderfunk.de", "https://routerwahl.ffnef.de",
+          "https://routersoftware.ffnef.de")
 JE_IP_STUNDE = 5
 JE_TAG = 40
 GROESSE = 8192
