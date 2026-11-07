@@ -605,7 +605,9 @@ Bis 04.11.2026 hieß die Seite routerwahl.ffnef.de; der Name bleibt als
 heißt weiter `/var/www/routerwahl.ffnef.de`.
 Den nginx-vhost (beide Namen) bringt `deploy.sh` aus
 `dienst/nginx/router.neanderfunk.de.conf` mit (seit 07.11.2026, vorher von
-Hand): Zeiger nach `/etc/nginx/sites-enabled/`, `nginx -t`, reload; scheitert
+Hand; ebenso `routersoftware.neanderfunk.de.conf` für den Selector, dort
+leiten routersoftware.ffnef.de, routerfirmware.ffnef.de und
+routerfirmware.neanderfunk.de per 301 um): Zeiger nach `/etc/nginx/sites-enabled/`, `nginx -t`, reload; scheitert
 der Test, kommt der alte Stand zurück. Hier keine http→https-Umleitung, die
 macht der vorgeschaltete Proxy.
 
