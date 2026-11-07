@@ -273,5 +273,31 @@ if [ -n "$WERKZEUGBIN" ]; then
   fi
 fi
 
+# --- Dienst "Fehler melden" -----------------------------------------------
+# Unit und Systembenutzer sind Zeiger in diesen Klon. Aendert ein Pull die
+# Unit, braucht systemd ein daemon-reload, und fehlermeldung.py laeuft erst
+# nach einem Neustart in der neuen Fassung. Fehlt der Benutzer, startet der
+# Dienst mit status=217/USER nicht (so bis 07.11.2026, "Fehler melden" gab
+# 502). Deshalb hier jedes Mal: Zeiger setzen, Benutzer anlegen (idempotent),
+# daemon-reload, Dienst einschalten und neu starten (adorfer 07.11.2026).
+# DIENST= (leer) schaltet das ab, z. B. auf einem Testrechner.
+DIENST="${DIENST-fehlermeldung}"
+if [ -n "$DIENST" ] && command -v systemctl >/dev/null && [ -d /run/systemd/system ]; then
+  mkdir -p /etc/sysusers.d
+  ln -sfn "$CFG/dienst/$DIENST.sysusers" "/etc/sysusers.d/$DIENST.conf"
+  systemd-sysusers
+  ln -sfn "$CFG/dienst/$DIENST.service" "/etc/systemd/system/$DIENST.service"
+  systemctl daemon-reload
+  systemctl enable --quiet "$DIENST"
+  systemctl restart "$DIENST"
+  sleep 1
+  if systemctl is-active --quiet "$DIENST"; then
+    sage "$DIENST: neu gestartet, laeuft"
+  else
+    sage "FEHLER: $DIENST laeuft nicht:"
+    systemctl status "$DIENST" --no-pager -n 5 || true
+  fi
+fi
+
 sage "fertig. Inhalt von $WURZEL:"
 ls -la "$WURZEL"

@@ -14,26 +14,24 @@ den lokalen Mailer (`/usr/sbin/sendmail`, auf dem Firmware-Server nullmailer).
   je IP und Stunde und 40 je Tag. IP-Adressen nur im Arbeitsspeicher.
 - Nur Python-Standardbibliothek.
 
-## Einrichtung auf dem Firmware-Server (einmalig, als root)
+## Einrichtung auf dem Firmware-Server
 
-1. Benutzer anlegen, Dienst eintragen und starten:
-   `mkdir -p /etc/sysusers.d` (fehlt auf Ubuntu 24.04),
-   `ln -s /var/www/selector-config/dienst/fehlermeldung.sysusers /etc/sysusers.d/fehlermeldung.conf`
-   und `systemd-sysusers`, dann
-   `ln -s /var/www/selector-config/dienst/fehlermeldung.service /etc/systemd/system/`,
-   dann `systemctl daemon-reload` und `systemctl enable --now fehlermeldung`.
-2. In die server-Blöcke von router.neanderfunk.de und routersoftware.neanderfunk.de (die vhosts in dienst/nginx/ haben das schon)
-   `include /var/www/selector-config/dienst/fehlermeldung-nginx.conf;`
-   eintragen, `nginx -t`, `systemctl reload nginx`.
-3. Prüfen: `curl -s -X POST https://router.neanderfunk.de/fehler-melden -d 'image=x&text=y&quiz=falsch'`
-   muss `{"ok": false, "fehler": "Das stimmt nicht ganz. Tipp: Es ist ein Wort."}` liefern.
+Macht seit 07.11.2026 `deploy.sh` bei jedem Lauf (Abschnitt „Dienst Fehler
+melden“, abschaltbar mit `DIENST=`): Zeiger nach `/etc/sysusers.d/` und
+`/etc/systemd/system/`, `systemd-sysusers`, `systemctl daemon-reload`,
+`enable` und `restart`. Die nginx-Einbindung steht in den vhosts unter
+`dienst/nginx/`, die `deploy.sh` ebenfalls setzt und neu lädt.
+
+Prüfen: `curl -s -X POST https://router.neanderfunk.de/fehler-melden -d 'image=x&text=y&quiz=falsch'`
+muss `{"ok": false, "fehler": "Das stimmt nicht ganz. Tipp: Es ist ein Wort."}` liefern.
 
 Testen ohne Mail: `FEHLERMELDUNG_TROCKEN=1 FEHLERMELDUNG_ADRESSE=127.0.0.1:18471 python3 -I dienst/fehlermeldung.py`
 gibt die Mail auf stderr aus.
 
-Nach Änderungen an `fehlermeldung.py`: `deploy.sh` wie gewohnt, dann
-`systemctl restart fehlermeldung`.
+Nach Änderungen an `fehlermeldung.py` genügt `deploy.sh`, es startet den
+Dienst neu.
 
 Startet der Dienst mit `status=217/USER` nicht, fehlt der Benutzer
-`fehlermeldung`: Schritt 1 (sysusers) wurde nicht ausgeführt. So war es
+`fehlermeldung` (sysusers nicht gelaufen; `deploy.sh` holt das inzwischen
+selbst nach). So war es
 nach 5613098 bis 07.11.2026, „Fehler melden“ gab bis dahin 502.
