@@ -603,6 +603,11 @@ Quellen, steht die andere Angabe rot darunter.
 Bis 04.11.2026 hieß die Seite routerwahl.ffnef.de; der Name bleibt als
 301 auf router.neanderfunk.de stehen (gedruckte Hinweise). Der Webroot
 heißt weiter `/var/www/routerwahl.ffnef.de`.
+Den nginx-vhost (beide Namen) bringt `deploy.sh` aus
+`dienst/nginx/router.neanderfunk.de.conf` mit (seit 07.11.2026, vorher von
+Hand): Zeiger nach `/etc/nginx/sites-enabled/`, `nginx -t`, reload; scheitert
+der Test, kommt der alte Stand zurück. Hier keine http→https-Umleitung, die
+macht der vorgeschaltete Proxy.
 
 Zweite Seite für Leute, die noch einen Router suchen (Filtersuche), aus
 `Neanderfunk/geraetedaten` (`web/`). `deploy.sh` baut dafür den Webroot

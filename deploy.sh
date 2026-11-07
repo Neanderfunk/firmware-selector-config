@@ -197,6 +197,39 @@ if [ -n "$WAHL" ] && [ -d "$GD/web" ]; then
   sage "routerwahl: $WAHL verknuepft"
 fi
 
+# --- nginx-vhost der Routerwahl -------------------------------------------
+# router.neanderfunk.de samt 301 vom alten Namen routerwahl.ffnef.de steht
+# in dienst/nginx/ (adorfer 05.11.2026: der vhost gehoert hierher). Die
+# frueheren Handdateien fuer routerwahl.ffnef.de wuerden denselben
+# server_name doppelt belegen; sie kommen einmalig nach sites-available
+# (Endung .vor-deploy) und zurueck, falls "nginx -t" scheitert.
+# NGINXSITES= (leer) schaltet das ab, z. B. auf einem Testrechner.
+NGINXSITES="${NGINXSITES-/etc/nginx/sites-enabled}"
+if [ -n "$NGINXSITES" ] && [ -d "$NGINXSITES" ] && command -v nginx >/dev/null; then
+  ablage="$(dirname "$NGINXSITES")/sites-available"
+  beiseite=""
+  for alt in "$NGINXSITES/routerwahl.ffnef.de.conf" "$NGINXSITES/routerwahl.ffnef.de.conf~"; do
+    [ -f "$alt" ] && [ ! -L "$alt" ] || continue
+    mkdir -p "$ablage"
+    mv "$alt" "$ablage/$(basename "$alt").vor-deploy"
+    beiseite="$beiseite $(basename "$alt")"
+    sage "nginx: $alt nach $ablage beiseitegelegt"
+  done
+  ln -sfn "$CFG/dienst/nginx/router.neanderfunk.de.conf" "$NGINXSITES/router.neanderfunk.de.conf"
+  if nginx -t 2>/dev/null; then
+    systemctl reload nginx
+    sage "nginx: router.neanderfunk.de.conf aktiv, neu geladen"
+  else
+    rm -f "$NGINXSITES/router.neanderfunk.de.conf"
+    for b in $beiseite; do
+      mv "$ablage/$b.vor-deploy" "$NGINXSITES/$b"
+    done
+    sage "FEHLER: nginx -t scheitert mit router.neanderfunk.de.conf, alter Stand zurueck:"
+    nginx -t || true
+    exit 1
+  fi
+fi
+
 # --- Werkzeuge auf den Pfad legen -----------------------------------------
 # Diese Skripte werden von Hand aufgerufen, meist als
 # "ssh firmware6 cudy-zwischenfirmware-spiegeln.py". Eine solche Shell ist
