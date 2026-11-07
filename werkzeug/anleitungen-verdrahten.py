@@ -48,7 +48,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-VORGABE_INDEX = "https://routersoftware.ffnef.de/anleitungen/index.json"
+VORGABE_INDEX = "https://routersoftware.neanderfunk.de/anleitungen/index.json"
 HIER = Path(__file__).resolve().parent.parent
 
 TABELLEN = [
