@@ -147,6 +147,8 @@ setze "$CFG/ffnef/fehler-melden.js" fehler-melden.js
 setze "$CFG/ffnef/versionen-anzeige.json" versionen-anzeige.json
 setze "$CFG/ffnef/config.js"  config.js
 setze "$CFG/ffnef/devices.js" devices.js
+# Vorschaubild fuer Links in Chats und sozialen Netzen (og:image in index.html)
+setze "$CFG/ffnef/vorschau.png" vorschau.png
 
 # --- Fremde Anleitungen ---------------------------------------------------
 # OpenWrt-Anleitungen fuer Xiaomi-Geraete, die adorfer am 27.10.2026
@@ -184,7 +186,7 @@ fi
 WAHL="${WAHL-$BASIS/routerwahl.ffnef.de}"
 if [ -n "$WAHL" ] && [ -d "$GD/web" ]; then
   mkdir -p "$WAHL"
-  for d in index.html routerwahl.js routerwahl.css; do
+  for d in index.html routerwahl.js routerwahl.css vorschau.png; do
     ln -sfn "$GD/web/$d" "$WAHL/$d"
   done
   ln -sfn "$UP/router.png" "$WAHL/router.png"
