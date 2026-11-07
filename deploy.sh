@@ -162,7 +162,7 @@ setze "$CFG/ffnef/xiaomi" xiaomi
 # rsync fuer Server ohne Internetzugang funktioniert unveraendert.
 #
 # Der Symlink zeigt auf anleitungen/html, NICHT auf anleitungen: die
-# Basis-URL https://routersoftware.ffnef.de/anleitungen muss auf das
+# Basis-URL https://routersoftware.neanderfunk.de/anleitungen muss auf das
 # html-Verzeichnis zeigen, sonst laufen die Verweise in der index.json ins
 # Leere.
 setze "$ANL/anleitungen/html" anleitungen

@@ -1,6 +1,6 @@
 # Fehler melden
 
-Unter den Gerätedaten (routersoftware.ffnef.de und router.neanderfunk.de) steht
+Unter den Gerätedaten (routersoftware.neanderfunk.de und router.neanderfunk.de) steht
 ein Knopf „Fehler melden“ (`ffnef/fehler-melden.js`). Er schickt die Meldung
 per POST an `/fehler-melden` derselben Seite. Dort nimmt sie
 `fehlermeldung.py` an und verschickt eine Mail an projekt@neanderfunk.de über
@@ -22,7 +22,7 @@ den lokalen Mailer (`/usr/sbin/sendmail`, auf dem Firmware-Server nullmailer).
    und `systemd-sysusers`, dann
    `ln -s /var/www/selector-config/dienst/fehlermeldung.service /etc/systemd/system/`,
    dann `systemctl daemon-reload` und `systemctl enable --now fehlermeldung`.
-2. In die server-Blöcke von router.neanderfunk.de und routersoftware.ffnef.de
+2. In die server-Blöcke von router.neanderfunk.de und routersoftware.neanderfunk.de (die vhosts in dienst/nginx/ haben das schon)
    `include /var/www/selector-config/dienst/fehlermeldung-nginx.conf;`
    eintragen, `nginx -t`, `systemctl reload nginx`.
 3. Prüfen: `curl -s -X POST https://router.neanderfunk.de/fehler-melden -d 'image=x&text=y&quiz=falsch'`

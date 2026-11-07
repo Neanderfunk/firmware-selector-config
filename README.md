@@ -1,7 +1,7 @@
 # Firmware-Selector: unsere Konfiguration
 
 Die lokale Konfiguration des Community-Downloaders
-**https://routersoftware.ffnef.de** (gluon-firmware-selector).
+**https://routersoftware.neanderfunk.de** (bis 07.11.2026 routersoftware.ffnef.de, bleibt als 301) (gluon-firmware-selector).
 
 Der Upstream-Code liegt getrennt davon in
 [Neanderfunk/gluon-firmware-selector](https://github.com/Neanderfunk/gluon-firmware-selector),

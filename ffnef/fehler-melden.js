@@ -1,4 +1,4 @@
-/* "Fehler melden" unter den Geraetedaten, fuer routersoftware.ffnef.de und
+/* "Fehler melden" unter den Geraetedaten, fuer routersoftware.neanderfunk.de und
    router.neanderfunk.de. Schickt per POST an /fehler-melden derselben Seite;
    dahinter steht dienst/fehlermeldung.py, der die Mail verschickt.
 

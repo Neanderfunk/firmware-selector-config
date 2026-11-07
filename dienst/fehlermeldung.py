@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Nimmt "Fehler melden" von router.neanderfunk.de und routersoftware.ffnef.de
+"""Nimmt "Fehler melden" von router.neanderfunk.de und routersoftware.neanderfunk.de
 an und schickt daraus eine Mail an projekt@neanderfunk.de.
 
 Laeuft als kleiner Dienst auf localhost; nginx reicht POST /fehler-melden

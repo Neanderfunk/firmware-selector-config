@@ -1,4 +1,4 @@
-# "Fehler melden" fuer router.neanderfunk.de und routersoftware.ffnef.de.
+# "Fehler melden" fuer router.neanderfunk.de und routersoftware.neanderfunk.de.
 # Einrichtung siehe dienst/README.md.
 [Unit]
 Description=Fehlermeldungen zu Geraetedaten annehmen und mailen
