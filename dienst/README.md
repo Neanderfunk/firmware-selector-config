@@ -17,6 +17,7 @@ den lokalen Mailer (`/usr/sbin/sendmail`, auf dem Firmware-Server nullmailer).
 ## Einrichtung auf dem Firmware-Server (einmalig, als root)
 
 1. Benutzer anlegen, Dienst eintragen und starten:
+   `mkdir -p /etc/sysusers.d` (fehlt auf Ubuntu 24.04),
    `ln -s /var/www/selector-config/dienst/fehlermeldung.sysusers /etc/sysusers.d/fehlermeldung.conf`
    und `systemd-sysusers`, dann
    `ln -s /var/www/selector-config/dienst/fehlermeldung.service /etc/systemd/system/`,
@@ -32,3 +33,7 @@ gibt die Mail auf stderr aus.
 
 Nach Änderungen an `fehlermeldung.py`: `deploy.sh` wie gewohnt, dann
 `systemctl restart fehlermeldung`.
+
+Startet der Dienst mit `status=217/USER` nicht, fehlt der Benutzer
+`fehlermeldung`: Schritt 1 (sysusers) wurde nicht ausgeführt. So war es
+nach 5613098 bis 07.11.2026, „Fehler melden“ gab bis dahin 502.
