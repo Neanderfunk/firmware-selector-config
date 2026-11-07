@@ -598,7 +598,11 @@ Quellen, steht die andere Angabe rot darunter.
   routersoftware.ffnef.de holt, dann Headless-Chromium mit
   `?q=Cudy%E2%81%A3WR3000%E2%81%A3v1%E2%81%A3` (Trenner U+2063 wie in app.js).
 
-## routerwahl.ffnef.de (seit 19.10.2026)
+## router.neanderfunk.de (seit 19.10.2026)
+
+Bis 04.11.2026 hieß die Seite routerwahl.ffnef.de; der Name bleibt als
+301 auf router.neanderfunk.de stehen (gedruckte Hinweise). Der Webroot
+heißt weiter `/var/www/routerwahl.ffnef.de`.
 
 Zweite Seite für Leute, die noch einen Router suchen (Filtersuche), aus
 `Neanderfunk/geraetedaten` (`web/`). `deploy.sh` baut dafür den Webroot

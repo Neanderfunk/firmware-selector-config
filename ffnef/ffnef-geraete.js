@@ -1,7 +1,7 @@
 /* Geraetedaten in Schritt 1: Nach der Wahl von Geraet und Hardware-Version
    zeigt diese Datei unter dem Geraetebild, was fuer die Installation zaehlt,
    aus der Neanderfunk-Geraetedatenbank (github.com/Neanderfunk/geraetedaten).
-   Den Rest und den Vergleich zeigt routerwahl.ffnef.de.
+   Den Rest und den Vergleich zeigt router.neanderfunk.de.
 
    Wie ffnef.js nur lesend: app.js bleibt unveraendert. Die Daten liegen je
    Geraet in geraete/<image>.json und werden erst geladen, wenn das Geraet
@@ -182,7 +182,7 @@
 
   /* Im Selector hat man das Geraet schon. Gezeigt wird deshalb nur, was
      beim Installieren schiefgehen kann (Content, 19.10.2026); alles andere
-     steht auf routerwahl.ffnef.de. */
+     steht auf router.neanderfunk.de. */
   function zeileMit(liste, titel) {
     for (var i = 0; i < (liste || []).length; i++) if (liste[i].titel === titel) return liste[i];
     return null;
@@ -225,8 +225,8 @@
     }
 
     var fuss = el('p', 'ffnef-geraet-fuss');
-    var rw = el('a', null, 'Alle Daten und Vergleich auf routerwahl.ffnef.de');
-    rw.href = 'https://routerwahl.ffnef.de/?geraet=' + encodeURIComponent(d.image);
+    var rw = el('a', null, 'Alle Daten und Vergleich auf router.neanderfunk.de');
+    rw.href = 'https://router.neanderfunk.de/?geraet=' + encodeURIComponent(d.image);
     fuss.appendChild(rw);
     box.appendChild(fuss);
     var liz = el('p', 'ffnef-geraet-lizenz',

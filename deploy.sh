@@ -176,7 +176,7 @@ else
   sage "WARNUNG: $GD/ausgabe/selector fehlt, keine Geraetedaten"
 fi
 
-# --- routerwahl.ffnef.de -------------------------------------------------
+# --- router.neanderfunk.de (Webroot heisst noch routerwahl.ffnef.de) ------
 # Zweite Seite fuer Leute, die noch einen Router suchen (Filtersuche). Sie
 # liegt im Repo geraetedaten unter web/ und nutzt Bilder, Anleitungen und
 # devices.js von hier mit, damit beide Seiten denselben Stand zeigen.
