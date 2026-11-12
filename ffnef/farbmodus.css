@@ -1,0 +1,68 @@
+/* Knopf Hell/Dunkel (farbmodus.js), gemeinsam fuer routersoftware. und
+   router.neanderfunk.de. Aussehen und Symbole wie auf neanderfunk.de
+   (freifunk-content seiten/wordpress/kopf/farbmodus.py). Die Farben der
+   Seiten selbst stehen in ffnef.css bzw. routerwahl.css.
+
+   Dunkle Werte stehen zweimal: fuer den Knopf (html[data-farbe="dunkel"])
+   und fuer die Systemeinstellung, solange niemand "hell" gewaehlt hat. */
+:root {
+  --nf-knopf-text: #5d5560;
+  --nf-knopf-hover-grund: #f7f1f4;
+  --nf-knopf-hover-text: #dc0067;
+}
+html[data-farbe="dunkel"] {
+  --nf-knopf-text: #b9adb5;
+  --nf-knopf-hover-grund: #2a2229;
+  --nf-knopf-hover-text: #ff5aa5;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-farbe="hell"]) {
+    --nf-knopf-text: #b9adb5;
+    --nf-knopf-hover-grund: #2a2229;
+    --nf-knopf-hover-text: #ff5aa5;
+  }
+}
+
+.farbknopf {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  margin: 0;
+  border: 0;
+  border-radius: 3px;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: 600;
+  color: var(--nf-knopf-text);
+  cursor: pointer;
+}
+.farbknopf:hover,
+.farbknopf:focus-visible {
+  background: var(--nf-knopf-hover-grund);
+  color: var(--nf-knopf-hover-text);
+}
+.farbknopf:focus-visible {
+  outline: 2px solid #dc0067;
+  outline-offset: 1px;
+}
+.farbknopf:before {
+  content: "";
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath fill=%22%235d5560%22 d=%22M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z%22/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.farbknopf.zu-hell:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%225%22 fill=%22%23ffb400%22/%3E%3Cpath stroke=%22%23ffb400%22 stroke-width=%222%22 stroke-linecap=%22round%22 d=%22M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1%22/%3E%3C/svg%3E");
+}
+@media screen and (max-width: 430px) {
+  .farbknopf span { display: none; }
+  .farbknopf { padding: 0 8px; }
+}

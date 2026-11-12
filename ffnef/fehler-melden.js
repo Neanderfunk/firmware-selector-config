@@ -23,7 +23,8 @@
     '.ffm-ergebnis{margin:.3em 0 0}' +
     '.ffm-ergebnis.ffm-gut{font-weight:bold}' +
     '.ffm-ergebnis.ffm-schlecht{color:#b00020}' +
-    '@media (prefers-color-scheme:dark){.ffm-ergebnis.ffm-schlecht{color:#ff8a80}}';
+    'html[data-farbe="dunkel"] .ffm-ergebnis.ffm-schlecht{color:#ff8a80}' +
+    '@media (prefers-color-scheme:dark){html:not([data-farbe="hell"]) .ffm-ergebnis.ffm-schlecht{color:#ff8a80}}';
 
   function stilEinmal() {
     if (document.getElementById('ffm-stil')) return;

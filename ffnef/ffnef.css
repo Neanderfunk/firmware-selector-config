@@ -2,6 +2,116 @@
    Bewusst eine eigene Datei: app.css bleibt unveraendert und laesst sich
    damit ohne Konflikt nachziehen. */
 
+/* --- Hell/Dunkel (farbmodus.js, farbmodus.css; adorfer 12.11.2026) ------
+   Farben wie im Dunkelmodus von neanderfunk.de: Grund #16121a, Flaeche
+   #211b24, Karten #2a2229, Linien #3b3140, Text #ece6ea, Nebentext #b9adb5,
+   Links #ff5aa5 (hover #ff8cc2); Magenta #dc0067 und Gelb #ffb400 bleiben.
+
+   app.css setzt seine Variablen auf JEDES Element ("*", im Dunklen per
+   prefers-color-scheme). Deshalb stehen sie hier ebenfalls auf "*", mit
+   hoeherer Spezifitaet, damit der Knopf in beide Richtungen gewinnt. Unsere
+   eigenen Variablen (--nf-*) stehen nur an der Wurzel und erben.
+   Die dunklen Werte stehen zweimal: fuer den Knopf und fuer die
+   Systemeinstellung, solange niemand "hell" gewaehlt hat. */
+:root {
+  --nf-link: #337ab7;
+  --nf-knopf-blau-text: #333;
+  --nf-link-hover: #23527c;
+  --nf-linie: #ddd;
+  --nf-flaeche: transparent;
+  --nf-bildgrund: transparent;
+  --nf-linie-kasten: #ccc;
+  --nf-linie-geraet: #7aa;
+  --nf-grau: #666;
+  --nf-grau2: #777;
+  --nf-rot: #a33;
+  --nf-erkennbar: #f6f6f0;
+  --nf-reichlich-grund: #bfb; --nf-reichlich-text: #141;
+  --nf-gut-grund: #cfc; --nf-gut-text: #252;
+  --nf-reicht-grund: #dfd; --nf-reicht-text: #262;
+  --nf-knapp-grund: #ffd; --nf-knapp-text: #752;
+  --nf-sackgasse-grund: #fdd; --nf-sackgasse-text: #a33;
+}
+html[data-farbe="hell"], html[data-farbe="hell"] * {
+  color-scheme: light;
+  --background-color: white;
+  --text-color: #333;
+  --shadow-color: #ccc;
+  --table-alternate-color: #f9f9f9;
+  --background-color-attribution: rgba(255, 255, 255, 0.8);
+}
+html[data-farbe="dunkel"], html[data-farbe="dunkel"] * {
+  color-scheme: dark;
+  --background-color: #16121a;
+  --text-color: #ece6ea;
+  --shadow-color: #000;
+  --table-alternate-color: #211b24;
+  --background-color-attribution: rgba(22, 18, 26, 0.85);
+}
+html[data-farbe="dunkel"] {
+  --nf-link: #ff5aa5;
+  --nf-knopf-blau-text: #16121a;
+  --nf-link-hover: #ff8cc2;
+  --nf-linie: #3b3140;
+  --nf-flaeche: #211b24;
+  --nf-bildgrund: #ece6ea;
+  --nf-linie-kasten: #3b3140;
+  --nf-linie-geraet: #4f7f7f;
+  --nf-grau: #b9adb5;
+  --nf-grau2: #b9adb5;
+  --nf-rot: #ff8a80;
+  --nf-erkennbar: #2a2229;
+  --nf-reichlich-grund: #1f3a22; --nf-reichlich-text: #bfb;
+  --nf-gut-grund: #1c3320; --nf-gut-text: #cfc;
+  --nf-reicht-grund: #1a2d1d; --nf-reicht-text: #dfd;
+  --nf-knapp-grund: #3a3318; --nf-knapp-text: #ffd;
+  --nf-sackgasse-grund: #3d1f22; --nf-sackgasse-text: #fdd;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-farbe="hell"]), html:not([data-farbe="hell"]) * {
+    color-scheme: dark;
+    --background-color: #16121a;
+    --text-color: #ece6ea;
+    --shadow-color: #000;
+    --table-alternate-color: #211b24;
+    --background-color-attribution: rgba(22, 18, 26, 0.85);
+  }
+  html:not([data-farbe="hell"]) {
+    --nf-link: #ff5aa5;
+  --nf-knopf-blau-text: #16121a;
+    --nf-link-hover: #ff8cc2;
+    --nf-linie: #3b3140;
+    --nf-flaeche: #211b24;
+    --nf-bildgrund: #ece6ea;
+    --nf-linie-kasten: #3b3140;
+    --nf-linie-geraet: #4f7f7f;
+    --nf-grau: #b9adb5;
+    --nf-grau2: #b9adb5;
+    --nf-rot: #ff8a80;
+    --nf-erkennbar: #2a2229;
+    --nf-reichlich-grund: #1f3a22; --nf-reichlich-text: #bfb;
+    --nf-gut-grund: #1c3320; --nf-gut-text: #cfc;
+    --nf-reicht-grund: #1a2d1d; --nf-reicht-text: #dfd;
+    --nf-knapp-grund: #3a3318; --nf-knapp-text: #ffd;
+    --nf-sackgasse-grund: #3d1f22; --nf-sackgasse-text: #fdd;
+  }
+}
+
+/* Feste Farben aus app.css, die nicht ueber Variablen laufen. Im Hellen
+   haben die Variablen genau die Werte aus app.css, dort aendert sich also
+   nichts. */
+a, .firmwareTableLink, .notRecommendedLink, .InfoLink, .notRecommendedLabel { color: var(--nf-link); }
+a:focus, a:hover { color: var(--nf-link-hover); }
+.table td { border-top-color: var(--nf-linie); }
+.table th { border-bottom-color: var(--nf-linie); }
+#wizard select, #wizard input { border-color: var(--nf-linie); }
+#wizard .pane-wrapper { background: var(--nf-flaeche); }
+/* Blaue Knoepfe (#009ee0): heller Text waere darauf kaum lesbar. */
+#wizard #branch-pane .btn, #wizard #type-pane .btn, #wizard #branch-pane .btn:hover, #wizard #type-pane .btn:hover { color: var(--nf-knopf-blau-text); }
+/* Geraetezeichnungen sind fuer hellen Grund gemacht (dunkle Geraete in
+   dunklem Grau): im Dunklen auf einer hellen Kachel. */
+#wizard .imagePreview .preview img { background: var(--nf-bildgrund); border-radius: 4px; }
+
 /* Die Anzeige der aktuellen Versionen oben rechts blenden wir aus. */
 #currentVersions {
   display: none;
@@ -21,7 +131,7 @@
   margin: 0.5em;
   padding: 0.5em 0.8em;
   text-align: left;
-  border-left: 3px solid #ccc;
+  border-left: 3px solid var(--nf-linie-kasten);
 }
 
 #wizard .imagePreview .preview.selected {
@@ -33,7 +143,7 @@
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #666;
+  color: var(--nf-grau);
 }
 
 #wizard .imagePreview .ffnef-versionen h2 + * {
@@ -52,7 +162,7 @@
 #wizard .imagePreview .ffnef-gilt-nicht,
 #wizard .imagePreview .ffnef-belegt {
   font-weight: bold;
-  color: #a33;
+  color: var(--nf-rot);
 }
 
 #wizard .imagePreview .ffnef-beleg {
@@ -61,7 +171,7 @@
 }
 
 #wizard .imagePreview .ffnef-erkennbar {
-  background: #f6f6f0;
+  background: var(--nf-erkennbar);
   padding: 0.4em 0.6em;
 }
 
@@ -72,7 +182,7 @@
   #wizard .imagePreview .ffnef-versionen {
     grid-column: 1 / -1;
     border-left: none;
-    border-top: 3px solid #ccc;
+    border-top: 3px solid var(--nf-linie-kasten);
   }
 }
 
@@ -144,7 +254,7 @@
   margin: 0.5em;
   padding: 0.5em 0.8em;
   text-align: left;
-  border-left: 3px solid #7aa;
+  border-left: 3px solid var(--nf-linie-geraet);
   font-size: 0.95em;
 }
 
@@ -153,7 +263,7 @@
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #666;
+  color: var(--nf-grau);
 }
 
 #wizard .imagePreview .ffnef-geraet-liste {
@@ -175,27 +285,27 @@
 #wizard .imagePreview .ffnef-geraet-quellen {
   margin-left: 0.4em;
   font-size: 0.8em;
-  color: #777;
+  color: var(--nf-grau2);
 }
 
 #wizard .imagePreview .ffnef-geraet-quellen a {
-  color: #777;
+  color: var(--nf-grau2);
 }
 
 #wizard .imagePreview .ffnef-geraet-abweichend {
   margin: 0.15em 0;
   font-size: 0.9em;
-  color: #a33;
+  color: var(--nf-rot);
 }
 
 #wizard .imagePreview .ffnef-geraet-warnung {
   margin: 0.15em 0;
   font-weight: bold;
-  color: #a33;
+  color: var(--nf-rot);
 }
 
 #wizard .imagePreview .ffnef-geraet-erkl {
-  color: #666;
+  color: var(--nf-grau);
 }
 
 #wizard .imagePreview .ffnef-stufe {
@@ -204,11 +314,11 @@
   font-weight: bold;
 }
 
-#wizard .imagePreview .ffnef-stufe-reichlich { background: #bfb; color: #141; }
-#wizard .imagePreview .ffnef-stufe-gut { background: #cfc; color: #252; }
-#wizard .imagePreview .ffnef-stufe-reicht { background: #dfd; color: #262; }
-#wizard .imagePreview .ffnef-stufe-knapp { background: #ffd; color: #752; }
-#wizard .imagePreview .ffnef-stufe-sackgasse { background: #fdd; color: #a33; }
+#wizard .imagePreview .ffnef-stufe-reichlich { background: var(--nf-reichlich-grund); color: var(--nf-reichlich-text); }
+#wizard .imagePreview .ffnef-stufe-gut { background: var(--nf-gut-grund); color: var(--nf-gut-text); }
+#wizard .imagePreview .ffnef-stufe-reicht { background: var(--nf-reicht-grund); color: var(--nf-reicht-text); }
+#wizard .imagePreview .ffnef-stufe-knapp { background: var(--nf-knapp-grund); color: var(--nf-knapp-text); }
+#wizard .imagePreview .ffnef-stufe-sackgasse { background: var(--nf-sackgasse-grund); color: var(--nf-sackgasse-text); }
 
 #wizard .imagePreview .ffnef-geraet details summary {
   cursor: pointer;
@@ -218,14 +328,14 @@
 #wizard .imagePreview .ffnef-geraet-weitere summary {
   font-weight: normal;
   font-size: 0.85em;
-  color: #666;
+  color: var(--nf-grau);
 }
 
 #wizard .imagePreview .ffnef-geraet-fuss,
 #wizard .imagePreview .ffnef-geraet-lizenz {
   margin: 0.4em 0 0;
   font-size: 0.85em;
-  color: #666;
+  color: var(--nf-grau);
 }
 
 @media (max-width: 40em) {
