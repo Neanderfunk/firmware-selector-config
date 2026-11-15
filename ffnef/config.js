@@ -191,7 +191,7 @@ var config = {
   // can be set for a whole model or individual revisions
   // overwrites default values from devices_info in devices.js
   // Erzeugt von werkzeug/anleitungen-verdrahten.py aus
-  // https://routersoftware.neanderfunk.de/anleitungen/index.json (Stand gluon-rampe-installer 37c218533)
+  // https://routersoftware.neanderfunk.de/anleitungen/index.json (Stand gluon-rampe-installer 24af2d33c)
   // Nicht von Hand pflegen, sondern das Werkzeug neu laufen lassen.
   devices_info: {
     "AVM": {
