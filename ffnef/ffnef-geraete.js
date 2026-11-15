@@ -30,18 +30,13 @@
     return k;
   }
 
+  /* fetch mit cache "no-cache": der Browser fragt jedes Mal beim Server nach
+     (ETag, meist 304). Per XHR hielt Firefox die index.json nach einem Deploy
+     trotz Strg+F5 fest und zeigte alte Level (adorfer 15.11.2026). */
   function holen(url, fertig) {
-    var r = new XMLHttpRequest();
-    r.open('GET', url, true);
-    r.onload = function () {
-      var d = null;
-      if (r.status >= 200 && r.status < 300) {
-        try { d = JSON.parse(r.responseText); } catch (e) { d = null; }
-      }
-      fertig(d);
-    };
-    r.onerror = function () { fertig(null); };
-    r.send();
+    fetch(url, { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { fertig(d); }, function () { fertig(null); });
   }
 
   /* Hersteller + Modell + gewaehlte Version -> moegliche Image-Namen. */
