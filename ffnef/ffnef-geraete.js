@@ -17,7 +17,7 @@
 
   var VERZ = 'geraete/';
   var bestand = null;        // geraete/index.json
-  var anleitungen = {};      // gluon_name -> {level, risiko, status, url}
+  var anleitungen = {};      // gluon_name -> {level, risiko, url}
   var cache = {};
   var zuletzt = null;
 
@@ -82,7 +82,8 @@
     'L5': 'Besondere Programme', 'L6': 'Serielles Kabel',
     'L7': 'Gehäuse öffnen', 'L8': 'Löten und Programmer'
   };
-  var STATUS = { 'erprobt': 'am Gerät erprobt', 'ungeprüft': 'noch nicht am Gerät erprobt' };
+  /* Kein Erprobt-Stand mehr in der Anzeige (adorfer 21.11.2026: ob etwas erprobt ist, ist eine
+     interne Notiz und kommt nicht mehr auf die Webseiten). */
   var BOOTLOADER = 'Hier wird der Bootloader verändert. Geht dabei etwas schief, gibt es ohne ' +
                    'Flash-Programmer meist kein Zurück.';
   /* Quellen-Kuerzel sind frei vergeben; die erste passende Regel gilt. */
@@ -196,8 +197,7 @@
       var lv = a.level || '';
       var zeileI = {
         titel: 'Einrichtung',
-        wert: (lv ? lv + ' ' + (LEVEL[lv] || '') : '').trim() +
-              (STATUS[a.status] ? ', ' + STATUS[a.status] : ''),
+        wert: (lv ? lv + ' ' + (LEVEL[lv] || '') : '').trim(),
         belege: [{ quelle: 'anleitung', url: a.url }]
       };
       if (a.risiko === 'bootloader') zeileI.warnung = BOOTLOADER;
