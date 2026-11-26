@@ -4,6 +4,23 @@ var devices_recommended = {
     "Jalapeno Board": "8devices-jalapeno"
   },
 
+  "Acelink": {
+    "EW-7886CAX": {"acelink-ew-7886cax": ""},
+  },
+
+  "Acer": {
+    "Connect Vero W6m": {"acer-connect-vero-w6m": ""},
+    "Predator Connect W6": {"acer-predator-connect-w6": ""},
+    "Predator Connect W6d": {"acer-predator-connect-w6d": ""},
+  },
+
+  "Adtran": {
+    "SmartRG SDG-8612": {"adtran-sdg-8612": ""},
+    "SmartRG SDG-8614": {"adtran-sdg-8614": ""},
+    "SmartRG SDG-8622": {"adtran-sdg-8622": ""},
+    "SmartRG SDG-8632": {"adtran-sdg-8632": ""},
+  },
+
   "Aerohive": {
     "HiveAP 121": "aerohive-hiveap-121",
     "HiveAP 330": "aerohive-hiveap-330",
@@ -41,6 +58,7 @@ var devices_recommended = {
      "RT-AX52": "asus-rt-ax52",
      "RT-AX53U": "asus-rt-ax53u",
      "TUF-AX4200": "asus-tuf-ax4200",
+     "TUF-AX4200Q": {"asus-tuf-ax4200q": ""},
      "TUF-AX6000": "asus-tuf-ax6000",
      "Lyra (MAP-AC2200)": "asus-lyra-map-ac2200",
      "RT-AX59U": "asus-rt-ax59u",
@@ -67,6 +85,11 @@ var devices_recommended = {
     "FRITZ!Box 3390": "avm-fritz-box-3390",
     "FRITZ!Box 7430": "avm-fritz-box-7430",
     "FRITZ!Repeater 3000": "avm-fritz-repeater-3000"
+  },
+
+  "Bananapi": {
+    "BPi-R3": {"bananapi-bpi-r3": ""},
+    "BPi-R3 Mini": {"bananapi-bpi-r3-mini": ""},
   },
 
   "Buffalo": {
@@ -189,10 +212,20 @@ var devices_recommended = {
     "GL-XE300": "gl.inet-gl-xe300",
     "microuter-N300": "gl.inet-microuter-n300",
     "VIXMINI": "gl.inet-vixmini",
+    "GL-AX1800": {"gl.inet-gl-ax1800": ""},
+    "GL-AXT1800": {"gl.inet-gl-axt1800": ""},
   },
 
   "Hewlett-Packard": {
     "MSM460": "hewlett-packard-msm460",
+  },
+
+  "ipTIME": {
+    "AX7800M-6E": {"iptime-ax7800m-6e": ""},
+  },
+
+  "JDCloud": {
+    "RE-CP-03": {"jdcloud-re-cp-03": ""},
   },
 
   "Joy-IT": {
@@ -232,6 +265,7 @@ var devices_recommended = {
     "MR70X": "mercusys-mr70x",
     "MR80X": "mercusys-mr80x",
     "MR90X": "mercusys-mr90x",
+    "MR3000X": {"mercusys-mr3000x-v2": "v2"},
   },
 
   "Mikrotik": {
@@ -247,6 +281,10 @@ var devices_recommended = {
     "RBmAPL-2nD (mAP lite)": {"mikrotik-routerboard-map-lite": "", "mikrotik-routerboard-mapl-2nd": ""},
     "RBwAPG-5HacD2HnD (wAP ac)": {"mikrotik-routerboard-wap-ac-d2": "", "mikrotik-wap-ac": "", "mikrotik-routerboard-wap-g-5hacd2hnd": "--ignore--"},
     "RBwAPG-5HacT2HnD (wAP ac)": {"mikrotik-routerboard-wap-ac-t2": "", "mikrotik-routerboard-wap-g-5hact2hnd": ""}
+  },
+
+  "Netcore": {
+    "N60": {"netcore-n60": ""},
   },
 
   "Netgear": {
@@ -377,6 +415,10 @@ var devices_recommended = {
     "RP-WD009": "ravpower-rp-wd009",
   },
 
+  "Ruijie": {
+    "RG-X60 Pro": {"ruijie-rg-x60-pro": ""},
+  },
+
   "Siemens": {
     "WS-AP3610": "siemens-ws-ap3610",
   },
@@ -442,7 +484,14 @@ var devices_recommended = {
     "TL-WR902AC": {"tp-link-tl-wr902ac-v3": "v3", "tp-link-tl-wr902ac-v4": "v4"},
     "WBS210": "tp-link-wbs210",
     "WBS510": "tp-link-wbs510",
-    "EAP225-Wall": "tp-link-eap225-wall"
+    "EAP225-Wall": "tp-link-eap225-wall",
+    "Archer AX80": {"tp-link-archer-ax80-v1": "v1 (US/RU/CA)"},
+    "EAP683": {"tp-link-eap683-lr": "LR", "tp-link-eap683-ur": "UR"},
+    "RE6000XD": {"tp-link-re6000xd": ""},
+    "TL-XDR4288": {"tp-link-tl-xdr4288": ""},
+    "TL-XDR6086": {"tp-link-tl-xdr6086": ""},
+    "TL-XDR6088": {"tp-link-tl-xdr6088": ""},
+    "TL-XTR8488": {"tp-link-tl-xtr8488": ""},
   },
 
   "Totolink": {
@@ -494,6 +543,7 @@ var devices_recommended = {
   "Wavlink": {
     "WS-WN572HP3 (4G)": "wavlink-ws-wn572hp3-4g",
     "WL-WN573HX3": "wavlink-wl-wn573hx3",
+    "WL-WN536AX6": {"wavlink-wl-wn536ax6-a": "Rev a"},
   },
 
   "Western Digital": {
@@ -514,6 +564,7 @@ var devices_recommended = {
     "Mi Router AC2100": "xiaomi-mi-router-ac2100",
     "Redmi Router AC2100": "xiaomi-redmi-router-ac2100",
     "Mi Router AX3000T": {"xiaomi-mi-router-ax3000t": "normal", "xiaomi-mi-router-ax3000t-openwrt-u-boot-layout": "OpenWrt-U-Boot-Layout"},
+    "Redmi Router AX6000": {"xiaomi-redmi-router-ax6000": "normal", "xiaomi-redmi-router-ax6000-openwrt-u-boot-layout": "OpenWrt-U-Boot-Layout"},
   },
 
   "x86": {
@@ -538,6 +589,9 @@ var devices_recommended = {
     "NWA90AX Pro": "zyxel-nwa90ax-pro",
     "NWA55AXE": "zyxel-nwa55axe",
     "WSM20": "zyxel-wsm20",
+    "EX5601-T0": {"zyxel-ex5601-t0": "normal", "zyxel-ex5601-t0-openwrt-u-boot-layout": "OpenWrt-U-Boot-Layout"},
+    "EX5700 (Telenor)": {"zyxel-ex5700-telenor": ""},
+    "WX5600-T0": {"zyxel-wx5600-t0-openwrt-u-boot-layout": "OpenWrt-U-Boot-Layout"},
   },
 
   "ZBT": {
